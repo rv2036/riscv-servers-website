@@ -1,354 +1,376 @@
-# Серверные чипы RISC-V, SoC и CPU IP (русская редакция)
+# Серверные чипы RISC-V и IP-ядра (русский)
+# kind: soc = выпущенный кремний (SoC / chiplet); ip = лицензируемое IP-ядро
 items:
-  - chip: "SG2042"
-    vendor: "SOPHGO (ранее Sophon)"
-    type: "SoC"
-    cores: "64× T-Head XuanTie C920, 4 ядра/кластер × 16 кластеров; по 64 КБ L1 на ядро, 1 МБ L2 на кластер, 64 МБ системного L3"
-    isa: "RV64GCV + RVV 0.7.1 (128-bit)"
-    process: ""
-    perf: "Базовая частота 2,0 ГГц; заявлено производителем 1 TFLOPS FP64, TDP 120 Вт; независимая оценка: одно ядро примерно в 5–10 раз быстрее доступного на тот момент RISC-V железа, многоядерная производительность примерно в 4–8 раз ниже, чем у серверного x86 CPU"
-    target: "Серверы / HPC / ИИ-инференс"
-    first_announced: "2022-12"
-    status: production
-    note: "Серийное производство; первый в мире коммерчески серийный 64-ядерный RISC-V CPU, впервые выведший RISC-V в основную лигу универсальных серверов и HPC."
-    urls:
-      - label: "Даташит PDF (riscv.epcc.ed.ac.uk)"
-        url: "http://riscv.epcc.ed.ac.uk/assets/files/hpcasia24/hpc_asia_wang.pdf"
-      - label: "Даташит PDF (ftp.radix-linux.su)"
-        url: "https://ftp.radix-linux.su/3pp/Sophgo/doc/Milk-V/SG2042_Draft_Spec_V1.0.pdf"
-      - label: "Страница продукта (sophgo.com)"
-        url: "https://www.sophgo.com/sophon-u/product/introduce/sg2042.html"
-      - label: "Статья (arXiv)"
-        url: "https://arxiv.org/abs/2309.00381"
-  - chip: "SG2044"
-    vendor: "SOPHGO"
-    type: "SoC"
-    cores: "64× XuanTie C920 (второе поколение, улучшенная подсистема памяти)"
-    isa: "RV64GCV + RVV 1.0"
-    process: ""
-    perf: "Независимая оценка: 64 ядра до 4,91× быстрее SG2042; система SRB3-40 с LPDDR5X-8533, пропускной способностью 546 ГБ/с и PCIe 5.0"
-    target: "Серверы / серверы хранения / центры ИИ-вычислений"
-    first_announced: "2023-08"
-    status: production
-    note: "Серийное производство; второе поколение китайского 64-ядерного серверного SoC, закрывшее пробелы по RVV 1.0 и пропускной способности памяти; сегодня это наиболее доступная для покупки платформа серверов RISC-V."
-    urls:
-      - label: "Страница продукта (sophgo.com)"
-        url: "https://www.sophgo.com/sophon-u/product/introduce/srb3-40.html"
-      - label: "Статья (arXiv)"
-        url: "https://arxiv.org/abs/2508.13840"
-      - label: "Даташит PDF (riscv.epcc.ed.ac.uk)"
-        url: "http://riscv.epcc.ed.ac.uk/assets/files/hpcasia24/hpc_asia_wang.pdf"
-  - chip: "RXU 3.5"
-    vendor: "SOPHGO"
-    type: "Ядро CPU IP"
-    cores: "Одноядерное IP с внеочередным исполнением шириной 8 (возможно многоядерное исполнение)"
-    isa: "RV64GCVH + RVV 1.0 + RVA23 (IOMMU/AIA)"
-    process: ""
-    perf: "SPECint2006 >20/ГГц (заявлено производителем, сравнение с Cortex-X1)"
-    target: "Серверы / лицензирование IP для высокопроизводительных вычислений"
-    first_announced: "2025-06"
-    status: announced
-    note: "Анонсирован 2025-06-30 с лицензированием для участников; собственное высокопроизводительное ядро SOPHGO, открытое для лицензирования, добавило ещё один канал поставки IP для китайских серверных ядер."
-    urls:
-      - label: "Даташит PDF (riscv.epcc.ed.ac.uk)"
-        url: "http://riscv.epcc.ed.ac.uk/assets/files/hpcasia24/hpc_asia_wang.pdf"
-  - chip: "XuanTie C930"
-    vendor: "Alibaba DAMO Academy / T-Head"
-    type: "Ядро CPU IP / серверный CPU"
-    cores: "Число ядер и частота официально не раскрыты (спроектировано как серверный многоядерный кластер)"
-    isa: "RVA23 + RVV 1.0 (512-bit) + 8 TOPS Matrix; Vector Crypto, Zacas, Zama16b, Smmtt, CoVE, RAS, AIA"
-    process: ""
-    perf: "SPECint2006 >17/ГГц (сайт XuanTie); матричный движок 8 TOPS; предсказание переходов TAGE, частный L2, настраиваемая предвыборка"
-    target: "Серверы / AI-HPC"
-    first_announced: "2025-02"
-    status: production
-    note: "Серийные поставки с 2025-03; первый серверный CPU DAMO Academy, нативно объединяющий векторный и матричный движки, — знаковый продукт выхода китайского RISC-V в основную серверную лигу."
-    urls:
-      - label: "Страница продукта (xrvm.cn)"
-        url: "https://www.xrvm.cn/product/xuantie/C930"
-      - label: "Источник (news.cn)"
-        url: "http://www.news.cn/tech/20250228/f4fd7f4a23744e4f9763ed156429cd6c/c.html"
-      - label: "Источник (tomshardware.com)"
-        url: "https://www.tomshardware.com/pc-components/cpus/alibaba-launches-risc-v-based-xuantie-c930-server-cpu-ai-hpc-chip-ships-this-month-more-designs-to-follow"
-  - chip: "XuanTie C920"
-    vendor: "Alibaba DAMO Academy / T-Head"
-    type: "Ядро CPU IP"
-    cores: "Одноядерное IP: 12-ступенчатое суперскалярное внеочередное исполнение, до 2,5 ГГц, опциональный внеочередной векторный блок (VLEN 128/256); поддержка нескольких ядер и кластеров, в SG2042 интегрировано 64 ядра"
-    isa: "RV64GCV + RVA22 + RVV 1.0; AMBA 4.0 ACE/AXI, поддержка BF16/FP16/FP32"
-    process: ""
-    perf: "До 2,5 ГГц (в SG2042 — 2,0 ГГц); производительность на задачах ИИ до 3,8× выше предыдущего поколения (заявлено производителем)"
-    target: "Серверы / периферийный ИИ / автономное вождение"
-    first_announced: "2023-11"
-    status: production
-    note: "Серийное производство; C920 — вычислительная основа SG2042 и ключевое IP, на котором реально построены китайские 64-ядерные серверные чипы."
-    urls:
-      - label: "Страница продукта (xrvm.cn)"
-        url: "https://www.xrvm.cn/product/xuantie/C920"
-      - label: "Статья (arXiv)"
-        url: "https://arxiv.org/html/2406.12394v1"
-  - chip: "XuanTie C908"
-    vendor: "Alibaba DAMO Academy / T-Head"
-    type: "Ядро CPU IP"
-    cores: "Одноядерное IP: 9-ступенчатый двухвыпускной конвейер с последовательным исполнением; 1–4 ядра на кластер, поддержка нескольких кластеров и гомогенных многоядерных конфигураций"
-    isa: "RV64GCV (совместимость с RV32 в пользовательском режиме) + RVA22 + RVV 1.0"
-    process: ""
-    perf: "Типовая рабочая частота >2 ГГц; энергоэффективность на 20% выше аналогов той же производительности, типовая производительность на нейросетях +50% (заявлено производителем)"
-    target: "Периферийный ИИ / AIoT / мультимедиа"
-    first_announced: "2022-11"
-    status: production
-    note: "Серийное производство; C908 принёс RVV 1.0 в сегмент низкого энергопотребления — это основная по объёму поставок единица экосистемы периферийного ИИ на RISC-V и сопутствующее ядро в серверных SoC."
-    urls:
-      - label: "Страница продукта (xrvm.cn)"
-        url: "https://www.xrvm.cn/product/xuantie/C908"
-  - chip: "Performance P670"
-    vendor: "SiFive"
-    type: "Ядро CPU IP"
-    cores: "Выпуск 4 инструкций, 13 ступеней, внеочередное исполнение; до 16 ядер в кластере, возможно несколько кластеров"
-    isa: "RVA22 + RVV 1.0 (2×128-bit) + Vector Crypto"
-    process: ""
-    perf: ">13 SPECint2006/ГГц; на >50% выше P550, лучше по энергоэффективности и площади, чем Cortex-A78 (заявлено производителем)"
-    target: "Периферийные серверы / потребительские прикладные процессоры"
-    first_announced: "2023-05"
-    status: production
-    note: "Серийное производство / лицензирование IP; P670 — основной продукт SiFive для выхода в класс 16-ядерных прикладных процессоров, применяется в китайских SoC, например SOPHGO SG2380."
-    urls:
-      - label: "Источник (sifive.com)"
-        url: "https://www.sifive.com/cores/performance-p600"
-      - label: "Источник (notebookcheck.net)"
-        url: "https://www.notebookcheck.net/SiFive-launches-Performance-P670-and-P470-RISC-V-energy-efficient-processors.665833.0.html"
-  - chip: "Performance P870"
-    vendor: "SiFive"
-    type: "Ядро CPU IP"
-    cores: "Внеочередное исполнение с выпуском 6 инструкций; до 32 ядер в кластере"
-    isa: "RVA23 + RVV 1.0 (2×128-bit) + Vector Crypto"
-    process: ""
-    perf: ">18 SPECint2006/ГГц; одноядерная производительность +50% к предыдущему поколению (заявлено производителем)"
-    target: "Высокопроизводительные прикладные процессоры / ЦОД"
-    first_announced: "2023-08"
-    status: production
-    note: "Серийное производство / лицензирование IP; P870 выводит одноядерную производительность RISC-V на уровень 18/ГГц и служит ориентиром для старшего IP стандарта RVA23."
-    urls:
-      - label: "Источник (sifive.com)"
-        url: "https://www.sifive.com/cores/performance-p800"
-      - label: "Даташит PDF (hc2023.hotchips.org)"
-        url: "https://hc2023.hotchips.org/assets/program/conference/day1/CPU2/P870%20for%20Hot%20Chips%20-%20FInal.pdf"
-  - chip: "Performance P870-D"
-    vendor: "SiFive"
-    type: "Ядро CPU IP (для ЦОД)"
-    cores: "Внеочередное исполнение с выпуском 6 инструкций; межсоединение AMBA CHI, до 64 кластеров / 256 ядер (на кристалле или в chiplet)"
-    isa: "RVA23 + RVV 1.0"
-    process: ""
-    perf: ">2 SPECint2017/ГГц; поддержка CXL, CHI C2C, кластерного DVFS и RAS"
-    target: "ЦОД (хранение, веб, видеопотоки)"
-    first_announced: "2024-08"
-    status: production
-    note: "Серийное производство / лицензирование IP; первое RISC-V IP, явно спроектированное под требования ЦОД по CHI/RAS/CXL, масштабируется до 256 ядер и до chiplet."
-    urls:
-      - label: "Официальная новость (sifive.com)"
-        url: "https://www.sifive.com/press/sifive-announces-high-performance-risc-v-datacenter-processor-for-ai-workloads"
-      - label: "Источник (sifive.com)"
-        url: "https://www.sifive.com/cores/performance-p800"
-  - chip: "Veyron V1"
-    vendor: "Ventana Micro Systems (в 2025-12 приобретена Qualcomm)"
-    type: "Многокристальная сборка / chiplet CPU"
-    cores: "Внеочередное исполнение шириной 8, 16 ядер/кластер, до 8 chiplet = 128 ядер; 48 МБ L3 на кластер"
-    isa: "RV64GC + векторное расширение (в V1 класс RVA не указан)"
-    process: "5nm"
-    perf: "3,6 ГГц; по заявлению производителя сопоставим с серверным x86, есть RAS/IOMMU/AIA"
-    target: "ЦОД / 5G / автомобили"
-    first_announced: "2022-12"
-    status: announced
-    note: "Поставка IP и chiplet (компания приобретена Qualcomm); V1 — первый продукт, превративший RISC-V в chiplet дата-центрового класса и задавший масштабируемый путь до 128 ядер."
-    urls:
-      - label: "Источник (notebookcheck.net)"
-        url: "https://www.notebookcheck.net/RISC-V-gears-up-for-data-centers-Ventana-presents-Veyron-V1-scalable-chiplets-with-up-to-128-cores.674440.0.html"
-      - label: "Официальная новость (prnewswire.com)"
-        url: "https://www.prnewswire.com/news-releases/ventana-introduces-veyron-worlds-first-data-center-class-risc-v-cpu-product-family-301700985.html"
-  - chip: "Veyron V2"
-    vendor: "Ventana Micro Systems (сейчас в составе Qualcomm)"
-    type: "Многокристальная сборка / chiplet CPU"
-    cores: "Внеочередное исполнение с декодированием и выдачей шириной 15; 32 ядра/chiplet, до 6 chiplet = 192 ядра; соединение UCIe, NoC 5 ТБ/с"
-    isa: "RVA23 + RVV 1.0 (512-bit) + Vector Crypto"
-    process: "4nm (TSMC)"
-    perf: "3,6 ГГц; IPC +20% к V1, в целом +40%; 192 ядра в SPECint2017rate примерно на 23% выше, чем у 128-ядерного Bergamo (360 Вт, моделирование производителя)"
-    target: "ЦОД / CPU для ИИ-хостов"
-    first_announced: "2023-11"
-    status: announced
-    note: "IP/chiplet (компания приобретена Qualcomm); V2 — самая ранняя реализация дата-центрового класса с RVA23 и 512-битной векторизацией, позже вошла в состав Qualcomm для закрытия пробела в линейке CPU."
-    urls:
-      - label: "Источник (riscv.org)"
-        url: "https://riscv.org/blog/ventana-introduces-veyron-v2-worlds-highest-performance-data-center-class-risc-v-processor-and-platform"
-      - label: "Источник (nextplatform.com)"
-        url: "https://www.nextplatform.com/compute/2023/11/07/ventana-launches-veyron-v2-risc-v-into-the-datacenter/1652320"
-      - label: "Источник (techpowerup.com)"
-        url: "https://www.techpowerup.com/343914/qualcomm-acquires-ventana-micro-systems-deepening-risc-v-cpu-expertise"
-  - chip: "TT-Ascalon"
-    vendor: "Tenstorrent"
-    type: "Ядро CPU IP"
-    cores: "Одноядерное IP (масштабируется в многоядерные кластеры)"
-    isa: "RVA23 + RVV 1.0 + Hypervisor/AIA/IOMMU + RAS"
-    process: "Samsung SF4X"
-    perf: ">22 SPECint2006/ГГц; >2,3 SPECint2017/ГГц; >3,6 SPECfp2017/ГГц; >2,5 ГГц"
-    target: "Серверы / инфраструктура ИИ / автомобильный HPC"
-    first_announced: ""
-    status: production
-    note: "Серийное производство / доступно для лицензирования (с 2025-12); Ascalon вывел одноядерный SPECint RISC-V на уровень 22/ГГц — одно из самых производительных серверных ядер среди открытого IP."
-    urls:
-      - label: "Официальная новость (tenstorrent.com)"
-        url: "https://tenstorrent.com/en/newsroom/tenstorrent-announces-availability-of-tt-ascalon"
-      - label: "Источник (tenstorrent.com)"
-        url: "https://tenstorrent.com/en/ip/risc-v-cpu"
-  - chip: "Atlantis (Ascalon-X SoC)"
-    vendor: "Tenstorrent"
-    type: "SoC (кремниевая платформа разработки)"
-    cores: "8× Ascalon-X (один кластер)"
-    isa: "RVA23 + RVV 1.0"
-    process: ""
-    perf: "Кластер из 8 ядер Ascalon-X (официальная машина QEMU), RVA23; конкретная частота в первичных источниках не указана"
-    target: "Серверная программная экосистема / ИИ-хосты"
-    first_announced: ""
-    status: sampling
-    note: "Платформа разработки (смоделирована в upstream QEMU, запускает OpenSBI/Linux); Atlantis — платформа кремниевой проверки RVA23 от Tenstorrent, благодаря которой Ascalon прошёл путь от IP до системы, способной загрузить Linux."
-    urls:
-      - label: "Источник (qemu.org)"
-        url: "https://www.qemu.org/docs/master/system/riscv/tt_atlantis.html"
-      - label: "Источник (tenstorrent.com)"
-        url: "https://tenstorrent.com/en/ip/risc-v-cpu"
-  - chip: "TT-Ascalon S"
-    vendor: "Tenstorrent"
-    type: "Ядро CPU IP"
-    cores: "Одноядерное IP (компактное, для инфраструктуры и периферии)"
-    isa: "RVA23"
-    process: ""
-    perf: "70% производительности Ascalon X при 50% площади (заявлено производителем)"
-    target: "Инфраструктура ИИ / периферия / автомобили"
-    first_announced: "2026-10"
-    status: announced
-    note: "Анонсирован 2026-10; Ascalon S вдвое уменьшает площадь серверного ядра и нацелен на чувствительные к стоимости сценарии вроде DPU и периферии."
-    urls:
-      - label: "Источник (docs.tenstorrent.com)"
-        url: "https://docs.tenstorrent.com/tt-awesome/planet"
-  - chip: "Серверный SoC Rivos (собственное ядро)"
-    vendor: "Rivos (в 2025-10 приобретена Meta)"
-    type: "SoC (chiplet, CPU + SIMT GPGPU)"
-    cores: "Собственный 64-битный CPU RVA23 @3,1 ГГц + SIMT GPGPU Rivos; архитектура chiplet"
-    isa: "RVA23"
-    process: ""
-    perf: "3,1 ГГц; единая память HBM3e + DDR5 RDIMM; встроенный сетевой адаптер Ultra Ethernet; совместимость с CUDA (recompile not redesign)"
-    target: "Обучение и инференс ИИ в ЦОД"
-    first_announced: ""
-    status: eol
-    note: "Вошла в состав Meta и самостоятельно на рынок не выходила; Rivos — одна из немногих команд с собственным серверным ядром RVA23 и GPU, после покупки Meta стала CPU-основой её направления MTIA."
-    urls:
-      - label: "Официальная новость (dailysynapse.com)"
-        url: "https://dailysynapse.com/news/what-metas-purchase-of-rivos-says-about-risc-v"
-      - label: "Официальная новость (lw.com)"
-        url: "https://www.lw.com/en/news/2025/10/latham-watkins-advises-meta-in-acquisition-of-rivos"
-  - chip: "Серия Akeana 1000"
-    vendor: "Akeana (в 2026-10 приобретена Qualcomm)"
-    type: "Ядро CPU IP"
-    cores: "Последовательное исполнение с выпуском 1–4 инструкций, опционально 12-ступенчатое внеочередное; SMT до 4 потоков"
-    isa: "RV64 + RVV (≤512-bit); конфигурируется под RVA22/RVA23"
-    process: ""
-    perf: ">2 ГГц fmax; 5–18 SPECint2006/ГГц (заявлено производителем)"
-    target: "Потребительские устройства / ИИ-ПК / доменные контроллеры автомобилей"
-    first_announced: "2024-08"
-    status: announced
-    note: "IP доступно для лицензирования (компания приобретена Qualcomm); серия 1000 — 64-битные ядра Akeana для массовых приложений, SMT и векторизация позволяют ей при той же площади конкурировать с Neoverse N1."
-    urls:
-      - label: "Даташит PDF (akeana.com)"
-        url: "https://www.akeana.com/wp-content/uploads/2024/04/Akeana-Product-Brochure-2024.pdf"
-      - label: "Официальная новость (prnewswire.com)"
-        url: "https://www.prnewswire.com/news-releases/akeana-exits-stealth-mode-with-comprehensive-risc-v-processor-portfolio-challenging-the-semiconductor-industry-status-quo-302220144.html"
-  - chip: "Alpine (тестовый чип серии Akeana 5000)"
-    vendor: "Akeana (сейчас в составе Qualcomm)"
-    type: "SoC (кремниевый проверочный чип)"
-    cores: "8× внеочередных ядер серии 5000 (выпуск 6–10 инструкций, 12 ступеней), mesh 2×2 CHI, 4 МБ L3 на каждые 2 ядра"
-    isa: "RVA23 + RVV 1.0 (2×128-bit) + Vector Crypto"
-    process: "4nm"
-    perf: "По спецификации IP серии 5000 — 3 ГГц, 20–25 SPECint2006/ГГц; в Alpine есть 2× LPDDR5 и PCIe Gen5 x4"
-    target: "Серверы / SmartNIC / ускорение хранения и памяти"
-    first_announced: "2025-10"
-    status: sampling
-    note: "Изготовлен в кремнии (2025-12), образцы с 2026; Alpine — самый производительный серверный тестовый чип RVA23 2025 года, доказавший, что небольшая команда способна сделать SoC уровня Neoverse."
-    urls:
-      - label: "Источник (akeana.com)"
-        url: "https://www.akeana.com/"
-      - label: "Официальная новость (design-reuse.com)"
-        url: "https://www.design-reuse.com/news/202531315-qualcomm-buys-risc-v-startup-akeana-to-push-into-ai-and-data-center-chips"
-  - chip: "K3"
-    vendor: "SpacemiT"
-    type: "SoC"
-    cores: "8× X100 (внеочередное исполнение с выпуском 4 инструкций) + 8× ИИ-ядер A100; два ядра реального времени RT24"
-    isa: "RVA23 + RVV 1.0 + Vector Crypto"
-    process: "12nm"
-    perf: "2,4 ГГц; 130 KDMIPS; SPECint2006 >9,0/ГГц; 60 TOPS (INT4 с разреженностью), запускает модели до 30B"
-    target: "ИИ-ПК / периферийный ИИ / робототехника"
-    first_announced: "2026-01"
-    status: production
-    note: "Серийное производство (массовые поставки с 2026-04); первый серийный китайский ИИ-CPU с RVA23, который в одном гомогенном стеке укладывает универсальные и ИИ-вычисления в 30 Вт, — ключевой шаг RISC-V в экосистему массовых ОС."
-    urls:
-      - label: "Источник (raw.githubusercontent.com)"
-        url: "https://raw.githubusercontent.com/spacemit-com/docs-chip/main/en/key_stone/k3/k3_docs/k3_ds.md"
-      - label: "Даташит PDF (forum.spacemit.com)"
-        url: "https://forum.spacemit.com/uploads/short-url/60aJ8cYNmrFWqHn4ddwwSzMLjlY.pdf"
-  - chip: "X60 (ядро SoC K1)"
-    vendor: "SpacemiT"
-    type: "Ядро CPU IP / SoC"
-    cores: "Одноядерное IP; в K1 интегрировано 8× X60 (2 кластера)"
-    isa: "RV64GCVB + RVA22 + RVV 1.0 (VLEN 256/128, ширина исполнения x2)"
-    process: ""
-    perf: "K1: заявленные производителем 2 TOPS для ИИ (совмещение CPU и ИИ на пользовательских инструкциях)"
-    target: "Периферийный ИИ / ИИ-ПК / промышленность"
-    first_announced: ""
-    status: production
-    note: "Серийное производство; X60 — зрелое серийное китайское ядро с RVA22 и RVV 1.0, K1 применяется в ряде ноутбуков и отладочных плат и подготовил программный стек для K3."
-    urls:
-      - label: "Источник (raw.githubusercontent.com)"
-        url: "https://raw.githubusercontent.com/spacemit-com/docs-chip/main/en/key_stone/k1/k1_docs/k1_ds.md"
-  - chip: "LX500"
-    vendor: "Lanxin Computing"
-    type: "SoC"
-    cores: "48 гетерогенных ядер: 32× производительных + 16× энергоэффективных; ИИ-блок на кристалле 75 TOPS INT8; один кристалл кремния"
-    isa: "RVA23 + RVV 1.0 + CXL 2.0"
-    process: ""
-    perf: "75 TOPS INT8; серверный RAS (ECC, зеркалирование памяти, горячая замена, DVFS)"
-    target: "Серверы / центры ИИ-вычислений / облака операторов связи"
-    first_announced: "2026-02"
-    status: production
-    note: "Серийное производство (в 2026-07 с конвейера сошла система производства Lenovo LCFC); первый в мире серийный серверный CPU с совмещением RISC-V и ИИ: универсальные вычисления и инференс на 75 TOPS в одном кристалле, без отдельной карты ускорителя."
-    urls:
-      - label: "Источник (caijing.chinadaily.com.cn)"
-        url: "https://caijing.chinadaily.com.cn/a/202605/11/WS6a0173b9a310942cc49ab9c0.html"
-      - label: "Источник (news.qq.com)"
-        url: "https://news.qq.com/rain/a/20260723A0CCN700"
-  - chip: "ET-SoC-1"
-    vendor: "Esperanto Technologies (IP в 2025-11 продан Ainekko)"
-    type: "SoC (ускоритель ИИ/HPC)"
-    cores: "1088× ET-Minion (со специализированными векторными и тензорными блоками) + 4× ET-Maxion с внеочередным исполнением"
-    isa: "RV64GC + собственные векторные и тензорные расширения"
-    process: "7nm"
-    perf: ">160 МБ SRAM на кристалле; LPDDR4x; PCIe Gen4 x8; более 1000 ядер на карту, до 16000 ядер в системе"
-    target: "ИИ-инференс / HPC"
-    first_announced: ""
-    status: eol
-    note: "Прекратила самостоятельную деятельность (в 2025-11 IP продан и открыт); ET-SoC-1 доказал, что RISC-V способен на многоядерный ускоритель с тысячами ядер; коммерчески проект не удался, но открытый IP остаётся важным ориентиром многоядерного направления."
-    urls:
-      - label: "Страница продукта (esperanto.ai)"
-        url: "https://www.esperanto.ai/products"
-      - label: "Официальная новость (jonpeddie.com)"
-        url: "https://www.jonpeddie.com/news/ainekko-acquires-esperanto-ip"
-  - chip: "AndesCore AX65"
-    vendor: "Andes Technology"
-    type: "Ядро CPU IP"
-    cores: "Декодирование шириной 4, 13 ступеней внеочередного исполнения, ROB на 128 записей, 8 функциональных конвейеров; SMP до 8 ядер"
-    isa: "RV64GCB + RVA22 + скалярное шифрование/CMO"
-    process: ""
-    perf: "По заявлению производителя ориентировано на ресурсоёмкие приложения, поддерживает кэш L2 и управление когерентностью"
-    target: "Сетевые, дисковые и периферийные серверы"
-    first_announced: ""
-    status: production
-    note: "Серийное производство / лицензирование IP; AX65 — самое производительное ядро Andes, ориентированное на управляющий уровень сетевых и дисковых SoC, распространённое IP в периферийных серверных чипах."
-    urls:
-      - label: "Страница продукта (andestech.com)"
-        url: "https://www.andestech.com/en/products-solutions/andescore-processors/riscv-ax65/"
+- kind: soc
+  chip: LX500
+  vendor: Lanxin Computing
+  type: SoC
+  cores: '48 гетерогенных ядер: 32× производительных + 16× энергоэффективных; ИИ-блок на кристалле 75 TOPS INT8; один кристалл кремния'
+  isa: RVA23 + RVV 1.0 + CXL 2.0
+  process: ''
+  perf: 75 TOPS INT8; серверный RAS (ECC, зеркалирование памяти, горячая замена, DVFS)
+  target: Серверы / центры ИИ-вычислений / облака операторов связи
+  first_announced: 2026-02
+  status: production
+  note: 'Серийное производство (в 2026-07 с конвейера сошла система производства Lenovo LCFC); первый в мире серийный серверный CPU с совмещением RISC-V и ИИ: универсальные вычисления и инференс на 75 TOPS
+    в одном кристалле, без отдельной карты ускорителя.'
+  urls:
+  - label: Источник (caijing.chinadaily.com.cn)
+    url: https://caijing.chinadaily.com.cn/a/202605/11/WS6a0173b9a310942cc49ab9c0.html
+  - label: Источник (news.qq.com)
+    url: https://news.qq.com/rain/a/20260723A0CCN700
+  ip_used: Собственные 32 производительных и 16 энергоэффективных ядер Lanxin плюс AI-движок на кристалле
+  order: 1
+  feature: true
+- kind: soc
+  chip: V100 (серверный CPU Vital Stone)
+  vendor: SpacemiT (进迭时空)
+  vendor_en: SpacemiT
+  type: SoC (серверный CPU)
+  cores: '46 гетерогенных ядер: 6× XiangShan Kunhu V2R2 (до 2.1GHz) и 40× собственных X100 (до 2.4GHz)'
+  isa: RVA23 + RVV 1.0; двухсокетное когерентное соединение до 92 ядер
+  process: ''
+  perf: Одноядерный SPECint2006 ≥15.0/ГГц (Kunhu V2R2) и ≥9.0/ГГц (X100), данные производителя
+  target: Универсальные вычисления в ЦОД, инфраструктура агентов, локальные платформы ИИ-вычислений
+  first_announced: 2026-10
+  status: announced
+  ip_used: 6× XiangShan Kunhu V2R2 (открытая разработка ядра) и 40× собственных X100
+  note: 'Анонс: представлен 2026-10-19 на саммите RISC-V в Китае вместе с системами C2201, G5201 и S5236; виртуализация, кластеры хранения и вывод больших моделей показаны на реальном железе; сроки серийного
+    производства и цена не объявлены'
+  urls:
+  - label: Страница продукта (spacemit.com)
+    url: https://www.spacemit.com/products/keystone/v100
+  - label: Даташит PDF (cdn-resource.spacemit.com)
+    url: https://cdn-resource.spacemit.com/file/chip/V100/v100_brief_zh.pdf
+  - label: Пресс-релиз (spacemit.com)
+    url: https://www.spacemit.com/news/2c9c8082a1770faf01a1870587fc0001
+  order: 2
+  feature: true
+- kind: soc
+  chip: SG2044
+  vendor: SOPHGO
+  type: SoC
+  cores: 64× XuanTie C920 (второе поколение, улучшенная подсистема памяти)
+  isa: RV64GCV + RVV 1.0
+  process: ''
+  perf: 'Независимая оценка: 64 ядра до 4,91× быстрее SG2042; система SRB3-40 с LPDDR5X-8533, пропускной способностью 546 ГБ/с и PCIe 5.0'
+  target: Серверы / серверы хранения / центры ИИ-вычислений
+  first_announced: 2023-08
+  status: production
+  note: Серийное производство; второе поколение китайского 64-ядерного серверного SoC, закрывшее пробелы по RVV 1.0 и пропускной способности памяти; сегодня это наиболее доступная для покупки платформа
+    серверов RISC-V.
+  urls:
+  - label: Страница продукта (sophgo.com)
+    url: https://www.sophgo.com/sophon-u/product/introduce/srb3-40.html
+  - label: Статья (arXiv)
+    url: https://arxiv.org/abs/2508.13840
+  - label: Даташит PDF (riscv.epcc.ed.ac.uk)
+    url: http://riscv.epcc.ed.ac.uk/assets/files/hpcasia24/hpc_asia_wang.pdf
+  ip_used: XuanTie C920 второго поколения ×64 (лицензированное IP)
+  order: 3
+  feature: true
+- kind: soc
+  chip: SG2042
+  vendor: SOPHGO (ранее Sophon)
+  type: SoC
+  cores: 64× T-Head XuanTie C920, 4 ядра/кластер × 16 кластеров; по 64 КБ L1 на ядро, 1 МБ L2 на кластер, 64 МБ системного L3
+  isa: RV64GCV + RVV 0.7.1 (128-bit)
+  process: ''
+  perf: 'Базовая частота 2,0 ГГц; заявлено производителем 1 TFLOPS FP64, TDP 120 Вт; независимая оценка: одно ядро примерно в 5–10 раз быстрее доступного на тот момент RISC-V железа, многоядерная производительность
+    примерно в 4–8 раз ниже, чем у серверного x86 CPU'
+  target: Серверы / HPC / ИИ-инференс
+  first_announced: 2022-12
+  status: production
+  note: первый 64-ядерный серверный чип RISC-V; Серийное производство; первый в мире коммерчески серийный 64-ядерный RISC-V CPU, впервые выведший RISC-V в основную лигу универсальных серверов и HPC.
+  urls:
+  - label: Даташит PDF (riscv.epcc.ed.ac.uk)
+    url: http://riscv.epcc.ed.ac.uk/assets/files/hpcasia24/hpc_asia_wang.pdf
+  - label: Даташит PDF (ftp.radix-linux.su)
+    url: https://ftp.radix-linux.su/3pp/Sophgo/doc/Milk-V/SG2042_Draft_Spec_V1.0.pdf
+  - label: Страница продукта (sophgo.com)
+    url: https://www.sophgo.com/sophon-u/product/introduce/sg2042.html
+  - label: Статья (arXiv)
+    url: https://arxiv.org/abs/2309.00381
+  ip_used: XuanTie C920 ×64 (лицензированное IP)
+  order: 4
+  feature: false
+- kind: ip
+  chip: RXU 3.5
+  vendor: SOPHGO
+  type: Ядро CPU IP
+  cores: Одноядерное IP с внеочередным исполнением шириной 8 (возможно многоядерное исполнение)
+  isa: RV64GCVH + RVV 1.0 + RVA23 (IOMMU/AIA)
+  process: ''
+  perf: SPECint2006 >20/ГГц (заявлено производителем, сравнение с Cortex-X1)
+  target: Серверы / лицензирование IP для высокопроизводительных вычислений
+  first_announced: 2025-06
+  status: announced
+  note: Анонсирован 2025-06-30 с лицензированием для участников; собственное высокопроизводительное ядро SOPHGO, открытое для лицензирования, добавило ещё один канал поставки IP для китайских серверных
+    ядер.
+  urls:
+  - label: Даташит PDF (riscv.epcc.ed.ac.uk)
+    url: http://riscv.epcc.ed.ac.uk/assets/files/hpcasia24/hpc_asia_wang.pdf
+  order: 5
+  feature: false
+- kind: ip
+  chip: XuanTie C930
+  vendor: Alibaba DAMO Academy / T-Head
+  type: Ядро CPU IP / серверный CPU
+  cores: Число ядер и частота официально не раскрыты (спроектировано как серверный многоядерный кластер)
+  isa: RVA23 + RVV 1.0 (512-bit) + 8 TOPS Matrix; Vector Crypto, Zacas, Zama16b, Smmtt, CoVE, RAS, AIA
+  process: ''
+  perf: SPECint2006 >17/ГГц (сайт XuanTie); матричный движок 8 TOPS; предсказание переходов TAGE, частный L2, настраиваемая предвыборка
+  target: Серверы / AI-HPC
+  first_announced: 2025-02
+  status: production
+  note: Серийные поставки с 2025-03; первый серверный CPU DAMO Academy, нативно объединяющий векторный и матричный движки, — знаковый продукт выхода китайского RISC-V в основную серверную лигу.
+  urls:
+  - label: Страница продукта (xrvm.cn)
+    url: https://www.xrvm.cn/product/xuantie/C930
+  - label: Источник (news.cn)
+    url: http://www.news.cn/tech/20250228/f4fd7f4a23744e4f9763ed156429cd6c/c.html
+  - label: Источник (tomshardware.com)
+    url: https://www.tomshardware.com/pc-components/cpus/alibaba-launches-risc-v-based-xuantie-c930-server-cpu-ai-hpc-chip-ships-this-month-more-designs-to-follow
+  order: 6
+  feature: false
+- kind: ip
+  chip: XuanTie C920
+  vendor: Alibaba DAMO Academy / T-Head
+  type: Ядро CPU IP
+  cores: 'Одноядерное IP: 12-ступенчатое суперскалярное внеочередное исполнение, до 2,5 ГГц, опциональный внеочередной векторный блок (VLEN 128/256); поддержка нескольких ядер и кластеров, в SG2042 интегрировано
+    64 ядра'
+  isa: RV64GCV + RVA22 + RVV 1.0; AMBA 4.0 ACE/AXI, поддержка BF16/FP16/FP32
+  process: ''
+  perf: До 2,5 ГГц (в SG2042 — 2,0 ГГц); производительность на задачах ИИ до 3,8× выше предыдущего поколения (заявлено производителем)
+  target: Серверы / периферийный ИИ / автономное вождение
+  first_announced: 2023-11
+  status: production
+  note: Серийное производство; C920 — вычислительная основа SG2042 и ключевое IP, на котором реально построены китайские 64-ядерные серверные чипы.
+  urls:
+  - label: Страница продукта (xrvm.cn)
+    url: https://www.xrvm.cn/product/xuantie/C920
+  - label: Статья (arXiv)
+    url: https://arxiv.org/html/2406.12394v1
+  order: 7
+  feature: false
+- kind: ip
+  chip: Performance P670
+  vendor: SiFive
+  type: Ядро CPU IP
+  cores: Выпуск 4 инструкций, 13 ступеней, внеочередное исполнение; до 16 ядер в кластере, возможно несколько кластеров
+  isa: RVA22 + RVV 1.0 (2×128-bit) + Vector Crypto
+  process: ''
+  perf: '>13 SPECint2006/ГГц; на >50% выше P550, лучше по энергоэффективности и площади, чем Cortex-A78 (заявлено производителем)'
+  target: Периферийные серверы / потребительские прикладные процессоры
+  first_announced: 2023-05
+  status: production
+  note: Серийное производство / лицензирование IP; P670 — основной продукт SiFive для выхода в класс 16-ядерных прикладных процессоров, применяется в китайских SoC, например SOPHGO SG2380.
+  urls:
+  - label: Источник (sifive.com)
+    url: https://www.sifive.com/cores/performance-p600
+  - label: Источник (notebookcheck.net)
+    url: https://www.notebookcheck.net/SiFive-launches-Performance-P670-and-P470-RISC-V-energy-efficient-processors.665833.0.html
+  order: 8
+  feature: false
+- kind: ip
+  chip: Performance P870
+  vendor: SiFive
+  type: Ядро CPU IP
+  cores: Внеочередное исполнение с выпуском 6 инструкций; до 32 ядер в кластере
+  isa: RVA23 + RVV 1.0 (2×128-bit) + Vector Crypto
+  process: ''
+  perf: '>18 SPECint2006/ГГц; одноядерная производительность +50% к предыдущему поколению (заявлено производителем)'
+  target: Высокопроизводительные прикладные процессоры / ЦОД
+  first_announced: 2023-08
+  status: production
+  note: Серийное производство / лицензирование IP; P870 выводит одноядерную производительность RISC-V на уровень 18/ГГц и служит ориентиром для старшего IP стандарта RVA23.
+  urls:
+  - label: Источник (sifive.com)
+    url: https://www.sifive.com/cores/performance-p800
+  - label: Даташит PDF (hc2023.hotchips.org)
+    url: https://hc2023.hotchips.org/assets/program/conference/day1/CPU2/P870%20for%20Hot%20Chips%20-%20FInal.pdf
+  order: 9
+  feature: false
+- kind: ip
+  chip: Performance P870-D
+  vendor: SiFive
+  type: Ядро CPU IP (для ЦОД)
+  cores: Внеочередное исполнение с выпуском 6 инструкций; межсоединение AMBA CHI, до 64 кластеров / 256 ядер (на кристалле или в chiplet)
+  isa: RVA23 + RVV 1.0
+  process: ''
+  perf: '>2 SPECint2017/ГГц; поддержка CXL, CHI C2C, кластерного DVFS и RAS'
+  target: ЦОД (хранение, веб, видеопотоки)
+  first_announced: 2024-08
+  status: production
+  note: Серийное производство / лицензирование IP; первое RISC-V IP, явно спроектированное под требования ЦОД по CHI/RAS/CXL, масштабируется до 256 ядер и до chiplet.
+  urls:
+  - label: Официальная новость (sifive.com)
+    url: https://www.sifive.com/press/sifive-announces-high-performance-risc-v-datacenter-processor-for-ai-workloads
+  - label: Источник (sifive.com)
+    url: https://www.sifive.com/cores/performance-p800
+  order: 10
+  feature: false
+- kind: soc
+  chip: Veyron V1
+  vendor: Ventana Micro Systems (в 2025-12 приобретена Qualcomm)
+  type: Многокристальная сборка / chiplet CPU
+  cores: Внеочередное исполнение шириной 8, 16 ядер/кластер, до 8 chiplet = 128 ядер; 48 МБ L3 на кластер
+  isa: RV64GC + векторное расширение (в V1 класс RVA не указан)
+  process: 5nm
+  perf: 3,6 ГГц; по заявлению производителя сопоставим с серверным x86, есть RAS/IOMMU/AIA
+  target: ЦОД / 5G / автомобили
+  first_announced: 2022-12
+  status: announced
+  note: Поставка IP и chiplet (компания приобретена Qualcomm); V1 — первый продукт, превративший RISC-V в chiplet дата-центрового класса и задавший масштабируемый путь до 128 ядер.
+  urls:
+  - label: Источник (notebookcheck.net)
+    url: https://www.notebookcheck.net/RISC-V-gears-up-for-data-centers-Ventana-presents-Veyron-V1-scalable-chiplets-with-up-to-128-cores.674440.0.html
+  - label: Официальная новость (prnewswire.com)
+    url: https://www.prnewswire.com/news-releases/ventana-introduces-veyron-worlds-first-data-center-class-risc-v-cpu-product-family-301700985.html
+  ip_used: Собственные 8-wide ядра Ventana ×16 на chiplet
+  caution: Ventana приобретена Qualcomm в 2025-12; линейка может измениться, изделие может быть недоступно
+  order: 11
+  feature: false
+- kind: soc
+  chip: Veyron V2
+  vendor: Ventana Micro Systems (сейчас в составе Qualcomm)
+  type: Многокристальная сборка / chiplet CPU
+  cores: Внеочередное исполнение с декодированием и выдачей шириной 15; 32 ядра/chiplet, до 6 chiplet = 192 ядра; соединение UCIe, NoC 5 ТБ/с
+  isa: RVA23 + RVV 1.0 (512-bit) + Vector Crypto
+  process: 4nm (TSMC)
+  perf: 3,6 ГГц; IPC +20% к V1, в целом +40%; 192 ядра в SPECint2017rate примерно на 23% выше, чем у 128-ядерного Bergamo (360 Вт, моделирование производителя)
+  target: ЦОД / CPU для ИИ-хостов
+  first_announced: 2023-11
+  status: announced
+  note: IP/chiplet (компания приобретена Qualcomm); V2 — самая ранняя реализация дата-центрового класса с RVA23 и 512-битной векторизацией, позже вошла в состав Qualcomm для закрытия пробела в линейке CPU.
+  urls:
+  - label: Источник (riscv.org)
+    url: https://riscv.org/blog/ventana-introduces-veyron-v2-worlds-highest-performance-data-center-class-risc-v-processor-and-platform
+  - label: Источник (nextplatform.com)
+    url: https://www.nextplatform.com/compute/2023/11/07/ventana-launches-veyron-v2-risc-v-into-the-datacenter/1652320
+  - label: Источник (techpowerup.com)
+    url: https://www.techpowerup.com/343914/qualcomm-acquires-ventana-micro-systems-deepening-risc-v-cpu-expertise
+  ip_used: Собственные ядра Ventana ×32 на chiplet (UCIe)
+  caution: Ventana теперь входит в Qualcomm; линейка может измениться, изделие может быть недоступно
+  order: 12
+  feature: false
+- kind: ip
+  chip: TT-Ascalon
+  vendor: Tenstorrent
+  type: Ядро CPU IP
+  cores: Одноядерное IP (масштабируется в многоядерные кластеры)
+  isa: RVA23 + RVV 1.0 + Hypervisor/AIA/IOMMU + RAS
+  process: Samsung SF4X
+  perf: '>22 SPECint2006/ГГц; >2,3 SPECint2017/ГГц; >3,6 SPECfp2017/ГГц; >2,5 ГГц'
+  target: Серверы / инфраструктура ИИ / автомобильный HPC
+  first_announced: ''
+  status: production
+  note: Серийное производство / доступно для лицензирования (с 2025-12); Ascalon вывел одноядерный SPECint RISC-V на уровень 22/ГГц — одно из самых производительных серверных ядер среди открытого IP.
+  urls:
+  - label: Официальная новость (tenstorrent.com)
+    url: https://tenstorrent.com/en/newsroom/tenstorrent-announces-availability-of-tt-ascalon
+  - label: Источник (tenstorrent.com)
+    url: https://tenstorrent.com/en/ip/risc-v-cpu
+  order: 13
+  feature: false
+- kind: soc
+  chip: Atlantis (Ascalon-X SoC)
+  vendor: Tenstorrent
+  type: SoC (кремниевая платформа разработки)
+  cores: 8× Ascalon-X (один кластер)
+  isa: RVA23 + RVV 1.0
+  process: ''
+  perf: Кластер из 8 ядер Ascalon-X (официальная машина QEMU), RVA23; конкретная частота в первичных источниках не указана
+  target: Серверная программная экосистема / ИИ-хосты
+  first_announced: ''
+  status: sampling
+  note: Платформа разработки (смоделирована в upstream QEMU, запускает OpenSBI/Linux); Atlantis — платформа кремниевой проверки RVA23 от Tenstorrent, благодаря которой Ascalon прошёл путь от IP до системы,
+    способной загрузить Linux.
+  urls:
+  - label: Источник (qemu.org)
+    url: https://www.qemu.org/docs/master/system/riscv/tt_atlantis.html
+  - label: Источник (tenstorrent.com)
+    url: https://tenstorrent.com/en/ip/risc-v-cpu
+  ip_used: Собственные IP-ядра Ascalon-X ×8
+  order: 14
+  feature: false
+- kind: ip
+  chip: TT-Ascalon S
+  vendor: Tenstorrent
+  type: Ядро CPU IP
+  cores: Одноядерное IP (компактное, для инфраструктуры и периферии)
+  isa: RVA23
+  process: ''
+  perf: 70% производительности Ascalon X при 50% площади (заявлено производителем)
+  target: Инфраструктура ИИ / периферия / автомобили
+  first_announced: 2026-10
+  status: announced
+  note: Анонсирован 2026-10; Ascalon S вдвое уменьшает площадь серверного ядра и нацелен на чувствительные к стоимости сценарии вроде DPU и периферии.
+  urls:
+  - label: Источник (docs.tenstorrent.com)
+    url: https://docs.tenstorrent.com/tt-awesome/planet
+  order: 15
+  feature: false
+- kind: soc
+  chip: Серверный SoC Rivos (собственное ядро)
+  vendor: Rivos (в 2025-10 приобретена Meta)
+  type: SoC (chiplet, CPU + SIMT GPGPU)
+  cores: Собственный 64-битный CPU RVA23 @3,1 ГГц + SIMT GPGPU Rivos; архитектура chiplet
+  isa: RVA23
+  process: ''
+  perf: 3,1 ГГц; единая память HBM3e + DDR5 RDIMM; встроенный сетевой адаптер Ultra Ethernet; совместимость с CUDA (recompile not redesign)
+  target: Обучение и инференс ИИ в ЦОД
+  first_announced: ''
+  status: eol
+  note: Вошла в состав Meta и самостоятельно на рынок не выходила; Rivos — одна из немногих команд с собственным серверным ядром RVA23 и GPU, после покупки Meta стала CPU-основой её направления MTIA.
+  urls:
+  - label: Официальная новость (dailysynapse.com)
+    url: https://dailysynapse.com/news/what-metas-purchase-of-rivos-says-about-risc-v
+  - label: Официальная новость (lw.com)
+    url: https://www.lw.com/en/news/2025/10/latham-watkins-advises-meta-in-acquisition-of-rivos
+  ip_used: Собственные 64-битные ядра Rivos RVA23
+  caution: В 2025-10 приобретена Meta и не продавалась как отдельный продукт; купить нельзя
+  order: 16
+  feature: false
+- kind: ip
+  chip: Серия Akeana 1000
+  vendor: Akeana (в 2026-10 приобретена Qualcomm)
+  type: Ядро CPU IP
+  cores: Последовательное исполнение с выпуском 1–4 инструкций, опционально 12-ступенчатое внеочередное; SMT до 4 потоков
+  isa: RV64 + RVV (≤512-bit); конфигурируется под RVA22/RVA23
+  process: ''
+  perf: '>2 ГГц fmax; 5–18 SPECint2006/ГГц (заявлено производителем)'
+  target: Потребительские устройства / ИИ-ПК / доменные контроллеры автомобилей
+  first_announced: 2024-08
+  status: announced
+  note: IP доступно для лицензирования (компания приобретена Qualcomm); серия 1000 — 64-битные ядра Akeana для массовых приложений, SMT и векторизация позволяют ей при той же площади конкурировать с Neoverse
+    N1.
+  urls:
+  - label: Даташит PDF (akeana.com)
+    url: https://www.akeana.com/wp-content/uploads/2024/04/Akeana-Product-Brochure-2024.pdf
+  - label: Официальная новость (prnewswire.com)
+    url: https://www.prnewswire.com/news-releases/akeana-exits-stealth-mode-with-comprehensive-risc-v-processor-portfolio-challenging-the-semiconductor-industry-status-quo-302220144.html
+  caution: Akeana приобретена Qualcomm в 2026-10; планы могут измениться, лицензию получить может не удаться
+  order: 17
+  feature: false
+- kind: soc
+  chip: Alpine (тестовый чип серии Akeana 5000)
+  vendor: Akeana (сейчас в составе Qualcomm)
+  type: SoC (кремниевый проверочный чип)
+  cores: 8× внеочередных ядер серии 5000 (выпуск 6–10 инструкций, 12 ступеней), mesh 2×2 CHI, 4 МБ L3 на каждые 2 ядра
+  isa: RVA23 + RVV 1.0 (2×128-bit) + Vector Crypto
+  process: 4nm
+  perf: По спецификации IP серии 5000 — 3 ГГц, 20–25 SPECint2006/ГГц; в Alpine есть 2× LPDDR5 и PCIe Gen5 x4
+  target: Серверы / SmartNIC / ускорение хранения и памяти
+  first_announced: 2025-10
+  status: sampling
+  note: Изготовлен в кремнии (2025-12), образцы с 2026; Alpine — самый производительный серверный тестовый чип RVA23 2025 года, доказавший, что небольшая команда способна сделать SoC уровня Neoverse.
+  urls:
+  - label: Источник (akeana.com)
+    url: https://www.akeana.com/
+  - label: Официальная новость (design-reuse.com)
+    url: https://www.design-reuse.com/news/202531315-qualcomm-buys-risc-v-startup-akeana-to-push-into-ai-and-data-center-chips
+  ip_used: IP-ядра Akeana серии 5000 ×8
+  caution: Akeana теперь входит в Qualcomm, а это тестовый кристалл для проверки кремния, а не товар
+  order: 18
+  feature: false

@@ -48,6 +48,8 @@ perf = "性能"
 target = "面向场景"
 what_works = "已经能跑什么"
 limits = "已知限制"
+caution = "注意"
+ip_used = "集成核心"
 all = "全部"
 highlight = "重点"
 home = "回首页"
@@ -62,6 +64,12 @@ lang = "切换语言"
 [footer]
 license = "文字以 CC BY-SA 4.0 发布"
 source = "源码"
+
+[chips]
+soc_title = "芯片（SoC / chiplet，已流片）"
+soc_note = "这些是可以买到、或已经在交付的硅片。每个条目注明了里面的核心是自己设计的还是外购 IP。"
+ip_title = "IP 核（可授权）"
+ip_note = "这些是卖给芯片公司的 CPU IP，不是成品芯片；上面那些 SoC 里往往就集成了这里的核。"
 
 [badge]
 verified = "甲辰计划主理人验证过"

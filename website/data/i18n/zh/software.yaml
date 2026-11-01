@@ -1,4 +1,4 @@
-# RISC-V 服务器解决方案与软件栈（中文母版）
+# RISC-V 服务器软件栈（中文母版）
 items:
 - name: Debian 13 trixie riscv64 官方支持架构 / Debian riscv64
   category: 发行版

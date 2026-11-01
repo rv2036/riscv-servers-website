@@ -35,7 +35,7 @@ timeZone = "Asia/Shanghai"
     title = "RISC-V Servers"
     [languages.en.params]
       tagline = "RISC-V servers worldwide"
-      description = "A portal tracking RISC-V servers, server-class chips, solutions and news around the world."
+      description = "A portal tracking RISC-V servers, server-class chips, software and news around the world."
   [languages.ja]
     languageName = "日本語"
     languageCode = "ja"

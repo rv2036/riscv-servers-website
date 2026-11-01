@@ -5,7 +5,7 @@ tagline = "世界の RISC-V サーバーの進展"
 [nav]
 servers = "サーバー"
 chips = "チップ"
-solutions = "ソリューション"
+software = "ソフトウェア"
 news = "ニュース"
 blog = "ブログ"
 
@@ -17,7 +17,7 @@ cta_chips = "チップを見る"
 cta_news = "最新ニュースを見る"
 latest = "最新の動き"
 chips_blurb = "サーバー向け RISC-V のチップと CPU IP：コア数、ISA、プロセス、ベンダー公称性能。"
-solutions_blurb = "ディストリビューションから仮想化、HPC、クラウドまで：RISC-V サーバーで実際に何が動くか。"
+software_blurb = "ディストリビューションから仮想化、HPC、クラウドまで：RISC-V サーバーで実際に何が動くか。"
 blog_blurb = "当サイトの長文：観察、つまずき、そして現状の整理。"
 
 [status]
@@ -70,6 +70,14 @@ soc_title = "チップ（SoC / chiplet、シリコン実装）"
 soc_note = "購入できる、またはすでに出荷されているシリコンです。内蔵コアが自社設計かライセンス IP かを各項目に記載しています。"
 ip_title = "IP コア（ライセンス可能）"
 ip_note = "チップ企業に販売される CPU IP で、完成品のチップではありません。上記 SoC の多くがここにあるコアを統合しています。"
+
+[category]
+server = "サーバー（システム・ボード）"
+rack = "ラック（ラックスケール POD）"
+
+[category_note]
+server = "サーバー製品、ボード、ワークステーション。公開情報に基づき、同一型番は 1 件のみ。"
+rack = "ラックスケール製品：キャビネット単位で納入され、POD やクラスタとして構成されます。複数のサーバーノードと AI アクセラレータを載せるのが一般的です。"
 
 [badge]
 hw_tested = "甲辰プロジェクトが実機で実測"

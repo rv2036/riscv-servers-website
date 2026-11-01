@@ -48,6 +48,7 @@ perf = "性能"
 target = "想定用途"
 what_works = "すでに動作するもの"
 limits = "既知の制限"
+ip_used = "内蔵コア"
 all = "すべて"
 highlight = "注目"
 home = "ホーム"
@@ -62,6 +63,12 @@ lang = "言語を変更"
 [footer]
 license = "本文は CC BY-SA 4.0 で公開"
 source = "ソース"
+
+[chips]
+soc_title = "チップ（SoC / chiplet、シリコン実装）"
+soc_note = "購入できる、またはすでに出荷されているシリコンです。内蔵コアが自社設計かライセンス IP かを各項目に記載しています。"
+ip_title = "IP コア（ライセンス可能）"
+ip_note = "チップ企業に販売される CPU IP で、完成品のチップではありません。上記 SoC の多くがここにあるコアを統合しています。"
 
 [badge]
 verified = "甲辰プロジェクト主宰者が検証済み"

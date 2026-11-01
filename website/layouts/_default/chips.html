@@ -1,5 +1,7 @@
 {{ define "main" }}
 {{ $d := partial "site-data.html" . }}
+{{ $socs := where $d.chips.items "kind" "soc" }}
+{{ $ips := where $d.chips.items "kind" "ip" }}
 <header class="page-head">
   <div class="wrap">
     <h1>{{ .Title }}</h1>
@@ -7,8 +9,43 @@
   </div>
 </header>
 <div class="wrap">
+
+  <h2 class="group-head">{{ i18n "chips.soc_title" }}<span class="count">{{ len $socs }}</span></h2>
+  <p class="group-note">{{ i18n "chips.soc_note" }}</p>
   <div class="grid cols-2">
-    {{ range $d.chips.items }}
+    {{ range $socs }}
+    <article class="card">
+      <div class="card-top">
+        <h3>{{ .chip }}</h3>
+        {{ with .type }}<span class="badge soft">{{ . }}</span>{{ end }}
+        {{ with .status }}<span class="badge soft">{{ i18n (printf "status.%s" .) }}</span>{{ end }}
+      </div>
+      <p>{{ .vendor }}</p>
+      {{ with .ip_used }}<p class="ip-used"><b>{{ i18n "label.ip_used" }}</b> · {{ . }}</p>{{ end }}
+      <dl class="specs">
+        {{ with .cores }}<dt>{{ i18n "label.cores" }}</dt><dd>{{ . }}</dd>{{ end }}
+        {{ with .isa }}<dt>{{ i18n "label.isa" }}</dt><dd>{{ . }}</dd>{{ end }}
+        {{ with .process }}<dt>{{ i18n "label.process" }}</dt><dd>{{ . }}</dd>{{ end }}
+        {{ with .perf }}<dt>{{ i18n "label.perf" }}</dt><dd>{{ . }}</dd>{{ end }}
+        {{ with .target }}<dt>{{ i18n "label.target" }}</dt><dd>{{ . }}</dd>{{ end }}
+        {{ with .first_announced }}<dt>{{ i18n "label.first_announced" }}</dt><dd>{{ . }}</dd>{{ end }}
+      </dl>
+      {{ with .note }}<p>{{ . }}</p>{{ end }}
+      {{ with .urls }}
+      <div class="links">
+        {{ range . }}{{ $u := .url }}
+        <a href="{{ $u }}" rel="noopener">{{ .label }}{{ with (urls.Parse $u).Query.Get "id" }} · id={{ . }}{{ end }}</a>
+        {{ end }}
+      </div>
+      {{ end }}
+    </article>
+    {{ end }}
+  </div>
+
+  <h2 class="group-head">{{ i18n "chips.ip_title" }}<span class="count">{{ len $ips }}</span></h2>
+  <p class="group-note">{{ i18n "chips.ip_note" }}</p>
+  <div class="grid cols-2">
+    {{ range $ips }}
     <article class="card">
       <div class="card-top">
         <h3>{{ .chip }}</h3>

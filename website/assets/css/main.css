@@ -281,6 +281,41 @@ section.block { padding: 2.2rem 0 0; }
 
 .card.feature { border-color: var(--accent); }
 
+.group-head {
+  display: flex;
+  align-items: baseline;
+  gap: .6rem;
+  margin: 2.2rem 0 .35rem;
+  font-size: 1.15rem;
+}
+
+.group-head .count {
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: .05rem .5rem;
+}
+
+.group-note {
+  margin: 0 0 1rem;
+  max-width: 52rem;
+  color: var(--fg-dim);
+  font-size: .93rem;
+}
+
+.ip-used {
+  margin-top: .45rem !important;
+  padding: .4rem .55rem;
+  background: var(--bg-soft);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 6px 6px 0;
+  font-size: .9rem !important;
+}
+.ip-used b { color: var(--fg-mute); font-weight: 600; }
+
 .card-top {
   display: flex;
   align-items: center;

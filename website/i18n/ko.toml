@@ -48,6 +48,7 @@ perf = "성능"
 target = "대상 용도"
 what_works = "이미 동작하는 것"
 limits = "알려진 제한"
+ip_used = "내장 코어"
 all = "전체"
 highlight = "주요"
 home = "홈으로"
@@ -62,6 +63,12 @@ lang = "언어 변경"
 [footer]
 license = "본문은 CC BY-SA 4.0으로 공개"
 source = "소스"
+
+[chips]
+soc_title = "칩(SoC / chiplet, 실리콘 출시)"
+soc_note = "구매할 수 있거나 이미 출하 중인 실리콘입니다. 내장 코어가 자체 설계인지 라이선스 IP인지 각 항목에 적었습니다."
+ip_title = "IP 코어(라이선스 가능)"
+ip_note = "칩 회사에 판매되는 CPU IP이며 완제품 칩이 아닙니다. 위 SoC 상당수가 이 목록의 코어를 통합합니다."
 
 [badge]
 verified = "지아천 프로젝트 대표 검증 완료"

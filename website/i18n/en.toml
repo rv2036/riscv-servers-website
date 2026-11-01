@@ -48,6 +48,7 @@ perf = "Performance"
 target = "Target use"
 what_works = "What already works"
 limits = "Known limits"
+ip_used = "Cores inside"
 all = "All"
 highlight = "Key"
 home = "Home"
@@ -62,6 +63,12 @@ lang = "Change language"
 [footer]
 license = "Text released under CC BY-SA 4.0"
 source = "Source"
+
+[chips]
+soc_title = "Chips (SoC / chiplet, shipped silicon)"
+soc_note = "Silicon you can buy or that already ships. Each entry says whether the cores inside are in-house or licensed IP."
+ip_title = "IP cores (licensable)"
+ip_note = "CPU IP sold to chip companies rather than a finished chip; many of the SoCs above integrate cores from this list."
 
 [badge]
 verified = "Verified by the Project Jiachen lead"

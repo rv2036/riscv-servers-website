@@ -8,8 +8,8 @@
 </header>
 <div class="wrap">
   <div class="grid cols-2">
-    {{ range $d.solutions.items }}
-    <article class="card">
+    {{ range (sort $d.solutions.items "order") }}
+    <article class="card{{ if .feature }} feature{{ end }}">
       <div class="card-top">
         <h3>{{ .name }}</h3>
         {{ with .category }}<span class="badge soft">{{ . }}</span>{{ end }}

@@ -1,370 +1,484 @@
 # RISC-V server solutions and software stacks (English edition)
 items:
-  - name: "openEuler 24.03 LTS RISC-V native server distribution / openEuler 24.03 LTS RISC-V"
-    category: "Distribution"
-    stack: "openEuler 24.03 LTS SP2 riscv64 (SG2042 / HiFive P550 / SpacemiT K3, etc.)"
-    maturity: limited
-    what_works: "The project states that 24.03 LTS unifies the kernel across x86/Arm/RISC-V, with RISC-V release scope aligned to x86/Arm; the first community distribution with UEFI standard support; integrates sysCare live patching and Shanghai Jiao Tong University's Penglai TEE; the OERV team validated StratoVirt on QEMU; the repository actually carries riscv64 RPMs for docker-engine, qemu 8.2, libvirt, mariadb 10.5, mysql 8.0.42, opengauss 6.0.0 and more."
-    limits: "Hardware enablement depends on vendor kernels/BSPs and the RISC-V Kernel Unification effort; vector and hardware-virtualization support for SG2380 and JH8110 was still listed as “coming soon” at release; the community edition carries no commercial LTS commitment, so enterprise support requires a commercial distribution."
-    note: "The most complete RISC-V server line among domestic distributions: broad package coverage and an LTS baseline, at the cost of hardware enablement that follows vendor BSPs."
-    evidence:
-      - label: "Official news (openeuler.org)"
-        url: "https://www.openeuler.org/en/news/20240628-openEuler%2024.03%20LTS-%20Pioneering%20Native%20RISC-V%20Support"
-      - label: "Source (docs.openeuler.org)"
-        url: "https://docs.openeuler.org/en/docs/24.03_LTS/docs/Installation/RISCV-OLK6.6.html"
-      - label: "Source (repo.openeuler.org)"
-        url: "https://repo.openeuler.org/openEuler-24.03-LTS-SP2/OS/riscv64/Packages/"
-  - name: "Ubuntu 26.04 LTS / 24.04.5 LTS for RISC-V (official Canonical builds)"
-    category: "Distribution"
-    stack: "Ubuntu Server riscv64 on SiFive BigSky, SpacemiT K3 (CoM260/Pico-ITX), HiFive Unmatched, VisionFive 2, Milk-V Mars, etc."
-    maturity: limited
-    what_works: "Images are built and hosted by Canonical, with both a Server live installer and preinstalled images; from 26.04 LTS the requirement is RVA23S64, with SiFive BigSky and SpacemiT K3 platforms supported; 24.04.5 LTS continues to cover RVA20 boards (HiFive Unmatched, VisionFive 2, Milk-V Mars, etc.)."
-    limits: "From 26.04 onward, RVA20 hardware is stranded on 24.04.5 LTS, creating a version fork; Canonical notes that most board images are headless only (no GPU, no WiFi); server-oriented RVA23 hardware is currently limited to a few platforms such as BigSky and K3."
-    note: "For running RISC-V servers, Ubuntu is one of the few options that can come with a commercial support contract, but confirm first whether the board is RVA23 — otherwise you are stuck on 24.04."
-    evidence:
-      - label: "Source (ubuntu.com)"
-        url: "https://ubuntu.com/download/risc-v"
-  - name: "Debian 13 trixie riscv64 officially supported architecture / Debian riscv64"
-    category: "Distribution"
-    stack: "Debian 13 trixie riscv64 (generic, including QEMU and various boards)"
-    maturity: production
-    what_works: "Debian 13 lists riscv64 as an officially supported architecture for the first time (one of seven official architectures), with a complete archive, installer and multi-arch container images; podman 5.4.2, postgresql-17, mariadb-server, nginx and ceph-mon/osd/radosgw all have official trixie/riscv64 packages."
-    limits: "No commercial LTS support (only the community security team); some software is not in the official archive — for example there is no kubernetes-client package for trixie/riscv64; a few packages are missing or delayed on riscv64 (not verified package by package)."
-    note: "Debian has the broadest software coverage of any community distribution on riscv64 and suits self-hosted services; what it lacks is commercial backing and the cloud-native stack, Kubernetes included."
-    evidence:
-      - label: "Official news (debian.org)"
-        url: "https://www.debian.org/News/2025/20250809"
-      - label: "Source (packages.debian.org)"
-        url: "https://packages.debian.org/trixie/riscv64/podman"
-      - label: "Source (packages.debian.org)"
-        url: "https://packages.debian.org/trixie/riscv64/postgresql-17"
-      - label: "Source (packages.debian.org)"
-        url: "https://packages.debian.org/trixie/riscv64/nginx"
-  - name: "Fedora RISC-V (Alternative Architecture) / Fedora riscv64"
-    category: "Distribution"
-    stack: "Fedora 44 riscv64 (HiFive Premier P550, VisionFive 2, QEMU, etc.)"
-    maturity: limited
-    what_works: "Fedora has published riscv64 images continuously since Fedora 44 (the 2026-07 update added board support), with its own riscv-koji build system and a RISC-V SIG; usable as a fairly aggressive development/validation platform."
-    limits: "Fedora officially classifies RISC-V as an Alternative Architecture (not a primary architecture), of the kind that runs its own koji and where build failures do not block the main repository; images and hardware enablement are community-maintained and the release cadence does not fully track the primary architectures."
-    note: "Fedora is the test bed for new RISC-V hardware and features and suits early adopters; it does not suit scenarios that need a stable server lifecycle."
-    evidence:
-      - label: "Source (fedoraproject.org)"
-        url: "https://fedoraproject.org/wiki/Architectures/RISC-V"
-      - label: "Source (fedoraproject.org)"
-        url: "https://fedoraproject.org/wiki/Architectures"
-      - label: "Source (riscv-koji.fedoraproject.org)"
-        url: "https://riscv-koji.fedoraproject.org/koji/"
-  - name: "openSUSE Tumbleweed riscv64 port / openSUSE Tumbleweed RISC-V port"
-    category: "Distribution"
-    stack: "openSUSE Tumbleweed riscv64 (ports/riscv images, some boards + QEMU)"
-    maturity: experimental
-    what_works: "openSUSE provides Tumbleweed images and OBS builds for riscv64 (appliances/iso images under ports/riscv), runnable on supported boards and on QEMU."
-    limits: "The official wiki states plainly that “RISC-V support is still under development, you may run into bugs or unstable circumstances”; some hardware is still not enabled, Factory has packages that fail to build, and the project is soliciting hardware donations and maintainers."
-    note: "openSUSE's RISC-V is in a “works, but do not run it in production” state — the project itself is still looking for people and hardware to fill the gaps."
-    evidence:
-      - label: "Source (en.opensuse.org)"
-        url: "https://en.opensuse.org/api.php?action=parse&page=openSUSE:RISC-V&prop=wikitext&format=json"
-      - label: "Source (download.opensuse.org)"
-        url: "https://download.opensuse.org/ports/riscv/tumbleweed/images/"
-  - name: "Gentoo riscv64 (source-based distribution) / Gentoo RISC-V"
-    category: "Distribution"
-    stack: "Gentoo stage3 rv64gc/rv32gc (glibc/musl, openrc/systemd)"
-    maturity: limited
-    what_works: "The Gentoo RISC-V project targets first-class support, and the official download page offers the full stage3 matrix: rv64gc/rv32gc, hard/soft-float, glibc/musl, openrc/systemd; a large number of packages are already keyworded, and qemu-riscv64 can be used for cross-validation."
-    limits: "The official wording is “a set of packages in the Gentoo repository is keyworded”, i.e. only some packages are usable and the rest must be keyworded and built by hand; there is no binary repository and no commercial support, so every part of a server stack has to be tuned individually."
-    note: "Gentoo suits deep customization and validation, not someone who wants to deliver servers quickly — every package has to be keyword-checked by hand."
-    evidence:
-      - label: "Source (wiki.gentoo.org)"
-        url: "https://wiki.gentoo.org/wiki/Project:RISC-V"
-  - name: "RHEL 10 RISC-V Developer Preview (Red Hat Enterprise Linux preview)"
-    category: "Distribution"
-    stack: "RHEL 10.2 riscv64 Developer Preview on SiFive HiFive Premier P550, SpacemiT K3 (Pico-ITX/CoM260), UltraRISC"
-    maturity: experimental
-    what_works: "Red Hat shipped RHEL 10.2 for RISC-V Developer Preview images with package versions aligned to RHEL 10.2 on other architectures (Go 1.26, Rust 1.92), plus new hardware enablement for SpacemiT and UltraRISC."
-    limits: "Red Hat states explicitly that a developer preview carries no technical support, no guaranteed upgrade path to GA (a reinstall and data migration may be needed) and no obligation of future support; the onboard GPU of every RISC-V board is not enabled, so only a serial console or an add-in display card works."
-    note: "Red Hat has made a serious RISC-V bet, but this is still only a preview — you cannot sign a production SLA against it and should not count on a smooth upgrade."
-    evidence:
-      - label: "Official news (access.redhat.com)"
-        url: "https://access.redhat.com/articles/7117031"
-  - name: "Rocky Linux 10 RISC-V (AltArch) / Rocky Linux riscv64"
-    category: "Distribution"
-    stack: "Rocky Linux 10 riscv64gc (VisionFive 2, QEMU, HiFive P550)"
-    maturity: experimental
-    what_works: "Rocky announced official RISC-V support in RL10, producing riscv64gc builds targeting VisionFive 2, QEMU and HiFive P550; the compiler stack was bootstrapped from Fedora RISC-V and brought back to EL10."
-    limits: "P550 relies solely on a vendor kernel and has some features restricted; Milk-V/Banana Pi are explicitly “not yet supported”; the announcement still marks images and installation guides as coming soon, so real use has to wait for actual artifacts."
-    note: "The RHEL-family ecosystem is only starting on RISC-V; Rocky 10 is a signal, not a deliverable server baseline."
-    evidence:
-      - label: "Official news (rockylinux.org)"
-        url: "https://rockylinux.org/news/rockylinux-support-for-riscv"
-  - name: "KVM on RISC-V (Linux mainline) / KVM RISC-V"
-    category: "Virtualization"
-    stack: "Linux mainline arch/riscv/kvm (requires the H extension in hardware; QEMU can stand in for validation)"
-    maturity: limited
-    what_works: "Linux mainline already contains a complete arch/riscv/kvm directory: vCPU management, gstage/MMU, AIA (APLIC/IMSIC), SBI v0.1/v2/HSM/PMU/STA, vector context (vcpu_vector.c) and more, so KVM guests run on hardware implementing the H extension or on QEMU."
-    limits: "Depends on the CPU implementing the RISC-V Hypervisor extension; some boards on sale (such as HiFive Premier P550) were designed before the H extension was ratified and cannot enable it directly (Vates recorded the same problem in its Xen port); mainline has no standalone KVM/RISC-V administrator documentation, and device passthrough and nesting support are limited."
-    note: "KVM is already a mainline feature on RISC-V, but confirm the CPU has the H extension before buying hardware — without it there is no virtualization."
-    evidence:
-      - label: "GitHub (torvalds/linux/tree/master/arch/)"
-        url: "https://github.com/torvalds/linux/tree/master/arch/riscv/kvm"
-      - label: "Product page (xcp-ng.org)"
-        url: "https://xcp-ng.org/blog/2026/09/29/xen-on-riscv-boots-on-the-spacemit-k3-our-first-rva23-board"
-  - name: "Xen on RISC-V (Type-1 hypervisor port) / Xen RISC-V"
-    category: "Virtualization"
-    stack: "Upstream Xen RISC-V port (dom0less first) + downstream multi-vCPU support; SpacemiT K3 (RVA23), HiFive P550, QEMU"
-    maturity: experimental
-    what_works: "In 2026-09 Xen was announced booting on the SpacemiT K3 (the first RVA23-compliant board) and booting a guest on real HiFive P550 hardware; the upstream route is dom0less first, while downstream can already run multi-vCPU guests (QEMU, P550, K3)."
-    limits: "A 2024 official blog post already described upstream Xen RISC-V as “not yet fully operational for widespread practical use”; dom0 support is still downstream, interrupt/AIA support is only partly complete, verifiable boards are very few and there is no distribution integration — far from production."
-    note: "Xen on RISC-V has only just lit up two boards; this is frontier-watching territory and should not enter production architecture choices."
-    evidence:
-      - label: "Product page (xcp-ng.org)"
-        url: "https://xcp-ng.org/blog/2026/09/29/xen-on-riscv-boots-on-the-spacemit-k3-our-first-rva23-board"
-      - label: "Source (xcp-ng.org)"
-        url: "https://xcp-ng.org/blog/2024/09/23/advancing-xen-on-risc-v-key-updates"
-      - label: "Source (vates.tech)"
-        url: "https://vates.tech/blog/xen-summit-2026-in-munich-the-week-risc-v-stopped-being-hypothetical"
-  - name: "Docker Engine on riscv64 (distribution packaging) / Docker riscv64"
-    category: "Containers and cloud native"
-    stack: "Debian trixie docker.io / openEuler docker-engine 18.09 + riscv64 images on Docker Hub"
-    maturity: limited
-    what_works: "Debian trixie ships a docker.io riscv64 package and openEuler 24.03 SP2 ships a docker-engine 18.09 riscv64 RPM; the official debian image on Docker Hub already includes a riscv64 layer, so base images can be pulled and run directly."
-    limits: "Docker's official static binaries are published only for aarch64/armel/armhf/ppc64le/s390x/x86_64, with no riscv64; the supported-platform list in the official install documentation does not include riscv64 either; the openEuler package is only 18.09, which is fairly old."
-    note: "Containers do run on RISC-V, but the engine comes from the distribution rather than Docker itself, so versions and features lag behind."
-    evidence:
-      - label: "Source (docs.docker.com)"
-        url: "https://docs.docker.com/engine/install/"
-      - label: "Source (download.docker.com)"
-        url: "https://download.docker.com/linux/static/stable/"
-      - label: "Source (packages.debian.org)"
-        url: "https://packages.debian.org/trixie/riscv64/docker.io"
-      - label: "Source (hub.docker.com)"
-        url: "https://hub.docker.com/v2/repositories/library/debian/tags?page_size=8"
-  - name: "Podman on riscv64 (daemonless containers) / Podman riscv64"
-    category: "Containers and cloud native"
-    stack: "Debian trixie podman 5.4.2 / openEuler podman 4.9.4, riscv64"
-    maturity: limited
-    what_works: "Both Debian trixie and openEuler 24.03 SP2 provide riscv64 podman packages (5.4.2 / 4.9.4), usable as a rootless container runtime instead of Docker."
-    limits: "There is no official Podman riscv64 static build and no podman-machine (virtual machine) support; Podman Desktop does not support riscv64; capabilities depend entirely on the distribution's packaged version."
-    note: "For a daemonless, rootless container setup, Podman is smoother than Docker on riscv64, but it still relies on distribution packages."
-    evidence:
-      - label: "Source (packages.debian.org)"
-        url: "https://packages.debian.org/trixie/riscv64/podman"
-      - label: "Source (repo.openeuler.org)"
-        url: "https://repo.openeuler.org/openEuler-24.03-LTS-SP2/everything/riscv64/Packages/"
-  - name: "Kubernetes on riscv64 (openEuler EPOL packaging) / Kubernetes riscv64"
-    category: "Containers and cloud native"
-    stack: "openEuler 24.03 LTS SP2 EPOL riscv64 + Kubernetes 1.29.1 + KubeKey 3.0.7 + KubeEdge 1.8.0"
-    maturity: limited
-    what_works: "The openEuler EPOL riscv64 repository provides kubernetes 1.29.1 (kubeadm/kubelet/master/node/client), kubekey 3.0.7, kubeedge 1.8.0, containerd 1.6.22, etcd 3.4.14 and k3s-containerd, enough to stand up a single cluster or an edge cluster."
-    limits: "Upstream Kubernetes does not publish linux/riscv64 binaries from dl.k8s.io (tested 2026-11: https://dl.k8s.io/release/v1.37.2/bin/linux/riscv64/kubelet returns 404, while the same version for arm64 returns 200); distribution packaging is stuck at 1.29 (upstream is at 1.37); plugins such as CNI/CSI/Ingress need their riscv64 images verified one by one."
-    note: "On riscv64, K8s can only come from distribution packaging (openEuler 1.29) because upstream ships no binaries; the version lag is a hard constraint."
-    evidence:
-      - label: "Source (repo.openeuler.org)"
-        url: "https://repo.openeuler.org/openEuler-24.03-LTS-SP2/EPOL/main/riscv64/Packages/"
-      - label: "GitHub (kubernetes/kubernetes/releases)"
-        url: "https://github.com/kubernetes/kubernetes/releases"
-  - name: "containerd riscv64 official builds / containerd riscv64"
-    category: "Containers and cloud native"
-    stack: "containerd 2.4.2 linux/riscv64 (official release tarball)"
-    maturity: limited
-    what_works: "containerd's official releases directly provide containerd-2.4.2-linux-riscv64.tar.gz and containerd-static-2.4.2-linux-riscv64.tar.gz, usable as the container runtime on riscv64 nodes."
-    limits: "Only the container runtime itself; the Kubernetes control plane still needs a distribution build; CNI/CRI plugins and the image ecosystem must be verified independently; no commercial support."
-    note: "containerd is one of the few cloud-native building blocks that officially ship riscv64 artifacts, making it a good runtime base for self-built K8s."
-    evidence:
-      - label: "GitHub (containerd/containerd/releases)"
-        url: "https://github.com/containerd/containerd/releases"
-  - name: "OpenHPC 4.x absence on riscv64 / OpenHPC riscv64 gap"
-    category: "HPC"
-    stack: "OpenHPC 4.0 (EL10, openEuler 24.03) — x86_64/aarch64 only"
-    maturity: experimental
-    what_works: "OpenHPC 4.0 adds EL10 and openEuler 24.03 support and provides a complete HPC packaging stack (SLURM, Warewulf, MPI, scientific libraries), but those repositories only carry ohpc-release for x86_64 and aarch64."
-    limits: "Every distribution combination on the official downloads page is aarch64/x86_64, with no riscv64 repository or RPM; RISC-V clusters can only assemble SLURM, MPI and scientific libraries by hand with Spack or from source."
-    note: "The “out-of-the-box HPC stack” that OpenHPC represents does not exist on riscv64 yet; RISC-V clusters have to be assembled by hand."
-    evidence:
-      - label: "Source (openhpc.community)"
-        url: "https://openhpc.community/downloads"
-      - label: "Official news (openhpc.community)"
-        url: "https://openhpc.community/news/2025/openhpc-v4-0-release-major-os-support-and-new-provisioning-systems"
-  - name: "Monte Cimone v2 RISC-V HPC cluster / Monte Cimone v2"
-    category: "HPC"
-    stack: "SG2042 (Milk-V Pioneer) + SiFive U740 nodes; Fedora 38 + GCC 13 + Spack + SLURM + ExaMon"
-    maturity: experimental
-    what_works: "The multi-node RISC-V cluster actually ran HPL/STREAM: 41.9 GB/s memory bandwidth from 64 threads on one socket and 82.9 GB/s across two sockets; optimizing BLIS microkernels for the C920 vector unit raised HPL noticeably; the software stack is managed with Spack, scheduled with SLURM and monitored with ExaMon."
-    limits: "Positioned as an HPC validation platform rather than a production cluster; the paper's HPL/STREAM results show absolute performance still at validation-machine level, clearly behind x86 HPC nodes; the toolchain (GCC 13 + vendor vector toolchain) must be built and tuned in-house, and ecosystem components need adapting one by one."
-    note: "This is the most complete public RISC-V HPC practice so far: it runs real workloads, but both performance and operational maturity are still at the “validation platform” stage."
-    evidence:
-      - label: "Paper (arXiv)"
-        url: "https://arxiv.org/html/2503.18543v4"
-  - name: "RVV scientific computing stack (OpenBLAS/BLIS + MPI libraries) / RVV scientific computing stack"
-    category: "HPC"
-    stack: "OpenBLAS riscv64 kernels (C910V/U74/x280, ZVL128B/256B) + openEuler netcdf-openmpi/mpich"
-    maturity: limited
-    what_works: "The OpenBLAS repository contains 229 riscv64 kernel files covering C910V, U74, x280 and the ZVL128B/ZVL256B RVV variants; openEuler provides riscv64 packages for parallel scientific libraries such as netcdf-openmpi/netcdf-mpich; Monte Cimone has validated the BLIS RVV microkernel optimization path."
-    limits: "Performance depends heavily on -march and vector length (RVV 0.7.1 and 1.0 differ substantially) and must be tailored per core; not every math library or HPC application has RVV kernels; vendor-level tuning and long-term maintenance are missing."
-    note: "Scientific computing does run, provided you are willing to recompile and retune for each core's vector length — this is not out-of-the-box binary performance."
-    evidence:
-      - label: "GitHub (OpenMathLib/OpenBLAS/tree/develo)"
-        url: "https://github.com/OpenMathLib/OpenBLAS/tree/develop/kernel/riscv64"
-      - label: "Source (repo.openeuler.org)"
-        url: "https://repo.openeuler.org/openEuler-24.03-LTS-SP2/everything/riscv64/Packages/"
-  - name: "HPC performance limits of the 64-core SG2042 RISC-V server / SG2042 HPC evaluation"
-    category: "HPC"
-    stack: "SOPHGO SG2042 (64×C920, RVV 0.7.1)"
-    maturity: limited
-    what_works: "The 64-core SG2042 runs HPC benchmarks such as RAJAPerf; the paper measured single-core performance at about 5–10× the most widely available RISC-V hardware of the time, with some kernels even faster than the x86 comparison."
-    limits: "Multithreaded performance overall still trails the x86 HPC CPU used for comparison by roughly 4–8×; limited by memory bandwidth and vector width, it is not suited to being a primary compute node."
-    note: "SG2042 is the starting point for RISC-V that “belongs in a machine room”, but its performance only suits edge, teaching and validation work — not replacing x86 compute."
-    evidence:
-      - label: "Paper (arXiv)"
-        url: "https://arxiv.org/abs/2309.00381"
-  - name: "PostgreSQL on riscv64 (officially stated to run) / PostgreSQL riscv64"
-    category: "Databases and middleware"
-    stack: "PostgreSQL 18 from source / Debian trixie postgresql-17 / openEuler postgresql-15"
-    maturity: production
-    what_works: "PostgreSQL's official supported-platforms documentation explicitly lists RISC-V among the CPU architectures expected to work (alongside x86, ARM and PowerPC); Debian trixie provides a postgresql-17 riscv64 package and openEuler provides postgresql-15 riscv64."
-    limits: "Official support means the source compiles and passes the build farm, which is not the same as commercial certification; distribution versions lag the latest upstream point releases; performance tuning needs RVV-specific compiler options."
-    note: "PostgreSQL is the safest database choice on RISC-V: upstream explicitly lists it as a supported architecture and distributions ship ready-made packages."
-    evidence:
-      - label: "Source (postgresql.org)"
-        url: "https://www.postgresql.org/docs/current/supported-platforms.html"
-      - label: "Source (packages.debian.org)"
-        url: "https://packages.debian.org/trixie/riscv64/postgresql-17"
-  - name: "MySQL 8.0 on riscv64 (distribution builds) / MySQL riscv64"
-    category: "Databases and middleware"
-    stack: "openEuler 24.03 SP2 mysql-8.0.42 riscv64 RPM"
-    maturity: limited
-    what_works: "The openEuler 24.03 LTS SP2 riscv64 repository provides complete mysql 8.0.42 RPMs (server/client/common/config), enough to deploy a conventional OLTP setup."
-    limits: "Oracle provides no riscv64 binaries or support: the official mysql Docker image covers only amd64/arm64; the openEuler repository has only the 8.0 series (no 8.4/9.x riscv64 packages); there is no official certification or patch commitment."
-    note: "MySQL runs, but entirely through distribution packaging — Oracle does not cover RISC-V, so business-critical use should weigh the risk in that support chain."
-    evidence:
-      - label: "Source (repo.openeuler.org)"
-        url: "https://repo.openeuler.org/openEuler-24.03-LTS-SP2/OS/riscv64/Packages/"
-      - label: "Source (hub.docker.com)"
-        url: "https://hub.docker.com/v2/repositories/library/mysql/tags?page_size=3"
-  - name: "openGauss on RISC-V (dedicated SIG enablement) / openGauss riscv64"
-    category: "Databases and middleware"
-    stack: "openGauss 6.0.0-lite / 7.0.0-RC1 on openEuler RISC-V and Fedora; RVV vector acceleration"
-    maturity: limited
-    what_works: "The openGauss RISC-V SIG was formed in 2024-06 and has since completed 5.1.0-lite and 6.0.0-lite enablement merged into the openEuler repository; in 2025-06 it completed enablement of the full 7.0.0-RC1 release, with RVV vector acceleration for MOT and datavec, and provides container images; the openEuler repository has an opengauss-6.0.0 riscv64 RPM."
-    limits: "The full edition only reaches 7.0.0-RC1 (not a formal LTS); the lite edition is a functional subset; the SIG's own poster lists Debian/Ubuntu enablement as future work, not yet done; whether ecosystem tools for backup, monitoring and migration have been validated on riscv64 is unverified."
-    note: "Among domestic databases, openGauss has done the most serious RISC-V enablement (a dedicated SIG and RVV acceleration), but the production version has not fully matured."
-    evidence:
-      - label: "Source (discuss.opengauss.org)"
-        url: "https://discuss.opengauss.org/t/topic/83"
-      - label: "Source (repo.openeuler.org)"
-        url: "https://repo.openeuler.org/openEuler-24.03-LTS-SP2/OS/riscv64/Packages/"
-      - label: "Source (gitcode.com)"
-        url: "https://gitcode.com/opengauss/riscv/overview"
-  - name: "OceanBase Community Edition (no official riscv64 support) / OceanBase riscv64"
-    category: "Databases and middleware"
-    stack: "OceanBase Community Edition (official support: x86_64/ARM only)"
-    maturity: experimental
-    what_works: "Neither the official documentation nor community Q&A lists RISC-V support; existing deployment options are based on x86 and ARM."
-    limits: "Neither the official documentation nor community Q&A (retrieval answers built on the official documentation library) lists RISC-V; no official riscv64 binaries or porting plan are visible (whether an internal port exists is unverified); self-porting means dealing with the compiler, dependency libraries (OpenSSL/Boost and others) and performance tuning."
-    note: "OceanBase is not currently a RISC-V option — choosing it means giving up riscv64 servers."
-    evidence:
-      - label: "Source (ask.oceanbase.com)"
-        url: "https://ask.oceanbase.com/t/topic/35620794"
-  - name: "nginx on riscv64 (distribution packages + reverse proxy) / nginx riscv64"
-    category: "Storage and gateways"
-    stack: "Debian trixie nginx riscv64; the official nginx.org repository covers x86_64/aarch64 only"
-    maturity: limited
-    what_works: "Debian trixie provides a riscv64 nginx package usable as a web server, reverse proxy or gateway; openEuler 24.03 SP2 also provides nginx 1.24.0 riscv64 RPMs plus common modules."
-    limits: "The official nginx.org Linux repositories (Debian 12/13, Ubuntu 22.04–26.04, EL8–10, SUSE, Alpine) list only x86_64 and aarch64/arm64, with no official riscv64 binaries; no NGINX commercial support covers riscv64; new versions have to wait for the distribution to catch up."
-    note: "nginx works fine as a gateway, but only from distribution packages; if you need the official latest release or commercial support, riscv64 is not available."
-    evidence:
-      - label: "Source (nginx.org)"
-        url: "https://nginx.org/en/linux_packages.html"
-      - label: "Source (packages.debian.org)"
-        url: "https://packages.debian.org/trixie/riscv64/nginx"
-      - label: "Source (repo.openeuler.org)"
-        url: "https://repo.openeuler.org/openEuler-24.03-LTS-SP2/everything/riscv64/Packages/"
-  - name: "Ceph on riscv64 (Debian-packaged distributed storage) / Ceph riscv64"
-    category: "Storage and gateways"
-    stack: "Debian trixie ceph-mon / ceph-osd / radosgw (riscv64)"
-    maturity: limited
-    what_works: "Debian trixie riscv64 provides ceph, ceph-base, ceph-mon, ceph-osd and radosgw packages, enough to build a Ceph cluster offering block and object storage."
-    limits: "Distribution packaging only, with no commercial support; public evidence on the stability and performance of large Ceph clusters on RISC-V is lacking (unverified); the resource cost of MON/OSD on low-core-count RISC-V servers has to be assessed by the user (not measured)."
-    note: "Ceph installs and runs, but there is no at-scale validation data; small clusters or edge storage are worth trying, core storage is not worth the risk."
-    evidence:
-      - label: "Source (packages.debian.org)"
-        url: "https://packages.debian.org/trixie/riscv64/ceph-mon"
-      - label: "Source (packages.debian.org)"
-        url: "https://packages.debian.org/trixie/riscv64/ceph-osd"
-      - label: "Source (packages.debian.org)"
-        url: "https://packages.debian.org/trixie/riscv64/radosgw"
-  - name: "llama.cpp / llama-server on riscv64 (local RVV inference) / llama.cpp riscv64"
-    category: "AI inference services"
-    stack: "llama.cpp built from source (GGML RVV backend) on SpacemiT K1/K3, SG2042, etc."
-    maturity: limited
-    what_works: "ggml provides RISC-V-specific compile flags (GGML_RV_ZFH/ZVFH/ZICBOP/ZIHINTPAUSE/ZVFBFWMA) and RVV kernels; llama-server exposes an OpenAI-compatible API; measured on a SpacemiT K1 (8 cores at 1.6GHz) running TinyLlama 1.1B, about 8.7 tok/s generation and 12.5 tok/s prefill, workable as a single-machine local inference service."
-    limits: "Official releases ship no riscv64 prebuilt packages (only arm64/x64/s390x and similar), so building from source is mandatory; -march must be set correctly (including zvfh) or the RVV build simply fails; the measured figure is ~8.7 tok/s for a single user, concurrency is unverified, and the interactive experience with models above 1.1B on 1.6GHz-class boards has to be measured by the user."
-    note: "The only workable LLM inference path on RISC-V is llama.cpp built from source; small models can serve one person, do not count on concurrency."
-    evidence:
-      - label: "GitHub (ggml-org/llama.cpp/blob/master/g)"
-        url: "https://github.com/ggml-org/llama.cpp/blob/master/ggml/CMakeLists.txt"
-      - label: "Source (bruno.verachten.fr)"
-        url: "https://bruno.verachten.fr/2026/02/27/running-a-local-llm-on-risc-v-building-llama.cpp-on-a-banana-pi-f3-part-1"
-      - label: "GitHub (ggml-org/llama.cpp/releases)"
-        url: "https://github.com/ggml-org/llama.cpp/releases"
-  - name: "vLLM (no official riscv64 backend) / vLLM riscv64"
-    category: "AI inference services"
-    stack: "vLLM CPU backend (officially supports x86 / ARM AArch64 / Apple / IBM Z)"
-    maturity: experimental
-    what_works: "vLLM's official CPU installation documentation lists four platform classes — x86, ARM AArch64, Apple Silicon and IBM Z — with the wheel or build method for each; riscv64 is not among them."
-    limits: "There is no riscv64 wheel, no official build script or CI; the official documentation gives no riscv64 installation path; CUDA/CPU operators such as PagedAttention would have to be ported by hand (no publicly available complete port was found; unverified)."
-    note: "vLLM does not support riscv64 today; there is no ready-made way to run high-throughput inference services on RISC-V."
-    evidence:
-      - label: "Source (docs.vllm.ai)"
-        url: "https://docs.vllm.ai/en/stable/getting_started/installation/cpu"
-  - name: "Ollama (no official riscv64 build) / Ollama riscv64"
-    category: "AI inference services"
-    stack: "Ollama official releases (linux-amd64 / linux-arm64, etc.)"
-    maturity: experimental
-    what_works: "Ollama's official releases provide amd64 and arm64 builds (including JetPack/ROCm/MLX variants) plus macOS and Windows packages."
-    limits: "No riscv64 binaries; building it yourself is possible, but the inference backend still depends on ggml/llama.cpp's RISC-V support, which leads right back to llama.cpp."
-    note: "Ollama's convenience does not exist on RISC-V; using llama.cpp directly is more realistic."
-    evidence:
-      - label: "GitHub (ollama/ollama/releases)"
-        url: "https://github.com/ollama/ollama/releases"
-  - name: "Scaleway Elastic Metal RV1 (commercial RISC-V cloud bare metal) / Scaleway EM-RV1"
-    category: "Real-world deployments"
-    stack: "4×T-Head C910 RV64GC @1.85GHz, 16GB LPDDR4, 128GB eMMC, 100Mb/s, Paris data center"
-    maturity: limited
-    what_works: "Described by the vendor as the world's first commercial RISC-V cloud server: the EM-RV1-C4M16S128-A is billed at €0.042/hour or €15.99/month (excluding tax), provisions instantly, includes an NPU and suits CI/CD, porting validation and lightweight services."
-    limits: "Low specification ceiling: 4 cores/16GB/128GB eMMC/100Mb networking, unsuitable for databases or high-throughput services; the C910 is affected by the GhostWrite vulnerability, so instances provisioned before 2024-06-06 need a kernel update; only a single Paris region."
-    note: "To try RISC-V servers at near-zero cost, Scaleway rents one for €16 a month; but it is only a “usable validation machine”, not production compute."
-    evidence:
-      - label: "Source (labs.scaleway.com)"
-        url: "https://labs.scaleway.com/en/em-rv1"
-  - name: "Shandong University “Dongshan-1” RISC-V server cluster / Dongshan-1 RISC-V cluster"
-    category: "Real-world deployments"
-    stack: "RISC-V server nodes + TPU acceleration + storage nodes; 6 compute + 2 storage nodes per rack"
-    maturity: limited
-    what_works: "Deployed and announced in 2024-04 as what is described as the world's first RISC-V architecture server cluster, “Dongshan-1”; 2024-08 brought the PLUS version: 6 compute plus 2 storage nodes in a single standard rack, 476.8 TFLOPS (including TPU expansion) and 126TB of storage, able to run 50+ AI models; in 2026-08 it passed a third-party scientific and technological achievement evaluation, having cumulatively completed migration and validation of 200+ open-source software packages (distributions, GCC/LLVM, databases, web servers, containers, AI frameworks, HPC)."
-    limits: "A university research/validation platform, not a commercial cloud; the 476.8 TFLOPS relies on TPU accelerator cards and pure CPU compute is limited; the exact node models and scale are not fully disclosed."
-    note: "The most complete RISC-V server full-stack validation environment in China, proving that it “runs”; but it is a research cluster, not a rentable commercial service."
-    evidence:
-      - label: "Source (aii.sdu.edu.cn)"
-        url: "https://aii.sdu.edu.cn/info/1001/1542.htm"
-      - label: "Source (aii.sdu.edu.cn)"
-        url: "https://aii.sdu.edu.cn/info/1002/1901.htm"
-  - name: "China Mobile 5G RISC-V server pilot / China Mobile RISC-V pilot"
-    category: "Real-world deployments"
-    stack: "RISC-V server chips and systems for 5G data-center scenarios (with custom instruction extensions)"
-    maturity: experimental
-    what_works: "China Mobile Research Institute used the 5G data center as its entry point: extracting workload requirements, extending instructions to optimize the core, and developing RISC-V server chips and systems, advancing standards, technology, products and ecosystem together."
-    limits: "An official talk states plainly that “high-performance RISC-V processors still face many challenges in breaking into the high-compute market”; the work remains at the exploration and pilot stage with no volume commercial deployment; no public performance or stability data."
-    note: "Carriers are already trialing it, but only as a pilot for specific 5G scenarios — still some way from general-purpose cloud servers."
-    evidence:
-      - label: "Source (finance.sina.com.cn)"
-        url: "https://finance.sina.com.cn/roll/2025-03-04/doc-inenpfii2575079.shtml"
-  - name: "SiFive BigSky SF-2U870 data-center RISC-V server / SiFive BigSky"
-    category: "Real-world deployments"
-    stack: "32×SiFive P870-D @2.0GHz, 2U rack, RVA23; Ubuntu 26.04 LTS / RHEL 10"
-    maturity: limited
-    what_works: "A 2U rack-mount RISC-V server announced in 2026-08 (32 P870-D cores @2.0GHz), fully RVA23 compliant, natively supporting Ubuntu 26.04 LTS and RHEL 10 without a custom port; the on-site demo ran several server workloads and CUDA was brought up on it, acting as head node for NVIDIA GPU LLM workloads; the vendor says hyperscale customers are already running workloads on deployed systems."
-    limits: "Limited production, prioritized for strategic partners, with pricing and lead times undisclosed; the ecosystem is still in the software porting/tuning stage; GPUs come from add-in PCIe cards, not onboard."
-    note: "This is the first RISC-V machine that “looks like a server” (2U, RVA23, native Ubuntu/RHEL), but it cannot be bought in volume — it is a validation platform for strategic customers."
-    evidence:
-      - label: "Official news (sifive.cn)"
-        url: "https://www.sifive.cn/press/risc-v-in-the-datacenter-bigsky-development-server"
+- name: Debian 13 trixie riscv64 officially supported architecture / Debian riscv64
+  category: Distribution
+  stack: Debian 13 trixie riscv64 (generic, including QEMU and various boards)
+  maturity: production
+  what_works: Debian 13 lists riscv64 as an officially supported architecture for the first time (one of seven official architectures), with a complete archive, installer and multi-arch container images;
+    podman 5.4.2, postgresql-17, mariadb-server, nginx and ceph-mon/osd/radosgw all have official trixie/riscv64 packages.
+  limits: No commercial LTS support (only the community security team); some software is not in the official archive — for example there is no kubernetes-client package for trixie/riscv64; a few packages
+    are missing or delayed on riscv64 (not verified package by package).
+  note: Debian has the broadest software coverage of any community distribution on riscv64 and suits self-hosted services; what it lacks is commercial backing and the cloud-native stack, Kubernetes included.
+  evidence:
+  - label: Official news (debian.org)
+    url: https://www.debian.org/News/2025/20250809
+  - label: Source (packages.debian.org)
+    url: https://packages.debian.org/trixie/riscv64/podman
+  - label: Source (packages.debian.org)
+    url: https://packages.debian.org/trixie/riscv64/postgresql-17
+  - label: Source (packages.debian.org)
+    url: https://packages.debian.org/trixie/riscv64/nginx
+  order: 1
+  feature: true
+- name: Fedora RISC-V (Alternative Architecture) / Fedora riscv64
+  category: Distribution
+  stack: Fedora 44 riscv64 (HiFive Premier P550, VisionFive 2, QEMU, etc.)
+  maturity: limited
+  what_works: Fedora has published riscv64 images continuously since Fedora 44 (the 2026-07 update added board support), with its own riscv-koji build system and a RISC-V SIG; usable as a fairly aggressive
+    development/validation platform.
+  limits: Fedora officially classifies RISC-V as an Alternative Architecture (not a primary architecture), of the kind that runs its own koji and where build failures do not block the main repository; images
+    and hardware enablement are community-maintained and the release cadence does not fully track the primary architectures.
+  note: Fedora is the test bed for new RISC-V hardware and features and suits early adopters; it does not suit scenarios that need a stable server lifecycle.
+  evidence:
+  - label: Source (fedoraproject.org)
+    url: https://fedoraproject.org/wiki/Architectures/RISC-V
+  - label: Source (fedoraproject.org)
+    url: https://fedoraproject.org/wiki/Architectures
+  - label: Source (riscv-koji.fedoraproject.org)
+    url: https://riscv-koji.fedoraproject.org/koji/
+  order: 2
+  feature: true
+- name: Ubuntu 26.04 LTS / 24.04.5 LTS for RISC-V (official Canonical builds)
+  category: Distribution
+  stack: Ubuntu Server riscv64 on SiFive BigSky, SpacemiT K3 (CoM260/Pico-ITX), HiFive Unmatched, VisionFive 2, Milk-V Mars, etc.
+  maturity: limited
+  what_works: Images are built and hosted by Canonical, with both a Server live installer and preinstalled images; from 26.04 LTS the requirement is RVA23S64, with SiFive BigSky and SpacemiT K3 platforms
+    supported; 24.04.5 LTS continues to cover RVA20 boards (HiFive Unmatched, VisionFive 2, Milk-V Mars, etc.).
+  limits: From 26.04 onward, RVA20 hardware is stranded on 24.04.5 LTS, creating a version fork; Canonical notes that most board images are headless only (no GPU, no WiFi); server-oriented RVA23 hardware
+    is currently limited to a few platforms such as BigSky and K3.
+  note: For running RISC-V servers, Ubuntu is one of the few options that can come with a commercial support contract, but confirm first whether the board is RVA23 — otherwise you are stuck on 24.04.
+  evidence:
+  - label: Source (ubuntu.com)
+    url: https://ubuntu.com/download/risc-v
+  order: 3
+  feature: true
+- name: openEuler 24.03 LTS RISC-V native server distribution / openEuler 24.03 LTS RISC-V
+  category: Distribution
+  stack: openEuler 24.03 LTS SP2 riscv64 (SG2042 / HiFive P550 / SpacemiT K3, etc.)
+  maturity: limited
+  what_works: The project states that 24.03 LTS unifies the kernel across x86/Arm/RISC-V, with RISC-V release scope aligned to x86/Arm; the first community distribution with UEFI standard support; integrates
+    sysCare live patching and Shanghai Jiao Tong University's Penglai TEE; the OERV team validated StratoVirt on QEMU; the repository actually carries riscv64 RPMs for docker-engine, qemu 8.2, libvirt,
+    mariadb 10.5, mysql 8.0.42, opengauss 6.0.0 and more.
+  limits: Hardware enablement depends on vendor kernels/BSPs and the RISC-V Kernel Unification effort; vector and hardware-virtualization support for SG2380 and JH8110 was still listed as “coming soon”
+    at release; the community edition carries no commercial LTS commitment, so enterprise support requires a commercial distribution.
+  note: 'The most complete RISC-V server line among domestic distributions: broad package coverage and an LTS baseline, at the cost of hardware enablement that follows vendor BSPs.'
+  evidence:
+  - label: Official news (openeuler.org)
+    url: https://www.openeuler.org/en/news/20240628-openEuler%2024.03%20LTS-%20Pioneering%20Native%20RISC-V%20Support
+  - label: Source (docs.openeuler.org)
+    url: https://docs.openeuler.org/en/docs/24.03_LTS/docs/Installation/RISCV-OLK6.6.html
+  - label: Source (repo.openeuler.org)
+    url: https://repo.openeuler.org/openEuler-24.03-LTS-SP2/OS/riscv64/Packages/
+  order: 4
+  feature: false
+- name: openSUSE Tumbleweed riscv64 port / openSUSE Tumbleweed RISC-V port
+  category: Distribution
+  stack: openSUSE Tumbleweed riscv64 (ports/riscv images, some boards + QEMU)
+  maturity: experimental
+  what_works: openSUSE provides Tumbleweed images and OBS builds for riscv64 (appliances/iso images under ports/riscv), runnable on supported boards and on QEMU.
+  limits: The official wiki states plainly that “RISC-V support is still under development, you may run into bugs or unstable circumstances”; some hardware is still not enabled, Factory has packages that
+    fail to build, and the project is soliciting hardware donations and maintainers.
+  note: openSUSE's RISC-V is in a “works, but do not run it in production” state — the project itself is still looking for people and hardware to fill the gaps.
+  evidence:
+  - label: Source (en.opensuse.org)
+    url: https://en.opensuse.org/api.php?action=parse&page=openSUSE:RISC-V&prop=wikitext&format=json
+  - label: Source (download.opensuse.org)
+    url: https://download.opensuse.org/ports/riscv/tumbleweed/images/
+  order: 5
+  feature: false
+- name: Gentoo riscv64 (source-based distribution) / Gentoo RISC-V
+  category: Distribution
+  stack: Gentoo stage3 rv64gc/rv32gc (glibc/musl, openrc/systemd)
+  maturity: limited
+  what_works: 'The Gentoo RISC-V project targets first-class support, and the official download page offers the full stage3 matrix: rv64gc/rv32gc, hard/soft-float, glibc/musl, openrc/systemd; a large number
+    of packages are already keyworded, and qemu-riscv64 can be used for cross-validation.'
+  limits: The official wording is “a set of packages in the Gentoo repository is keyworded”, i.e. only some packages are usable and the rest must be keyworded and built by hand; there is no binary repository
+    and no commercial support, so every part of a server stack has to be tuned individually.
+  note: Gentoo suits deep customization and validation, not someone who wants to deliver servers quickly — every package has to be keyword-checked by hand.
+  evidence:
+  - label: Source (wiki.gentoo.org)
+    url: https://wiki.gentoo.org/wiki/Project:RISC-V
+  order: 6
+  feature: false
+- name: RHEL 10 RISC-V Developer Preview (Red Hat Enterprise Linux preview)
+  category: Distribution
+  stack: RHEL 10.2 riscv64 Developer Preview on SiFive HiFive Premier P550, SpacemiT K3 (Pico-ITX/CoM260), UltraRISC
+  maturity: experimental
+  what_works: Red Hat shipped RHEL 10.2 for RISC-V Developer Preview images with package versions aligned to RHEL 10.2 on other architectures (Go 1.26, Rust 1.92), plus new hardware enablement for SpacemiT
+    and UltraRISC.
+  limits: Red Hat states explicitly that a developer preview carries no technical support, no guaranteed upgrade path to GA (a reinstall and data migration may be needed) and no obligation of future support;
+    the onboard GPU of every RISC-V board is not enabled, so only a serial console or an add-in display card works.
+  note: Red Hat has made a serious RISC-V bet, but this is still only a preview — you cannot sign a production SLA against it and should not count on a smooth upgrade.
+  evidence:
+  - label: Official news (access.redhat.com)
+    url: https://access.redhat.com/articles/7117031
+  order: 7
+  feature: false
+- name: Rocky Linux 10 RISC-V (AltArch) / Rocky Linux riscv64
+  category: Distribution
+  stack: Rocky Linux 10 riscv64gc (VisionFive 2, QEMU, HiFive P550)
+  maturity: experimental
+  what_works: Rocky announced official RISC-V support in RL10, producing riscv64gc builds targeting VisionFive 2, QEMU and HiFive P550; the compiler stack was bootstrapped from Fedora RISC-V and brought
+    back to EL10.
+  limits: P550 relies solely on a vendor kernel and has some features restricted; Milk-V/Banana Pi are explicitly “not yet supported”; the announcement still marks images and installation guides as coming
+    soon, so real use has to wait for actual artifacts.
+  note: The RHEL-family ecosystem is only starting on RISC-V; Rocky 10 is a signal, not a deliverable server baseline.
+  evidence:
+  - label: Official news (rockylinux.org)
+    url: https://rockylinux.org/news/rockylinux-support-for-riscv
+  order: 8
+  feature: false
+- name: KVM on RISC-V (Linux mainline) / KVM RISC-V
+  category: Virtualization
+  stack: Linux mainline arch/riscv/kvm (requires the H extension in hardware; QEMU can stand in for validation)
+  maturity: limited
+  what_works: 'Linux mainline already contains a complete arch/riscv/kvm directory: vCPU management, gstage/MMU, AIA (APLIC/IMSIC), SBI v0.1/v2/HSM/PMU/STA, vector context (vcpu_vector.c) and more, so KVM
+    guests run on hardware implementing the H extension or on QEMU.'
+  limits: Depends on the CPU implementing the RISC-V Hypervisor extension; some boards on sale (such as HiFive Premier P550) were designed before the H extension was ratified and cannot enable it directly
+    (Vates recorded the same problem in its Xen port); mainline has no standalone KVM/RISC-V administrator documentation, and device passthrough and nesting support are limited.
+  note: KVM is already a mainline feature on RISC-V, but confirm the CPU has the H extension before buying hardware — without it there is no virtualization.
+  evidence:
+  - label: GitHub (torvalds/linux/tree/master/arch/)
+    url: https://github.com/torvalds/linux/tree/master/arch/riscv/kvm
+  - label: Product page (xcp-ng.org)
+    url: https://xcp-ng.org/blog/2026/09/29/xen-on-riscv-boots-on-the-spacemit-k3-our-first-rva23-board
+  order: 9
+  feature: false
+- name: Xen on RISC-V (Type-1 hypervisor port) / Xen RISC-V
+  category: Virtualization
+  stack: Upstream Xen RISC-V port (dom0less first) + downstream multi-vCPU support; SpacemiT K3 (RVA23), HiFive P550, QEMU
+  maturity: experimental
+  what_works: In 2026-09 Xen was announced booting on the SpacemiT K3 (the first RVA23-compliant board) and booting a guest on real HiFive P550 hardware; the upstream route is dom0less first, while downstream
+    can already run multi-vCPU guests (QEMU, P550, K3).
+  limits: A 2024 official blog post already described upstream Xen RISC-V as “not yet fully operational for widespread practical use”; dom0 support is still downstream, interrupt/AIA support is only partly
+    complete, verifiable boards are very few and there is no distribution integration — far from production.
+  note: Xen on RISC-V has only just lit up two boards; this is frontier-watching territory and should not enter production architecture choices.
+  evidence:
+  - label: Product page (xcp-ng.org)
+    url: https://xcp-ng.org/blog/2026/09/29/xen-on-riscv-boots-on-the-spacemit-k3-our-first-rva23-board
+  - label: Source (xcp-ng.org)
+    url: https://xcp-ng.org/blog/2024/09/23/advancing-xen-on-risc-v-key-updates
+  - label: Source (vates.tech)
+    url: https://vates.tech/blog/xen-summit-2026-in-munich-the-week-risc-v-stopped-being-hypothetical
+  order: 10
+  feature: false
+- name: Docker Engine on riscv64 (distribution packaging) / Docker riscv64
+  category: Containers and cloud native
+  stack: Debian trixie docker.io / openEuler docker-engine 18.09 + riscv64 images on Docker Hub
+  maturity: limited
+  what_works: Debian trixie ships a docker.io riscv64 package and openEuler 24.03 SP2 ships a docker-engine 18.09 riscv64 RPM; the official debian image on Docker Hub already includes a riscv64 layer, so
+    base images can be pulled and run directly.
+  limits: Docker's official static binaries are published only for aarch64/armel/armhf/ppc64le/s390x/x86_64, with no riscv64; the supported-platform list in the official install documentation does not include
+    riscv64 either; the openEuler package is only 18.09, which is fairly old.
+  note: Containers do run on RISC-V, but the engine comes from the distribution rather than Docker itself, so versions and features lag behind.
+  evidence:
+  - label: Source (docs.docker.com)
+    url: https://docs.docker.com/engine/install/
+  - label: Source (download.docker.com)
+    url: https://download.docker.com/linux/static/stable/
+  - label: Source (packages.debian.org)
+    url: https://packages.debian.org/trixie/riscv64/docker.io
+  - label: Source (hub.docker.com)
+    url: https://hub.docker.com/v2/repositories/library/debian/tags?page_size=8
+  order: 11
+  feature: false
+- name: Podman on riscv64 (daemonless containers) / Podman riscv64
+  category: Containers and cloud native
+  stack: Debian trixie podman 5.4.2 / openEuler podman 4.9.4, riscv64
+  maturity: limited
+  what_works: Both Debian trixie and openEuler 24.03 SP2 provide riscv64 podman packages (5.4.2 / 4.9.4), usable as a rootless container runtime instead of Docker.
+  limits: There is no official Podman riscv64 static build and no podman-machine (virtual machine) support; Podman Desktop does not support riscv64; capabilities depend entirely on the distribution's packaged
+    version.
+  note: For a daemonless, rootless container setup, Podman is smoother than Docker on riscv64, but it still relies on distribution packages.
+  evidence:
+  - label: Source (packages.debian.org)
+    url: https://packages.debian.org/trixie/riscv64/podman
+  - label: Source (repo.openeuler.org)
+    url: https://repo.openeuler.org/openEuler-24.03-LTS-SP2/everything/riscv64/Packages/
+  order: 12
+  feature: false
+- name: Kubernetes on riscv64 (openEuler EPOL packaging) / Kubernetes riscv64
+  category: Containers and cloud native
+  stack: openEuler 24.03 LTS SP2 EPOL riscv64 + Kubernetes 1.29.1 + KubeKey 3.0.7 + KubeEdge 1.8.0
+  maturity: limited
+  what_works: The openEuler EPOL riscv64 repository provides kubernetes 1.29.1 (kubeadm/kubelet/master/node/client), kubekey 3.0.7, kubeedge 1.8.0, containerd 1.6.22, etcd 3.4.14 and k3s-containerd, enough
+    to stand up a single cluster or an edge cluster.
+  limits: 'Upstream Kubernetes does not publish linux/riscv64 binaries from dl.k8s.io (tested 2026-11: https://dl.k8s.io/release/v1.37.2/bin/linux/riscv64/kubelet returns 404, while the same version for
+    arm64 returns 200); distribution packaging is stuck at 1.29 (upstream is at 1.37); plugins such as CNI/CSI/Ingress need their riscv64 images verified one by one.'
+  note: On riscv64, K8s can only come from distribution packaging (openEuler 1.29) because upstream ships no binaries; the version lag is a hard constraint.
+  evidence:
+  - label: Source (repo.openeuler.org)
+    url: https://repo.openeuler.org/openEuler-24.03-LTS-SP2/EPOL/main/riscv64/Packages/
+  - label: GitHub (kubernetes/kubernetes/releases)
+    url: https://github.com/kubernetes/kubernetes/releases
+  order: 13
+  feature: false
+- name: containerd riscv64 official builds / containerd riscv64
+  category: Containers and cloud native
+  stack: containerd 2.4.2 linux/riscv64 (official release tarball)
+  maturity: limited
+  what_works: containerd's official releases directly provide containerd-2.4.2-linux-riscv64.tar.gz and containerd-static-2.4.2-linux-riscv64.tar.gz, usable as the container runtime on riscv64 nodes.
+  limits: Only the container runtime itself; the Kubernetes control plane still needs a distribution build; CNI/CRI plugins and the image ecosystem must be verified independently; no commercial support.
+  note: containerd is one of the few cloud-native building blocks that officially ship riscv64 artifacts, making it a good runtime base for self-built K8s.
+  evidence:
+  - label: GitHub (containerd/containerd/releases)
+    url: https://github.com/containerd/containerd/releases
+  order: 14
+  feature: false
+- name: OpenHPC 4.x absence on riscv64 / OpenHPC riscv64 gap
+  category: HPC
+  stack: OpenHPC 4.0 (EL10, openEuler 24.03) — x86_64/aarch64 only
+  maturity: experimental
+  what_works: OpenHPC 4.0 adds EL10 and openEuler 24.03 support and provides a complete HPC packaging stack (SLURM, Warewulf, MPI, scientific libraries), but those repositories only carry ohpc-release for
+    x86_64 and aarch64.
+  limits: Every distribution combination on the official downloads page is aarch64/x86_64, with no riscv64 repository or RPM; RISC-V clusters can only assemble SLURM, MPI and scientific libraries by hand
+    with Spack or from source.
+  note: The “out-of-the-box HPC stack” that OpenHPC represents does not exist on riscv64 yet; RISC-V clusters have to be assembled by hand.
+  evidence:
+  - label: Source (openhpc.community)
+    url: https://openhpc.community/downloads
+  - label: Official news (openhpc.community)
+    url: https://openhpc.community/news/2025/openhpc-v4-0-release-major-os-support-and-new-provisioning-systems
+  order: 15
+  feature: false
+- name: Monte Cimone v2 RISC-V HPC cluster / Monte Cimone v2
+  category: HPC
+  stack: SG2042 (Milk-V Pioneer) + SiFive U740 nodes; Fedora 38 + GCC 13 + Spack + SLURM + ExaMon
+  maturity: experimental
+  what_works: 'The multi-node RISC-V cluster actually ran HPL/STREAM: 41.9 GB/s memory bandwidth from 64 threads on one socket and 82.9 GB/s across two sockets; optimizing BLIS microkernels for the C920
+    vector unit raised HPL noticeably; the software stack is managed with Spack, scheduled with SLURM and monitored with ExaMon.'
+  limits: Positioned as an HPC validation platform rather than a production cluster; the paper's HPL/STREAM results show absolute performance still at validation-machine level, clearly behind x86 HPC nodes;
+    the toolchain (GCC 13 + vendor vector toolchain) must be built and tuned in-house, and ecosystem components need adapting one by one.
+  note: 'This is the most complete public RISC-V HPC practice so far: it runs real workloads, but both performance and operational maturity are still at the “validation platform” stage.'
+  evidence:
+  - label: Paper (arXiv)
+    url: https://arxiv.org/html/2503.18543v4
+  order: 16
+  feature: false
+- name: RVV scientific computing stack (OpenBLAS/BLIS + MPI libraries) / RVV scientific computing stack
+  category: HPC
+  stack: OpenBLAS riscv64 kernels (C910V/U74/x280, ZVL128B/256B) + openEuler netcdf-openmpi/mpich
+  maturity: limited
+  what_works: The OpenBLAS repository contains 229 riscv64 kernel files covering C910V, U74, x280 and the ZVL128B/ZVL256B RVV variants; openEuler provides riscv64 packages for parallel scientific libraries
+    such as netcdf-openmpi/netcdf-mpich; Monte Cimone has validated the BLIS RVV microkernel optimization path.
+  limits: Performance depends heavily on -march and vector length (RVV 0.7.1 and 1.0 differ substantially) and must be tailored per core; not every math library or HPC application has RVV kernels; vendor-level
+    tuning and long-term maintenance are missing.
+  note: Scientific computing does run, provided you are willing to recompile and retune for each core's vector length — this is not out-of-the-box binary performance.
+  evidence:
+  - label: GitHub (OpenMathLib/OpenBLAS/tree/develo)
+    url: https://github.com/OpenMathLib/OpenBLAS/tree/develop/kernel/riscv64
+  - label: Source (repo.openeuler.org)
+    url: https://repo.openeuler.org/openEuler-24.03-LTS-SP2/everything/riscv64/Packages/
+  order: 17
+  feature: false
+- name: HPC performance limits of the 64-core SG2042 RISC-V server / SG2042 HPC evaluation
+  category: HPC
+  stack: SOPHGO SG2042 (64×C920, RVV 0.7.1)
+  maturity: limited
+  what_works: The 64-core SG2042 runs HPC benchmarks such as RAJAPerf; the paper measured single-core performance at about 5–10× the most widely available RISC-V hardware of the time, with some kernels
+    even faster than the x86 comparison.
+  limits: Multithreaded performance overall still trails the x86 HPC CPU used for comparison by roughly 4–8×; limited by memory bandwidth and vector width, it is not suited to being a primary compute node.
+  note: SG2042 is the starting point for RISC-V that “belongs in a machine room”, but its performance only suits edge, teaching and validation work — not replacing x86 compute.
+  evidence:
+  - label: Paper (arXiv)
+    url: https://arxiv.org/abs/2309.00381
+  order: 18
+  feature: false
+- name: PostgreSQL on riscv64 (officially stated to run) / PostgreSQL riscv64
+  category: Databases and middleware
+  stack: PostgreSQL 18 from source / Debian trixie postgresql-17 / openEuler postgresql-15
+  maturity: production
+  what_works: PostgreSQL's official supported-platforms documentation explicitly lists RISC-V among the CPU architectures expected to work (alongside x86, ARM and PowerPC); Debian trixie provides a postgresql-17
+    riscv64 package and openEuler provides postgresql-15 riscv64.
+  limits: Official support means the source compiles and passes the build farm, which is not the same as commercial certification; distribution versions lag the latest upstream point releases; performance
+    tuning needs RVV-specific compiler options.
+  note: 'PostgreSQL is the safest database choice on RISC-V: upstream explicitly lists it as a supported architecture and distributions ship ready-made packages.'
+  evidence:
+  - label: Source (postgresql.org)
+    url: https://www.postgresql.org/docs/current/supported-platforms.html
+  - label: Source (packages.debian.org)
+    url: https://packages.debian.org/trixie/riscv64/postgresql-17
+  order: 19
+  feature: false
+- name: MySQL 8.0 on riscv64 (distribution builds) / MySQL riscv64
+  category: Databases and middleware
+  stack: openEuler 24.03 SP2 mysql-8.0.42 riscv64 RPM
+  maturity: limited
+  what_works: The openEuler 24.03 LTS SP2 riscv64 repository provides complete mysql 8.0.42 RPMs (server/client/common/config), enough to deploy a conventional OLTP setup.
+  limits: 'Oracle provides no riscv64 binaries or support: the official mysql Docker image covers only amd64/arm64; the openEuler repository has only the 8.0 series (no 8.4/9.x riscv64 packages); there
+    is no official certification or patch commitment.'
+  note: MySQL runs, but entirely through distribution packaging — Oracle does not cover RISC-V, so business-critical use should weigh the risk in that support chain.
+  evidence:
+  - label: Source (repo.openeuler.org)
+    url: https://repo.openeuler.org/openEuler-24.03-LTS-SP2/OS/riscv64/Packages/
+  - label: Source (hub.docker.com)
+    url: https://hub.docker.com/v2/repositories/library/mysql/tags?page_size=3
+  order: 20
+  feature: false
+- name: openGauss on RISC-V (dedicated SIG enablement) / openGauss riscv64
+  category: Databases and middleware
+  stack: openGauss 6.0.0-lite / 7.0.0-RC1 on openEuler RISC-V and Fedora; RVV vector acceleration
+  maturity: limited
+  what_works: The openGauss RISC-V SIG was formed in 2024-06 and has since completed 5.1.0-lite and 6.0.0-lite enablement merged into the openEuler repository; in 2025-06 it completed enablement of the
+    full 7.0.0-RC1 release, with RVV vector acceleration for MOT and datavec, and provides container images; the openEuler repository has an opengauss-6.0.0 riscv64 RPM.
+  limits: The full edition only reaches 7.0.0-RC1 (not a formal LTS); the lite edition is a functional subset; the SIG's own poster lists Debian/Ubuntu enablement as future work, not yet done; whether ecosystem
+    tools for backup, monitoring and migration have been validated on riscv64 is unverified.
+  note: Among domestic databases, openGauss has done the most serious RISC-V enablement (a dedicated SIG and RVV acceleration), but the production version has not fully matured.
+  evidence:
+  - label: Source (discuss.opengauss.org)
+    url: https://discuss.opengauss.org/t/topic/83
+  - label: Source (repo.openeuler.org)
+    url: https://repo.openeuler.org/openEuler-24.03-LTS-SP2/OS/riscv64/Packages/
+  - label: Source (gitcode.com)
+    url: https://gitcode.com/opengauss/riscv/overview
+  order: 21
+  feature: false
+- name: OceanBase Community Edition (no official riscv64 support) / OceanBase riscv64
+  category: Databases and middleware
+  stack: 'OceanBase Community Edition (official support: x86_64/ARM only)'
+  maturity: experimental
+  what_works: Neither the official documentation nor community Q&A lists RISC-V support; existing deployment options are based on x86 and ARM.
+  limits: Neither the official documentation nor community Q&A (retrieval answers built on the official documentation library) lists RISC-V; no official riscv64 binaries or porting plan are visible (whether
+    an internal port exists is unverified); self-porting means dealing with the compiler, dependency libraries (OpenSSL/Boost and others) and performance tuning.
+  note: OceanBase is not currently a RISC-V option — choosing it means giving up riscv64 servers.
+  evidence:
+  - label: Source (ask.oceanbase.com)
+    url: https://ask.oceanbase.com/t/topic/35620794
+  order: 22
+  feature: false
+- name: nginx on riscv64 (distribution packages + reverse proxy) / nginx riscv64
+  category: Storage and gateways
+  stack: Debian trixie nginx riscv64; the official nginx.org repository covers x86_64/aarch64 only
+  maturity: limited
+  what_works: Debian trixie provides a riscv64 nginx package usable as a web server, reverse proxy or gateway; openEuler 24.03 SP2 also provides nginx 1.24.0 riscv64 RPMs plus common modules.
+  limits: The official nginx.org Linux repositories (Debian 12/13, Ubuntu 22.04–26.04, EL8–10, SUSE, Alpine) list only x86_64 and aarch64/arm64, with no official riscv64 binaries; no NGINX commercial support
+    covers riscv64; new versions have to wait for the distribution to catch up.
+  note: nginx works fine as a gateway, but only from distribution packages; if you need the official latest release or commercial support, riscv64 is not available.
+  evidence:
+  - label: Source (nginx.org)
+    url: https://nginx.org/en/linux_packages.html
+  - label: Source (packages.debian.org)
+    url: https://packages.debian.org/trixie/riscv64/nginx
+  - label: Source (repo.openeuler.org)
+    url: https://repo.openeuler.org/openEuler-24.03-LTS-SP2/everything/riscv64/Packages/
+  order: 23
+  feature: false
+- name: Ceph on riscv64 (Debian-packaged distributed storage) / Ceph riscv64
+  category: Storage and gateways
+  stack: Debian trixie ceph-mon / ceph-osd / radosgw (riscv64)
+  maturity: limited
+  what_works: Debian trixie riscv64 provides ceph, ceph-base, ceph-mon, ceph-osd and radosgw packages, enough to build a Ceph cluster offering block and object storage.
+  limits: Distribution packaging only, with no commercial support; public evidence on the stability and performance of large Ceph clusters on RISC-V is lacking (unverified); the resource cost of MON/OSD
+    on low-core-count RISC-V servers has to be assessed by the user (not measured).
+  note: Ceph installs and runs, but there is no at-scale validation data; small clusters or edge storage are worth trying, core storage is not worth the risk.
+  evidence:
+  - label: Source (packages.debian.org)
+    url: https://packages.debian.org/trixie/riscv64/ceph-mon
+  - label: Source (packages.debian.org)
+    url: https://packages.debian.org/trixie/riscv64/ceph-osd
+  - label: Source (packages.debian.org)
+    url: https://packages.debian.org/trixie/riscv64/radosgw
+  order: 24
+  feature: false
+- name: llama.cpp / llama-server on riscv64 (local RVV inference) / llama.cpp riscv64
+  category: AI inference services
+  stack: llama.cpp built from source (GGML RVV backend) on SpacemiT K1/K3, SG2042, etc.
+  maturity: limited
+  what_works: ggml provides RISC-V-specific compile flags (GGML_RV_ZFH/ZVFH/ZICBOP/ZIHINTPAUSE/ZVFBFWMA) and RVV kernels; llama-server exposes an OpenAI-compatible API; measured on a SpacemiT K1 (8 cores
+    at 1.6GHz) running TinyLlama 1.1B, about 8.7 tok/s generation and 12.5 tok/s prefill, workable as a single-machine local inference service.
+  limits: Official releases ship no riscv64 prebuilt packages (only arm64/x64/s390x and similar), so building from source is mandatory; -march must be set correctly (including zvfh) or the RVV build simply
+    fails; the measured figure is ~8.7 tok/s for a single user, concurrency is unverified, and the interactive experience with models above 1.1B on 1.6GHz-class boards has to be measured by the user.
+  note: The only workable LLM inference path on RISC-V is llama.cpp built from source; small models can serve one person, do not count on concurrency.
+  evidence:
+  - label: GitHub (ggml-org/llama.cpp/blob/master/g)
+    url: https://github.com/ggml-org/llama.cpp/blob/master/ggml/CMakeLists.txt
+  - label: Source (bruno.verachten.fr)
+    url: https://bruno.verachten.fr/2026/02/27/running-a-local-llm-on-risc-v-building-llama.cpp-on-a-banana-pi-f3-part-1
+  - label: GitHub (ggml-org/llama.cpp/releases)
+    url: https://github.com/ggml-org/llama.cpp/releases
+  order: 25
+  feature: false
+- name: vLLM (no official riscv64 backend) / vLLM riscv64
+  category: AI inference services
+  stack: vLLM CPU backend (officially supports x86 / ARM AArch64 / Apple / IBM Z)
+  maturity: experimental
+  what_works: vLLM's official CPU installation documentation lists four platform classes — x86, ARM AArch64, Apple Silicon and IBM Z — with the wheel or build method for each; riscv64 is not among them.
+  limits: There is no riscv64 wheel, no official build script or CI; the official documentation gives no riscv64 installation path; CUDA/CPU operators such as PagedAttention would have to be ported by hand
+    (no publicly available complete port was found; unverified).
+  note: vLLM does not support riscv64 today; there is no ready-made way to run high-throughput inference services on RISC-V.
+  evidence:
+  - label: Source (docs.vllm.ai)
+    url: https://docs.vllm.ai/en/stable/getting_started/installation/cpu
+  order: 26
+  feature: false
+- name: Ollama (no official riscv64 build) / Ollama riscv64
+  category: AI inference services
+  stack: Ollama official releases (linux-amd64 / linux-arm64, etc.)
+  maturity: experimental
+  what_works: Ollama's official releases provide amd64 and arm64 builds (including JetPack/ROCm/MLX variants) plus macOS and Windows packages.
+  limits: No riscv64 binaries; building it yourself is possible, but the inference backend still depends on ggml/llama.cpp's RISC-V support, which leads right back to llama.cpp.
+  note: Ollama's convenience does not exist on RISC-V; using llama.cpp directly is more realistic.
+  evidence:
+  - label: GitHub (ollama/ollama/releases)
+    url: https://github.com/ollama/ollama/releases
+  order: 27
+  feature: false
+- name: Scaleway Elastic Metal RV1 (commercial RISC-V cloud bare metal) / Scaleway EM-RV1
+  category: Real-world deployments
+  stack: 4×T-Head C910 RV64GC @1.85GHz, 16GB LPDDR4, 128GB eMMC, 100Mb/s, Paris data center
+  maturity: limited
+  what_works: 'Described by the vendor as the world''s first commercial RISC-V cloud server: the EM-RV1-C4M16S128-A is billed at €0.042/hour or €15.99/month (excluding tax), provisions instantly, includes
+    an NPU and suits CI/CD, porting validation and lightweight services.'
+  limits: 'Low specification ceiling: 4 cores/16GB/128GB eMMC/100Mb networking, unsuitable for databases or high-throughput services; the C910 is affected by the GhostWrite vulnerability, so instances provisioned
+    before 2024-06-06 need a kernel update; only a single Paris region.'
+  note: To try RISC-V servers at near-zero cost, Scaleway rents one for €16 a month; but it is only a “usable validation machine”, not production compute.
+  evidence:
+  - label: Source (labs.scaleway.com)
+    url: https://labs.scaleway.com/en/em-rv1
+  order: 28
+  feature: false
+- name: Shandong University “Dongshan-1” RISC-V server cluster / Dongshan-1 RISC-V cluster
+  category: Real-world deployments
+  stack: RISC-V server nodes + TPU acceleration + storage nodes; 6 compute + 2 storage nodes per rack
+  maturity: limited
+  what_works: 'Deployed and announced in 2024-04 as what is described as the world''s first RISC-V architecture server cluster, “Dongshan-1”; 2024-08 brought the PLUS version: 6 compute plus 2 storage nodes
+    in a single standard rack, 476.8 TFLOPS (including TPU expansion) and 126TB of storage, able to run 50+ AI models; in 2026-08 it passed a third-party scientific and technological achievement evaluation,
+    having cumulatively completed migration and validation of 200+ open-source software packages (distributions, GCC/LLVM, databases, web servers, containers, AI frameworks, HPC).'
+  limits: A university research/validation platform, not a commercial cloud; the 476.8 TFLOPS relies on TPU accelerator cards and pure CPU compute is limited; the exact node models and scale are not fully
+    disclosed.
+  note: The most complete RISC-V server full-stack validation environment in China, proving that it “runs”; but it is a research cluster, not a rentable commercial service.
+  evidence:
+  - label: Source (aii.sdu.edu.cn)
+    url: https://aii.sdu.edu.cn/info/1001/1542.htm
+  - label: Source (aii.sdu.edu.cn)
+    url: https://aii.sdu.edu.cn/info/1002/1901.htm
+  order: 29
+  feature: false
+- name: China Mobile 5G RISC-V server pilot / China Mobile RISC-V pilot
+  category: Real-world deployments
+  stack: RISC-V server chips and systems for 5G data-center scenarios (with custom instruction extensions)
+  maturity: experimental
+  what_works: 'China Mobile Research Institute used the 5G data center as its entry point: extracting workload requirements, extending instructions to optimize the core, and developing RISC-V server chips
+    and systems, advancing standards, technology, products and ecosystem together.'
+  limits: An official talk states plainly that “high-performance RISC-V processors still face many challenges in breaking into the high-compute market”; the work remains at the exploration and pilot stage
+    with no volume commercial deployment; no public performance or stability data.
+  note: Carriers are already trialing it, but only as a pilot for specific 5G scenarios — still some way from general-purpose cloud servers.
+  evidence:
+  - label: Source (finance.sina.com.cn)
+    url: https://finance.sina.com.cn/roll/2025-03-04/doc-inenpfii2575079.shtml
+  order: 30
+  feature: false
+- name: SiFive BigSky SF-2U870 data-center RISC-V server / SiFive BigSky
+  category: Real-world deployments
+  stack: 32×SiFive P870-D @2.0GHz, 2U rack, RVA23; Ubuntu 26.04 LTS / RHEL 10
+  maturity: limited
+  what_works: A 2U rack-mount RISC-V server announced in 2026-08 (32 P870-D cores @2.0GHz), fully RVA23 compliant, natively supporting Ubuntu 26.04 LTS and RHEL 10 without a custom port; the on-site demo
+    ran several server workloads and CUDA was brought up on it, acting as head node for NVIDIA GPU LLM workloads; the vendor says hyperscale customers are already running workloads on deployed systems.
+  limits: Limited production, prioritized for strategic partners, with pricing and lead times undisclosed; the ecosystem is still in the software porting/tuning stage; GPUs come from add-in PCIe cards,
+    not onboard.
+  note: This is the first RISC-V machine that “looks like a server” (2U, RVA23, native Ubuntu/RHEL), but it cannot be bought in volume — it is a validation platform for strategic customers.
+  evidence:
+  - label: Official news (sifive.cn)
+    url: https://www.sifive.cn/press/risc-v-in-the-datacenter-bigsky-development-server
+  order: 31
+  feature: false

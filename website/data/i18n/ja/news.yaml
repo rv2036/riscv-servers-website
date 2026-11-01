@@ -1,2 +1,370 @@
-# 新闻条目，按日期倒序
-items: []
+# RISC-V サーバーニュース（日本語版、日付の新しい順）
+items:
+  - date: "2026-10-22"
+    title: "Qualcomm が RISC-V スタートアップ Akeana を買収、AI・データセンター向けチップを強化"
+    summary: "Qualcomm は RISC-V プロセッサ設計会社 Akeana の買収を完了した。取引額は非公開で、Akeana の IP とエンジニアリングチームは一体で Qualcomm に組み込まれ、AI とデータセンターの布陣を強める。Akeana は 2021 年、Marvell でサーバーチップを手がけたチームが創業し、2024 年 8 月に 1 億ドル超を調達、顧客ごとにカスタマイズできる RISC-V コアを主力とする。Qualcomm が Ventana に続いてデータセンター級の RISC-V 資産を手に入れるのは 2 度目。"
+    source: "Design & Reuse / Dealroom"
+    url: "https://www.design-reuse.com/news/202531315-qualcomm-buys-risc-v-startup-akeana-to-push-into-ai-and-data-center-chips"
+    vendors: ["Qualcomm", "Akeana"]
+    tags: ["M&A・投資", "チップ発表"]
+    importance: "high"
+  - date: "2026-10-20"
+    title: "进迭时空が V100 を発表：46 コアの RISC-V サーバー CPU、2 ソケットで 92 コアまで拡張"
+    summary: "深センで開催された 2026 RISC-V 中国サミットで、进迭时空は初のサーバー級チップ V100 を発表した。香山「昆明湖」V2R2 高性能コア 6 個と自社開発 X100 高効率コア 40 個の計 46 コア、2 ソケットで 92 コアまで拡張でき、8 チャネル DDR5 と PCIe 5.0 レーン 52 本を備える。公式は、業界で初めて RISC-V サーバー仕様に完全準拠した計算チップとし、BRS テストの全項目に合格、openEuler、openKylin、Ubuntu、Debian、Fedora などのディストリビューションをそのままインストールして起動できるとしている。香山コアが商用サーバーチップに入るのは初めてで、RISC-V サーバーが汎用ディストリビューションを載せて納品できる段階に入ったことも意味する。"
+    source: "腾讯新闻 / 芯智讯"
+    url: "https://view.inews.qq.com/a/20261020A0BL9500"
+    vendors: ["进迭时空 SpacemiT"]
+    tags: ["チップ発表", "サーバー出荷", "標準・仕様"]
+    importance: "high"
+  - date: "2026-10-15"
+    title: "zeroRISC の 10 年：オープンシリコンの安全な商用化の道筋"
+    summary: "The Next Platform が zeroRISC 創業者の Dominic Rizzo にインタビューし、Google の OpenTitan プロジェクトから出発してオープンシリコンの商用化を推し進めた 10 年を振り返った。同社はオープンソースの Root of Trust でサーバーセキュリティに切り込み、オープンなシリコンが機密コンピューティングとサプライチェーンの信頼性に固有の価値を持つと主張する。記事はエコシステムの観察であり、製品発表ではない。"
+    source: "The Next Platform"
+    url: "https://www.nextplatform.com/compute/2026/10/15/a-decade-in-zerorisc-sees-a-bright-future-for-open-silicon/5303297"
+    vendors: ["zeroRISC", "Google"]
+    tags: ["エコシステム連携", "ソフトウェアスタック"]
+    importance: "medium"
+  - date: "2026-09-15"
+    title: "SiFive が AMD と協業し、ROCm を RISC-V サーバーへ"
+    summary: "AI Infra Summit で SiFive と AMD は、SiFive BigSky プラットフォーム上で ROCm 10.0 を動かすデモを行った。P870-D をヘッドノードとし、Radeon AI PRO R9700 が推論をオフロードして Gemma4-E2B モデルを動作させた。両社は RISC-V サーバー上での ROCm の性能最適化を続けるとしている。RISC-V サーバーが主要 GPU ソフトウェアスタックの公式な協業の場に入るのは初めて。"
+    source: "SiFive"
+    url: "https://www.sifive.com/press/sifive-amd-rocm-riscv-datacenter-servers"
+    vendors: ["SiFive", "AMD"]
+    tags: ["ソフトウェアスタック", "エコシステム連携", "HPC"]
+    importance: "high"
+  - date: "2026-09-07"
+    title: "Canonical が語る、Ubuntu の RISC-V エンタープライズ準備"
+    summary: "Canonical のシリコンアライアンス担当ディレクター Gordan Markuš が Hot Chips 2026 で、Ubuntu のビルド工程、アーキテクチャをまたぐ ISA 対応戦略、そして RISC-V が「エンタープライズレディ」になる条件を説明した。重点は RVA23 の基準線と、ファームウェアおよびサーバープラットフォーム仕様との整合性にある。"
+    source: "ServeTheHome"
+    url: "https://www.servethehome.com/canonical-evolution-of-enterprise-open-source-risc-v-at-hot-chips-2026/"
+    vendors: ["Canonical", "Ubuntu"]
+    tags: ["オペレーティングシステム", "ソフトウェアスタック"]
+    importance: "medium"
+  - date: "2026-09-02"
+    title: "Hot Chips 2026：RISC-V の標準化と採用の進展"
+    summary: "RISC-V International と SiFive などが Hot Chips 2026 で標準策定と採用状況を更新し、RVA23 の定着、サーバープラットフォーム仕様の進展、AI 計算向けのコア設計を紹介した。年に一度のエコシステム進捗の総括にあたる。"
+    source: "ServeTheHome"
+    url: "https://www.servethehome.com/update-on-risc-v-standards-and-adoption-at-hot-chips-2026/"
+    vendors: ["RISC-V International", "SiFive"]
+    tags: ["標準・仕様", "エコシステム連携"]
+    importance: "medium"
+  - date: "2026-09-01"
+    title: "NVIDIA が Hot Chips 2026 で RISC-V と GPU の協調を語る"
+    summary: "NVIDIA は Hot Chips 2026 のチュートリアルで、CUDA アプリケーションが CPU と GPU のソフトウェアモジュールをどう組み合わせるか、RISC-V ホスト上で自社 GPU をどう支えるかの道筋を説明した。これは 2025 年に CUDA が公式に RISC-V をサポートした動きにつながるもので、RISC-V サーバーが GPU ヘッドノードを担う流れの主流化を指し示す。"
+    source: "ServeTheHome"
+    url: "https://www.servethehome.com/nvidia-risc-v-for-nvidia-gpus-at-hot-chips-2026/"
+    vendors: ["NVIDIA"]
+    tags: ["ソフトウェアスタック", "エコシステム連携"]
+    importance: "medium"
+  - date: "2026-08-25"
+    title: "SiFive が BigSky を発表：初のエンタープライズ向け 2U RISC-V サーバー"
+    summary: "SiFive はデータセンター開発プラットフォーム BigSky SF-2U870 を発表し、世界初のエンタープライズ向けでラック搭載可能な 2U RISC-V サーバーと位置づけた。P870-D をベースに、ハイパースケール顧客のソフトウェア移植と負荷調整を狙う。The Register は、実質は開発・検証プラットフォームであり量産の市販機ではないと指摘した。"
+    source: "The Register"
+    url: "https://www.theregister.com/systems/2026/08/25/sifive-pushes-development-server-to-take-risc-v-into-the-datacenter/5292136"
+    vendors: ["SiFive"]
+    tags: ["サーバー出荷", "システム・マザーボード", "ソフトウェアスタック"]
+    importance: "high"
+  - date: "2026-08-24"
+    title: "Alibaba の C950、CPU だけで 270 億パラメータモデルを動作"
+    summary: "玄鉄 C950（64 コア、TSMC 5nm）が GPU なし、エミュレーション層なし、翻訳オーバーヘッドなしで Qwen3.8 27B を動かし、30 tokens/s、最初のトークンまで 1.9 秒を達成した。RISC-V サーバーにとっては「CPU が単独で推論を担う」ことの公開検証であり、中国市場における RISC-V 智算路線への信頼も強める。"
+    source: "Design & Reuse / Intelligent Living"
+    url: "https://www.design-reuse.com/news/202531019-alibaba-s-risc-v-chip-runs-27b-ai-model-without-a-gpu/"
+    vendors: ["Alibaba", "DAMO Academy"]
+    tags: ["チップ発表", "ソフトウェアスタック"]
+    importance: "high"
+  - date: "2026-08-20"
+    title: "赛昉がサーバー級 RISC-V コア Dubhe-100 を発表"
+    summary: "赛昉科技はサーバー市場向けの Dubhe-100（昉・天枢-100）を発表した。15 段パイプライン、6 イシュー、256 エントリのリオーダバッファで、RVA23 とベクトル拡張に対応する。公式は、中国で初めて納品可能な段階に達したサーバー級 RISC-V CPU IP の一群とし、すでに顧客がこれを使ってサーバーチップを開発しているとしている。"
+    source: "Design & Reuse"
+    url: "https://www.design-reuse.com/news/202531000-starfive-launches-server-class-risc-v-ip-to-accelerate-its-strategic-expansion-into-ai-computing-infrastructure/"
+    vendors: ["StarFive 赛昉科技"]
+    tags: ["チップ発表", "サーバー出荷"]
+    importance: "high"
+  - date: "2026-08-17"
+    title: "スペインの Openchip が BER10 を発表：欧州初のスパコン向け RISC-V チップ"
+    summary: "Openchip は 64 ビットの BER10 を発表した。2nm 未満の GAA プロセスを採用し、完全な Linux を動作でき、企業と研究機関がスパコンやデータセンターのプロジェクトで検証できるよう提供済み。欧州の自主シリコンと、将来の AI アクセラレータの土台と位置づけられている。"
+    source: "Design & Reuse / russpain"
+    url: "https://www.design-reuse.com/news/202530985-spain-unveils-ber10-europe-s-first-risc-v-chip-for-supercomputing/"
+    vendors: ["Openchip"]
+    tags: ["チップ発表", "HPC"]
+    importance: "high"
+  - date: "2026-08-13"
+    title: "Andes が Condor Computing を閉鎖、データセンター級 RISC-V コア計画は頓挫"
+    summary: "Jon Peddie Research は、Andes が子会社 Condor Computing を閉鎖し、その RVA23 高性能コア IP を Andes に戻したと報じた。Condor の Cuzco は独特の時間スケジューリング・アーキテクチャを採り、RISC-V がデータセンターに挑む重要な試みと見られていた。今回の閉鎖はエコシステムにとっての後退となる。"
+    source: "Jon Peddie Research"
+    url: "https://www.jonpeddie.com/news/condor-flies-no-more"
+    vendors: ["Andes", "Condor Computing"]
+    tags: ["M&A・投資", "チップ発表"]
+    importance: "medium"
+  - date: "2026-07-27"
+    title: "RISC-V の HPC におけるロードマップが徐々に明確に"
+    summary: "HPCwire が ISC 2026 のパネル討論をもとに書いた記事。世界で 300 億個を超える RISC-V コアが配備され、調査会社は 5 年以内に市場の 3 分の 1 を占めると予測するが、HPC 分野では RISC-V はまだ期待に応えていない。新しいチップの登場とエコシステムの成熟により、今後数年で変わるとの見立て。"
+    source: "Design & Reuse / HPCwire"
+    url: "https://www.design-reuse.com/news/202530880-charting-risc-v-s-future-in-hpc/"
+    vendors: ["RISC-V International"]
+    tags: ["HPC", "エコシステム連携"]
+    importance: "medium"
+  - date: "2026-07-09"
+    title: "SUSE と Openchip が協業、欧州の RISC-V ハードウェアに企業向けソフトウェアスタックを"
+    summary: "両社は MoU を締結し、SUSE Linux Enterprise Server、RKE2、Rancher Prime、SUSE AI Factory を Openchip の RISC-V アクセラレータに適合させる。チップアーキテクチャからオープンソースソフトウェアまでの欧州主権技術スタックを目指すもので、RISC-V の企業データセンター進出に直接の意味を持つ。"
+    source: "Design & Reuse / Evertiq"
+    url: "https://www.design-reuse.com/news/202530790-suse-openchip-partner-to-develop-european-risc-v-hardware/"
+    vendors: ["SUSE", "Openchip"]
+    tags: ["ソフトウェアスタック", "エコシステム連携", "オペレーティングシステム"]
+    importance: "medium"
+  - date: "2026-07-02"
+    title: "赛昉と LECARC が RISC-V サーバー CPU を共同開発"
+    summary: "LECARC（Theo End Computing）は赛昉の自社開発 Dubhe-100 CPU IP を採用し、インテリジェントエッジ向けの次世代サーバー CPU を開発する。両社は Bernstein のレポートを引き、agentic AI によって推論負荷における CPU の比率が従来の大規模モデルの約 14% から 50% に上がるとしている。"
+    source: "Design & Reuse"
+    url: "https://www.design-reuse.com/news/202530748-starfive-and-lecarc-forge-partnership-to-co-develop-risc-v-server-cpus-and-seize-new-opportunities-in-the-agentic-ai-era/"
+    vendors: ["StarFive", "LECARC"]
+    tags: ["エコシステム連携", "チップ発表"]
+    importance: "medium"
+  - date: "2026-06-30"
+    title: "Tenstorrent が TT-Ascalon S を発表、日本事業も拡大"
+    summary: "TT-Deploy JP で Tenstorrent は agentic AI 向けの TT-Ascalon S RISC-V CPU IP を発表し、言語モデルと動画モデルでの新記録を公表、日本の ai& の主権型ヘテロジニアス推論プラットフォームにも加わった。Galaxy スーパークラスタは単独で配備でき、GPU と併存させることもできる。"
+    source: "Tenstorrent"
+    url: "https://tenstorrent.com/en/newsroom/tenstorrent-sets-new-performance-records-launches-tt--ascalon-s"
+    vendors: ["Tenstorrent"]
+    tags: ["チップ発表", "エコシステム連携"]
+    importance: "medium"
+  - date: "2026-06-16"
+    title: "Qualcomm が 100 億ドルで Tenstorrent 買収を検討と報道"
+    summary: "The Register は、Qualcomm が Tenstorrent の買収について協議中で、評価額は約 100 億ドルと報じた。後者は Ascalon RISC-V CPU IP と Blackhole AI アクセラレータを持ち、取引が成立すれば Qualcomm は Ventana、Akeana、Tenstorrent の 3 つの RISC-V 製品ラインを同時に握ることになる。"
+    source: "The Register"
+    url: "https://www.theregister.com/systems/2026/06/16/qualcomm-said-to-be-circling-ai-chip-biz-tenstorrent-in-10b-risc-v-power-play/5256084"
+    vendors: ["Qualcomm", "Tenstorrent"]
+    tags: ["M&A・投資"]
+    importance: "high"
+  - date: "2026-06-10"
+    title: "SpacemiT K3 ミニ PC：「使える」RVA23 デスクトップ RISC-V"
+    summary: "Ubuntu Summit で进迭时空は 16 コア K3 SoC を載せたミニ PC を展示した。RVA23 準拠で日常性能は使えるが、価格は安くない。RVA23 のソフトウェア基準線に実ハードウェアの裏付けが付き始めたことを示し、後のサーバー級製品への布石にもなった。"
+    source: "The Register"
+    url: "https://www.theregister.com/systems/2026/06/10/spacemit-shows-off-usably-quick-risc-v-mini-desktop/5252935"
+    vendors: ["SpacemiT 进迭时空"]
+    tags: ["チップ発表", "システム・マザーボード"]
+    importance: "medium"
+  - date: "2026-05-20"
+    title: "Firefly が 2880 TOPS の RISC-V AI サーバーを発表"
+    summary: "Firefly CSC2-N48SPK3 は 4U シャーシ内に SpacemiT K3 ノード 48 個と NVMe SSD 48 基を集積し、公称演算性能は 2880 TOPS。単一の大きなチップに頼らず、RISC-V ノードを積み上げて「マルチノード AI サーバー」にする路線である。"
+    source: "CNX Software"
+    url: "https://www.cnx-software.com/2026/05/20/firefly-csc2-n48spk3-a-2880-tops-risc-v-ai-server-with-48-spacemit-k3-nodes-48-nvme-ssds/"
+    vendors: ["Firefly", "SpacemiT"]
+    tags: ["サーバー出荷", "システム・マザーボード"]
+    importance: "medium"
+  - date: "2026-05-18"
+    title: "Tenstorrent が TT-QuietBox 2 を発表：全オープンソーススタックの RISC-V AI ワークステーション"
+    summary: "TT-QuietBox 2（Blackhole）は液冷デスクトップシステムで、最大 1200 億パラメータのモデルをローカルで動かせる。コンパイラからカーネルまで全てオープンソースで、価格は 9999 ドルから。公式は、RISC-V ベースで teraflop 級の推論に達する初のデスクトップ AI ワークステーションとしている。"
+    source: "Design & Reuse / Tenstorrent"
+    url: "https://www.design-reuse.com/news/202530525-tenstorrent-unveils-tt-quietbox-2-the-first-risc-v-ai-workstation-with-a-fully-open-source-stack-to-deliver-teraflop-class-inference/"
+    vendors: ["Tenstorrent"]
+    tags: ["システム・マザーボード", "ソフトウェアスタック"]
+    importance: "medium"
+  - date: "2026-05-12"
+    title: "SiFive が第 3 世代 P570/P550 高性能 RISC-V IP を発表"
+    summary: "新しい IP はアウトオブオーダーのスーパースカラにベクトルを加えた構成で、面積と消費電力に制約のあるコンシューマ機器が主戦場。SiFive は P570 Gen3 を同クラスで最強かつ最も効率的なアウトオブオーダーコアとしている。P500 性能シリーズの最新世代にあたり、データセンター向けの P870-D とは別の製品ライン。"
+    source: "SiFive"
+    url: "https://www.sifive.com/press/sifive-sets-new-bar-for-high-performance-risc-v-with-third-generation-performance-p550-and-p570-ip"
+    vendors: ["SiFive"]
+    tags: ["チップ発表"]
+    importance: "medium"
+  - date: "2026-05-06"
+    title: "RISC-V サーバープラットフォーム仕様 1.0 が正式承認"
+    summary: "riscv-non-isa ワーキンググループが RISC-V Server Platform v1.0 を公開した。この仕様で初の正式承認版にあたり、サーバーシステムがファームウェア、割り込み制御、PCIe、RAS などで満たすべき最低要件を統一する。システムベンダーやクラウド事業者にとっては、RISC-V サーバーが「導入でき、運用できる」ための前提条件となる。"
+    source: "RISC-V International (GitHub)"
+    url: "https://github.com/riscv-non-isa/riscv-server-platform/releases/tag/v1.0"
+    vendors: ["RISC-V International"]
+    tags: ["標準・仕様"]
+    importance: "high"
+  - date: "2026-04-29"
+    title: "Tenstorrent Galaxy Blackhole サーバーが出荷開始"
+    summary: "Galaxy は 6U シャーシに Blackhole アクセラレータ 32 基を集積し、100 Tbps のアグリゲート帯域を持つイーサネットメッシュで相互接続する。1TB の GDDR6 と 16TB のメモリを備え、1 台約 11 万ドル。システムは RISC-V コアが管理し、AI サーバーというシステム単位で RISC-V が量産されている珍しい例。"
+    source: "Tenstorrent"
+    url: "https://tenstorrent.com/en/newsroom/tenstorrent-enables-ai-at-scale-with-industry-leading-performance"
+    vendors: ["Tenstorrent"]
+    tags: ["サーバー出荷", "システム・マザーボード"]
+    importance: "high"
+  - date: "2026-04-09"
+    title: "SiFive が 4 億ドルの G ラウンドを完了、評価額 36.5 億ドル"
+    summary: "今回は Atreides Management がリードし、NVIDIA、Apollo、Point72、T. Rowe Price などが出資した。資金はデータセンター向け RISC-V のロードマップ加速に充てる。NVIDIA の出資は、RISC-V ホスト CPU のエコシステムへの裏付けと受け止められた。"
+    source: "SiFive"
+    url: "https://www.sifive.com/press/sifive-raises-400-million-to-accelerate-high-performance-risc-v-data-center-solutions"
+    vendors: ["SiFive", "NVIDIA"]
+    tags: ["M&A・投資"]
+    importance: "high"
+  - date: "2026-03-25"
+    title: "Alibaba が中国の大規模モデル向け RISC-V サーバーチップを納品"
+    summary: "達摩院は玄鉄 C950 を発表し、史上最強の RISC-V プロセッサとした。シングルコアの SPECint2006 は 70 点を超え、Qwen3、DeepSeek V3 など千億パラメータ級のモデルをネイティブにサポートし、RVA23.1 を実装する。外部の評価ではシングルコア性能は Apple M1 に近いが、全体ではなお西側のフラッグシップに劣り、公式はコア数を公表していない。"
+    source: "The Register"
+    url: "https://www.theregister.com/on-prem/2026/03/25/alibaba-delivers-risc-v-server-chip-optimized-for-chinese-ai/5229685"
+    vendors: ["Alibaba", "DAMO Academy"]
+    tags: ["チップ発表", "サーバー出荷"]
+    importance: "high"
+  - date: "2026-03-24"
+    title: "玄鉄 C950 発表：初めて千億パラメータ級モデルをネイティブにサポート"
+    summary: "2026 玄鉄 RISC-V エコシステム大会が上海で開催され、達摩院は C950（3.2GHz、8 デコード、16 段パイプライン、1000 超のアウトオブオーダーウィンドウ）を発表した。あわせて RISC-V ネイティブの AI エンジン 2 種を投入し、CoVE 機密コンピューティングをネイティブにサポートする。公式は SHD Group の予測を引き、2031 年に RISC-V デバイスの出荷が 360 億台に達するとしている。"
+    source: "新华网"
+    url: "https://www3.xinhuanet.com/tech/20260324/fdc7c3b201074147a46b5ce6ad51045f/c.html"
+    vendors: ["Alibaba", "DAMO Academy"]
+    tags: ["チップ発表", "エコシステム連携"]
+    importance: "high"
+  - date: "2026-03-09"
+    title: "openEuler 24.03 LTS SP3 RISC-V が長期保守に移行"
+    summary: "このバージョンは中国科学院ソフトウェア研究所が主導し、中興通訊、Alibaba 達摩院、算能、进迭时空、超睿などと共同で完成させた。RVA23 に対応した初の長期保守バージョンで、RISC-V Server Platform 仕様に初步的に対応し、RVA20/RVA23 の 2 本の基準線を維持する。国産 RISC-V サーバーにとって、長期間運用できる OS の土台となる。"
+    source: "openEuler 社区"
+    url: "https://www.openeuler.org/zh/blog/20260317-RISC-V/20260317-RISC-V.html"
+    vendors: ["openEuler", "中科院软件所", "中兴通讯", "SOPHGO", "SpacemiT"]
+    tags: ["オペレーティングシステム", "ソフトウェアスタック", "標準・仕様"]
+    importance: "high"
+  - date: "2026-01-23"
+    title: "SpaceMiT K3：16 コア RVA23 SoC の仕様と初期ベンチマーク"
+    summary: "CNX Software が K3 の公開仕様をまとめた。X100 コアをベースに最高 2.5GHz、RVA23 準拠で、初期のベンチマークデータも示している。K3 は後に複数の RISC-V サーバーや AI システムの演算ユニットになった。"
+    source: "CNX Software"
+    url: "https://www.cnx-software.com/2026/01/23/spacemit-k3-16-core-risc-v-soc-system-information-and-early-benchmarks/"
+    vendors: ["SpacemiT 进迭时空"]
+    tags: ["チップ発表"]
+    importance: "medium"
+  - date: "2026-01-15"
+    title: "SiFive が NVIDIA NVLink Fusion に接続"
+    summary: "SiFive は高性能データセンター向けソリューションに NVLink Fusion を統合し、RISC-V ホスト CPU が NVIDIA GPU や他のアクセラレータとコヒーレントかつ高帯域に相互接続できるようにすると発表した。RISC-V が AI ラックに入り、GPU ヘッドノードの役割を担うための鍵となる一歩。"
+    source: "The Register"
+    url: "https://www.theregister.com/on-prem/2026/01/15/sifive-to-fuse-risc-v-with-nvidias-nvlink/5115896"
+    vendors: ["SiFive", "NVIDIA"]
+    tags: ["エコシステム連携", "HPC"]
+    importance: "high"
+  - date: "2025-12-10"
+    title: "Qualcomm が Ventana Micro Systems を買収"
+    summary: "Qualcomm は高性能 RISC-V CPU 設計会社 Ventana の買収を発表した。取引額は非公開で、自社開発の Arm Oryon コアと並行して展開する。Ventana の Veyron V2 はデータセンターと HPC 向けで、今回の動きは Qualcomm が Arm ライセンス以外に持つ重要なバックアップ路線と見られている。"
+    source: "The Register"
+    url: "https://www.theregister.com/special-features/2025/12/10/qualcomm-takes-risc-on-arm-alternative-with-ventana-buy/2292187"
+    vendors: ["Qualcomm", "Ventana"]
+    tags: ["M&A・投資"]
+    importance: "high"
+  - date: "2025-12-04"
+    title: "Tenstorrent TT-Ascalon 高性能 RISC-V CPU IP をライセンス提供"
+    summary: "Tenstorrent は TT-Ascalon を即時ライセンス可能にしたと発表した。「所有でき、カスタマイズできる」データセンター級 RISC-V コアを掲げ、完全な納品方案も用意する。RISC-V CPU IP の競争を組み込みから高性能帯へ押し上げた。"
+    source: "Tenstorrent"
+    url: "https://tenstorrent.com/en/newsroom/tenstorrent-announces-availability-of-tt-ascalon"
+    vendors: ["Tenstorrent"]
+    tags: ["チップ発表"]
+    importance: "medium"
+  - date: "2025-11-27"
+    title: "HPC は x86 の一人勝ちではなくなり、Arm と RISC-V が参入"
+    summary: "The Register の特集は、TOP500 で Intel プラットフォームの比率が 10 年前の 9 割近くから 57% に下がり、Arm と RISC-V が HPC のシェアを争っていると指摘した。RISC-V の現実的な機会は主にアクセラレータの制御コア、主権型スパコンのプロジェクト、専用クラスタにある。"
+    source: "The Register"
+    url: "https://www.theregister.com/special-features/2025/11/27/hpc-wont-be-x86-forever-and-its-starting-to-show/2154107"
+    vendors: ["Arm", "RISC-V International"]
+    tags: ["HPC"]
+    importance: "medium"
+  - date: "2025-11-27"
+    title: "Tenstorrent QuietBox を試す：演算力は十分、ソフトウェアスタックが足を引っ張る"
+    summary: "約 1.2 万ドルの RISC-V AI ワークステーションは 32 チップのサーバーまで拡張できるが、ソフトウェアスタックが未成熟で実際の調整は難しい。このレビューは、RISC-V サーバーの「ハードウェアが先行し、ソフトウェアが後を追う」現状を如実に示している。"
+    source: "The Register"
+    url: "https://www.theregister.com/on-prem/2025/11/27/blackhole-quietbox-tenstorrents-ai-workstation-reviewed/2113269"
+    vendors: ["Tenstorrent"]
+    tags: ["システム・マザーボード", "ソフトウェアスタック"]
+    importance: "medium"
+  - date: "2025-10-09"
+    title: "欧州初のアウトオブオーダー実行 RISC-V プロセッサがテープアウトに成功"
+    summary: "eProcessor プロジェクトは、欧州初のアウトオブオーダー実行 RISC-V プロセッサの開発と配備を完了したと発表した。チップは 22nm プロセス。欧州プロセッサ計画（EPI）の一部で、後続の HPC チップに向けた設計・検証能力を蓄積する。"
+    source: "RISC-V International"
+    url: "https://riscv.org/blog/europe-achieves-a-key-milestone-with-the-europes-first-out-of-order-risc-v-processor-chip-with-the-eprocess"
+    vendors: ["eProcessor", "European Processor Initiative"]
+    tags: ["HPC", "チップ発表"]
+    importance: "medium"
+  - date: "2025-10-02"
+    title: "Meta が Rivos を買収、自社計算エンジンを加速"
+    summary: "Meta は RISC-V サーバーチップのスタートアップ Rivos を買収し、そのチームと IP を Meta の Compute Engine 体系に組み入れた。The Next Platform は、ハイパースケーラーが RISC-V でカスタム CPU を作る路線を裏付けるもので、Rivos のサーバー級設計がエンジニアリング上の価値を持っていたことも示すと論じた。"
+    source: "The Next Platform"
+    url: "https://www.nextplatform.com/compute/2025/10/02/meta-buys-rivos-to-accelerate-compute-engine-engineering/1642477"
+    vendors: ["Meta", "Rivos"]
+    tags: ["M&A・投資", "チップ発表"]
+    importance: "high"
+  - date: "2025-09-15"
+    title: "Condor の Cuzco：RISC-V をデータセンターへ"
+    summary: "The Next Platform が Condor Computing の Cuzco コアを分析した。時間スケジューリングに基づく高性能 RVA23 設計で、データセンターで Arm Neoverse と正面から競うことを狙う。記事は同時に、ソフトウェアとエコシステムの成熟度が最大の変数だと指摘する。"
+    source: "The Next Platform"
+    url: "https://www.nextplatform.com/compute/2025/09/15/condor-technology-to-fly-cuzco-risc-v-cpu-into-the-datacenter/1639614"
+    vendors: ["Condor Computing", "Andes"]
+    tags: ["チップ発表", "HPC"]
+    importance: "medium"
+  - date: "2025-08-25"
+    title: "Hot Chips 2025：Condor Cuzco の高性能 RISC-V 設計"
+    summary: "ServeTheHome が会場から Cuzco のマイクロアーキテクチャの詳細を報じた。Hot Chips では珍しい RISC-V の高性能コアで、ワイドイシューかつ深いアウトオブオーダーによりサーバー級の負荷を狙う。このコアは後に Condor の閉鎖とともに中止された。"
+    source: "ServeTheHome"
+    url: "https://www.servethehome.com/condor-computings-cuzco-a-high-perf-risc-v-design-at-hot-chip-2025/"
+    vendors: ["Condor Computing", "Andes"]
+    tags: ["チップ発表"]
+    importance: "medium"
+  - date: "2025-07-21"
+    title: "NVIDIA が CUDA を RISC-V に"
+    summary: "NVIDIA は CUDA ソフトウェアスタックの対応を RISC-V CPU に広げた。最初の恩恵を受けるのは中国の新しい世代の RISC-V サーバーチップ。RISC-V サーバーにとっては AI エコシステムで最も重要なピースの 1 つが埋まったことになり、GPU ヘッドノードとしての適性も高まる。"
+    source: "The Register"
+    url: "https://www.theregister.com/on-prem/2025/07/21/nvidia-cuda-gets-risc-v-support/802029"
+    vendors: ["NVIDIA", "Alibaba"]
+    tags: ["ソフトウェアスタック", "エコシステム連携"]
+    importance: "high"
+  - date: "2025-07-09"
+    title: "GlobalFoundries が MIPS を買収"
+    summary: "GlobalFoundries はチップ設計会社 MIPS を買収し、設計と製造の両方を備える主体となった。AI 市場における RISC-V の機会に賭ける姿勢も明確にした。MIPS は近年製品ラインを RISC-V に転換しており、この取引はライセンスコア市場での存在感を強める。"
+    source: "The Register"
+    url: "https://www.theregister.com/on-prem/2025/07/09/globalfoundries-acquires-chip-designer-mips/1300966"
+    vendors: ["GlobalFoundries", "MIPS"]
+    tags: ["M&A・投資"]
+    importance: "medium"
+  - date: "2025-04-17"
+    title: "openEuler Developer Day 2025：RISC-V SIG の取り組み"
+    summary: "RISC-V 分科会は openEuler RISC-V SIG が主催し、中国科学院ソフトウェア研究所、北京オープンソースチップ研究院、Alibaba などが参加して、サーバー向けソフトウェアスタック、ディストリビューションの保守、ハードウェア適応を議論した。国産 RISC-V サーバー向け OS エコシステムの進捗記録にあたる。"
+    source: "openEuler 社区"
+    url: "https://www.openeuler.org/zh/news/openEuler/20250423-riscv/20250423-riscv"
+    vendors: ["openEuler", "中科院软件所"]
+    tags: ["オペレーティングシステム", "エコシステム連携"]
+    importance: "low"
+  - date: "2025-03-07"
+    title: "欧州 DARE プロジェクト始動：2.4 億ユーロで RISC-V スパコンチップ"
+    summary: "38 の機関が共同で DARE（Digital Autonomy with RISC-V in Europe）を設立し、3 年以内に HPC と AI 向けの chiplet 3 種を開発する計画で、予算は約 2.4 億ユーロ。欧州のスパコンに非米系プロセッサの選択肢を提供することが目標で、欧州の RISC-V 主権演算としては最大の投資。"
+    source: "The Register"
+    url: "https://www.theregister.com/on-prem/2025/03/07/europe-bets-on-risc-v-for-homegrown-supercomputing-platform/884921"
+    vendors: ["DARE", "EuroHPC"]
+    tags: ["HPC", "エコシステム連携", "標準・仕様"]
+    importance: "high"
+  - date: "2025-03-05"
+    title: "Alibaba がサーバー級 RISC-V コア C930 を発表"
+    summary: "玄鉄 C930 はサーバー、PC、自動運転向けで、6 デコード、16 段パイプラインのアウトオブオーダー実行マイクロアーキテクチャを採用し、RVA23 に準拠して Vector、CoVE、RAS、AIA などの拡張に対応する。同時期に、中国が全国で RISC-V の使用を促す文書を出すとの報道もあり、政策と製品が同じ方向に働いた。"
+    source: "The Register"
+    url: "https://www.theregister.com/on-prem/2025/03/05/alibaba-launches-server-grade-risc-v-cpu-design/745022"
+    vendors: ["Alibaba", "DAMO Academy"]
+    tags: ["チップ発表", "標準・仕様"]
+    importance: "high"
+  - date: "2025-03-04"
+    title: "算能が世界初の DeepSeek 対応 RISC-V メニーコアサーバーを発表"
+    summary: "2025 中国 RISC-V エコシステム大会で、算能は 64 コア SG2044 を搭載した計算サーバー SRA3-40 を発表し、同時にストレージサーバー SRB3-40 と融合サーバー SRM3-40 も投入した。Firefly も同じ時期に前世代 SG2042 ベースのサーバー製品を出しており、RISC-V メニーコアのシステムが体系化し始めたことを示す。"
+    source: "新浪科技 / IT之家"
+    url: "https://finance.sina.com.cn/tech/digi/2025-03-04/doc-inennyzc9665232.shtml"
+    vendors: ["SOPHGO 算能", "Firefly"]
+    tags: ["サーバー出荷", "システム・マザーボード"]
+    importance: "high"
+  - date: "2025-03-01"
+    title: "算能がヘテロジニアス融合の新製品を発表、RISC-V サーバーシステムを推進"
+    summary: "算能は 2025 中国 RISC-V エコシステム大会で SG2044 と対応するサーバー、智算製品を発表し、CPU と自社開発 TPU のヘテロジニアス融合を強調した。智算センター、汎用計算、エッジが対象。SG2042 の後の国産 RISC-V サーバープラットフォームの全面的なアップグレードにあたる。"
+    source: "SOPHGO"
+    url: "https://en.sophgo.com/post/435.html"
+    vendors: ["SOPHGO 算能"]
+    tags: ["チップ発表", "サーバー出荷"]
+    importance: "medium"
+  - date: "2025-01-16"
+    title: "米国が算能をエンティティリストに追加"
+    summary: "米商務省は中国の RISC-V チップ設計会社である算能（Sophgo）をエンティティリストに追加した。Huawei に AI チップを供給した疑いが理由。RISC-V サーバーのサプライチェーンにとっては地政学リスクが最も直接的に現れた事例で、海外でのファウンドリ調達や顧客開拓にも影響する。"
+    source: "The Register"
+    url: "https://www.theregister.com/offbeat/2025/01/16/us-bans-chinese-chipmaker-suspected-of-helping-huawei/524767"
+    vendors: ["SOPHGO 算能", "Huawei"]
+    tags: ["M&A・投資", "エコシステム連携"]
+    importance: "medium"
+  - date: "2025-01-08"
+    title: "第 3 世代香山プロセッサが 2025 年に登場へ"
+    summary: "中国科学院計算技術研究所の包雲崗氏が Weibo で予告したところによると、香山の第 3 世代設計は 2025 年に納品予定で、性能は Arm が HPC 向けに作った Neoverse N2 に近づく可能性があり、データセンターでの潜在力を持つ。香山はオープンソース RISC-V 高性能コアの代表的なプロジェクトで、进迭时空 V100 など商用チップの技術的な源流でもある。"
+    source: "The Register"
+    url: "https://www.theregister.com/on-prem/2025/01/08/chinese-risc-v-project-teases-2025-debut-of-advanced-chip/1329768"
+    vendors: ["中科院计算所", "香山 XiangShan"]
+    tags: ["チップ発表", "HPC"]
+    importance: "medium"

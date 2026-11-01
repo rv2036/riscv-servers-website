@@ -1,2 +1,55 @@
-# 服务器级整机/主板/工作站/云实例
-items: []
+# RISC-V 서버 목록(한국어판, 중국어 원본 대응)
+# 일차 자료를 직접 확인한 제품만 항목으로 만들며, status는 프로그램 값이라 i18n에서 각 언어 문구로 렌더링된다
+items:
+  - id: lx500
+    name: "란신 LX500 AI·범용 융합 서버 CPU(완제품: Lenovo Wentian WR5219 G5)"
+    vendor: "란신 컴퓨팅(선전) 테크놀로지"
+    vendor_en: "Lanxin Computing (Shenzhen) Technology Co., Ltd."
+    soc: "LX500 단일 칩: 48코어 이기종 = 성능 코어 32개 + 에너지 효율 코어 16개(칩 내 저장 공간 공유); 칩 내 AI 매트릭스 엔진 통합, 최대 75 TOPS INT8, INT4/INT8/FP16/FP32 지원; RVV 1.0과 RVA23 지원; 행렬 곱셈 확장 명령 + 전용 행렬 연산 하드웨어 유닛."
+    form: "칩은 단일 다이 패키지(패키지 형태와 크기는 미공개); 완제품은 2U 랙마운트 서버(Lenovo Wentian WR5219 G5)입니다."
+    memory: "4채널 DDR5, 최대 6400 MT/s; CPU와 칩 내 AI 엔진이 메모리를 통합(같은 메모리 공간을 공유해 데이터 이동이 없음); CXL 2.0 메모리 확장 지원."
+    storage_io: "PCIe Gen5 64레인(분기 지원) + PCIe Gen3 4레인; CXL 2.0; 완제품(WR5219 G5)은 다양한 스토리지/IO/메모리 옵션과 핫스왑 드라이브를 제공합니다."
+    power: ""
+    os_support: "Ubuntu, openEuler(공식 점등 시연은 두 운영체제에서 실기 부팅); China Mobile BC-Linux는 심층 적응을 마쳤습니다."
+    availability: "칩과 완제품 모두 가격 미공개; 완제품은 Lenovo Wentian 제품 라인으로 공급됩니다"
+    first_announced: "2026-02"
+    status: production
+    verified: true
+    highlight: true
+    note: "공식 포지셔닝은 서버용 세계 최초 RISC-V + AI 'AI·범용 융합' CPU(플래그십)입니다. 범용 연산과 칩 내 AI 추론을 한 칩에 올려 'CPU + 독립 가속 카드' 구성을 대체하며, 탑재 완제품은 2U 랙마운트 서버 Lenovo Wentian WR5219 G5이고 올인원과 AI·범용 융합 슈퍼노드 형태도 있습니다."
+    urls:
+      - label: "공식 뉴스(lanxincomputing.com)"
+        url: "https://lanxincomputing.com/news-detail.html?id=76"
+      - label: "공식 뉴스(lanxincomputing.com)"
+        url: "https://lanxincomputing.com/news-detail.html?id=82"
+      - label: "공식 뉴스(lanxincomputing.com)"
+        url: "https://lanxincomputing.com/news-detail.html?id=86"
+      - label: "공식 뉴스(lanxincomputing.com)"
+        url: "https://lanxincomputing.com/news-detail.html?id=122"
+      - label: "공식 뉴스(lanxincomputing.com)"
+        url: "https://lanxincomputing.com/news-detail.html?id=123"
+  - id: v100
+    name: "SpacemiT V100 서버급 CPU(완제품: C2201 / G5201 / S5236)"
+    vendor: "SpacemiT(베이징) 인텔리전트 테크놀로지"
+    vendor_en: "SpacemiT"
+    soc: "V100 단일 칩: 46코어 이기종 = 6× XiangShan Kunminghu V2R2(최대 2.1 GHz, 단일 코어 SPECint2006 ≥15.0/GHz) + 40× SpacemiT 자체 개발 X100(최대 2.4 GHz, ≥9.0/GHz); RVA23; 64 MB SLC; 2소켓 일관성 인터커넥트로 최대 92코어."
+    form: "칩은 FCBGA 패키지, 58.5 × 75.4 mm, 0.94 mm 피치; 완제품 C2201은 2U 랙마운트, 820×447.4×87.8 mm, ≤35 kg(G5201은 4U 895×447.4×176.8 mm, S5236은 4U)입니다."
+    memory: "칩 1개당 8채널 DDR5, 1DPC, DDR5 RDIMM, 4800 MT/s, 최대 대역폭 307 GB/s; DIMM 1개 최대 256 GB, 칩 1개 최대 2 TB; 완제품 C2201은 DIMM 슬롯 16개, 최대 2 TB."
+    storage_io: "PCIe 5.0 총 52레인(x16~x1 유연 구성, AI 카드와 SAS/SATA/NVMe 확장 가능); 1×GMAC(IEEE 1588); 주변 인터페이스 1×QSPI, 1×LPC, 1×eSPI, 3×SPI Master, 4×I3C, 12×I2C, 12×SMBUS, 5×UART. 완제품 C2201: 2소켓 합계 88개 PCIe 5.0 레인, 전면 8×3.5인치 U.2 NVMe, 내장 1×M.2, 후면 2×2.5인치 SATA."
+    power: "칩 TDP 120W(공식 규격서); 완제품 C2201은 1600W CRPS 플래티넘 전원, 1+1 이중화."
+    os_support: "openEuler, openRuyi, openKylin, Debian, Ubuntu(26.10), Red Hat Enterprise Linux 10.2(개발자 프리뷰), Fedora, Rocky Linux를 바로 설치·부팅할 수 있습니다. 펌웨어는 UEFI 2.1.1 + ACPI 6.6, EDK2, openBMC이며 가상화는 KVM/QEMU, Docker를 지원합니다."
+    availability: "공식 가격과 양산 시점은 미공개; 함께 발표된 완제품은 C2201 / G5201 / S5236"
+    first_announced: "2026-10"
+    status: announced
+    verified: true
+    highlight: true
+    note: "공식 포지셔닝은 RISC-V 서버 규격을 완전히 충족하는 첫 컴퓨팅 칩이자 서버급 CPU로, 데이터센터 범용 연산과 에이전트 인프라, 자국산 지능형 컴퓨팅 플랫폼을 겨냥합니다. 함께 발표된 제품은 컴퓨팅 서버 C2201(2U 2소켓), AI 서버 G5201(4U, 8카드), 스토리지 서버 S5236(4U, 36베이)입니다."
+    urls:
+      - label: "제품 페이지(spacemit.com)"
+        url: "https://www.spacemit.com/products/keystone/v100"
+      - label: "규격서 PDF(cdn-resource.spacemit.com)"
+        url: "https://cdn-resource.spacemit.com/file/chip/V100/v100_brief_zh.pdf"
+      - label: "공식 뉴스(spacemit.com)"
+        url: "https://www.spacemit.com/news/2c9c8082a1770faf01a1870587fc0001"
+      - label: "규격서 PDF(cdn-resource.spacemit.com)"
+        url: "https://cdn-resource.spacemit.com/file/product/V100/c2201_brief_zh.pdf"

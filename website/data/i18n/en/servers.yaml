@@ -1,2 +1,55 @@
-# 服务器级整机/主板/工作站/云实例
-items: []
+# RISC-V server list (English edition)
+# Entries are only created for products whose primary sources were manually checked; status uses program values, rendered into per-language text by i18n
+items:
+  - id: lx500
+    name: "Lanxin LX500 compute-AI convergence server CPU (complete system: Lenovo WenTian WR5219 G5)"
+    vendor: "蓝芯算力（深圳）科技有限公司"
+    vendor_en: "Lanxin Computing (Shenzhen) Technology Co., Ltd."
+    soc: "LX500 single die: 48 heterogeneous cores = 32 performance cores + 16 efficiency cores (sharing the on-die memory space); an AI matrix engine integrated on-die, peak 75 TOPS INT8, supporting INT4/INT8/FP16/FP32; RVV 1.0 and RVA23 support; matrix-multiply extension instructions plus dedicated matrix-arithmetic hardware units."
+    form: "The chip is a single-die package (package type and dimensions not disclosed); the complete system is a 2U rack server (Lenovo WenTian WR5219 G5)."
+    memory: "4-channel DDR5, up to 6400 MT/s; unified memory between the CPU and the on-die AI engine (one shared memory space, zero data movement); CXL 2.0 memory expansion supported."
+    storage_io: "64 PCIe Gen5 lanes (with bifurcation support) + 4 PCIe Gen3 lanes; CXL 2.0; the complete system (WR5219 G5) offers multiple storage/IO/memory options and supports hot-swap drives."
+    power: ""
+    os_support: "Ubuntu, openEuler (the official bring-up demo booted on real hardware under both); China Mobile's BC-Linux has completed in-depth adaptation."
+    availability: "No pricing announced for either the chip or the system; the system ships through Lenovo's WenTian product line"
+    first_announced: "2026-02"
+    status: production
+    verified: true
+    highlight: true
+    note: "Official positioning: the world's first server-oriented RISC-V + AI “convergence” CPU (flagship product), putting general-purpose compute and on-die AI inference on the same chip in place of a “CPU + discrete accelerator card” pairing; the host system is the 2U rack server Lenovo WenTian WR5219 G5, with all-in-one and converged super-node form factors also offered."
+    urls:
+      - label: "Official news (lanxincomputing.com)"
+        url: "https://lanxincomputing.com/news-detail.html?id=76"
+      - label: "Official news (lanxincomputing.com)"
+        url: "https://lanxincomputing.com/news-detail.html?id=82"
+      - label: "Official news (lanxincomputing.com)"
+        url: "https://lanxincomputing.com/news-detail.html?id=86"
+      - label: "Official news (lanxincomputing.com)"
+        url: "https://lanxincomputing.com/news-detail.html?id=122"
+      - label: "Official news (lanxincomputing.com)"
+        url: "https://lanxincomputing.com/news-detail.html?id=123"
+  - id: v100
+    name: "SpacemiT V100 server-class CPU (systems: C2201 / G5201 / S5236)"
+    vendor: "进迭时空（北京）智能科技有限公司"
+    vendor_en: "SpacemiT"
+    soc: "V100 single die: 46 heterogeneous cores = 6× XiangShan Kunminghu V2R2 (up to 2.1 GHz, single-core SPECint2006 ≥15.0/GHz) + 40× in-house SpacemiT X100 (up to 2.4 GHz, ≥9.0/GHz); RVA23; 64 MB SLC; dual-socket coherent interconnect scaling to 92 cores."
+    form: "FCBGA package, 58.5 × 75.4 mm, 0.94 mm pitch; the C2201 system is a 2U rack unit, 820×447.4×87.8 mm, ≤35 kg (G5201 4U 895×447.4×176.8 mm; S5236 4U)."
+    memory: "8-channel DDR5, 1DPC, DDR5 RDIMM, 4800 MT/s, 307 GB/s peak bandwidth per chip; up to 256 GB per DIMM, up to 2 TB per chip; the C2201 system has 16 DIMM slots and supports up to 2 TB."
+    storage_io: "52 PCIe 5.0 lanes in total (flexible x16–x1 configuration, expandable with AI cards and SAS/SATA/NVMe); 1×GMAC (IEEE 1588); peripherals 1×QSPI, 1×LPC, 1×eSPI, 3×SPI master, 4×I3C, 12×I2C, 12×SMBUS, 5×UART. C2201 system: 88 PCIe 5.0 lanes across two sockets, 8×3.5\" U.2 NVMe front-accessible, 1×M.2 internal, 2×2.5\" SATA rear."
+    power: "Chip TDP 120W (official datasheet); the C2201 system ships with 1600W CRPS Platinum power supplies in 1+1 redundancy."
+    os_support: "openEuler, openRuyi, openKylin, Debian, Ubuntu (26.10), Red Hat Enterprise Linux 10.2 (developer preview), Fedora, Rocky Linux — all directly installable and bootable; firmware UEFI 2.1.1 + ACPI 6.6, EDK2, openBMC; virtualization KVM/QEMU, Docker."
+    availability: "No pricing or volume-production date announced; companion systems C2201 / G5201 / S5236"
+    first_announced: "2026-10"
+    status: announced
+    verified: true
+    highlight: true
+    note: "Official positioning: the first compute chip / server-class CPU fully compliant with the RISC-V server specification, aimed at general-purpose data-center compute, agent infrastructure and domestically developed AI computing platforms; launched alongside the C2201 compute server (2U, dual-socket), G5201 AI server (4U, 8 cards) and S5236 storage server (4U, 36 bays)."
+    urls:
+      - label: "Product page (spacemit.com)"
+        url: "https://www.spacemit.com/products/keystone/v100"
+      - label: "Spec sheet PDF (cdn-resource.spacemit.com)"
+        url: "https://cdn-resource.spacemit.com/file/chip/V100/v100_brief_zh.pdf"
+      - label: "Official news (spacemit.com)"
+        url: "https://www.spacemit.com/news/2c9c8082a1770faf01a1870587fc0001"
+      - label: "Spec sheet PDF (cdn-resource.spacemit.com)"
+        url: "https://cdn-resource.spacemit.com/file/product/V100/c2201_brief_zh.pdf"

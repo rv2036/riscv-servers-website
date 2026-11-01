@@ -2,27 +2,48 @@
 # kind: soc = 已流片的芯片（SoC / chiplet 芯片）；ip = 可授权的 IP 核
 items:
 - kind: soc
-  chip: SG2042
-  vendor: 算能科技 SOPHGO（原 Sophon）
+  chip: LX500
+  vendor: 蓝芯算力 Lanxin Computing
   type: SoC
-  cores: 64× 达摩院玄铁 C920，4 核/簇×16 簇；每核 64KB L1、每簇 1MB L2、64MB 系统级 L3
-  isa: RV64GCV + RVV 0.7.1（128-bit）
+  cores: 48 核异构：32× 性能核 + 16× 能效核；片内 AI 模块 75 TOPS INT8；单硅片
+  isa: RVA23 + RVV 1.0 + CXL 2.0
   process: ''
-  perf: 基频 2.0GHz；厂宣 1 TFLOPS FP64、TDP 120W；独立评测：单核约为同期可获取 RISC-V 硬件的 5–10 倍，x86 服务器 CPU 多线程约快 4–8 倍
-  target: 服务器 / HPC / AI 推理
-  first_announced: 2022-12
+  perf: 75 TOPS INT8；服务器级 RAS（ECC、内存镜像、热替换、DVFS）
+  target: 服务器 / 智算中心 / 运营商云
+  first_announced: 2026-02
   status: production
-  note: 量产；全球首颗商用量产 64 核 RISC-V CPU，第一次把 RISC-V 推进通用服务器/HPC 主赛道。
+  note: 量产（2026-07 联想联宝整机下线）；全球首款量产的 RISC-V+AI 融合服务器 CPU，单 die 内做通用+75TOPS 推理，绕开独立加速卡。
   urls:
-  - label: 规格书 PDF（riscv.epcc.ed.ac.uk）
-    url: http://riscv.epcc.ed.ac.uk/assets/files/hpcasia24/hpc_asia_wang.pdf
-  - label: 规格书 PDF（ftp.radix-linux.su）
-    url: https://ftp.radix-linux.su/3pp/Sophgo/doc/Milk-V/SG2042_Draft_Spec_V1.0.pdf
-  - label: 产品页（sophgo.com）
-    url: https://www.sophgo.com/sophon-u/product/introduce/sg2042.html
-  - label: 论文（arXiv）
-    url: https://arxiv.org/abs/2309.00381
-  ip_used: 达摩院玄铁 C920 ×64（外购 IP 集成）
+  - label: 来源（caijing.chinadaily.com.cn）
+    url: https://caijing.chinadaily.com.cn/a/202605/11/WS6a0173b9a310942cc49ab9c0.html
+  - label: 来源（news.qq.com）
+    url: https://news.qq.com/rain/a/20260723A0CCN700
+  ip_used: 蓝芯自研 32 性能核 + 16 能效核 + 片内 AI 引擎
+  order: 1
+  feature: true
+- kind: soc
+  chip: V100（Vital Stone 服务器 CPU）
+  vendor: 进迭时空（杭州）科技有限公司 SpacemiT
+  vendor_en: SpacemiT
+  type: SoC（服务器级 CPU）
+  cores: 46 核异构：6× 香山昆明湖 V2R2（最高 2.1GHz）+ 40× 自研 X100（最高 2.4GHz）
+  isa: RVA23 + RVV 1.0；双路一致性互联最高 92 核
+  process: ''
+  perf: 单核 SPECint2006 ≥15.0/GHz（昆明湖 V2R2）、≥9.0/GHz（X100），厂商公布
+  target: 数据中心通用计算、Agent 基础设施、国产化智算平台
+  first_announced: 2026-10
+  status: announced
+  ip_used: 6× 香山昆明湖 V2R2（开源核设计）+ 40× 自研 X100
+  note: 发布：2026-10-19 于 RISC-V 中国峰会发布，同步推出 C2201 / G5201 / S5236 三款整机，现场以实机跑通虚拟化、存储集群与大模型推理；官方未公布量产时间与价格
+  urls:
+  - label: 产品页（spacemit.com）
+    url: https://www.spacemit.com/products/keystone/v100
+  - label: 规格书 PDF（cdn-resource.spacemit.com）
+    url: https://cdn-resource.spacemit.com/file/chip/V100/v100_brief_zh.pdf
+  - label: 官方新闻（spacemit.com）
+    url: https://www.spacemit.com/news/2c9c8082a1770faf01a1870587fc0001
+  order: 2
+  feature: true
 - kind: soc
   chip: SG2044
   vendor: 算能科技 SOPHGO
@@ -43,6 +64,32 @@ items:
   - label: 规格书 PDF（riscv.epcc.ed.ac.uk）
     url: http://riscv.epcc.ed.ac.uk/assets/files/hpcasia24/hpc_asia_wang.pdf
   ip_used: 达摩院玄铁 C920 第二代 ×64（外购 IP 集成）
+  order: 3
+  feature: true
+- kind: soc
+  chip: SG2042
+  vendor: 算能科技 SOPHGO（原 Sophon）
+  type: SoC
+  cores: 64× 达摩院玄铁 C920，4 核/簇×16 簇；每核 64KB L1、每簇 1MB L2、64MB 系统级 L3
+  isa: RV64GCV + RVV 0.7.1（128-bit）
+  process: ''
+  perf: 基频 2.0GHz；厂宣 1 TFLOPS FP64、TDP 120W；独立评测：单核约为同期可获取 RISC-V 硬件的 5–10 倍，x86 服务器 CPU 多线程约快 4–8 倍
+  target: 服务器 / HPC / AI 推理
+  first_announced: 2022-12
+  status: production
+  note: 首款 64 核 RISC-V 服务器芯片；量产；全球首颗商用量产 64 核 RISC-V CPU，第一次把 RISC-V 推进通用服务器/HPC 主赛道。
+  urls:
+  - label: 规格书 PDF（riscv.epcc.ed.ac.uk）
+    url: http://riscv.epcc.ed.ac.uk/assets/files/hpcasia24/hpc_asia_wang.pdf
+  - label: 规格书 PDF（ftp.radix-linux.su）
+    url: https://ftp.radix-linux.su/3pp/Sophgo/doc/Milk-V/SG2042_Draft_Spec_V1.0.pdf
+  - label: 产品页（sophgo.com）
+    url: https://www.sophgo.com/sophon-u/product/introduce/sg2042.html
+  - label: 论文（arXiv）
+    url: https://arxiv.org/abs/2309.00381
+  ip_used: 达摩院玄铁 C920 ×64（外购 IP 集成）
+  order: 4
+  feature: false
 - kind: ip
   chip: RXU 3.5
   vendor: 算能科技 SOPHGO
@@ -58,6 +105,8 @@ items:
   urls:
   - label: 规格书 PDF（riscv.epcc.ed.ac.uk）
     url: http://riscv.epcc.ed.ac.uk/assets/files/hpcasia24/hpc_asia_wang.pdf
+  order: 5
+  feature: false
 - kind: ip
   chip: XuanTie C930
   vendor: 阿里巴巴达摩院玄铁（XuanTie）
@@ -77,6 +126,8 @@ items:
     url: http://www.news.cn/tech/20250228/f4fd7f4a23744e4f9763ed156429cd6c/c.html
   - label: 来源（tomshardware.com）
     url: https://www.tomshardware.com/pc-components/cpus/alibaba-launches-risc-v-based-xuantie-c930-server-cpu-ai-hpc-chip-ships-this-month-more-designs-to-follow
+  order: 6
+  feature: false
 - kind: ip
   chip: XuanTie C920
   vendor: 阿里巴巴达摩院玄铁（XuanTie）
@@ -94,6 +145,8 @@ items:
     url: https://www.xrvm.cn/product/xuantie/C920
   - label: 论文（arXiv）
     url: https://arxiv.org/html/2406.12394v1
+  order: 7
+  feature: false
 - kind: ip
   chip: Performance P670
   vendor: SiFive
@@ -111,6 +164,8 @@ items:
     url: https://www.sifive.com/cores/performance-p600
   - label: 来源（notebookcheck.net）
     url: https://www.notebookcheck.net/SiFive-launches-Performance-P670-and-P470-RISC-V-energy-efficient-processors.665833.0.html
+  order: 8
+  feature: false
 - kind: ip
   chip: Performance P870
   vendor: SiFive
@@ -128,6 +183,8 @@ items:
     url: https://www.sifive.com/cores/performance-p800
   - label: 规格书 PDF（hc2023.hotchips.org）
     url: https://hc2023.hotchips.org/assets/program/conference/day1/CPU2/P870%20for%20Hot%20Chips%20-%20FInal.pdf
+  order: 9
+  feature: false
 - kind: ip
   chip: Performance P870-D
   vendor: SiFive
@@ -145,6 +202,8 @@ items:
     url: https://www.sifive.com/press/sifive-announces-high-performance-risc-v-datacenter-processor-for-ai-workloads
   - label: 来源（sifive.com）
     url: https://www.sifive.com/cores/performance-p800
+  order: 10
+  feature: false
 - kind: soc
   chip: Veyron V1
   vendor: Ventana Micro Systems（2025-12 被 Qualcomm 收购）
@@ -164,6 +223,8 @@ items:
     url: https://www.prnewswire.com/news-releases/ventana-introduces-veyron-worlds-first-data-center-class-risc-v-cpu-product-family-301700985.html
   ip_used: Ventana 自研 8-wide 乱序核 ×16/chiplet
   caution: Ventana 于 2025-12 被 Qualcomm 收购，产品线存在变数，未必买得到
+  order: 11
+  feature: false
 - kind: soc
   chip: Veyron V2
   vendor: Ventana Micro Systems（现属 Qualcomm）
@@ -185,6 +246,8 @@ items:
     url: https://www.techpowerup.com/343914/qualcomm-acquires-ventana-micro-systems-deepening-risc-v-cpu-expertise
   ip_used: Ventana 自研核 ×32/chiplet（UCIe 互连）
   caution: Ventana 现属 Qualcomm，产品线存在变数，未必买得到
+  order: 12
+  feature: false
 - kind: ip
   chip: TT-Ascalon
   vendor: Tenstorrent
@@ -202,6 +265,8 @@ items:
     url: https://tenstorrent.com/en/newsroom/tenstorrent-announces-availability-of-tt-ascalon
   - label: 来源（tenstorrent.com）
     url: https://tenstorrent.com/en/ip/risc-v-cpu
+  order: 13
+  feature: false
 - kind: soc
   chip: Atlantis（Ascalon-X SoC）
   vendor: Tenstorrent
@@ -220,6 +285,8 @@ items:
   - label: 来源（tenstorrent.com）
     url: https://tenstorrent.com/en/ip/risc-v-cpu
   ip_used: 自家 Ascalon-X IP 核 ×8（同厂 IP 集成）
+  order: 14
+  feature: false
 - kind: ip
   chip: TT-Ascalon S
   vendor: Tenstorrent
@@ -235,6 +302,8 @@ items:
   urls:
   - label: 来源（docs.tenstorrent.com）
     url: https://docs.tenstorrent.com/tt-awesome/planet
+  order: 15
+  feature: false
 - kind: soc
   chip: Rivos 服务器 SoC（自研核）
   vendor: Rivos（2025-10 被 Meta 收购）
@@ -254,6 +323,8 @@ items:
     url: https://www.lw.com/en/news/2025/10/latham-watkins-advises-meta-in-acquisition-of-rivos
   ip_used: Rivos 自研 64 位 RVA23 核（自家 IP）
   caution: 2025-10 被 Meta 收购，未作为独立产品商用，市面上买不到
+  order: 16
+  feature: false
 - kind: ip
   chip: Akeana 1000 系列
   vendor: Akeana（2026-10 被 Qualcomm 收购）
@@ -272,6 +343,8 @@ items:
   - label: 官方新闻（prnewswire.com）
     url: https://www.prnewswire.com/news-releases/akeana-exits-stealth-mode-with-comprehensive-risc-v-processor-portfolio-challenging-the-semiconductor-industry-status-quo-302220144.html
   caution: 2026-10 Akeana 被 Qualcomm 收购，产品线存在变数，未必能授权到
+  order: 17
+  feature: false
 - kind: soc
   chip: Alpine（Akeana 5000 系列测试芯片）
   vendor: Akeana（现属 Qualcomm）
@@ -291,21 +364,5 @@ items:
     url: https://www.design-reuse.com/news/202531315-qualcomm-buys-risc-v-startup-akeana-to-push-into-ai-and-data-center-chips
   ip_used: Akeana 5000 系列 IP 核 ×8（同厂 IP 集成）
   caution: Akeana 现属 Qualcomm，且这是硅验证测试芯片，不对外销售
-- kind: soc
-  chip: LX500
-  vendor: 蓝芯算力 Lanxin Computing
-  type: SoC
-  cores: 48 核异构：32× 性能核 + 16× 能效核；片内 AI 模块 75 TOPS INT8；单硅片
-  isa: RVA23 + RVV 1.0 + CXL 2.0
-  process: ''
-  perf: 75 TOPS INT8；服务器级 RAS（ECC、内存镜像、热替换、DVFS）
-  target: 服务器 / 智算中心 / 运营商云
-  first_announced: 2026-02
-  status: production
-  note: 量产（2026-07 联想联宝整机下线）；全球首款量产的 RISC-V+AI 融合服务器 CPU，单 die 内做通用+75TOPS 推理，绕开独立加速卡。
-  urls:
-  - label: 来源（caijing.chinadaily.com.cn）
-    url: https://caijing.chinadaily.com.cn/a/202605/11/WS6a0173b9a310942cc49ab9c0.html
-  - label: 来源（news.qq.com）
-    url: https://news.qq.com/rain/a/20260723A0CCN700
-  ip_used: 蓝芯自研 32 性能核 + 16 能效核 + 片内 AI 引擎
+  order: 18
+  feature: false

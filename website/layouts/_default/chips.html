@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{ $d := partial "site-data.html" . }}
-{{ $socs := where $d.chips.items "kind" "soc" }}
-{{ $ips := where $d.chips.items "kind" "ip" }}
+{{ $socs := sort (where $d.chips.items "kind" "soc") "order" }}
+{{ $ips := sort (where $d.chips.items "kind" "ip") "order" }}
 <header class="page-head">
   <div class="wrap">
     <h1>{{ .Title }}</h1>
@@ -14,7 +14,7 @@
   <p class="group-note">{{ i18n "chips.soc_note" }}</p>
   <div class="grid cols-2">
     {{ range $socs }}
-    <article class="card">
+    <article class="card{{ if .feature }} feature{{ end }}">
       <div class="card-top">
         <h3>{{ .chip }}</h3>
         {{ with .type }}<span class="badge soft">{{ . }}</span>{{ end }}
@@ -47,7 +47,7 @@
   <p class="group-note">{{ i18n "chips.ip_note" }}</p>
   <div class="grid cols-2">
     {{ range $ips }}
-    <article class="card">
+    <article class="card{{ if .feature }} feature{{ end }}">
       <div class="card-top">
         <h3>{{ .chip }}</h3>
         {{ with .type }}<span class="badge soft">{{ . }}</span>{{ end }}

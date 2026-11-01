@@ -1,5 +1,8 @@
 {{ define "main" }}
 {{ $d := partial "site-data.html" . }}
+{{ $all := sort $d.servers.items "order" }}
+{{ $systems := where $all "category" "server" }}
+{{ $racks := where $all "category" "rack" }}
 <header class="page-head">
   <div class="wrap">
     <h1>{{ .Title }}</h1>
@@ -7,28 +10,32 @@
   </div>
 </header>
 <div class="wrap">
+  {{ range $key := slice "server" "rack" }}
+  {{ $group := cond (eq $key "server") $systems $racks }}
+  {{ if $group }}
+  <h2 class="group-head">{{ i18n (printf "category.%s" $key) }}<span class="count">{{ len $group }}</span></h2>
+  <p class="group-note">{{ i18n (printf "category_note.%s" $key) }}</p>
   <div class="grid cols-2">
-    {{ range $i, $s := $d.servers.items }}
-    <article class="card{{ if $s.highlight }} feature{{ end }}">
+    {{ range $group }}
+    <article class="card{{ if .highlight }} feature{{ end }}">
       <div class="card-top">
-        <span class="rank">{{ add $i 1 }}</span>
-        <h3>{{ $s.name }}</h3>
-        {{ if $s.hw_tested }}<span class="badge verified">{{ i18n "badge.hw_tested" }}</span>{{ end }}
-        {{ with $s.status }}<span class="badge soft">{{ i18n (printf "status.%s" .) }}</span>{{ end }}
+        <h3>{{ .name }}</h3>
+        {{ if .hw_tested }}<span class="badge verified">{{ i18n "badge.hw_tested" }}</span>{{ end }}
+        {{ with .status }}<span class="badge soft">{{ i18n (printf "status.%s" .) }}</span>{{ end }}
       </div>
-      <p>{{ $s.vendor }}{{ with $s.vendor_en }} · {{ . }}{{ end }}</p>
+      <p>{{ .vendor }}{{ with .vendor_en }} · {{ . }}{{ end }}</p>
       <dl class="specs">
-        {{ with $s.soc }}<dt>{{ i18n "label.soc" }}</dt><dd>{{ . }}</dd>{{ end }}
-        {{ with $s.form }}<dt>{{ i18n "label.form" }}</dt><dd>{{ . }}</dd>{{ end }}
-        {{ with $s.memory }}<dt>{{ i18n "label.memory" }}</dt><dd>{{ . }}</dd>{{ end }}
-        {{ with $s.storage_io }}<dt>{{ i18n "label.storage_io" }}</dt><dd>{{ . }}</dd>{{ end }}
-        {{ with $s.power }}<dt>{{ i18n "label.power" }}</dt><dd>{{ . }}</dd>{{ end }}
-        {{ with $s.os_support }}<dt>{{ i18n "label.os" }}</dt><dd>{{ . }}</dd>{{ end }}
-        {{ with $s.availability }}<dt>{{ i18n "label.availability" }}</dt><dd>{{ . }}</dd>{{ end }}
-        {{ with $s.first_announced }}<dt>{{ i18n "label.first_announced" }}</dt><dd>{{ . }}</dd>{{ end }}
+        {{ with .soc }}<dt>{{ i18n "label.soc" }}</dt><dd>{{ . }}</dd>{{ end }}
+        {{ with .form }}<dt>{{ i18n "label.form" }}</dt><dd>{{ . }}</dd>{{ end }}
+        {{ with .memory }}<dt>{{ i18n "label.memory" }}</dt><dd>{{ . }}</dd>{{ end }}
+        {{ with .storage_io }}<dt>{{ i18n "label.storage_io" }}</dt><dd>{{ . }}</dd>{{ end }}
+        {{ with .power }}<dt>{{ i18n "label.power" }}</dt><dd>{{ . }}</dd>{{ end }}
+        {{ with .os_support }}<dt>{{ i18n "label.os" }}</dt><dd>{{ . }}</dd>{{ end }}
+        {{ with .availability }}<dt>{{ i18n "label.availability" }}</dt><dd>{{ . }}</dd>{{ end }}
+        {{ with .first_announced }}<dt>{{ i18n "label.first_announced" }}</dt><dd>{{ . }}</dd>{{ end }}
       </dl>
-      {{ with $s.note }}<p>{{ . }}</p>{{ end }}
-      {{ with $s.urls }}
+      {{ with .note }}<p>{{ . }}</p>{{ end }}
+      {{ with .urls }}
       <div class="links">
         {{ range . }}{{ $u := .url }}
         <a href="{{ $u }}" rel="noopener">{{ .label }}{{ with (urls.Parse $u).Query.Get "id" }} · id={{ . }}{{ end }}</a>
@@ -38,6 +45,8 @@
     </article>
     {{ end }}
   </div>
+  {{ end }}
+  {{ end }}
 
   <section class="block prose">
     {{ .Content }}

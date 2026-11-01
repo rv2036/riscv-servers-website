@@ -10,7 +10,7 @@
 | --- | --- | --- |
 | **Servers** | `/servers/` | 服务器级整机、主板、工作站、云实例与 HPC 集群，同一型号只留一条 |
 | **Chips** | `/chips/` | 服务器级 SoC 与 CPU IP：核数、ISA、工艺、厂商公布性能 |
-| **Solutions** | `/solutions/` | 发行版、虚拟化、容器、HPC、数据库与推理服务，分清「已经能跑」与「还差什么」 |
+| **Software** | `/software/` | 发行版、虚拟化、容器、HPC、数据库与推理服务，分清「已经能跑」与「还差什么」 |
 | **News** | `/news/` | 每天检索到的新闻，一条摘要 + 原文 URL |
 | **Blog** | `/blog/` | 站主自己写的长文 |
 
@@ -29,10 +29,10 @@
 ```
 website/
   hugo.toml                 # 五语言：zh（根）/ en / ja / ru / ko
-  content/<lang>/           # 每种语言 6 页：首页、servers、chips、solutions、news、blog
-  data/i18n/<lang>/         # servers.yaml / chips.yaml / solutions.yaml / news.yaml
+  content/<lang>/           # 每种语言 6 页：首页、servers、chips、software、news、blog
+  data/i18n/<lang>/         # servers.yaml / chips.yaml / software.yaml / news.yaml
   i18n/<lang>.toml          # 界面文案
-  layouts/                  # 布局（servers/chips/solutions/news 走同名 layout）
+  layouts/                  # 布局（servers/chips/software/news 走同名 layout）
   assets/css/main.css       # 明暗双主题，跟随系统并可手动切换
   static/                   # favicon.svg、CNAME
 scripts/check_site.py       # 页面矩阵 / hreflang / 站内链接 / 新闻去重
@@ -67,7 +67,7 @@ items:
     importance: high          # high / medium / low
 ```
 
-**服务器 / 芯片 / 解决方案**：改对应的 `servers.yaml` / `chips.yaml` / `solutions.yaml`。`status` 与 `maturity` 用程序值（`production` / `sampling` / `announced` / `eol`，`production` / `limited` / `experimental` / `demo`），由 `i18n/<lang>.toml` 翻成各语言显示文案。
+**服务器 / 芯片 / 软件**：改对应的 `servers.yaml` / `chips.yaml` / `software.yaml`。`status` 与 `maturity` 用程序值（`production` / `sampling` / `announced` / `eol`，`production` / `limited` / `experimental` / `demo`），由 `i18n/<lang>.toml` 翻成各语言显示文案。
 
 新增条目只改中文数据是不够的：其余四种语言的同名文件也要有对应条目，否则那些语言的页面会显示中文（回退），`make site-check` 的新闻去重也会按语言分别检查。
 

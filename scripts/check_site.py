@@ -15,7 +15,7 @@ PUB = os.path.join(ROOT, "website", "public")
 
 LANGS = ["zh", "en", "ja", "ru", "ko"]
 # 每种语言都应存在的页面（相对站点根；zh 在根，其余在 /<lang>/）
-PAGES = ["", "servers/", "chips/", "solutions/", "news/", "blog/"]
+PAGES = ["", "servers/", "chips/", "software/", "news/", "blog/"]
 
 
 def page_url(lang, page):

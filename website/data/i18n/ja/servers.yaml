@@ -1,55 +1,88 @@
 # RISC-V サーバー一覧（日本語版）
 # 一次資料を人が確認した製品のみ項目化する。status はプログラム値で、i18n が各言語の文言に描画する
 items:
-  - id: lx500
-    name: "蓝芯 LX500 智通融合サーバー CPU（システム：Lenovo 問天 WR5219 G5）"
-    vendor: "蓝芯算力（深圳）科技有限公司"
-    vendor_en: "Lanxin Computing (Shenzhen) Technology Co., Ltd."
-    soc: "LX500 単一チップ：48 コアのヘテロジニアス構成 ＝ 高性能コア 32 ＋ 高効率コア 16（チップ内メモリ空間を共有）。オンチップに AI 行列エンジンを統合し、ピーク 75 TOPS INT8、INT4/INT8/FP16/FP32 に対応。RVV 1.0 と RVA23 をサポート。行列積拡張命令＋専用の行列演算ハードウェアユニットを備える。"
-    form: "チップは単一ダイのパッケージ（パッケージ形態と寸法は未公開）。システム形態は 2U ラックマウントサーバー（Lenovo 問天 WR5219 G5）。"
-    memory: "4 チャネル DDR5、最高 6400 MT/s。CPU とオンチップ AI エンジンはメモリを統合（同一メモリ空間を共有しデータ転送が不要）。CXL 2.0 によるメモリ拡張に対応。"
-    storage_io: "PCIe Gen5 レーン 64 本（bifurcation 対応）＋ PCIe Gen3 レーン 4 本。CXL 2.0。システム（WR5219 G5）は各種ストレージ／IO／メモリのオプションを用意し、HDD のホットスワップに対応。"
-    power: ""
-    os_support: "Ubuntu、openEuler（公式の点灯デモは両 OS での実機起動による）。中国移動 BC-Linux は深く適応済み。"
-    availability: "チップ・システムとも価格は未公表。システムは Lenovo 問天の製品ラインで提供"
-    first_announced: "2026-02"
-    status: production
-    hw_tested: true
-    highlight: true
-    note: "公式の位置づけ：サーバー向けとしては世界初の RISC-V＋AI「智通融合」CPU（フラッグシップ製品）。汎用計算とオンチップ AI 推論を同一チップに載せ、「CPU＋独立アクセラレータカード」を置き換えることを狙う。搭載システムは 2U ラックマウントの Lenovo 問天 WR5219 G5 で、ほかにオールインワン型と智通融合スーパーノード型がある。"
-    urls:
-      - label: "公式ニュース（lanxincomputing.com）"
-        url: "https://lanxincomputing.com/news-detail.html?id=76"
-      - label: "公式ニュース（lanxincomputing.com）"
-        url: "https://lanxincomputing.com/news-detail.html?id=82"
-      - label: "公式ニュース（lanxincomputing.com）"
-        url: "https://lanxincomputing.com/news-detail.html?id=86"
-      - label: "公式ニュース（lanxincomputing.com）"
-        url: "https://lanxincomputing.com/news-detail.html?id=122"
-      - label: "公式ニュース（lanxincomputing.com）"
-        url: "https://lanxincomputing.com/news-detail.html?id=123"
-  - id: v100
-    name: "进迭时空 SpacemiT V100 サーバー級 CPU（システム：C2201 / G5201 / S5236）"
-    vendor: "进迭时空（北京）智能科技有限公司"
-    vendor_en: "SpacemiT"
-    soc: "V100 単一チップ：46 コアのヘテロジニアス構成 ＝ 6× 香山昆明湖 V2R2（最高 2.1 GHz、シングルコア SPECint2006 ≥15.0/GHz）＋ 40× 进迭时空自社開発 X100（最高 2.4 GHz、≥9.0/GHz）。RVA23。64 MB SLC。2 ソケット間のコヒーレント接続で最高 92 コア。"
-    form: "チップは FCBGA パッケージ、58.5 × 75.4 mm、0.94 mm ピッチ。システム C2201 は 2U ラックマウントで 820×447.4×87.8 mm、≤35 kg（G5201 は 4U 895×447.4×176.8 mm、S5236 は 4U）。"
-    memory: "単一チップで 8 チャネル DDR5、1DPC、DDR5 RDIMM、4800 MT/s、ピーク帯域 307 GB/s。1 枚あたり最大 256 GB、単一チップで最大 2 TB。システム C2201 は DIMM スロット 16、最大 2 TB。"
-    storage_io: "PCIe 5.0 は合計 52 レーン（x16〜x1 を柔軟に構成でき、AI カードや SAS/SATA/NVMe を増設可能）。1×GMAC（IEEE 1588）。周辺は 1×QSPI、1×LPC、1×eSPI、3×SPI Master、4×I3C、12×I2C、12×SMBUS、5×UART。システム C2201：2 ソケット合計 88 本の PCIe 5.0 レーン、前面 8×3.5\" U.2 NVMe、内蔵 1×M.2、背面 2×2.5\" SATA。"
-    power: "チップ TDP 120W（公式データシート）。システム C2201 は 1600W CRPS プラチナ電源、1+1 冗長。"
-    os_support: "openEuler、openRuyi、openKylin、Debian、Ubuntu（26.10）、Red Hat Enterprise Linux 10.2（開発者プレビュー）、Fedora、Rocky Linux をそのままインストールして起動可能。ファームウェアは UEFI 2.1.1＋ACPI 6.6、EDK2、openBMC。仮想化は KVM/QEMU、Docker。"
-    availability: "価格と量産時期は公式に未公表。対応システムは C2201 / G5201 / S5236"
-    first_announced: "2026-10"
-    status: announced
-    hw_tested: true
-    highlight: true
-    note: "公式の位置づけ：RISC-V サーバー仕様に完全準拠した初の計算チップ／サーバー級 CPU。データセンターの汎用計算、Agent 基盤、国産の智算プラットフォーム向け。あわせて計算サーバー C2201（2U デュアルソケット）、智算サーバー G5201（4U、8 カード）、ストレージサーバー S5236（4U、36 ベイ）を発表。"
-    urls:
-      - label: "製品ページ（spacemit.com）"
-        url: "https://www.spacemit.com/products/keystone/v100"
-      - label: "データシート PDF（cdn-resource.spacemit.com）"
-        url: "https://cdn-resource.spacemit.com/file/chip/V100/v100_brief_zh.pdf"
-      - label: "公式ニュース（spacemit.com）"
-        url: "https://www.spacemit.com/news/2c9c8082a1770faf01a1870587fc0001"
-      - label: "データシート PDF（cdn-resource.spacemit.com）"
-        url: "https://cdn-resource.spacemit.com/file/product/V100/c2201_brief_zh.pdf"
+- id: lx500
+  name: 蓝芯 LX500 智通融合サーバー CPU（システム：Lenovo 問天 WR5219 G5）
+  vendor: 蓝芯算力（深圳）科技有限公司
+  vendor_en: Lanxin Computing (Shenzhen) Technology Co., Ltd.
+  soc: LX500 単一チップ：48 コアのヘテロジニアス構成 ＝ 高性能コア 32 ＋ 高効率コア 16（チップ内メモリ空間を共有）。オンチップに AI 行列エンジンを統合し、ピーク 75 TOPS INT8、INT4/INT8/FP16/FP32 に対応。RVV 1.0 と RVA23 をサポート。行列積拡張命令＋専用の行列演算ハードウェアユニットを備える。
+  form: チップは単一ダイのパッケージ（パッケージ形態と寸法は未公開）。システム形態は 2U ラックマウントサーバー（Lenovo 問天 WR5219 G5）。
+  memory: 4 チャネル DDR5、最高 6400 MT/s。CPU とオンチップ AI エンジンはメモリを統合（同一メモリ空間を共有しデータ転送が不要）。CXL 2.0 によるメモリ拡張に対応。
+  storage_io: PCIe Gen5 レーン 64 本（bifurcation 対応）＋ PCIe Gen3 レーン 4 本。CXL 2.0。システム（WR5219 G5）は各種ストレージ／IO／メモリのオプションを用意し、HDD のホットスワップに対応。
+  power: ''
+  os_support: Ubuntu、openEuler（公式の点灯デモは両 OS での実機起動による）。中国移動 BC-Linux は深く適応済み。
+  availability: チップ・システムとも価格は未公表。システムは Lenovo 問天の製品ラインで提供
+  first_announced: 2026-02
+  status: production
+  hw_tested: true
+  highlight: true
+  note: 公式の位置づけ：サーバー向けとしては世界初の RISC-V＋AI「智通融合」CPU（フラッグシップ製品）。汎用計算とオンチップ AI 推論を同一チップに載せ、「CPU＋独立アクセラレータカード」を置き換えることを狙う。搭載システムは 2U ラックマウントの Lenovo 問天 WR5219 G5 で、ほかにオールインワン型と智通融合スーパーノード型がある。
+  urls:
+  - label: 公式ニュース（lanxincomputing.com）
+    url: https://lanxincomputing.com/news-detail.html?id=76
+  - label: 公式ニュース（lanxincomputing.com）
+    url: https://lanxincomputing.com/news-detail.html?id=82
+  - label: 公式ニュース（lanxincomputing.com）
+    url: https://lanxincomputing.com/news-detail.html?id=86
+  - label: 公式ニュース（lanxincomputing.com）
+    url: https://lanxincomputing.com/news-detail.html?id=122
+  - label: 公式ニュース（lanxincomputing.com）
+    url: https://lanxincomputing.com/news-detail.html?id=123
+  category: server
+  order: 1
+- id: v100
+  name: 进迭时空 SpacemiT V100 サーバー級 CPU（システム：C2201 / G5201 / S5236）
+  vendor: 进迭时空（北京）智能科技有限公司
+  vendor_en: SpacemiT
+  soc: V100 単一チップ：46 コアのヘテロジニアス構成 ＝ 6× 香山昆明湖 V2R2（最高 2.1 GHz、シングルコア SPECint2006 ≥15.0/GHz）＋ 40× 进迭时空自社開発 X100（最高 2.4 GHz、≥9.0/GHz）。RVA23。64 MB SLC。2 ソケット間のコヒーレント接続で最高 92 コア。
+  form: チップは FCBGA パッケージ、58.5 × 75.4 mm、0.94 mm ピッチ。システム C2201 は 2U ラックマウントで 820×447.4×87.8 mm、≤35 kg（G5201 は 4U 895×447.4×176.8 mm、S5236 は 4U）。
+  memory: 単一チップで 8 チャネル DDR5、1DPC、DDR5 RDIMM、4800 MT/s、ピーク帯域 307 GB/s。1 枚あたり最大 256 GB、単一チップで最大 2 TB。システム C2201 は DIMM スロット 16、最大 2 TB。
+  storage_io: PCIe 5.0 は合計 52 レーン（x16〜x1 を柔軟に構成でき、AI カードや SAS/SATA/NVMe を増設可能）。1×GMAC（IEEE 1588）。周辺は 1×QSPI、1×LPC、1×eSPI、3×SPI Master、4×I3C、12×I2C、12×SMBUS、5×UART。システム C2201：2 ソケット合計 88 本の PCIe 5.0 レーン、前面
+    8×3.5" U.2 NVMe、内蔵 1×M.2、背面 2×2.5" SATA。
+  power: チップ TDP 120W（公式データシート）。システム C2201 は 1600W CRPS プラチナ電源、1+1 冗長。
+  os_support: openEuler、openRuyi、openKylin、Debian、Ubuntu（26.10）、Red Hat Enterprise Linux 10.2（開発者プレビュー）、Fedora、Rocky Linux をそのままインストールして起動可能。ファームウェアは UEFI 2.1.1＋ACPI 6.6、EDK2、openBMC。仮想化は KVM/QEMU、Docker。
+  availability: 価格と量産時期は公式に未公表。対応システムは C2201 / G5201 / S5236
+  first_announced: 2026-10
+  status: announced
+  hw_tested: true
+  highlight: true
+  note: 公式の位置づけ：RISC-V サーバー仕様に完全準拠した初の計算チップ／サーバー級 CPU。データセンターの汎用計算、Agent 基盤、国産の智算プラットフォーム向け。あわせて計算サーバー C2201（2U デュアルソケット）、智算サーバー G5201（4U、8 カード）、ストレージサーバー S5236（4U、36 ベイ）を発表。
+  urls:
+  - label: 製品ページ（spacemit.com）
+    url: https://www.spacemit.com/products/keystone/v100
+  - label: データシート PDF（cdn-resource.spacemit.com）
+    url: https://cdn-resource.spacemit.com/file/chip/V100/v100_brief_zh.pdf
+  - label: 公式ニュース（spacemit.com）
+    url: https://www.spacemit.com/news/2c9c8082a1770faf01a1870587fc0001
+  - label: データシート PDF（cdn-resource.spacemit.com）
+    url: https://cdn-resource.spacemit.com/file/product/V100/c2201_brief_zh.pdf
+  category: server
+  order: 2
+- id: metastone-rack-pod
+  name: 元石智算 RISMA® クロスアーキテクチャ・クラウドネイティブ POD（ラックスケール）
+  vendor: 武漢元石智算科技有限公司（MetaStone）
+  vendor_en: MetaStone
+  category: rack
+  soc: 2 ソケット 80 コアの RISC-V サーバーノード（SoC 型番は非公開）、複数の AI アクセラレータに対応
+  form: ラックスケール POD（クロスアーキテクチャ、クラウドネイティブ）
+  memory: ''
+  storage_io: ベンダー公称 10Gbps ラインレート、AI アクセラレータを複数搭載可能
+  power: ''
+  os_support: 「主要な OS に広く対応」とベンダーは述べるが、具体的なディストリビューションは未公表
+  availability: プロジェクト単位の納入。複数の AI 計算センターで稼働中とベンダーは述べるが、価格と導入先一覧は非公開
+  first_announced: 2025-07
+  status: production
+  hw_tested: false
+  highlight: false
+  note: ESWIN グループのインキュベーション企業として 2023-07 設立。自社開発の RVOCs 開放型異種計算システムでカーネルドライバ、コンパイラ、推論フレームワーク、モデルサービスの全経路を接続。2026-10 の第 6 回 RISC-V サミット中国では、2 ソケット 80 コアに複数の AI アクセラレータを載せ、32 並列推論で x86 の 95.8% のスループット、12
+    時間の高負荷安定性試験に合格したと発表（いずれもベンダー公表値、第三者による再現はなし）
+  urls:
+  - label: 会社概要（metastonecorp.com）
+    url: https://metastonecorp.com/aboutus
+  - label: 製品（metastonecorp.com）
+    url: https://metastonecorp.com/products
+  - label: サミット報道（科技日報）
+    url: https://www.stdaily.com/web/gdxw/2026-10/23/content_601662.html
+  - label: メディア報道（財経）
+    url: https://www.mycaijing.com/article/detail/586233?source_id=40
+  order: 3

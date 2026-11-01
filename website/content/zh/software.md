@@ -1,8 +1,9 @@
 ---
-title: "解决方案"
+title: "软件"
 sub: "发行版、虚拟化、容器、HPC、数据库与推理服务，以及真实部署案例"
 description: "发行版、虚拟化、容器、HPC、数据库与推理服务，以及真实部署案例"
-layout: solutions
+layout: software
+aliases: ["/solutions/"]
 ---
 
 每条的「已经能跑什么」与「已知限制」都要求有出处：官方文档、release notes、代码仓或可复现的实测记录。没有依据的成熟度判断不进表。

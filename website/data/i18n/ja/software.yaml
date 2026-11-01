@@ -1,4 +1,4 @@
-# RISC-V サーバー向けソリューションとソフトウェアスタック（日本語版）
+# RISC-V サーバー向けソフトウェアスタック（日本語）
 items:
 - name: Debian 13 trixie riscv64 公式サポートアーキテクチャ / Debian riscv64
   category: ディストリビューション

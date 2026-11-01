@@ -1,6 +1,6 @@
 ---
 title: "RISC-V Servers"
-description: "A portal tracking RISC-V servers, server-class chips, solutions and news around the world."
+description: "A portal tracking RISC-V servers, server-class chips, software and news around the world."
 ---
 
 ## What this site covers
@@ -16,4 +16,4 @@ Every entry has to point back to a primary source: a vendor product page, datash
 
 ## Licence and updates
 
-Text on this site is released under CC BY-SA 4.0. News is swept automatically once a day; servers, chips and solutions are updated by hand after checking primary sources.
+Text on this site is released under CC BY-SA 4.0. News is swept automatically once a day; servers, chips and software are updated by hand after checking primary sources.

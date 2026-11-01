@@ -5,7 +5,7 @@ tagline = "RISC-V servers worldwide"
 [nav]
 servers = "Servers"
 chips = "Chips"
-solutions = "Solutions"
+software = "Software"
 news = "News"
 blog = "Blog"
 
@@ -17,7 +17,7 @@ cta_chips = "Browse chips"
 cta_news = "Read the news"
 latest = "Latest"
 chips_blurb = "Server-class RISC-V silicon and CPU IP: cores, ISA, process and vendor-claimed performance."
-solutions_blurb = "From distributions to virtualisation, HPC and cloud: what a RISC-V server can actually run today."
+software_blurb = "From distributions to virtualisation, HPC and cloud: what a RISC-V server can actually run today."
 blog_blurb = "Longer notes from this site: observations, dead ends, and what changed."
 
 [status]
@@ -70,6 +70,14 @@ soc_title = "Chips (SoC / chiplet, shipped silicon)"
 soc_note = "Silicon you can buy or that already ships. Each entry says whether the cores inside are in-house or licensed IP."
 ip_title = "IP cores (licensable)"
 ip_note = "CPU IP sold to chip companies rather than a finished chip; many of the SoCs above integrate cores from this list."
+
+[category]
+server = "Servers (systems and boards)"
+rack = "Racks (rack-scale POD)"
+
+[category_note]
+server = "Server systems, boards and workstations, built from publicly checkable sources, one entry per model."
+rack = "Rack-scale products: delivered as a whole cabinet and organised as a POD or cluster, usually holding several server nodes and AI accelerators."
 
 [badge]
 hw_tested = "Tested on real hardware by Project Jiachen"

@@ -5,7 +5,7 @@ tagline = "전 세계 RISC-V 서버의 진전"
 [nav]
 servers = "서버"
 chips = "칩"
-solutions = "솔루션"
+software = "소프트웨어"
 news = "뉴스"
 blog = "블로그"
 
@@ -17,7 +17,7 @@ cta_chips = "칩 보기"
 cta_news = "최신 뉴스 보기"
 latest = "최신 소식"
 chips_blurb = "서버급 RISC-V 칩과 CPU IP: 코어 수, ISA, 공정, 제조사 공표 성능."
-solutions_blurb = "배포판부터 가상화, HPC, 클라우드까지: RISC-V 서버가 실제로 무엇을 돌릴 수 있는지."
+software_blurb = "배포판부터 가상화, HPC, 클라우드까지: RISC-V 서버가 실제로 무엇을 돌릴 수 있는지."
 blog_blurb = "사이트의 긴 글: 관찰, 시행착오, 현재 상황 정리."
 
 [status]
@@ -70,6 +70,14 @@ soc_title = "칩(SoC / chiplet, 실리콘 출시)"
 soc_note = "구매할 수 있거나 이미 출하 중인 실리콘입니다. 내장 코어가 자체 설계인지 라이선스 IP인지 각 항목에 적었습니다."
 ip_title = "IP 코어(라이선스 가능)"
 ip_note = "칩 회사에 판매되는 CPU IP이며 완제품 칩이 아닙니다. 위 SoC 상당수가 이 목록의 코어를 통합합니다."
+
+[category]
+server = "서버(시스템·보드)"
+rack = "랙(랙 스케일 POD)"
+
+[category_note]
+server = "서버 완제품, 보드, 워크스테이션. 공개적으로 확인 가능한 자료 기반, 모델당 한 항목."
+rack = "랙 스케일 제품: 캐비닛 단위로 공급되며 POD 또는 클러스터로 구성되고 보통 여러 서버 노드와 AI 가속기를 함께 탑재합니다."
 
 [badge]
 hw_tested = "지아천 프로젝트 실기 실측 완료"

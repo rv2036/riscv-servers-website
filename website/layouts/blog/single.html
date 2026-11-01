@@ -8,6 +8,7 @@
     </div>
     {{ with .Description }}<div class="sub">{{ . }}</div>{{ end }}
   </header>
+{{ partial "subscribe.html" . }}
   <div class="prose">
     {{ .Content }}
   </div>

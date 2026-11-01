@@ -8,6 +8,7 @@
     {{ with .Params.sub }}<div class="sub">{{ . }}</div>{{ end }}
   </div>
 </header>
+{{ partial "subscribe.html" . }}
 <div class="wrap">
 
   <h2 class="group-head">{{ i18n "chips.soc_title" }}<span class="count">{{ len $socs }}</span></h2>

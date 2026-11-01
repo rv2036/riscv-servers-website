@@ -7,6 +7,7 @@
     {{ with .Params.sub }}<div class="sub">{{ . }}</div>{{ end }}
   </div>
 </header>
+{{ partial "subscribe.html" . }}
 <div class="wrap">
   {{ if $items }}
   <div class="grid cols-2">

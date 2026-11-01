@@ -5,6 +5,7 @@
     {{ with .Params.sub }}<div class="sub">{{ . }}</div>{{ end }}
   </div>
 </header>
+{{ partial "subscribe.html" . }}
 <div class="wrap">
   <ul class="post-list post-list-page">
     {{ range .Pages.ByDate.Reverse }}

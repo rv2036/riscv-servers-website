@@ -10,6 +10,9 @@ timeZone = "Asia/Shanghai"
   pagerSize = 50
 
 [params]
+  # 邮件订阅后端地址。留空 = 前端表单置灰（未接入状态）。
+  # 配好服务后把 POST 端点填在这里，表单会自动变成可提交。
+  newsletter_endpoint = ""
   domain = "riscvservers.org"
   repo = "https://github.com/rv2036/riscv-servers-website"
   license = "CC BY-SA 4.0"

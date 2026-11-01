@@ -1,0 +1,70 @@
+# RISC-V servers worldwide
+[site]
+tagline = "RISC-V servers worldwide"
+
+[nav]
+servers = "Servers"
+chips = "Chips"
+solutions = "Solutions"
+news = "News"
+blog = "Blog"
+
+[home]
+h1 = "RISC-V servers, on one page"
+lede = "Products, silicon, viable stacks and recent progress for server-class RISC-V, collected in one place. Every entry links back to a primary source; unknown specifications stay blank rather than guessed."
+cta_servers = "Browse servers"
+cta_chips = "Browse chips"
+cta_news = "Read the news"
+latest = "Latest"
+chips_blurb = "Server-class RISC-V silicon and CPU IP: cores, ISA, process and vendor-claimed performance."
+solutions_blurb = "From distributions to virtualisation, HPC and cloud: what a RISC-V server can actually run today."
+blog_blurb = "Longer notes from this site: observations, dead ends, and what changed."
+
+[status]
+production = "In production"
+sampling = "Sampling"
+announced = "Announced"
+eol = "End of life"
+
+[maturity]
+production = "Production ready"
+limited = "Usable with limits"
+experimental = "Experimental"
+demo = "Demo only"
+
+[label]
+soc = "SoC / processor"
+form = "Form factor"
+memory = "Memory"
+storage_io = "Storage and I/O"
+power = "Power"
+os = "Official OS"
+availability = "Where to get it"
+first_announced = "First shown"
+cores = "Cores"
+isa = "ISA"
+process = "Process"
+perf = "Performance"
+target = "Target use"
+what_works = "What already works"
+limits = "Known limits"
+all = "All"
+highlight = "Key"
+home = "Home"
+
+[a11y]
+skip = "Skip to content"
+nav = "Main navigation"
+theme_dark = "Switch to dark"
+theme_light = "Switch to light"
+lang = "Change language"
+
+[footer]
+license = "Text released under CC BY-SA 4.0"
+source = "Source"
+
+[badge]
+verified = "Verified by the Project Jiachen lead"
+
+[error]
+"404" = "Nothing lives at this address. Start again from one of the links below."

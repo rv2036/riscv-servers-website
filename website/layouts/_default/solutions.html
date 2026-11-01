@@ -1,0 +1,39 @@
+{{ define "main" }}
+{{ $d := partial "site-data.html" . }}
+<header class="page-head">
+  <div class="wrap">
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.sub }}<div class="sub">{{ . }}</div>{{ end }}
+  </div>
+</header>
+<div class="wrap">
+  <div class="grid cols-2">
+    {{ range $d.solutions.items }}
+    <article class="card">
+      <div class="card-top">
+        <h3>{{ .name }}</h3>
+        {{ with .category }}<span class="badge soft">{{ . }}</span>{{ end }}
+        {{ with .maturity }}<span class="badge">{{ i18n (printf "maturity.%s" .) }}</span>{{ end }}
+      </div>
+      {{ with .stack }}<p>{{ . }}</p>{{ end }}
+      <dl class="specs">
+        {{ with .what_works }}<dt>{{ i18n "label.what_works" }}</dt><dd>{{ . }}</dd>{{ end }}
+        {{ with .limits }}<dt>{{ i18n "label.limits" }}</dt><dd>{{ . }}</dd>{{ end }}
+      </dl>
+      {{ with .note }}<p>{{ . }}</p>{{ end }}
+      {{ with .evidence }}
+      <div class="links">
+        {{ range . }}{{ $u := .url }}
+        <a href="{{ $u }}" rel="noopener">{{ .label }}{{ with (urls.Parse $u).Query.Get "id" }} · id={{ . }}{{ end }}</a>
+        {{ end }}
+      </div>
+      {{ end }}
+    </article>
+    {{ end }}
+  </div>
+
+  <section class="block prose">
+    {{ .Content }}
+  </section>
+</div>
+{{ end }}

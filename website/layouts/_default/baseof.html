@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.LanguageCode }}" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ if .IsHome }}{{ site.Title }} · {{ i18n "site.tagline" }}{{ else }}{{ .Title }} · {{ site.Title }}{{ end }}</title>
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+<link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+<link rel="canonical" href="{{ .Permalink }}">
+{{- range .AllTranslations }}
+<link rel="alternate" hreflang="{{ .Language.LanguageCode }}" href="{{ .Permalink }}">
+{{- end }}
+{{- range .AllTranslations }}{{ if eq .Language.Lang site.Home.Language.Lang }}
+<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
+{{- end }}{{ end }}
+{{- if .IsPage }}{{ with .OutputFormats.Get "rss" }}
+<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ site.Title }}">
+{{- end }}{{ end }}
+{{- with .Site.Home.OutputFormats.Get "rss" }}
+<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ site.Title }}">
+{{- end }}
+{{ $css := resources.Get "css/main.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}">
+<script>
+  // 防闪白：在任何 DOM 之前先把主题定下来
+  (function () {
+    try {
+      var t = localStorage.getItem('rvs-theme');
+      if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+      else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches)
+        document.documentElement.dataset.theme = 'light';
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+<a class="skip" href="#main">{{ i18n "a11y.skip" }}</a>
+{{ partial "header.html" . }}
+<main id="main">
+{{ block "main" . }}{{ end }}
+</main>
+{{ partial "footer.html" . }}
+<script>
+  (function () {
+    var root = document.documentElement;
+    // 主题切换
+    var tBtn = document.getElementById('themeToggle');
+    if (tBtn) {
+      var sync = function () {
+        tBtn.textContent = root.dataset.theme === 'light' ? '☾' : '☀';
+        tBtn.setAttribute('aria-label', root.dataset.theme === 'light' ? '{{ i18n "a11y.theme_dark" }}' : '{{ i18n "a11y.theme_light" }}');
+      };
+      sync();
+      tBtn.addEventListener('click', function () {
+        root.dataset.theme = root.dataset.theme === 'light' ? 'dark' : 'light';
+        try { localStorage.setItem('rvs-theme', root.dataset.theme); } catch (e) {}
+        sync();
+      });
+    }
+    // 语言菜单
+    var lBtn = document.getElementById('langToggle');
+    var lMenu = document.getElementById('langMenu');
+    if (lBtn && lMenu) {
+      lBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var open = lMenu.classList.toggle('open');
+        lBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      document.addEventListener('click', function () {
+        lMenu.classList.remove('open');
+        lBtn.setAttribute('aria-expanded', 'false');
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') { lMenu.classList.remove('open'); lBtn.setAttribute('aria-expanded', 'false'); }
+      });
+    }
+  })();
+</script>
+</body>
+</html>

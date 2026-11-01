@@ -1,0 +1,18 @@
+{{- /* 按当前语言取 data/i18n/<lang>/<key>.yaml，缺则回退中文，再缺回退 data/<key>.yaml */ -}}
+{{- $lang := site.Language.Lang -}}
+{{- $cur := dict -}}
+{{- $lc := lower $lang -}}
+{{- with index site.Data "i18n" -}}
+  {{- with index . $lang -}}{{- $cur = . -}}{{- end -}}
+  {{- if not $cur -}}{{- with index . $lc -}}{{- $cur = . -}}{{- end -}}{{- end -}}
+{{- end -}}
+{{- $fallback := dict -}}
+{{- with index site.Data "i18n" -}}{{- with index . "zh" -}}{{- $fallback = . -}}{{- end -}}{{- end -}}
+{{- $out := dict -}}
+{{- range $k := slice "servers" "chips" "solutions" "news" -}}
+  {{- $v := index $cur $k -}}
+  {{- if not $v -}}{{- $v = index $fallback $k -}}{{- end -}}
+  {{- if not $v -}}{{- $v = index site.Data $k -}}{{- end -}}
+  {{- $out = merge $out (dict $k $v) -}}
+{{- end -}}
+{{- return $out -}}

@@ -1,0 +1,36 @@
+{{ define "main" }}
+{{ $d := partial "site-data.html" . }}
+<header class="page-head">
+  <div class="wrap">
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.sub }}<div class="sub">{{ . }}</div>{{ end }}
+  </div>
+</header>
+<div class="wrap">
+  {{- $lastYear := "" }}
+  {{- range $i, $n := $d.news.items }}
+  {{- $y := substr $n.date 0 4 }}
+  {{- if ne $y $lastYear }}
+  {{- if ne $lastYear "" }}</ul>{{ end }}
+  <h2 class="year-head">{{ $y }}</h2>
+  <ul class="news-list">
+  {{- $lastYear = $y }}
+  {{- end }}
+    <li class="news-item">
+      <div class="news-meta">
+        <span>{{ $n.date }}</span>
+        {{ with $n.source }}<span>·</span><span>{{ . }}</span>{{ end }}
+        {{ if eq $n.importance "high" }}<span class="badge">{{ i18n "label.highlight" }}</span>{{ end }}
+        {{ range $n.tags }}<span class="tag">{{ . }}</span>{{ end }}
+      </div>
+      <h3><a href="{{ $n.url }}" rel="noopener">{{ $n.title }}</a></h3>
+      {{ with $n.summary }}<p>{{ . }}</p>{{ end }}
+    </li>
+  {{- end }}
+  {{- if ne $lastYear "" }}</ul>{{ end }}
+
+  <section class="block prose">
+    {{ .Content }}
+  </section>
+</div>
+{{ end }}

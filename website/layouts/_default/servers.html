@@ -1,0 +1,46 @@
+{{ define "main" }}
+{{ $d := partial "site-data.html" . }}
+<header class="page-head">
+  <div class="wrap">
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.sub }}<div class="sub">{{ . }}</div>{{ end }}
+  </div>
+</header>
+<div class="wrap">
+  <div class="grid cols-2">
+    {{ range $i, $s := $d.servers.items }}
+    <article class="card{{ if $s.highlight }} feature{{ end }}">
+      <div class="card-top">
+        <span class="rank">{{ add $i 1 }}</span>
+        <h3>{{ $s.name }}</h3>
+        {{ if $s.verified }}<span class="badge verified">{{ i18n "badge.verified" }}</span>{{ end }}
+        {{ with $s.status }}<span class="badge soft">{{ i18n (printf "status.%s" .) }}</span>{{ end }}
+      </div>
+      <p>{{ $s.vendor }}{{ with $s.vendor_en }} · {{ . }}{{ end }}</p>
+      <dl class="specs">
+        {{ with $s.soc }}<dt>{{ i18n "label.soc" }}</dt><dd>{{ . }}</dd>{{ end }}
+        {{ with $s.form }}<dt>{{ i18n "label.form" }}</dt><dd>{{ . }}</dd>{{ end }}
+        {{ with $s.memory }}<dt>{{ i18n "label.memory" }}</dt><dd>{{ . }}</dd>{{ end }}
+        {{ with $s.storage_io }}<dt>{{ i18n "label.storage_io" }}</dt><dd>{{ . }}</dd>{{ end }}
+        {{ with $s.power }}<dt>{{ i18n "label.power" }}</dt><dd>{{ . }}</dd>{{ end }}
+        {{ with $s.os_support }}<dt>{{ i18n "label.os" }}</dt><dd>{{ . }}</dd>{{ end }}
+        {{ with $s.availability }}<dt>{{ i18n "label.availability" }}</dt><dd>{{ . }}</dd>{{ end }}
+        {{ with $s.first_announced }}<dt>{{ i18n "label.first_announced" }}</dt><dd>{{ . }}</dd>{{ end }}
+      </dl>
+      {{ with $s.note }}<p>{{ . }}</p>{{ end }}
+      {{ with $s.urls }}
+      <div class="links">
+        {{ range . }}{{ $u := .url }}
+        <a href="{{ $u }}" rel="noopener">{{ .label }}{{ with (urls.Parse $u).Query.Get "id" }} · id={{ . }}{{ end }}</a>
+        {{ end }}
+      </div>
+      {{ end }}
+    </article>
+    {{ end }}
+  </div>
+
+  <section class="block prose">
+    {{ .Content }}
+  </section>
+</div>
+{{ end }}

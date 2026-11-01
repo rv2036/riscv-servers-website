@@ -1,0 +1,65 @@
+baseURL = "https://riscvservers.org/"
+title = "RISC-V Servers"
+enableRobotsTXT = true
+defaultContentLanguage = "zh"
+defaultContentLanguageInSubdir = false
+hasCJKLanguage = true
+timeZone = "Asia/Shanghai"
+
+[pagination]
+  pagerSize = 50
+
+[params]
+  domain = "riscvservers.org"
+  repo = "https://github.com/rv2036/riscv-servers-website"
+  license = "CC BY-SA 4.0"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[languages]
+  [languages.zh]
+    languageName = "简体中文"
+    languageCode = "zh-CN"
+    contentDir = "content/zh"
+    weight = 1
+    title = "RISC-V 服务器"
+    [languages.zh.params]
+      tagline = "全世界的 RISC-V 服务器进展"
+      description = "收录并跟踪全球 RISC-V 服务器产品、芯片、解决方案与新闻的门户站。"
+  [languages.en]
+    languageName = "English"
+    languageCode = "en"
+    contentDir = "content/en"
+    weight = 2
+    title = "RISC-V Servers"
+    [languages.en.params]
+      tagline = "RISC-V servers worldwide"
+      description = "A portal tracking RISC-V servers, server-class chips, solutions and news around the world."
+  [languages.ja]
+    languageName = "日本語"
+    languageCode = "ja"
+    contentDir = "content/ja"
+    weight = 3
+    title = "RISC-V サーバー"
+    [languages.ja.params]
+      tagline = "世界の RISC-V サーバーの進展"
+      description = "世界の RISC-V サーバー製品、チップ、ソリューション、ニュースを追うポータルサイト。"
+  [languages.ru]
+    languageName = "Русский"
+    languageCode = "ru"
+    contentDir = "content/ru"
+    weight = 4
+    title = "Серверы RISC-V"
+    [languages.ru.params]
+      tagline = "Серверы RISC-V по всему миру"
+      description = "Портал, который отслеживает серверы RISC-V, серверные чипы, решения и новости по всему миру."
+  [languages.ko]
+    languageName = "한국어"
+    languageCode = "ko"
+    contentDir = "content/ko"
+    weight = 5
+    title = "RISC-V 서버"
+    [languages.ko.params]
+      tagline = "전 세계 RISC-V 서버의 진전"
+      description = "전 세계 RISC-V 서버 제품, 칩, 솔루션, 뉴스를 추적하는 포털 사이트."

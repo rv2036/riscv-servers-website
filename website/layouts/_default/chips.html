@@ -1,0 +1,43 @@
+{{ define "main" }}
+{{ $d := partial "site-data.html" . }}
+<header class="page-head">
+  <div class="wrap">
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.sub }}<div class="sub">{{ . }}</div>{{ end }}
+  </div>
+</header>
+<div class="wrap">
+  <div class="grid cols-2">
+    {{ range $d.chips.items }}
+    <article class="card">
+      <div class="card-top">
+        <h3>{{ .chip }}</h3>
+        {{ with .type }}<span class="badge soft">{{ . }}</span>{{ end }}
+        {{ with .status }}<span class="badge soft">{{ i18n (printf "status.%s" .) }}</span>{{ end }}
+      </div>
+      <p>{{ .vendor }}</p>
+      <dl class="specs">
+        {{ with .cores }}<dt>{{ i18n "label.cores" }}</dt><dd>{{ . }}</dd>{{ end }}
+        {{ with .isa }}<dt>{{ i18n "label.isa" }}</dt><dd>{{ . }}</dd>{{ end }}
+        {{ with .process }}<dt>{{ i18n "label.process" }}</dt><dd>{{ . }}</dd>{{ end }}
+        {{ with .perf }}<dt>{{ i18n "label.perf" }}</dt><dd>{{ . }}</dd>{{ end }}
+        {{ with .target }}<dt>{{ i18n "label.target" }}</dt><dd>{{ . }}</dd>{{ end }}
+        {{ with .first_announced }}<dt>{{ i18n "label.first_announced" }}</dt><dd>{{ . }}</dd>{{ end }}
+      </dl>
+      {{ with .note }}<p>{{ . }}</p>{{ end }}
+      {{ with .urls }}
+      <div class="links">
+        {{ range . }}{{ $u := .url }}
+        <a href="{{ $u }}" rel="noopener">{{ .label }}{{ with (urls.Parse $u).Query.Get "id" }} · id={{ . }}{{ end }}</a>
+        {{ end }}
+      </div>
+      {{ end }}
+    </article>
+    {{ end }}
+  </div>
+
+  <section class="block prose">
+    {{ .Content }}
+  </section>
+</div>
+{{ end }}

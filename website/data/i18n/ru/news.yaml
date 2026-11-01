@@ -1,0 +1,370 @@
+# Новости серверного RISC-V (русская редакция, в обратном хронологическом порядке)
+items:
+  - date: "2026-10-22"
+    title: "Qualcomm покупает RISC-V-стартап Akeana, усиливая направление чипов для ИИ и ЦОД"
+    summary: "Qualcomm завершила покупку компании Akeana, разрабатывающей RISC-V-процессоры; сумма сделки не раскрыта, IP и инженерная команда Akeana целиком вошли в Qualcomm для усиления направлений ИИ и ЦОД. Akeana основана в 2021 году командой, ранее делавшей серверные чипы в Marvell, в августе 2024 года привлекла более 100 млн долларов и специализируется на RISC-V-ядрах с настройкой под заказчика. Это второй после Ventana случай, когда Qualcomm получает активы RISC-V дата-центрового класса."
+    source: "Design & Reuse / Dealroom"
+    url: "https://www.design-reuse.com/news/202531315-qualcomm-buys-risc-v-startup-akeana-to-push-into-ai-and-data-center-chips"
+    vendors: ["Qualcomm", "Akeana"]
+    tags: ["Слияния и инвестиции", "Анонсы чипов"]
+    importance: "high"
+  - date: "2026-10-20"
+    title: "SpacemiT представила V100: 46-ядерный серверный CPU RISC-V с расширением до 92 ядер в двух сокетах"
+    summary: "На саммите RISC-V China 2026 в Шэньчжэне SpacemiT представила первый серверный чип V100: 6 высокопроизводительных ядер XiangShan «Kunminghu» V2R2 плюс 40 собственных энергоэффективных ядер X100, всего 46 ядер, до 92 в двух сокетах, 8 каналов DDR5 и 52 линии PCIe 5.0. Официально он назван первым в отрасли вычислительным чипом, полностью соответствующим спецификации серверного RISC-V; все пункты тестов BRS пройдены, дистрибутивы openEuler, openKylin, Ubuntu, Debian и Fedora устанавливаются и загружаются напрямую. Ядра XiangShan впервые вошли в коммерческий серверный чип, а серверный RISC-V получил способность поставляться с обычными дистрибутивами."
+    source: "Tencent News / Xinzhixun"
+    url: "https://view.inews.qq.com/a/20261020A0BL9500"
+    vendors: ["SpacemiT"]
+    tags: ["Анонсы чипов", "Поставки серверов", "Стандарты и спецификации"]
+    importance: "high"
+  - date: "2026-10-15"
+    title: "Десять лет zeroRISC: путь коммерциализации открытого кремния для безопасности"
+    summary: "The Next Platform взяла интервью у основателя zeroRISC Доминика Риццо о десяти годах работы — от проекта Google OpenTitan до коммерциализации открытого кремния. Компания выходит на серверную безопасность с открытым Root of Trust и считает, что открытый кремний имеет особую ценность для конфиденциальных вычислений и доверия к цепочке поставок. Это обзор экосистемы, а не анонс продукта."
+    source: "The Next Platform"
+    url: "https://www.nextplatform.com/compute/2026/10/15/a-decade-in-zerorisc-sees-a-bright-future-for-open-silicon/5303297"
+    vendors: ["zeroRISC", "Google"]
+    tags: ["Партнёрства и экосистема", "Программный стек"]
+    importance: "medium"
+  - date: "2026-09-15"
+    title: "SiFive и AMD переносят ROCm на серверы RISC-V"
+    summary: "На AI Infra Summit SiFive и AMD показали ROCm 10.0 на платформе SiFive BigSky: P870-D в роли head node, Radeon AI PRO R9700 для выгрузки инференса, запущена модель Gemma4-E2B. Стороны заявили, что продолжат оптимизировать производительность ROCm на серверах RISC-V. Впервые сервер RISC-V попал в официальную зону сотрудничества с мейнстримным программным стеком GPU."
+    source: "SiFive"
+    url: "https://www.sifive.com/press/sifive-amd-rocm-riscv-datacenter-servers"
+    vendors: ["SiFive", "AMD"]
+    tags: ["Программный стек", "Партнёрства и экосистема", "HPC"]
+    importance: "high"
+  - date: "2026-09-07"
+    title: "Canonical о том, как Ubuntu готовится к корпоративному RISC-V"
+    summary: "Директор по кремниевым альянсам Canonical Гордан Маркуш на Hot Chips 2026 рассказал о процессе сборки Ubuntu, стратегии поддержки ISA на разных архитектурах и о том, какие условия RISC-V должна выполнить, чтобы считаться «готовой для предприятий». Основное внимание уделено базовой линии RVA23 и согласованности прошивки со спецификацией серверной платформы."
+    source: "ServeTheHome"
+    url: "https://www.servethehome.com/canonical-evolution-of-enterprise-open-source-risc-v-at-hot-chips-2026/"
+    vendors: ["Canonical", "Ubuntu"]
+    tags: ["Операционные системы", "Программный стек"]
+    importance: "medium"
+  - date: "2026-09-02"
+    title: "Hot Chips 2026: прогресс стандартов и внедрения RISC-V"
+    summary: "RISC-V International и SiFive на Hot Chips 2026 обновили данные о разработке стандартов и внедрении: внедрение RVA23, продвижение спецификации серверной платформы и проекты ядер для ИИ-вычислений. Это ежегодный обзор прогресса экосистемы."
+    source: "ServeTheHome"
+    url: "https://www.servethehome.com/update-on-risc-v-standards-and-adoption-at-hot-chips-2026/"
+    vendors: ["RISC-V International", "SiFive"]
+    tags: ["Стандарты и спецификации", "Партнёрства и экосистема"]
+    importance: "medium"
+  - date: "2026-09-01"
+    title: "NVIDIA на Hot Chips 2026 о взаимодействии RISC-V и GPU"
+    summary: "В учебной секции Hot Chips 2026 NVIDIA рассказала, как приложения CUDA сочетают программные модули CPU и GPU и каким образом поддерживаются её GPU на хостах RISC-V. Это стыкуется с официальной поддержкой RISC-V в CUDA в 2025 году и указывает на превращение серверов RISC-V в обычные головные узлы для GPU."
+    source: "ServeTheHome"
+    url: "https://www.servethehome.com/nvidia-risc-v-for-nvidia-gpus-at-hot-chips-2026/"
+    vendors: ["NVIDIA"]
+    tags: ["Программный стек", "Партнёрства и экосистема"]
+    importance: "medium"
+  - date: "2026-08-25"
+    title: "SiFive представила BigSky: первый корпоративный сервер RISC-V 2U"
+    summary: "SiFive выпустила платформу разработки BigSky SF-2U870 для ЦОД, назвав её первым в мире корпоративным стоечным сервером RISC-V 2U; в основе P870-D, назначение — портирование ПО и настройка нагрузок у клиентов гипермасштаба. The Register отмечает, что по сути это платформа разработки и проверки, а не серийная товарная машина."
+    source: "The Register"
+    url: "https://www.theregister.com/systems/2026/08/25/sifive-pushes-development-server-to-take-risc-v-into-the-datacenter/5292136"
+    vendors: ["SiFive"]
+    tags: ["Поставки серверов", "Серверы и платы", "Программный стек"]
+    importance: "high"
+  - date: "2026-08-24"
+    title: "Alibaba C950 запустила 27-миллиардную модель силами одного CPU"
+    summary: "XuanTie C950 (64 ядра, TSMC 5 нм) выполнила Qwen3.8 27B без GPU, без слоя эмуляции и без накладных расходов на трансляцию, достигнув 30 токенов/с и 1,9 секунды до первого токена. Для серверов RISC-V это публичная проверка того, что «CPU самостоятельно тянет инференс», и дополнительный аргумент в пользу направления ИИ-вычислений на RISC-V на китайском рынке."
+    source: "Design & Reuse / Intelligent Living"
+    url: "https://www.design-reuse.com/news/202531019-alibaba-s-risc-v-chip-runs-27b-ai-model-without-a-gpu/"
+    vendors: ["Alibaba", "DAMO Academy"]
+    tags: ["Анонсы чипов", "Программный стек"]
+    importance: "high"
+  - date: "2026-08-20"
+    title: "StarFive выпустила серверное ядро RISC-V Dubhe-100"
+    summary: "StarFive представила Dubhe-100 (Fang TianShu-100) для серверного рынка: 15-ступенчатый конвейер, выпуск 6 инструкций, буфер переупорядочивания на 256 записей, поддержка RVA23 и векторных расширений. Официально это одно из первых в Китае серверных RISC-V CPU IP, дошедших до стадии поставки; заказчики уже разрабатывают на нём серверные чипы."
+    source: "Design & Reuse"
+    url: "https://www.design-reuse.com/news/202531000-starfive-launches-server-class-risc-v-ip-to-accelerate-its-strategic-expansion-into-ai-computing-infrastructure/"
+    vendors: ["StarFive"]
+    tags: ["Анонсы чипов", "Поставки серверов"]
+    importance: "high"
+  - date: "2026-08-17"
+    title: "Испанская Openchip представила BER10: первый европейский чип RISC-V для суперкомпьютеров"
+    summary: "Openchip выпустила 64-битный BER10 по GAA-техпроцессу менее 2 нм, способный работать под полноценным Linux; чип уже открыт для проверки компаниями и исследовательскими организациями в проектах суперкомпьютеров и ЦОД. Он позиционируется как база европейского суверенного кремния и последующих ИИ-ускорителей."
+    source: "Design & Reuse / russpain"
+    url: "https://www.design-reuse.com/news/202530985-spain-unveils-ber10-europe-s-first-risc-v-chip-for-supercomputing/"
+    vendors: ["Openchip"]
+    tags: ["Анонсы чипов", "HPC"]
+    importance: "high"
+  - date: "2026-08-13"
+    title: "Andes закрыла Condor Computing: планы дата-центрового ядра RISC-V сорваны"
+    summary: "Jon Peddie Research сообщает, что Andes закрыла дочернюю компанию Condor Computing, а её высокопроизводительное IP RVA23 вернулось в Andes. Cuzco от Condor использовал необычную архитектуру временного планирования и считался важной попыткой RISC-V выйти в ЦОД; закрытие стало неудачей для экосистемы."
+    source: "Jon Peddie Research"
+    url: "https://www.jonpeddie.com/news/condor-flies-no-more"
+    vendors: ["Andes", "Condor Computing"]
+    tags: ["Слияния и инвестиции", "Анонсы чипов"]
+    importance: "medium"
+  - date: "2026-07-27"
+    title: "Дорожная карта RISC-V в HPC постепенно проясняется"
+    summary: "HPCwire по итогам дискуссии на ISC 2026 пишет: в мире развёрнуто более 30 млрд ядер RISC-V, аналитики ожидают долю в треть рынка в течение пяти лет, но в HPC RISC-V пока не оправдала ожиданий. По мнению авторов, новые чипы и зрелость экосистемы изменят картину в ближайшие годы."
+    source: "Design & Reuse / HPCwire"
+    url: "https://www.design-reuse.com/news/202530880-charting-risc-v-s-future-in-hpc/"
+    vendors: ["RISC-V International"]
+    tags: ["HPC", "Партнёрства и экосистема"]
+    importance: "medium"
+  - date: "2026-07-09"
+    title: "SUSE и Openchip создают корпоративный программный стек для европейского железа RISC-V"
+    summary: "Стороны подписали меморандум о взаимопонимании: SUSE Linux Enterprise Server, RKE2, Rancher Prime и SUSE AI Factory будут адаптированы к ускорителям RISC-V от Openchip. Цель — европейский суверенный технологический стек от архитектуры чипа до открытого ПО, что напрямую важно для выхода RISC-V в корпоративные ЦОД."
+    source: "Design & Reuse / Evertiq"
+    url: "https://www.design-reuse.com/news/202530790-suse-openchip-partner-to-develop-european-risc-v-hardware/"
+    vendors: ["SUSE", "Openchip"]
+    tags: ["Программный стек", "Партнёрства и экосистема", "Операционные системы"]
+    importance: "medium"
+  - date: "2026-07-02"
+    title: "StarFive и LECARC совместно разрабатывают серверный CPU RISC-V"
+    summary: "LECARC (Theo End Computing) будет использовать собственное CPU IP Dubhe-100 от StarFive для создания серверного CPU нового поколения для интеллектуальной периферии. Стороны ссылаются на отчёт Bernstein: agentic AI поднимет долю CPU в нагрузке инференса с примерно 14% у традиционных больших моделей до 50%."
+    source: "Design & Reuse"
+    url: "https://www.design-reuse.com/news/202530748-starfive-and-lecarc-forge-partnership-to-co-develop-risc-v-server-cpus-and-seize-new-opportunities-in-the-agentic-ai-era/"
+    vendors: ["StarFive", "LECARC"]
+    tags: ["Партнёрства и экосистема", "Анонсы чипов"]
+    importance: "medium"
+  - date: "2026-06-30"
+    title: "Tenstorrent выпустила TT-Ascalon S и расширила бизнес в Японии"
+    summary: "На TT-Deploy JP Tenstorrent представила CPU IP RISC-V TT-Ascalon S для agentic AI, объявила новые рекорды производительности на языковых и видеомоделях и вошла в суверенную гетерогенную платформу инференса японской ai&. Её суперкластер Galaxy может развёртываться как отдельно, так и вместе с GPU."
+    source: "Tenstorrent"
+    url: "https://tenstorrent.com/en/newsroom/tenstorrent-sets-new-performance-records-launches-tt--ascalon-s"
+    vendors: ["Tenstorrent"]
+    tags: ["Анонсы чипов", "Партнёрства и экосистема"]
+    importance: "medium"
+  - date: "2026-06-16"
+    title: "Сообщается, что Qualcomm планирует купить Tenstorrent за 10 млрд долларов"
+    summary: "The Register пишет, что Qualcomm ведёт переговоры о покупке Tenstorrent с оценкой около 10 млрд долларов. У последней есть CPU IP Ascalon RISC-V и ускорители ИИ Blackhole; если сделка состоится, Qualcomm одновременно получит три линейки RISC-V — Ventana, Akeana и Tenstorrent."
+    source: "The Register"
+    url: "https://www.theregister.com/systems/2026/06/16/qualcomm-said-to-be-circling-ai-chip-biz-tenstorrent-in-10b-risc-v-power-play/5256084"
+    vendors: ["Qualcomm", "Tenstorrent"]
+    tags: ["Слияния и инвестиции"]
+    importance: "high"
+  - date: "2026-06-10"
+    title: "Мини-ПК на SpacemiT K3: RISC-V-десктоп RVA23, которым «можно пользоваться»"
+    summary: "На Ubuntu Summit SpacemiT показала мини-ПК на 16-ядерном SoC K3: совместимость с RVA23, приемлемая повседневная производительность, но цена немаленькая. Это говорит о том, что у программной базы RVA23 появилось реальное железо, и подготовлена почва для последующих серверных продуктов."
+    source: "The Register"
+    url: "https://www.theregister.com/systems/2026/06/10/spacemit-shows-off-usably-quick-risc-v-mini-desktop/5252935"
+    vendors: ["SpacemiT"]
+    tags: ["Анонсы чипов", "Серверы и платы"]
+    importance: "medium"
+  - date: "2026-05-20"
+    title: "Firefly выпустила сервер ИИ на RISC-V производительностью 2880 TOPS"
+    summary: "Firefly CSC2-N48SPK3 в корпусе 4U объединяет 48 узлов SpacemiT K3 и 48 NVMe SSD с заявленной производительностью 2880 TOPS. Это путь набора RISC-V-узлов в «многоузловой ИИ-сервер», а не ставка на один большой чип."
+    source: "CNX Software"
+    url: "https://www.cnx-software.com/2026/05/20/firefly-csc2-n48spk3-a-2880-tops-risc-v-ai-server-with-48-spacemit-k3-nodes-48-nvme-ssds/"
+    vendors: ["Firefly", "SpacemiT"]
+    tags: ["Поставки серверов", "Серверы и платы"]
+    importance: "medium"
+  - date: "2026-05-18"
+    title: "Tenstorrent выпустила TT-QuietBox 2: рабочая станция ИИ на RISC-V с полностью открытым стеком"
+    summary: "TT-QuietBox 2 (Blackhole) — настольная система с жидкостным охлаждением, локально запускающая модели до 120 млрд параметров, с полностью открытым кодом от компилятора до ядра, от 9999 долларов. Официально это первая настольная рабочая станция ИИ на RISC-V с инференсом уровня терафлопс."
+    source: "Design & Reuse / Tenstorrent"
+    url: "https://www.design-reuse.com/news/202530525-tenstorrent-unveils-tt-quietbox-2-the-first-risc-v-ai-workstation-with-a-fully-open-source-stack-to-deliver-teraflop-class-inference/"
+    vendors: ["Tenstorrent"]
+    tags: ["Серверы и платы", "Программный стек"]
+    importance: "medium"
+  - date: "2026-05-12"
+    title: "SiFive выпустила третье поколение высокопроизводительного IP RISC-V P570/P550"
+    summary: "Новое IP построено на внеочередной суперскалярной архитектуре с векторизацией и ориентировано на потребительские устройства с ограничениями по площади и энергопотреблению; SiFive называет P570 Gen3 самым мощным и эффективным внеочередным ядром в классе. Это последнее поколение производительной серии P500, отдельное от дата-центрового P870-D."
+    source: "SiFive"
+    url: "https://www.sifive.com/press/sifive-sets-new-bar-for-high-performance-risc-v-with-third-generation-performance-p550-and-p570-ip"
+    vendors: ["SiFive"]
+    tags: ["Анонсы чипов"]
+    importance: "medium"
+  - date: "2026-05-06"
+    title: "Спецификация серверной платформы RISC-V 1.0 официально утверждена"
+    summary: "Рабочая группа riscv-non-isa выпустила RISC-V Server Platform v1.0 — первую официально утверждённую версию спецификации, унифицирующую минимальные требования к серверным системам по прошивке, управлению прерываниями, PCIe и RAS. Для сборщиков систем и облачных провайдеров это предпосылка того, что сервер RISC-V «ставится и обслуживается»."
+    source: "RISC-V International (GitHub)"
+    url: "https://github.com/riscv-non-isa/riscv-server-platform/releases/tag/v1.0"
+    vendors: ["RISC-V International"]
+    tags: ["Стандарты и спецификации"]
+    importance: "high"
+  - date: "2026-04-29"
+    title: "Сервер Tenstorrent Galaxy Blackhole пошёл в серию"
+    summary: "Galaxy — корпус 6U с 32 ускорителями Blackhole, объединёнными Ethernet-сеткой с агрегированной пропускной способностью 100 Тбит/с, 1 ТБ GDDR6 и 16 ТБ памяти, около 110 тыс. долларов за систему. Управление построено на ядрах RISC-V; это редкий серийный продукт RISC-V на уровне целого ИИ-сервера."
+    source: "Tenstorrent"
+    url: "https://tenstorrent.com/en/newsroom/tenstorrent-enables-ai-at-scale-with-industry-leading-performance"
+    vendors: ["Tenstorrent"]
+    tags: ["Поставки серверов", "Серверы и платы"]
+    importance: "high"
+  - date: "2026-04-09"
+    title: "SiFive привлекла 400 млн долларов в раунде G при оценке 3,65 млрд"
+    summary: "Раунд возглавила Atreides Management, участвовали NVIDIA, Apollo, Point72, T. Rowe Price и др.; средства пойдут на ускорение дорожной карты RISC-V для ЦОД. Вход NVIDIA наблюдатели трактуют как поддержку экосистемы хост-CPU на RISC-V."
+    source: "SiFive"
+    url: "https://www.sifive.com/press/sifive-raises-400-million-to-accelerate-high-performance-risc-v-data-center-solutions"
+    vendors: ["SiFive", "NVIDIA"]
+    tags: ["Слияния и инвестиции"]
+    importance: "high"
+  - date: "2026-03-25"
+    title: "Alibaba поставила серверный чип RISC-V для китайских больших моделей"
+    summary: "DAMO Academy выпустила XuanTie C950, назвав его самым мощным процессором RISC-V в истории: одно ядро SPECint2006 превышает 70 баллов, нативная поддержка моделей на сотни миллиардов параметров вроде Qwen3 и DeepSeek V3, реализован RVA23.1. Внешние оценки: одноядерная производительность близка к Apple M1, но в целом чип отстаёт от западных флагманов, а число ядер официально не раскрыто."
+    source: "The Register"
+    url: "https://www.theregister.com/on-prem/2026/03/25/alibaba-delivers-risc-v-server-chip-optimized-for-chinese-ai/5229685"
+    vendors: ["Alibaba", "DAMO Academy"]
+    tags: ["Анонсы чипов", "Поставки серверов"]
+    importance: "high"
+  - date: "2026-03-24"
+    title: "Представлен XuanTie C950: впервые нативная поддержка моделей на сотни миллиардов параметров"
+    summary: "В Шанхае прошла конференция экосистемы XuanTie RISC-V 2026, где DAMO Academy представила C950 (3,2 ГГц, декодирование 8 инструкций, 16 ступеней конвейера, окно внеочередного исполнения более 1000 инструкций) и два нативных ИИ-движка RISC-V, а также нативную поддержку конфиденциальных вычислений CoVE. Официально приводится прогноз SHD Group: к 2031 году поставки устройств на RISC-V достигнут 36 млрд штук."
+    source: "Xinhua"
+    url: "https://www3.xinhuanet.com/tech/20260324/fdc7c3b201074147a46b5ce6ad51045f/c.html"
+    vendors: ["Alibaba", "DAMO Academy"]
+    tags: ["Анонсы чипов", "Партнёрства и экосистема"]
+    importance: "high"
+  - date: "2026-03-09"
+    title: "openEuler 24.03 LTS SP3 RISC-V перешёл в долгосрочное сопровождение"
+    summary: "Версию подготовил Институт программного обеспечения КАН (ISCAS) совместно с ZTE, DAMO Academy, SOPHGO, SpacemiT, UltraRISC и др.; это первая версия с длительным сопровождением и поддержкой RVA23, с начальной поддержкой спецификации RISC-V Server Platform и сохранением двух базовых линий RVA20/RVA23. Для китайских серверов RISC-V это операционная система, которую можно долго эксплуатировать."
+    source: "Сообщество openEuler"
+    url: "https://www.openeuler.org/zh/blog/20260317-RISC-V/20260317-RISC-V.html"
+    vendors: ["openEuler", "ISCAS", "ZTE", "SOPHGO", "SpacemiT"]
+    tags: ["Операционные системы", "Программный стек", "Стандарты и спецификации"]
+    importance: "high"
+  - date: "2026-01-23"
+    title: "SpaceMiT K3: спецификации и первые тесты 16-ядерного SoC RVA23"
+    summary: "CNX Software собрала опубликованные характеристики K3: ядра X100, до 2,5 ГГц, соответствие RVA23, и привела ранние результаты тестов. Позже K3 стал вычислительной единицей ряда серверов и ИИ-систем на RISC-V."
+    source: "CNX Software"
+    url: "https://www.cnx-software.com/2026/01/23/spacemit-k3-16-core-risc-v-soc-system-information-and-early-benchmarks/"
+    vendors: ["SpacemiT"]
+    tags: ["Анонсы чипов"]
+    importance: "medium"
+  - date: "2026-01-15"
+    title: "SiFive подключилась к NVIDIA NVLink Fusion"
+    summary: "SiFive объявила об интеграции NVLink Fusion в высокопроизводительные решения для ЦОД, что даёт хост-CPU RISC-V когерентное соединение с высокой пропускной способностью к GPU NVIDIA и другим ускорителям. Это ключевой шаг RISC-V в ИИ-стойки и в роль головного узла для GPU."
+    source: "The Register"
+    url: "https://www.theregister.com/on-prem/2026/01/15/sifive-to-fuse-risc-v-with-nvidias-nvlink/5115896"
+    vendors: ["SiFive", "NVIDIA"]
+    tags: ["Партнёрства и экосистема", "HPC"]
+    importance: "high"
+  - date: "2025-12-10"
+    title: "Qualcomm купила Ventana Micro Systems"
+    summary: "Qualcomm объявила о покупке компании Ventana, разрабатывающей высокопроизводительные CPU RISC-V; сумма не раскрыта, направление будет развиваться параллельно с собственными ядрами Arm Oryon. Veyron V2 от Ventana ориентирован на ЦОД и HPC, и сделка рассматривается как ключевой резервный путь Qualcomm вне лицензий Arm."
+    source: "The Register"
+    url: "https://www.theregister.com/special-features/2025/12/10/qualcomm-takes-risc-on-arm-alternative-with-ventana-buy/2292187"
+    vendors: ["Qualcomm", "Ventana"]
+    tags: ["Слияния и инвестиции"]
+    importance: "high"
+  - date: "2025-12-04"
+    title: "Tenstorrent открыла лицензирование высокопроизводительного CPU IP RISC-V TT-Ascalon"
+    summary: "Tenstorrent объявила, что TT-Ascalon доступен клиентам для лицензирования сразу: дата-центровое ядро RISC-V, которым можно «владеть и которое можно настраивать», с полным комплектом поставки. Это вывело конкуренцию в CPU IP RISC-V из встраиваемого сегмента в высокопроизводительный."
+    source: "Tenstorrent"
+    url: "https://tenstorrent.com/en/newsroom/tenstorrent-announces-availability-of-tt-ascalon"
+    vendors: ["Tenstorrent"]
+    tags: ["Анонсы чипов"]
+    importance: "medium"
+  - date: "2025-11-27"
+    title: "HPC больше не вотчина одного x86: приходят Arm и RISC-V"
+    summary: "В материале The Register отмечается, что доля платформ Intel в TOP500 за десять лет упала с почти 90% до 57%, а Arm и RISC-V борются за долю в HPC. Реальные возможности RISC-V — управляющие ядра ускорителей, суверенные суперкомпьютерные проекты и специализированные кластеры."
+    source: "The Register"
+    url: "https://www.theregister.com/special-features/2025/11/27/hpc-wont-be-x86-forever-and-its-starting-to-show/2154107"
+    vendors: ["Arm", "RISC-V International"]
+    tags: ["HPC"]
+    importance: "medium"
+  - date: "2025-11-27"
+    title: "Знакомство с Tenstorrent QuietBox: производительность есть, программный стек отстаёт"
+    summary: "Рабочая станция ИИ на RISC-V стоимостью около 12 тыс. долларов масштабируется до сервера на 32 чипах, но программный стек незрел, и реальная настройка затруднена. Обзор честно отражает состояние серверного RISC-V: «железо впереди, ПО догоняет»."
+    source: "The Register"
+    url: "https://www.theregister.com/on-prem/2025/11/27/blackhole-quietbox-tenstorrents-ai-workstation-reviewed/2113269"
+    vendors: ["Tenstorrent"]
+    tags: ["Серверы и платы", "Программный стек"]
+    importance: "medium"
+  - date: "2025-10-09"
+    title: "Первый европейский процессор RISC-V с внеочередным исполнением успешно изготовлен"
+    summary: "Проект eProcessor объявил о завершении разработки и развёртывания первого европейского процессора RISC-V с внеочередным исполнением по техпроцессу 22 нм. Он является частью Европейской инициативы процессоров (EPI) и накапливает компетенции проектирования и проверки для последующих HPC-чипов."
+    source: "RISC-V International"
+    url: "https://riscv.org/blog/europe-achieves-a-key-milestone-with-the-europes-first-out-of-order-risc-v-processor-chip-with-the-eprocess"
+    vendors: ["eProcessor", "European Processor Initiative"]
+    tags: ["HPC", "Анонсы чипов"]
+    importance: "medium"
+  - date: "2025-10-02"
+    title: "Meta купила Rivos, ускоряя собственные вычислительные движки"
+    summary: "Meta приобрела стартап Rivos, разрабатывавший серверные чипы RISC-V; команда и IP вошли в систему Compute Engine компании Meta. The Next Platform считает, что это подтверждает линию гипермасштабируемых компаний на собственные CPU на RISC-V и показывает, что серверный дизайн Rivos уже имеет инженерную ценность."
+    source: "The Next Platform"
+    url: "https://www.nextplatform.com/compute/2025/10/02/meta-buys-rivos-to-accelerate-compute-engine-engineering/1642477"
+    vendors: ["Meta", "Rivos"]
+    tags: ["Слияния и инвестиции", "Анонсы чипов"]
+    importance: "high"
+  - date: "2025-09-15"
+    title: "Cuzco от Condor: как RISC-V выводили в ЦОД"
+    summary: "The Next Platform разбирает ядро Cuzco от Condor Computing — высокопроизводительный дизайн RVA23 на основе временного планирования, нацеленный на прямую конкуренцию с Arm Neoverse в ЦОД. Статья также отмечает, что зрелость ПО и экосистемы остаётся главной переменной."
+    source: "The Next Platform"
+    url: "https://www.nextplatform.com/compute/2025/09/15/condor-technology-to-fly-cuzco-risc-v-cpu-into-the-datacenter/1639614"
+    vendors: ["Condor Computing", "Andes"]
+    tags: ["Анонсы чипов", "HPC"]
+    importance: "medium"
+  - date: "2025-08-25"
+    title: "Hot Chips 2025: высокопроизводительный дизайн RISC-V Condor Cuzco"
+    summary: "Репортаж ServeTheHome с места событий о микроархитектуре Cuzco: редкое для Hot Chips высокопроизводительное ядро RISC-V с широкой выдачей и глубоким внеочередным исполнением, рассчитанное на серверные нагрузки. Позже ядро было прекращено вместе с закрытием Condor."
+    source: "ServeTheHome"
+    url: "https://www.servethehome.com/condor-computings-cuzco-a-high-perf-risc-v-design-at-hot-chip-2025/"
+    vendors: ["Condor Computing", "Andes"]
+    tags: ["Анонсы чипов"]
+    importance: "medium"
+  - date: "2025-07-21"
+    title: "NVIDIA принесла CUDA на RISC-V"
+    summary: "NVIDIA официально расширила поддержку программного стека CUDA на CPU RISC-V, и первыми выгодоприобретателями стали новые китайские серверные чипы RISC-V. Для серверов RISC-V это закрыло самый важный пробел в ИИ-экосистеме и сделало RISC-V более пригодной для роли головного узла GPU."
+    source: "The Register"
+    url: "https://www.theregister.com/on-prem/2025/07/21/nvidia-cuda-gets-risc-v-support/802029"
+    vendors: ["NVIDIA", "Alibaba"]
+    tags: ["Программный стек", "Партнёрства и экосистема"]
+    importance: "high"
+  - date: "2025-07-09"
+    title: "GlobalFoundries купила MIPS"
+    summary: "GlobalFoundries приобрела проектировщика чипов MIPS, создав структуру с компетенциями и в проектировании, и в производстве, и явно сделала ставку на возможности RISC-V на рынке ИИ. В последние годы MIPS переориентировала линейку на RISC-V, и сделка усилила её присутствие на рынке лицензируемых ядер."
+    source: "The Register"
+    url: "https://www.theregister.com/on-prem/2025/07/09/globalfoundries-acquires-chip-designer-mips/1300966"
+    vendors: ["GlobalFoundries", "MIPS"]
+    tags: ["Слияния и инвестиции"]
+    importance: "medium"
+  - date: "2025-04-17"
+    title: "openEuler Developer Day 2025: чем занимается RISC-V SIG"
+    summary: "Секцию RISC-V провела openEuler RISC-V SIG при участии ISCAS, Пекинского института открытых чипов, Alibaba и других; обсуждались серверный программный стек, сопровождение дистрибутива и адаптация под железо. Это запись прогресса экосистемы операционных систем для китайских серверов RISC-V."
+    source: "Сообщество openEuler"
+    url: "https://www.openeuler.org/zh/news/openEuler/20250423-riscv/20250423-riscv"
+    vendors: ["openEuler", "ISCAS"]
+    tags: ["Операционные системы", "Партнёрства и экосистема"]
+    importance: "low"
+  - date: "2025-03-07"
+    title: "Запуск европейского проекта DARE: 240 млн евро на чипы RISC-V для суперкомпьютеров"
+    summary: "38 организаций совместно создали DARE (Digital Autonomy with RISC-V in Europe) и планируют за три года разработать три чиплета для HPC и ИИ с бюджетом около 240 млн евро. Цель — дать европейским суперкомпьютерам неамериканский вариант процессора; это крупнейшая европейская инвестиция в суверенные вычисления на RISC-V."
+    source: "The Register"
+    url: "https://www.theregister.com/on-prem/2025/03/07/europe-bets-on-risc-v-for-homegrown-supercomputing-platform/884921"
+    vendors: ["DARE", "EuroHPC"]
+    tags: ["HPC", "Партнёрства и экосистема", "Стандарты и спецификации"]
+    importance: "high"
+  - date: "2025-03-05"
+    title: "Alibaba выпустила серверное ядро RISC-V C930"
+    summary: "XuanTie C930 ориентирован на серверы, ПК и автономное вождение, использует микроархитектуру внеочередного исполнения с декодированием 6 инструкций и 16-ступенчатым конвейером, совместим с RVA23 и поддерживает расширения Vector, CoVE, RAS, AIA. Тогда же появились сообщения, что Китай выпустит документ о продвижении RISC-V в масштабах страны, — политика и продукт совпали по времени."
+    source: "The Register"
+    url: "https://www.theregister.com/on-prem/2025/03/05/alibaba-launches-server-grade-risc-v-cpu-design/745022"
+    vendors: ["Alibaba", "DAMO Academy"]
+    tags: ["Анонсы чипов", "Стандарты и спецификации"]
+    importance: "high"
+  - date: "2025-03-04"
+    title: "SOPHGO выпустила первый в мире многоядерный сервер RISC-V с поддержкой DeepSeek"
+    summary: "На конференции экосистемы RISC-V China 2025 компания SOPHGO представила вычислительный сервер SRA3-40 на 64-ядерном SG2044 и одновременно серверы хранения SRB3-40 и гибридный SRM3-40. Firefly тогда же выпустила продукты на предыдущем SG2042 — многоядерные системы RISC-V начали складываться в единую линейку."
+    source: "Sina Tech / IT Home"
+    url: "https://finance.sina.com.cn/tech/digi/2025-03-04/doc-inennyzc9665232.shtml"
+    vendors: ["SOPHGO", "Firefly"]
+    tags: ["Поставки серверов", "Серверы и платы"]
+    importance: "high"
+  - date: "2025-03-01"
+    title: "SOPHGO представила гетерогенные продукты и продвинула серверные системы RISC-V"
+    summary: "На конференции экосистемы RISC-V China 2025 SOPHGO выпустила SG2044 и сопутствующие серверные и ИИ-продукты, подчеркнув гетерогенное объединение CPU с собственным TPU для центров ИИ-вычислений, универсальных вычислений и периферийных сценариев. Это общее обновление китайской серверной платформы RISC-V после SG2042."
+    source: "SOPHGO"
+    url: "https://en.sophgo.com/post/435.html"
+    vendors: ["SOPHGO"]
+    tags: ["Анонсы чипов", "Поставки серверов"]
+    importance: "medium"
+  - date: "2025-01-16"
+    title: "США внесли SOPHGO в список Entity List"
+    summary: "Министерство торговли США включило китайского проектировщика чипов RISC-V SOPHGO (Sophgo) в Entity List из-за подозрений в поставках ИИ-чипов Huawei. Для цепочки поставок серверов RISC-V это самый прямой пример геополитического риска, он же затрагивает зарубежное производство и работу с клиентами."
+    source: "The Register"
+    url: "https://www.theregister.com/offbeat/2025/01/16/us-bans-chinese-chipmaker-suspected-of-helping-huawei/524767"
+    vendors: ["SOPHGO", "Huawei"]
+    tags: ["Слияния и инвестиции", "Партнёрства и экосистема"]
+    importance: "medium"
+  - date: "2025-01-08"
+    title: "Третье поколение процессора XiangShan появится в 2025 году"
+    summary: "Бао Юньган из Института вычислительной техники КАН анонсировал в Weibo, что третье поколение XiangShan будет сдано в 2025 году и по производительности может приблизиться к Neoverse N2, созданному Arm для HPC, с потенциалом для ЦОД. XiangShan — главный проект открытого высокопроизводительного ядра RISC-V и технологический источник коммерческих чипов вроде SpacemiT V100."
+    source: "The Register"
+    url: "https://www.theregister.com/on-prem/2025/01/08/chinese-risc-v-project-teases-2025-debut-of-advanced-chip/1329768"
+    vendors: ["ICT CAS", "XiangShan"]
+    tags: ["Анонсы чипов", "HPC"]
+    importance: "medium"

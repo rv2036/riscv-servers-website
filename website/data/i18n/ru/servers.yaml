@@ -1,0 +1,55 @@
+# Список серверов RISC-V (русская редакция)
+# Записи создаются только для продуктов, чьи первоисточники проверены вручную; в status хранится программное значение, текст для каждой локали подставляет i18n
+items:
+  - id: lx500
+    name: "Серверный CPU Lanxin LX500 с совмещёнными универсальными и ИИ-вычислениями (система: Lenovo WenTian WR5219 G5)"
+    vendor: "Lanxin Computing (Shenzhen) Technology Co., Ltd."
+    vendor_en: "Lanxin Computing (Shenzhen) Technology Co., Ltd."
+    soc: "LX500, один кристалл: 48 гетерогенных ядер = 32 производительных + 16 энергоэффективных (общее внутрикристальное адресное пространство памяти); на кристалле интегрирован матричный ИИ-движок с пиковой производительностью 75 TOPS INT8, поддержка INT4/INT8/FP16/FP32; поддерживаются RVV 1.0 и RVA23; расширенные инструкции матричного умножения и выделенные аппаратные блоки матричных операций."
+    form: "Чип выпускается в однокристальном корпусе (тип и размеры корпуса не раскрыты); системный форм-фактор — стоечный сервер 2U (Lenovo WenTian WR5219 G5)."
+    memory: "4 канала DDR5, до 6400 MT/s; CPU и внутрикристальный ИИ-движок используют единую память (общее адресное пространство, данные не копируются); поддерживается расширение памяти CXL 2.0."
+    storage_io: "64 линии PCIe Gen5 (с поддержкой bifurcation) + 4 линии PCIe Gen3; CXL 2.0; система (WR5219 G5) предлагает различные варианты накопителей, ввода-вывода и памяти, поддерживает горячую замену дисков."
+    power: ""
+    os_support: "Ubuntu, openEuler (официальные демонстрации запуска выполнялись на реальном железе под обеими системами); China Mobile BC-Linux уже прошла глубокую адаптацию."
+    availability: "Цена ни на чип, ни на систему не объявлена; система поставляется по продуктовой линейке Lenovo WenTian"
+    first_announced: "2026-02"
+    status: production
+    verified: true
+    highlight: true
+    note: "Официальное позиционирование: первый в мире серверный RISC-V + AI CPU с совмещением универсальных и ИИ-вычислений (флагманский продукт), который объединяет вычисления общего назначения и ИИ-инференс на кристалле и заменяет схему «CPU + отдельная карта ускорителя»; несущая система — стоечный сервер 2U Lenovo WenTian WR5219 G5, дополнительно предусмотрены формы «всё в одном» и «совмещённый суперузел»."
+    urls:
+      - label: "Официальная новость (lanxincomputing.com)"
+        url: "https://lanxincomputing.com/news-detail.html?id=76"
+      - label: "Официальная новость (lanxincomputing.com)"
+        url: "https://lanxincomputing.com/news-detail.html?id=82"
+      - label: "Официальная новость (lanxincomputing.com)"
+        url: "https://lanxincomputing.com/news-detail.html?id=86"
+      - label: "Официальная новость (lanxincomputing.com)"
+        url: "https://lanxincomputing.com/news-detail.html?id=122"
+      - label: "Официальная новость (lanxincomputing.com)"
+        url: "https://lanxincomputing.com/news-detail.html?id=123"
+  - id: v100
+    name: "Серверный CPU SpacemiT V100 (системы: C2201 / G5201 / S5236)"
+    vendor: "SpacemiT (Пекин)"
+    vendor_en: "SpacemiT"
+    soc: "V100, один кристалл: 46 гетерогенных ядер = 6× XiangShan Kunminghu V2R2 (до 2,1 ГГц, одно ядро SPECint2006 ≥15,0/ГГц) + 40× собственных X100 (до 2,4 ГГц, ≥9,0/ГГц); RVA23; 64 МБ SLC; межсокетное когерентное соединение — до 92 ядер."
+    form: "Корпус FCBGA, 58,5 × 75,4 мм, шаг 0,94 мм; система C2201 — стоечная 2U, 820×447,4×87,8 мм, ≤35 кг (G5201 — 4U, 895×447,4×176,8 мм; S5236 — 4U)."
+    memory: "На кристалл — 8 каналов DDR5, 1DPC, DDR5 RDIMM, 4800 MT/s, пиковая пропускная способность 307 ГБ/с; до 256 ГБ на модуль DIMM, до 2 ТБ на кристалл; система C2201 — 16 слотов DIMM, до 2 ТБ."
+    storage_io: "PCIe 5.0, всего 52 линии (гибкая конфигурация от x16 до x1, возможно подключение ИИ-карт и SAS/SATA/NVMe); 1× GMAC (IEEE 1588); периферия 1× QSPI, 1× LPC, 1× eSPI, 3× SPI Master, 4× I3C, 12× I2C, 12× SMBUS, 5× UART. Система C2201: 88 линий PCIe 5.0 на два сокета, спереди 8× 3,5\" U.2 NVMe, внутри 1× M.2, сзади 2× 2,5\" SATA."
+    power: "TDP чипа 120 Вт (официальный даташит); система C2201 — блок питания CRPS Platinum 1600 Вт, резервирование 1+1."
+    os_support: "openEuler, openRuyi, openKylin, Debian, Ubuntu (26.10), Red Hat Enterprise Linux 10.2 (developer preview), Fedora, Rocky Linux — устанавливаются и загружаются напрямую; прошивка UEFI 2.1.1 + ACPI 6.6, EDK2, openBMC; виртуализация KVM/QEMU, Docker."
+    availability: "Цена и сроки серийного производства официально не объявлены; в комплекте предлагаются системы C2201 / G5201 / S5236"
+    first_announced: "2026-10"
+    status: announced
+    verified: true
+    highlight: true
+    note: "Официальное позиционирование: первый вычислительный чип / серверный CPU, полностью соответствующий спецификации серверного RISC-V, для универсальных вычислений в ЦОД, инфраструктуры агентов и отечественных платформ ИИ-вычислений; вместе с ним представлены вычислительный сервер C2201 (2U, два сокета), сервер ИИ-вычислений G5201 (4U, 8 карт) и сервер хранения S5236 (4U, 36 отсеков)."
+    urls:
+      - label: "Страница продукта (spacemit.com)"
+        url: "https://www.spacemit.com/products/keystone/v100"
+      - label: "Даташит PDF (cdn-resource.spacemit.com)"
+        url: "https://cdn-resource.spacemit.com/file/chip/V100/v100_brief_zh.pdf"
+      - label: "Официальная новость (spacemit.com)"
+        url: "https://www.spacemit.com/news/2c9c8082a1770faf01a1870587fc0001"
+      - label: "Даташит PDF (cdn-resource.spacemit.com)"
+        url: "https://cdn-resource.spacemit.com/file/product/V100/c2201_brief_zh.pdf"

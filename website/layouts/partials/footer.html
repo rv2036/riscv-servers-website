@@ -1,0 +1,10 @@
+<footer class="site-foot">
+  <div class="wrap">
+    <span>{{ site.Title }} · <a href="https://{{ site.Params.domain }}">{{ site.Params.domain }}</a></span>
+    <span>{{ i18n "footer.license" }}</span>
+    <span class="spacer"></span>
+    <a href="{{ "news/" | relLangURL }}">{{ i18n "nav.news" }}</a>
+    <a href="{{ "blog/" | relLangURL }}">{{ i18n "nav.blog" }}</a>
+    <a href="{{ site.Params.repo }}" rel="noopener">{{ i18n "footer.source" }}</a>
+  </div>
+</footer>

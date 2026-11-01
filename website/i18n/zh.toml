@@ -3,6 +3,7 @@
 tagline = "全世界的 RISC-V 服务器进展"
 
 [nav]
+data = "数据"
 servers = "服务器"
 chips = "芯片"
 software = "软件"
@@ -18,6 +19,7 @@ cta_news = "看最新新闻"
 latest = "最新进展"
 chips_blurb = "服务器级 RISC-V 芯片与 CPU IP：核数、ISA、工艺与厂商公布性能。"
 software_blurb = "从发行版到虚拟化、HPC 与云：RISC-V 服务器现在真的能跑什么。"
+data_blurb = "经甲辰计划真机实测的性能报告：测试环境、方法与原始数据一并在列。"
 blog_blurb = "本站长文：观察、踩坑与阶段总结。"
 
 [status]
@@ -78,6 +80,10 @@ rack = "机柜（机柜级 POD）"
 [category_note]
 server = "服务器整机、主板与工作站：按公开可查的一手资料汇总，同一型号只留一条。"
 rack = "机柜级形态：整柜交付、按 POD 或集群组织，通常装多台服务器节点与 AI 加速卡。"
+
+[data]
+empty_title = "暂无内容"
+empty_body = "这里将存放**经甲辰计划真机实测**的性能报告。每份报告发布前会写清测试环境、软件版本、测试方法与原始数据出处，不收录未经真机验证的数字。"
 
 [badge]
 hw_tested = "经甲辰计划真机实测"

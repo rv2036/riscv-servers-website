@@ -316,6 +316,27 @@ section.block { padding: 2.2rem 0 0; }
 }
 .ip-used b { color: var(--fg-mute); font-weight: 600; }
 
+.empty-state {
+  margin: 1.2rem 0 0;
+  padding: 1.6rem 1.4rem;
+  border: 1px dashed var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-soft);
+}
+
+.empty-state h2 {
+  margin: 0 0 .5rem;
+  font-size: 1.05rem;
+  color: var(--fg);
+}
+
+.empty-state p {
+  margin: 0;
+  max-width: 48rem;
+  color: var(--fg-dim);
+  font-size: .94rem;
+}
+
 .card-top {
   display: flex;
   align-items: center;

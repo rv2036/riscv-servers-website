@@ -3,6 +3,7 @@
 tagline = "RISC-V servers worldwide"
 
 [nav]
+data = "Data"
 servers = "Servers"
 chips = "Chips"
 software = "Software"
@@ -18,6 +19,7 @@ cta_news = "Read the news"
 latest = "Latest"
 chips_blurb = "Server-class RISC-V silicon and CPU IP: cores, ISA, process and vendor-claimed performance."
 software_blurb = "From distributions to virtualisation, HPC and cloud: what a RISC-V server can actually run today."
+data_blurb = "Performance reports measured on real hardware by Project Jiachen, with environment, method and raw data."
 blog_blurb = "Longer notes from this site: observations, dead ends, and what changed."
 
 [status]
@@ -78,6 +80,10 @@ rack = "Racks (rack-scale POD)"
 [category_note]
 server = "Server systems, boards and workstations, built from publicly checkable sources, one entry per model."
 rack = "Rack-scale products: delivered as a whole cabinet and organised as a POD or cluster, usually holding several server nodes and AI accelerators."
+
+[data]
+empty_title = "Nothing published yet"
+empty_body = "This section will hold performance reports measured by Project Jiachen on real hardware. Each report will state the test environment, software versions, method and the source of the raw data; numbers that were not measured on hardware are not accepted here."
 
 [badge]
 hw_tested = "Tested on real hardware by Project Jiachen"

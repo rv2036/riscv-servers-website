@@ -21,6 +21,7 @@
         {{ with .status }}<span class="badge soft">{{ i18n (printf "status.%s" .) }}</span>{{ end }}
       </div>
       <p>{{ .vendor }}</p>
+      {{ with .caution }}<p class="caution"><span class="caution-tag">{{ i18n "label.caution" }}</span>{{ . }}</p>{{ end }}
       {{ with .ip_used }}<p class="ip-used"><b>{{ i18n "label.ip_used" }}</b> · {{ . }}</p>{{ end }}
       <dl class="specs">
         {{ with .cores }}<dt>{{ i18n "label.cores" }}</dt><dd>{{ . }}</dd>{{ end }}
@@ -53,6 +54,7 @@
         {{ with .status }}<span class="badge soft">{{ i18n (printf "status.%s" .) }}</span>{{ end }}
       </div>
       <p>{{ .vendor }}</p>
+      {{ with .caution }}<p class="caution"><span class="caution-tag">{{ i18n "label.caution" }}</span>{{ . }}</p>{{ end }}
       <dl class="specs">
         {{ with .cores }}<dt>{{ i18n "label.cores" }}</dt><dd>{{ . }}</dd>{{ end }}
         {{ with .isa }}<dt>{{ i18n "label.isa" }}</dt><dd>{{ . }}</dd>{{ end }}

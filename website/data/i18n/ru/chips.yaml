@@ -23,7 +23,7 @@ items:
     url: https://www.sophgo.com/sophon-u/product/introduce/sg2042.html
   - label: Статья (arXiv)
     url: https://arxiv.org/abs/2309.00381
-  ip_used: 'XuanTie C920 ×64 (лицензированное IP)'
+  ip_used: XuanTie C920 ×64 (лицензированное IP)
 - kind: soc
   chip: SG2044
   vendor: SOPHGO
@@ -44,7 +44,7 @@ items:
     url: https://arxiv.org/abs/2508.13840
   - label: Даташит PDF (riscv.epcc.ed.ac.uk)
     url: http://riscv.epcc.ed.ac.uk/assets/files/hpcasia24/hpc_asia_wang.pdf
-  ip_used: 'XuanTie C920 второго поколения ×64 (лицензированное IP)'
+  ip_used: XuanTie C920 второго поколения ×64 (лицензированное IP)
 - kind: ip
   chip: RXU 3.5
   vendor: SOPHGO
@@ -166,7 +166,8 @@ items:
     url: https://www.notebookcheck.net/RISC-V-gears-up-for-data-centers-Ventana-presents-Veyron-V1-scalable-chiplets-with-up-to-128-cores.674440.0.html
   - label: Официальная новость (prnewswire.com)
     url: https://www.prnewswire.com/news-releases/ventana-introduces-veyron-worlds-first-data-center-class-risc-v-cpu-product-family-301700985.html
-  ip_used: 'Собственные 8-wide ядра Ventana ×16 на chiplet'
+  ip_used: Собственные 8-wide ядра Ventana ×16 на chiplet
+  caution: Ventana приобретена Qualcomm в 2025-12; линейка может измениться, изделие может быть недоступно
 - kind: soc
   chip: Veyron V2
   vendor: Ventana Micro Systems (сейчас в составе Qualcomm)
@@ -186,7 +187,8 @@ items:
     url: https://www.nextplatform.com/compute/2023/11/07/ventana-launches-veyron-v2-risc-v-into-the-datacenter/1652320
   - label: Источник (techpowerup.com)
     url: https://www.techpowerup.com/343914/qualcomm-acquires-ventana-micro-systems-deepening-risc-v-cpu-expertise
-  ip_used: 'Собственные ядра Ventana ×32 на chiplet (UCIe)'
+  ip_used: Собственные ядра Ventana ×32 на chiplet (UCIe)
+  caution: Ventana теперь входит в Qualcomm; линейка может измениться, изделие может быть недоступно
 - kind: ip
   chip: TT-Ascalon
   vendor: Tenstorrent
@@ -222,7 +224,7 @@ items:
     url: https://www.qemu.org/docs/master/system/riscv/tt_atlantis.html
   - label: Источник (tenstorrent.com)
     url: https://tenstorrent.com/en/ip/risc-v-cpu
-  ip_used: 'Собственные IP-ядра Ascalon-X ×8'
+  ip_used: Собственные IP-ядра Ascalon-X ×8
 - kind: ip
   chip: TT-Ascalon S
   vendor: Tenstorrent
@@ -255,7 +257,8 @@ items:
     url: https://dailysynapse.com/news/what-metas-purchase-of-rivos-says-about-risc-v
   - label: Официальная новость (lw.com)
     url: https://www.lw.com/en/news/2025/10/latham-watkins-advises-meta-in-acquisition-of-rivos
-  ip_used: 'Собственные 64-битные ядра Rivos RVA23'
+  ip_used: Собственные 64-битные ядра Rivos RVA23
+  caution: В 2025-10 приобретена Meta и не продавалась как отдельный продукт; купить нельзя
 - kind: ip
   chip: Серия Akeana 1000
   vendor: Akeana (в 2026-10 приобретена Qualcomm)
@@ -274,6 +277,7 @@ items:
     url: https://www.akeana.com/wp-content/uploads/2024/04/Akeana-Product-Brochure-2024.pdf
   - label: Официальная новость (prnewswire.com)
     url: https://www.prnewswire.com/news-releases/akeana-exits-stealth-mode-with-comprehensive-risc-v-processor-portfolio-challenging-the-semiconductor-industry-status-quo-302220144.html
+  caution: Akeana приобретена Qualcomm в 2026-10; планы могут измениться, лицензию получить может не удаться
 - kind: soc
   chip: Alpine (тестовый чип серии Akeana 5000)
   vendor: Akeana (сейчас в составе Qualcomm)
@@ -291,41 +295,8 @@ items:
     url: https://www.akeana.com/
   - label: Официальная новость (design-reuse.com)
     url: https://www.design-reuse.com/news/202531315-qualcomm-buys-risc-v-startup-akeana-to-push-into-ai-and-data-center-chips
-  ip_used: 'IP-ядра Akeana серии 5000 ×8'
-- kind: soc
-  chip: K3
-  vendor: SpacemiT
-  type: SoC
-  cores: 8× X100 (внеочередное исполнение с выпуском 4 инструкций) + 8× ИИ-ядер A100; два ядра реального времени RT24
-  isa: RVA23 + RVV 1.0 + Vector Crypto
-  process: 12nm
-  perf: 2,4 ГГц; 130 KDMIPS; SPECint2006 >9,0/ГГц; 60 TOPS (INT4 с разреженностью), запускает модели до 30B
-  target: ИИ-ПК / периферийный ИИ / робототехника
-  first_announced: 2026-01
-  status: production
-  note: Серийное производство (массовые поставки с 2026-04); первый серийный китайский ИИ-CPU с RVA23, который в одном гомогенном стеке укладывает универсальные и ИИ-вычисления в 30 Вт, — ключевой шаг RISC-V
-    в экосистему массовых ОС.
-  urls:
-  - label: Источник (raw.githubusercontent.com)
-    url: https://raw.githubusercontent.com/spacemit-com/docs-chip/main/en/key_stone/k3/k3_docs/k3_ds.md
-  - label: Даташит PDF (forum.spacemit.com)
-    url: https://forum.spacemit.com/uploads/short-url/60aJ8cYNmrFWqHn4ddwwSzMLjlY.pdf
-  ip_used: 'Собственные X100 ×8 и AI-ядра A100 ×8 от SpacemiT'
-- kind: ip
-  chip: X60 (ядро SoC K1)
-  vendor: SpacemiT
-  type: Ядро CPU IP / SoC
-  cores: Одноядерное IP; в K1 интегрировано 8× X60 (2 кластера)
-  isa: RV64GCVB + RVA22 + RVV 1.0 (VLEN 256/128, ширина исполнения x2)
-  process: ''
-  perf: 'K1: заявленные производителем 2 TOPS для ИИ (совмещение CPU и ИИ на пользовательских инструкциях)'
-  target: Периферийный ИИ / ИИ-ПК / промышленность
-  first_announced: ''
-  status: production
-  note: Серийное производство; X60 — зрелое серийное китайское ядро с RVA22 и RVV 1.0, K1 применяется в ряде ноутбуков и отладочных плат и подготовил программный стек для K3.
-  urls:
-  - label: Источник (raw.githubusercontent.com)
-    url: https://raw.githubusercontent.com/spacemit-com/docs-chip/main/en/key_stone/k1/k1_docs/k1_ds.md
+  ip_used: IP-ядра Akeana серии 5000 ×8
+  caution: Akeana теперь входит в Qualcomm, а это тестовый кристалл для проверки кремния, а не товар
 - kind: soc
   chip: LX500
   vendor: Lanxin Computing
@@ -344,38 +315,4 @@ items:
     url: https://caijing.chinadaily.com.cn/a/202605/11/WS6a0173b9a310942cc49ab9c0.html
   - label: Источник (news.qq.com)
     url: https://news.qq.com/rain/a/20260723A0CCN700
-  ip_used: 'Собственные 32 производительных и 16 энергоэффективных ядер Lanxin плюс AI-движок на кристалле'
-- kind: soc
-  chip: ET-SoC-1
-  vendor: Esperanto Technologies (IP в 2025-11 продан Ainekko)
-  type: SoC (ускоритель ИИ/HPC)
-  cores: 1088× ET-Minion (со специализированными векторными и тензорными блоками) + 4× ET-Maxion с внеочередным исполнением
-  isa: RV64GC + собственные векторные и тензорные расширения
-  process: 7nm
-  perf: '>160 МБ SRAM на кристалле; LPDDR4x; PCIe Gen4 x8; более 1000 ядер на карту, до 16000 ядер в системе'
-  target: ИИ-инференс / HPC
-  first_announced: ''
-  status: eol
-  note: Прекратила самостоятельную деятельность (в 2025-11 IP продан и открыт); ET-SoC-1 доказал, что RISC-V способен на многоядерный ускоритель с тысячами ядер; коммерчески проект не удался, но открытый
-    IP остаётся важным ориентиром многоядерного направления.
-  urls:
-  - label: Страница продукта (esperanto.ai)
-    url: https://www.esperanto.ai/products
-  - label: Официальная новость (jonpeddie.com)
-    url: https://www.jonpeddie.com/news/ainekko-acquires-esperanto-ip
-  ip_used: 'Собственные ET-Minion ×1088 и ET-Maxion ×4 от Esperanto'
-- kind: ip
-  chip: AndesCore AX65
-  vendor: Andes Technology
-  type: Ядро CPU IP
-  cores: Декодирование шириной 4, 13 ступеней внеочередного исполнения, ROB на 128 записей, 8 функциональных конвейеров; SMP до 8 ядер
-  isa: RV64GCB + RVA22 + скалярное шифрование/CMO
-  process: ''
-  perf: По заявлению производителя ориентировано на ресурсоёмкие приложения, поддерживает кэш L2 и управление когерентностью
-  target: Сетевые, дисковые и периферийные серверы
-  first_announced: ''
-  status: production
-  note: Серийное производство / лицензирование IP; AX65 — самое производительное ядро Andes, ориентированное на управляющий уровень сетевых и дисковых SoC, распространённое IP в периферийных серверных чипах.
-  urls:
-  - label: Страница продукта (andestech.com)
-    url: https://www.andestech.com/en/products-solutions/andescore-processors/riscv-ax65/
+  ip_used: Собственные 32 производительных и 16 энергоэффективных ядер Lanxin плюс AI-движок на кристалле

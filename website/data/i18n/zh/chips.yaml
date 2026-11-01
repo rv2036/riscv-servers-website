@@ -163,6 +163,7 @@ items:
   - label: 官方新闻（prnewswire.com）
     url: https://www.prnewswire.com/news-releases/ventana-introduces-veyron-worlds-first-data-center-class-risc-v-cpu-product-family-301700985.html
   ip_used: Ventana 自研 8-wide 乱序核 ×16/chiplet
+  caution: Ventana 于 2025-12 被 Qualcomm 收购，产品线存在变数，未必买得到
 - kind: soc
   chip: Veyron V2
   vendor: Ventana Micro Systems（现属 Qualcomm）
@@ -183,6 +184,7 @@ items:
   - label: 来源（techpowerup.com）
     url: https://www.techpowerup.com/343914/qualcomm-acquires-ventana-micro-systems-deepening-risc-v-cpu-expertise
   ip_used: Ventana 自研核 ×32/chiplet（UCIe 互连）
+  caution: Ventana 现属 Qualcomm，产品线存在变数，未必买得到
 - kind: ip
   chip: TT-Ascalon
   vendor: Tenstorrent
@@ -251,6 +253,7 @@ items:
   - label: 官方新闻（lw.com）
     url: https://www.lw.com/en/news/2025/10/latham-watkins-advises-meta-in-acquisition-of-rivos
   ip_used: Rivos 自研 64 位 RVA23 核（自家 IP）
+  caution: 2025-10 被 Meta 收购，未作为独立产品商用，市面上买不到
 - kind: ip
   chip: Akeana 1000 系列
   vendor: Akeana（2026-10 被 Qualcomm 收购）
@@ -268,6 +271,7 @@ items:
     url: https://www.akeana.com/wp-content/uploads/2024/04/Akeana-Product-Brochure-2024.pdf
   - label: 官方新闻（prnewswire.com）
     url: https://www.prnewswire.com/news-releases/akeana-exits-stealth-mode-with-comprehensive-risc-v-processor-portfolio-challenging-the-semiconductor-industry-status-quo-302220144.html
+  caution: 2026-10 Akeana 被 Qualcomm 收购，产品线存在变数，未必能授权到
 - kind: soc
   chip: Alpine（Akeana 5000 系列测试芯片）
   vendor: Akeana（现属 Qualcomm）
@@ -286,39 +290,7 @@ items:
   - label: 官方新闻（design-reuse.com）
     url: https://www.design-reuse.com/news/202531315-qualcomm-buys-risc-v-startup-akeana-to-push-into-ai-and-data-center-chips
   ip_used: Akeana 5000 系列 IP 核 ×8（同厂 IP 集成）
-- kind: soc
-  chip: K3
-  vendor: 进迭时空 SpacemiT
-  type: SoC
-  cores: 8× X100（4 发射乱序）+ 8× A100 AI 核；双核 RT24 实时核
-  isa: RVA23 + RVV 1.0 + Vector Crypto
-  process: 12nm
-  perf: 2.4GHz；130 KDMIPS；SPECint2006 >9.0/GHz；60 TOPS（INT4 稀疏），可跑 30B 模型
-  target: AI PC / 边缘 AI / 机器人
-  first_announced: 2026-01
-  status: production
-  note: 量产（2026-04 起规模交付）；首颗量产的 RVA23 国产 AI CPU，用同构一栈把通用算力与 AI 算力塞进 30W，是 RISC-V 进主流 OS 生态的关键一步。
-  urls:
-  - label: 来源（raw.githubusercontent.com）
-    url: https://raw.githubusercontent.com/spacemit-com/docs-chip/main/en/key_stone/k3/k3_docs/k3_ds.md
-  - label: 规格书 PDF（forum.spacemit.com）
-    url: https://forum.spacemit.com/uploads/short-url/60aJ8cYNmrFWqHn4ddwwSzMLjlY.pdf
-  ip_used: 进迭时空自研 X100 ×8 + A100 AI 核 ×8
-- kind: ip
-  chip: X60（K1 SoC 内核）
-  vendor: 进迭时空 SpacemiT
-  type: CPU IP 核 / SoC
-  cores: 单核 IP；K1 集成 8× X60（2 簇）
-  isa: RV64GCVB + RVA22 + RVV 1.0（VLEN 256/128，x2 执行宽度）
-  process: ''
-  perf: K1 厂宣 2 TOPS AI 算力（自定义指令 CPU+AI 融合）
-  target: 边缘 AI / AI PC / 工业
-  first_announced: ''
-  status: production
-  note: 量产；X60 是国产 RVA22+RVV 1.0 的成熟量产核，K1 已被多款笔记本/开发板采用，为 K3 铺平软件栈。
-  urls:
-  - label: 来源（raw.githubusercontent.com）
-    url: https://raw.githubusercontent.com/spacemit-com/docs-chip/main/en/key_stone/k1/k1_docs/k1_ds.md
+  caution: Akeana 现属 Qualcomm，且这是硅验证测试芯片，不对外销售
 - kind: soc
   chip: LX500
   vendor: 蓝芯算力 Lanxin Computing
@@ -337,36 +309,3 @@ items:
   - label: 来源（news.qq.com）
     url: https://news.qq.com/rain/a/20260723A0CCN700
   ip_used: 蓝芯自研 32 性能核 + 16 能效核 + 片内 AI 引擎
-- kind: soc
-  chip: ET-SoC-1
-  vendor: Esperanto Technologies（IP 2025-11 售予 Ainekko）
-  type: SoC（AI/HPC 加速器）
-  cores: 1088× ET-Minion（含定制向量/张量单元）+ 4× ET-Maxion 乱序核
-  isa: RV64GC + 自定义向量/张量扩展
-  process: 7nm
-  perf: '>160MB 片上 SRAM；LPDDR4x；PCIe Gen4 x8；单卡 >1000 核，整机最多 16000 核'
-  target: AI 推理 / HPC
-  first_announced: ''
-  status: eol
-  note: 停止独立运营（2025-11 IP 出售并开源）；ET-SoC-1 证明 RISC-V 可以做到千核级众核加速，虽商业失败但 IP 已开源，仍是众核路线的重要参考。
-  urls:
-  - label: 产品页（esperanto.ai）
-    url: https://www.esperanto.ai/products
-  - label: 官方新闻（jonpeddie.com）
-    url: https://www.jonpeddie.com/news/ainekko-acquires-esperanto-ip
-  ip_used: Esperanto 自研 ET-Minion ×1088 + ET-Maxion ×4
-- kind: ip
-  chip: AndesCore AX65
-  vendor: Andes Technology 晶心科技
-  type: CPU IP 核
-  cores: 4 宽译码、13 级乱序、128 项 ROB、8 条功能流水线；SMP 最多 8 核
-  isa: RV64GCB + RVA22 + 标量加密/CMO
-  process: ''
-  perf: 厂宣面向计算密集型应用，支持 L2 缓存与一致性管理
-  target: 网络/存储/边缘服务器
-  first_announced: ''
-  status: production
-  note: 量产/IP 授权；AX65 是 Andes 最高性能核，主打网络与存储 SoC 的控制面，属于服务器外围芯片的常用 IP。
-  urls:
-  - label: 产品页（andestech.com）
-    url: https://www.andestech.com/en/products-solutions/andescore-processors/riscv-ax65/

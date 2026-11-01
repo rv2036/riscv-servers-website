@@ -163,6 +163,7 @@ items:
   - label: 公式ニュース（prnewswire.com）
     url: https://www.prnewswire.com/news-releases/ventana-introduces-veyron-worlds-first-data-center-class-risc-v-cpu-product-family-301700985.html
   ip_used: Ventana 自社 8-wide アウトオブオーダーコア ×16/chiplet
+  caution: Ventana は 2025-12 に Qualcomm に買収されました。製品ラインは流動的で、入手できない可能性があります
 - kind: soc
   chip: Veyron V2
   vendor: Ventana Micro Systems（現 Qualcomm 傘下）
@@ -183,6 +184,7 @@ items:
   - label: 出典（techpowerup.com）
     url: https://www.techpowerup.com/343914/qualcomm-acquires-ventana-micro-systems-deepening-risc-v-cpu-expertise
   ip_used: Ventana 自社コア ×32/chiplet（UCIe）
+  caution: Ventana は現在 Qualcomm 傘下です。製品ラインは流動的で、入手できない可能性があります
 - kind: ip
   chip: TT-Ascalon
   vendor: Tenstorrent
@@ -251,6 +253,7 @@ items:
   - label: 公式ニュース（lw.com）
     url: https://www.lw.com/en/news/2025/10/latham-watkins-advises-meta-in-acquisition-of-rivos
   ip_used: Rivos 自社 64bit RVA23 コア
+  caution: 2025-10 に Meta に買収され、単独製品としては販売されていません。購入できません
 - kind: ip
   chip: Akeana 1000 系列
   vendor: Akeana（2026-10 に Qualcomm が買収）
@@ -268,6 +271,7 @@ items:
     url: https://www.akeana.com/wp-content/uploads/2024/04/Akeana-Product-Brochure-2024.pdf
   - label: 公式ニュース（prnewswire.com）
     url: https://www.prnewswire.com/news-releases/akeana-exits-stealth-mode-with-comprehensive-risc-v-processor-portfolio-challenging-the-semiconductor-industry-status-quo-302220144.html
+  caution: Akeana は 2026-10 に Qualcomm に買収されました。ロードマップは流動的で、ライセンスできない可能性があります
 - kind: soc
   chip: Alpine（Akeana 5000 系列测试芯片）
   vendor: Akeana（現 Qualcomm 傘下）
@@ -286,39 +290,7 @@ items:
   - label: 公式ニュース（design-reuse.com）
     url: https://www.design-reuse.com/news/202531315-qualcomm-buys-risc-v-startup-akeana-to-push-into-ai-and-data-center-chips
   ip_used: Akeana 5000 シリーズ IP コア ×8
-- kind: soc
-  chip: K3
-  vendor: 进迭时空 SpacemiT
-  type: SoC
-  cores: 8× X100（4 イシュー・アウトオブオーダー）＋ 8× A100 AI コア。デュアルコアの RT24 リアルタイムコア
-  isa: RVA23 + RVV 1.0 + Vector Crypto
-  process: 12nm
-  perf: 2.4GHz、130 KDMIPS、SPECint2006 >9.0/GHz、60 TOPS（INT4 スパース）で 30B モデルを実行可能
-  target: AI PC / エッジ AI / ロボティクス
-  first_announced: 2026-01
-  status: production
-  note: 量産中（2026-04 から規模出荷）。量産された初の RVA23 国産 AI CPU で、同一のスタックで汎用演算と AI 演算を 30W に収めた。RISC-V が主要 OS エコシステムに入る鍵となる一歩。
-  urls:
-  - label: 出典（raw.githubusercontent.com）
-    url: https://raw.githubusercontent.com/spacemit-com/docs-chip/main/en/key_stone/k3/k3_docs/k3_ds.md
-  - label: データシート PDF（forum.spacemit.com）
-    url: https://forum.spacemit.com/uploads/short-url/60aJ8cYNmrFWqHn4ddwwSzMLjlY.pdf
-  ip_used: SpacemiT 自社 X100 ×8 ＋ A100 AI コア ×8
-- kind: ip
-  chip: X60（K1 SoC 内核）
-  vendor: 进迭时空 SpacemiT
-  type: CPU IP コア / SoC
-  cores: 単コア IP。K1 は 8× X60（2 クラスタ）を集積
-  isa: RV64GCVB + RVA22 + RVV 1.0（VLEN 256/128、x2 実行幅）
-  process: ''
-  perf: K1 は 2 TOPS の AI 演算性能をベンダーが公表（カスタム命令による CPU＋AI 融合）
-  target: エッジ AI / AI PC / 産業
-  first_announced: ''
-  status: production
-  note: 量産中。X60 は国産 RVA22＋RVV 1.0 の成熟した量産コアで、K1 は複数のノート PC／開発ボードに採用され、K3 のソフトウェアスタックを整えた。
-  urls:
-  - label: 出典（raw.githubusercontent.com）
-    url: https://raw.githubusercontent.com/spacemit-com/docs-chip/main/en/key_stone/k1/k1_docs/k1_ds.md
+  caution: Akeana は現在 Qualcomm 傘下で、これ自体はシリコン検証用のテストチップであり販売されていません
 - kind: soc
   chip: LX500
   vendor: 蓝芯算力 Lanxin Computing
@@ -337,36 +309,3 @@ items:
   - label: 出典（news.qq.com）
     url: https://news.qq.com/rain/a/20260723A0CCN700
   ip_used: Lanxin 自社 32 高性能コア＋16 高効率コア＋オンダイ AI エンジン
-- kind: soc
-  chip: ET-SoC-1
-  vendor: Esperanto Technologies（IP は 2025-11 に Ainekko へ売却）
-  type: SoC（AI/HPC アクセラレータ）
-  cores: 1088× ET-Minion（カスタムのベクトル／テンソルユニットを含む）＋ 4× ET-Maxion アウトオブオーダーコア
-  isa: RV64GC + カスタムのベクトル／テンソル拡張
-  process: 7nm
-  perf: '>160MB のオンチップ SRAM。LPDDR4x。PCIe Gen4 x8。1 カードで 1000 コア超、システムで最大 16000 コア'
-  target: AI 推論 / HPC
-  first_announced: ''
-  status: eol
-  note: 独立運営を終了（2025-11 に IP を売却しオープンソース化）。ET-SoC-1 は RISC-V で 1000 コア級のメニーコア加速が可能なことを示した。商業的には失敗したが IP は公開されており、メニーコア路線の重要な参考例。
-  urls:
-  - label: 製品ページ（esperanto.ai）
-    url: https://www.esperanto.ai/products
-  - label: 公式ニュース（jonpeddie.com）
-    url: https://www.jonpeddie.com/news/ainekko-acquires-esperanto-ip
-  ip_used: Esperanto 自社 ET-Minion ×1088 ＋ ET-Maxion ×4
-- kind: ip
-  chip: AndesCore AX65
-  vendor: Andes Technology 晶心科技
-  type: CPU IP コア
-  cores: 4 幅デコード、13 段アウトオブオーダー、128 エントリ ROB、8 本のファンクションパイプライン。SMP は最大 8 コア
-  isa: RV64GCB + RVA22 + スカラー暗号/CMO
-  process: ''
-  perf: 計算集約型アプリ向けとベンダーが公表。L2 キャッシュとコヒーレンシ管理に対応
-  target: ネットワーク／ストレージ／エッジサーバー
-  first_announced: ''
-  status: production
-  note: 量産／IP ライセンス。AX65 は Andes の最高性能コアで、ネットワーク・ストレージ SoC の制御系が主戦場。サーバー周辺チップでよく使われる IP。
-  urls:
-  - label: 製品ページ（andestech.com）
-    url: https://www.andestech.com/en/products-solutions/andescore-processors/riscv-ax65/

@@ -507,3 +507,25 @@ th { color: var(--fg-mute); font-weight: 600; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
+.caution {
+  margin: .55rem 0 0;
+  padding: .45rem .6rem;
+  border: 1px solid var(--warn);
+  border-radius: 7px;
+  background: transparent;
+  color: var(--fg);
+  font-size: .88rem !important;
+}
+
+.caution-tag {
+  display: inline-block;
+  margin-right: .4rem;
+  padding: .02rem .4rem;
+  border-radius: 999px;
+  background: var(--warn);
+  color: #1a1206;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+}

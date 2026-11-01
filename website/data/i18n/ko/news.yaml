@@ -1,5 +1,45 @@
 # RISC-V 서버 뉴스(한국어판, 중국어 원본 대응, 날짜 내림차순)
 items:
+  - date: "2026-10-21"
+    title: "랑신컴퓨팅, 지통 융합 슈퍼노드 공개…LX500 단일 시스템에서 클러스터로"
+    summary: "2026 RISC-V 중국 서밋에서 랑신컴퓨팅(Lanxin Computing)이 '지통 융합' 슈퍼노드를 발표하며 LX500 기반 RISC-V AI 연산을 단일 칩·단일 서버에서 클러스터급 인프라로 확장했습니다. LX500은 RISC-V 코어 48개(성능 코어 32개, 에너지 효율 코어 16개)와 AI Vector/Matrix 엔진을 통합해 INT8 75 TOPS를 제공하며, 통합 메모리 구조로 DDR5를 공유하고 CXL을 지원합니다. 첫 토큰 지연, Prefill, 장문 컨텍스트 추론에 최적화했고 제품군은 LX500 칩, 레노버 원티엔 WR5219 G5 서버, LX5000 일체형, 슈퍼노드로 구성됩니다. 회사는 Qwen, DeepSeek, Kimi 등 모델 적응을 마쳤다고 밝혔으며, RISC-V 서버가 '칩-시스템-클러스터' 완전한 형태로 공급되기 시작했음을 보여줍니다."
+    source: "상관신문 / 둥팡차이푸"
+    url: "https://wap.eastmoney.com/a/202610213903006416.html"
+    vendors: ["Lanxin Computing"]
+    tags: ["완제품·메인보드", "HPC"]
+    importance: "high"
+  - date: "2026-10-20"
+    title: "울트라RISC, UR-CP400 공개…RVA23 서버급 코어 IP, 2027년 1분기 공급"
+    summary: "2026 RISC-V 중국 서밋에서 울트라RISC(UltraRISC)가 고성능 RISC-V 코어 IP UR-CP400을 공개했습니다. RVA23을 준수하고 RVV 1.0을 지원하며 8폭 비순차 실행과 14단 파이프라인을 채택해 FPGA 구성에서 SPECint_base2006이 22점/GHz를 넘습니다. 다계층 클라우드 가상화와 에이전트형 AI 워크로드에 맞춘 강화도 적용했으며 IP 공급은 2027년 1분기 예정입니다. 회사는 코어 IP와 멀티코어 CPU를 함께 제공하며, UR-CP400의 지표는 세계 일류 서버급 코어에 근접했지만 상용 칩 출시는 2027년이 됩니다."
+    source: "IT즈자 / 펑황망 테크"
+    url: "https://tech.ifeng.com/c/8xNZKmD2pZD"
+    vendors: ["UltraRISC"]
+    tags: ["칩 발표"]
+    importance: "medium"
+  - date: "2026-10-20"
+    title: "다모아카데미 쉬안톄, 누적 출하 60억 개 돌파…C950 데이터센터 겨냥"
+    summary: "2026 RISC-V 중국 서밋에서 다모아카데미 수석과학자 멍젠이(孟建熠)가 쉬안톄 RISC-V 프로세서의 진전을 소개했습니다. 쉬안톄 시리즈 누적 출하는 60억 개를 넘었고, 서버급 C950은 RVA23 기반으로 단일 코어 SPECint2006 70점을 돌파했으며 자율주행과 구현형 AI를 겨냥한 프로세서 로드맵도 공개했습니다. 다모아카데미는 소프트웨어와 하드웨어 협력으로 '사용 가능'에서 '양산 가능' 단계로 끌어올린다고 강조했습니다. 서버 시장에서 C950은 데이터센터 범용 연산을 명확히 겨냥한 중국의 몇 안 되는 RISC-V 코어 IP이며, 60억 개 출하 규모는 쉬안톄 생태계가 고성능 제품을 뒷받침할 산업 기반을 갖췄음을 보여줍니다."
+    source: "ICWise / 텐센트 뉴스"
+    url: "https://news.qq.com/rain/a/20261020A05R3V00"
+    vendors: ["Alibaba DAMO Academy", "XuanTie"]
+    tags: ["생태계 협력", "HPC"]
+    importance: "medium"
+  - date: "2026-10-19"
+    title: "ZTE마이크로일렉트로닉스 계열 리루이웨이, '주펑 200' 첫 공개…AI 데이터센터용 RISC-V CPU"
+    summary: "2026 RISC-V 중국 서밋에서 ZTE마이크로일렉트로닉스 계열사 리루이웨이(Lirui Micro)가 AI 데이터센터용 고성능 RISC-V CPU '주펑 200(珠峰200)'을 처음 공개했습니다. RVA23을 준수하고 Hypervisor, AIA, CoVE, RVV 1.0을 지원하며 64비트 슈퍼스칼라 비순차 구조에 Vector/Matrix와 압축·암호 엔진을 통합했습니다. DDR5(MRDIMM 포함), PCIe 6.0, CXL 3을 지원하고 에이전트 클러스터, 추론 슈퍼노드 Host CPU, 기업용 하이브리드 추론을 겨냥합니다. 회사는 1000억 파라미터급 MoE 모델을 구동할 수 있다고 밝혔고 상세 사양은 2026년 말 공개 예정입니다. 통신장비 계열 중국 칩 회사가 RISC-V를 AI 데이터센터 Host CPU 위치에 명확히 둔 첫 사례입니다."
+    source: "ICWise / 텐센트 뉴스"
+    url: "https://news.qq.com/rain/a/20261019A09YLY00"
+    vendors: ["ZTE Microelectronics", "Lirui Micro"]
+    tags: ["칩 발표"]
+    importance: "high"
+  - date: "2026-10-19"
+    title: "텐스토런트, 15억 달러 시리즈 E 완료…기업가치 62억 달러"
+    summary: "텐스토런트(Tenstorrent)가 15억 달러 규모 시리즈 E 투자를 마무리했으며 투자 후 기업가치는 62억 달러입니다. Trace Capital과 Innovation X가 주도했고 ARK Invest, Fidelity, Morgan Stanley, Sandisk, Tether Investments 등이 참여했습니다. 조달 자금은 Galaxy 서버의 대규모 배치, 오픈 웨이트 모델 추론 서비스 확대, 외부 라이선스용 AI·CPU IP 개발에 쓰입니다. 텐스토런트는 RISC-V CPU(TT-Ascalon)와 자체 Tensix AI 코어를 결합해 단일 카드부터 슈퍼클러스터까지 제품군을 갖추고 있으며, 이번 라운드는 NVIDIA와의 데이터센터 경쟁에 생산·공급 역량을 더합니다."
+    source: "Tenstorrent"
+    url: "https://tenstorrent.com/en/newsroom/tenstorrent-announces-series-e"
+    vendors: ["Tenstorrent"]
+    tags: ["인수합병·투자"]
+    importance: "high"
   - date: "2026-10-22"
     title: "Qualcomm, RISC-V 스타트업 Akeana 인수… AI·데이터센터 칩 강화"
     summary: "Qualcomm이 RISC-V 프로세서 설계 기업 Akeana 인수를 완료했습니다. 거래 금액은 공개되지 않았고 Akeana의 IP와 엔지니어링 조직이 Qualcomm에 전부 합류해 AI·데이터센터 사업을 강화합니다. Akeana는 2021년 Marvell에서 서버 칩을 만들던 팀이 창업했고 2024년 8월 1억 달러 이상을 조달했으며, 고객 맞춤형 RISC-V 코어를 주력으로 합니다. Qualcomm이 Ventana에 이어 데이터센터급 RISC-V 자산을 두 번째로 사들인 사례입니다."

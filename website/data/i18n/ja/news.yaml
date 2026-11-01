@@ -1,5 +1,45 @@
 # RISC-V サーバーニュース（日本語版、日付の新しい順）
 items:
+  - date: "2026-10-21"
+    title: "藍芯算力、智通融合スーパーノードを発表—LX500 を単機からクラスタへ"
+    summary: "2026 RISC-V 中国サミットで、藍芯算力（Lanxin Computing）は「智通融合」スーパーノードを発表し、LX500 ベースの RISC-V AI 演算を単一チップ・単一サーバーからクラスタ級の基盤へ広げた。LX500 は RISC-V コア 48 個（高性能 32＋高効率 16）と AI Vector/Matrix エンジンを統合し、INT8 で 75 TOPS、統一メモリアーキテクチャで DDR5 を共有し CXL にも対応、初回トークン遅延や Prefill、長文コンテキスト推論に向けて最適化している。製品は LX500 チップ、Lenovo 問天 WR5219 G5 サーバー、LX5000 一体型機、スーパーノードの四層となり、Qwen、DeepSeek、Kimi などへの適応も済んだとしている。RISC-V サーバーが「チップ—整機—クラスタ」の形で納入される段階に入ったことを示す。"
+    source: "上観新聞 / 東方財富"
+    url: "https://wap.eastmoney.com/a/202610213903006416.html"
+    vendors: ["Lanxin Computing"]
+    tags: ["システム・マザーボード", "HPC"]
+    importance: "high"
+  - date: "2026-10-20"
+    title: "超睿科技（UltraRISC）、UR-CP400 を公開—RVA23 準拠サーバー向けコア IP、2027 年 Q1 提供"
+    summary: "2026 RISC-V 中国サミットで、超睿科技（UltraRISC）は高性能 RISC-V コア IP「UR-CP400」を公開した。RVA23 に準拠し RVV 1.0 をサポート、8 幅アウトオブオーダーと 14 段パイプラインを採用、FPGA 構成で SPECint_base2006 が 22 ポイント/GHz 超、マルチテナントクラウド向け仮想化とエージェント型 AI 向けの強化も施し、IP の提供は 2027 年第 1 四半期を予定する。同社はコア IP とマルチコア CPU の両方を手がけており、UR-CP400 の数値は世界一流のサーバー向けコアに近づいたが、商用チップの投入は 2027 年になる。"
+    source: "IT之家 / 鳳凰網科技"
+    url: "https://tech.ifeng.com/c/8xNZKmD2pZD"
+    vendors: ["UltraRISC"]
+    tags: ["チップ発表"]
+    importance: "medium"
+  - date: "2026-10-20"
+    title: "達摩院玄鉄、累計出荷 60 億個超え—C950 はデータセンター向け汎用演算を狙う"
+    summary: "2026 RISC-V 中国サミットで、達摩院の首席科学者・孟建熠氏は玄鉄 RISC-V プロセッサの進展を説明した。玄鉄シリーズの累計出荷は 60 億個を超え、サーバー級 C950 は RVA23 に基づき単核 SPECint2006 が 70 点を突破、自動運転と具身知能（エンボディド AI）向けのプロセッサロードマップも公表した。同社はソフトとハードの協調で「使える」から「量産できる」段階へ引き上げると強調している。サーバー市場にとって C950 は、データセンターの汎用演算を明確に狙う中国でも数少ない RISC-V コア IP であり、60 億個の出荷規模は玄鉄エコシステムが高性能製品を支える産業基盤を持つことを示す。"
+    source: "芯智讯 / 腾讯新闻"
+    url: "https://news.qq.com/rain/a/20261020A05R3V00"
+    vendors: ["Alibaba DAMO Academy", "XuanTie"]
+    tags: ["エコシステム連携", "HPC"]
+    importance: "medium"
+  - date: "2026-10-19"
+    title: "中興微電子傘下の砺睿微、「珠峰200」を初公開—智算センター向け RISC-V CPU"
+    summary: "2026 RISC-V 中国サミットで、中興微電子（ZTE Microelectronics）傘下の砺睿微（Lirui Micro）は智算センター向け高性能 RISC-V CPU「珠峰200」を初めて公開した。RVA23 に準拠し Hypervisor、AIA、CoVE、RVV 1.0 をサポート、64 ビットのスーパースカラー・アウトオブオーダー構成で Vector/Matrix と圧縮・暗号エンジンを統合、DDR5（MRDIMM を含む）、PCIe 6.0、CXL 3 に対応する。用途はエージェントクラスタ、推論スーパーノードの Host CPU、企業向けハイブリッド推論の三つで、1000 億パラメータ級 MoE モデルを動かせるとし、詳細仕様は 2026 年末に公表予定。通信機器系の中国チップ企業が RISC-V を智算センターの Host CPU に明確に位置づけた初めての例となる。"
+    source: "芯智讯 / 腾讯新闻"
+    url: "https://news.qq.com/rain/a/20261019A09YLY00"
+    vendors: ["ZTE Microelectronics", "Lirui Micro"]
+    tags: ["チップ発表"]
+    importance: "high"
+  - date: "2026-10-19"
+    title: "Tenstorrent、15 億ドルのシリーズ E を完了—評価額 62 億ドル"
+    summary: "Tenstorrent は 15 億ドルのシリーズ E を完了し、資金調達後の評価額は 62 億ドルとなった。Trace Capital と Innovation X が主導し、ARK Invest、Fidelity、Morgan Stanley、Sandisk、Tether Investments などが参加した。調達資金は Galaxy サーバーの量産配備、オープンウェイトモデル向け推論サービスの拡大、外部ライセンスする AI・CPU IP の開発に充てる。同社は RISC-V CPU（TT-Ascalon）と自社 Tensix AI コアを組み合わせ、1 枚のカードからスーパークラスタまでの製品群を揃えており、今回の調達は NVIDIA とのデータセンター競争に向けた生産・納入能力を補強する。"
+    source: "Tenstorrent"
+    url: "https://tenstorrent.com/en/newsroom/tenstorrent-announces-series-e"
+    vendors: ["Tenstorrent"]
+    tags: ["M&A・投資"]
+    importance: "high"
   - date: "2026-10-22"
     title: "Qualcomm が RISC-V スタートアップ Akeana を買収、AI・データセンター向けチップを強化"
     summary: "Qualcomm は RISC-V プロセッサ設計会社 Akeana の買収を完了した。取引額は非公開で、Akeana の IP とエンジニアリングチームは一体で Qualcomm に組み込まれ、AI とデータセンターの布陣を強める。Akeana は 2021 年、Marvell でサーバーチップを手がけたチームが創業し、2024 年 8 月に 1 億ドル超を調達、顧客ごとにカスタマイズできる RISC-V コアを主力とする。Qualcomm が Ventana に続いてデータセンター級の RISC-V 資産を手に入れるのは 2 度目。"

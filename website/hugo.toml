@@ -13,6 +13,9 @@ timeZone = "Asia/Shanghai"
   # 邮件订阅后端地址。留空 = 前端表单置灰（未接入状态）。
   # 配好服务后把 POST 端点填在这里，表单会自动变成可提交。
   newsletter_endpoint = ""
+  # 购买咨询入口。留空 = 卡片里的【购买咨询】按钮置灰不可点。
+  # 接好流程后填 URL，按钮自动变成可点击（会带 ?model=<条目 id>）。
+  purchase_enquiry_url = ""
   domain = "riscvservers.org"
   repo = "https://github.com/rv2036/riscv-servers-website"
   license = "CC BY-SA 4.0"

@@ -102,6 +102,10 @@ news = "News"
 data = "Data"
 blog = "Blog"
 
+[servers]
+enquire = "Buy enquiry"
+enquire_pending = "Purchase enquiries are not open yet"
+
 [badge]
 hw_tested = "Tested on real hardware by Project Jiachen"
 

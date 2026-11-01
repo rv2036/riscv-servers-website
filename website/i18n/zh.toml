@@ -102,6 +102,10 @@ news = "新闻"
 data = "数据"
 blog = "博客"
 
+[servers]
+enquire = "购买咨询"
+enquire_pending = "购买咨询通道尚未开通"
+
 [badge]
 hw_tested = "经甲辰计划真机实测"
 

@@ -43,6 +43,15 @@
         {{ end }}
       </div>
       {{ end }}
+      {{- $enq := site.Params.purchase_enquiry_url }}
+      {{- $mid := .id }}
+      <div class="card-actions">
+        {{ if $enq }}
+        <a class="btn btn-enquire" href="{{ $enq }}?model={{ $mid }}">{{ i18n "servers.enquire" }}</a>
+        {{ else }}
+        <span class="btn btn-enquire is-disabled" role="link" aria-disabled="true" title="{{ i18n "servers.enquire_pending" }}">{{ i18n "servers.enquire" }}</span>
+        {{ end }}
+      </div>
     </article>
     {{ end }}
   </div>

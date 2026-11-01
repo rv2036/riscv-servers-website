@@ -1,0 +1,14 @@
+<div class="lang-switch">
+  <button class="icon-btn" id="langToggle" type="button" aria-label="{{ i18n "a11y.lang" }}" aria-expanded="false">{{ substr site.Language.LanguageName 0 1 }}</button>
+  <ul class="lang-menu" id="langMenu">
+    {{- $page := . }}
+    {{- range site.Languages }}
+      {{- $lang := .Lang }}
+      {{- $target := "" }}
+      {{- range $page.AllTranslations }}{{ if eq .Lang $lang }}{{ $target = .RelPermalink }}{{ end }}{{ end }}
+      {{- if not $target }}{{ range site.Home.AllTranslations }}{{ if eq .Lang $lang }}{{ $target = .RelPermalink }}{{ end }}{{ end }}{{ end }}
+      {{- if not $target }}{{ $target = printf "/%s/" $lang }}{{ end }}
+      <li><a href="{{ $target }}"{{ if eq $lang $page.Site.Language.Lang }} class="active"{{ end }} lang="{{ .LanguageCode }}">{{ .LanguageName }}</a></li>
+    {{- end }}
+  </ul>
+</div>

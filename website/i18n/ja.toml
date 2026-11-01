@@ -1,0 +1,70 @@
+# 世界の RISC-V サーバーの進展
+[site]
+tagline = "世界の RISC-V サーバーの進展"
+
+[nav]
+servers = "サーバー"
+chips = "チップ"
+solutions = "ソリューション"
+news = "ニュース"
+blog = "ブログ"
+
+[home]
+h1 = "RISC-V サーバーを 1 ページで"
+lede = "サーバー向け RISC-V の製品、チップ、実用できる構成、最新の動きを一か所に集めました。各項目は一次情報へリンクし、不明な仕様は推測せず空欄にしています。"
+cta_servers = "サーバー製品を見る"
+cta_chips = "チップを見る"
+cta_news = "最新ニュースを見る"
+latest = "最新の動き"
+chips_blurb = "サーバー向け RISC-V のチップと CPU IP：コア数、ISA、プロセス、ベンダー公称性能。"
+solutions_blurb = "ディストリビューションから仮想化、HPC、クラウドまで：RISC-V サーバーで実際に何が動くか。"
+blog_blurb = "当サイトの長文：観察、つまずき、そして現状の整理。"
+
+[status]
+production = "量産中"
+sampling = "サンプル出荷"
+announced = "発表済み"
+eol = "生産終了"
+
+[maturity]
+production = "本番利用可"
+limited = "制限付きで利用可"
+experimental = "実験的"
+demo = "デモのみ"
+
+[label]
+soc = "SoC / プロセッサ"
+form = "形態"
+memory = "メモリ"
+storage_io = "ストレージと IO"
+power = "電力"
+os = "公式 OS"
+availability = "入手方法"
+first_announced = "初公開"
+cores = "コア構成"
+isa = "ISA"
+process = "プロセス"
+perf = "性能"
+target = "想定用途"
+what_works = "すでに動作するもの"
+limits = "既知の制限"
+all = "すべて"
+highlight = "注目"
+home = "ホーム"
+
+[a11y]
+skip = "本文へ"
+nav = "メインナビ"
+theme_dark = "ダークに切り替え"
+theme_light = "ライトに切り替え"
+lang = "言語を変更"
+
+[footer]
+license = "本文は CC BY-SA 4.0 で公開"
+source = "ソース"
+
+[badge]
+verified = "甲辰プロジェクト主宰者が検証済み"
+
+[error]
+"404" = "このアドレスに内容はありません。下のリンクからやり直してください。"

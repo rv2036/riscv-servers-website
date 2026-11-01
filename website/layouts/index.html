@@ -1,0 +1,76 @@
+{{ define "main" }}
+{{ $d := partial "site-data.html" . }}
+<section class="hero">
+  <div class="wrap">
+    <h1>{{ i18n "home.h1" }}</h1>
+    <p class="lede">{{ i18n "home.lede" }}</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="{{ "servers/" | relLangURL }}">{{ i18n "home.cta_servers" }}</a>
+      <a class="btn" href="{{ "chips/" | relLangURL }}">{{ i18n "home.cta_chips" }}</a>
+      <a class="btn" href="{{ "news/" | relLangURL }}">{{ i18n "home.cta_news" }}</a>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <section class="block" id="servers">
+    <div class="block-head">
+      <h2>{{ i18n "nav.servers" }}</h2>
+      <a class="more" href="{{ "servers/" | relLangURL }}">{{ i18n "label.all" }} →</a>
+    </div>
+    <div class="grid cols-2">
+      {{ range first 2 $d.servers.items }}
+      <article class="card{{ if .highlight }} feature{{ end }}">
+        <div class="card-top">
+          <h3>{{ .name }}</h3>
+          {{ if .verified }}<span class="badge verified">{{ i18n "badge.verified" }}</span>{{ end }}
+        </div>
+        <p>{{ .vendor }}{{ with .vendor_en }} · {{ . }}{{ end }}{{ with .soc }} · {{ . }}{{ end }}</p>
+        {{ with .note }}<p>{{ . }}</p>{{ end }}
+      </article>
+      {{ end }}
+    </div>
+  </section>
+
+  <section class="block" id="latest">
+    <div class="block-head">
+      <h2>{{ i18n "home.latest" }}</h2>
+      <a class="more" href="{{ "news/" | relLangURL }}">{{ i18n "label.all" }} →</a>
+    </div>
+    <ul class="news-list">
+      {{ range first 6 $d.news.items }}
+      <li class="news-item">
+        <div class="news-meta">
+          <span>{{ .date }}</span>
+          {{ with .source }}<span>·</span><span>{{ . }}</span>{{ end }}
+          {{ range .tags }}<span class="tag">{{ . }}</span>{{ end }}
+        </div>
+        <h3><a href="{{ .url }}" rel="noopener">{{ .title }}</a></h3>
+        {{ with .summary }}<p>{{ . }}</p>{{ end }}
+      </li>
+      {{ end }}
+    </ul>
+  </section>
+
+  <section class="block">
+    <div class="grid cols-3">
+      <a class="card" href="{{ "chips/" | relLangURL }}">
+        <h3>{{ i18n "nav.chips" }} →</h3>
+        <p>{{ i18n "home.chips_blurb" }}</p>
+      </a>
+      <a class="card" href="{{ "solutions/" | relLangURL }}">
+        <h3>{{ i18n "nav.solutions" }} →</h3>
+        <p>{{ i18n "home.solutions_blurb" }}</p>
+      </a>
+      <a class="card" href="{{ "blog/" | relLangURL }}">
+        <h3>{{ i18n "nav.blog" }} →</h3>
+        <p>{{ i18n "home.blog_blurb" }}</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="block prose">
+    {{ .Content }}
+  </section>
+</div>
+{{ end }}

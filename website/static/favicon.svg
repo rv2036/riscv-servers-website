@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="RISC-V Servers">
+  <rect width="64" height="64" rx="12" fill="#0b0d11"/>
+  <rect x="7" y="14" width="50" height="12" rx="3" fill="#4fd1c5"/>
+  <rect x="7" y="30" width="50" height="12" rx="3" fill="#4fd1c5" opacity=".65"/>
+  <rect x="7" y="46" width="50" height="10" rx="3" fill="#4fd1c5" opacity=".35"/>
+  <circle cx="13" cy="20" r="1.9" fill="#04211f"/>
+  <circle cx="13" cy="36" r="1.9" fill="#04211f"/>
+  <path d="M36 20h6l3 4-3 4h-6l-3-4z" fill="#04211f"/>
+</svg>

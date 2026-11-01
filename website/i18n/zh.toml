@@ -1,0 +1,70 @@
+# 全世界的 RISC-V 服务器进展
+[site]
+tagline = "全世界的 RISC-V 服务器进展"
+
+[nav]
+servers = "服务器"
+chips = "芯片"
+solutions = "解决方案"
+news = "新闻"
+blog = "博客"
+
+[home]
+h1 = "RISC-V 服务器，一页看完"
+lede = "把全世界服务器级 RISC-V 的产品、芯片、可用方案与最新进展收在同一处。每一条都能点回一手来源，查不到的参数留空，不转述未经核实的宣传。"
+cta_servers = "看服务器产品"
+cta_chips = "看服务器芯片"
+cta_news = "看最新新闻"
+latest = "最新进展"
+chips_blurb = "服务器级 RISC-V 芯片与 CPU IP：核数、ISA、工艺与厂商公布性能。"
+solutions_blurb = "从发行版到虚拟化、HPC 与云：RISC-V 服务器现在真的能跑什么。"
+blog_blurb = "本站长文：观察、踩坑与阶段总结。"
+
+[status]
+production = "量产在售"
+sampling = "送样中"
+announced = "已宣布"
+eol = "已停产"
+
+[maturity]
+production = "生产可用"
+limited = "可用但有限制"
+experimental = "实验性"
+demo = "仅演示"
+
+[label]
+soc = "SoC / 处理器"
+form = "形态"
+memory = "内存"
+storage_io = "存储与 IO"
+power = "供电 / 功耗"
+os = "官方系统"
+availability = "获取方式"
+first_announced = "首次公开"
+cores = "核心构成"
+isa = "ISA"
+process = "工艺"
+perf = "性能"
+target = "面向场景"
+what_works = "已经能跑什么"
+limits = "已知限制"
+all = "全部"
+highlight = "重点"
+home = "回首页"
+
+[a11y]
+skip = "跳到正文"
+nav = "主导航"
+theme_dark = "切换到深色"
+theme_light = "切换到浅色"
+lang = "切换语言"
+
+[footer]
+license = "文字以 CC BY-SA 4.0 发布"
+source = "源码"
+
+[badge]
+verified = "甲辰计划主理人验证过"
+
+[error]
+"404" = "这个地址没有内容。可以从下面的入口重新开始。"

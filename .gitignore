@@ -1,0 +1,6 @@
+website/public/
+website/resources/
+website/.hugo_build.lock
+.DS_Store
+*.log
+__pycache__/

@@ -1,0 +1,6 @@
+{{- $dest := .Destination -}}
+{{- $keep := or (hasPrefix $dest "http") (hasPrefix $dest "mailto") (hasPrefix $dest "tel") (hasPrefix $dest "#") (hasPrefix $dest "/") -}}
+{{- if not $keep -}}
+  {{- $dest = printf "%s/%s" (site.LanguagePrefix | default "") $dest -}}
+{{- end -}}
+<a href="{{ $dest }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}</a>

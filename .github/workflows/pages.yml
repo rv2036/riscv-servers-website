@@ -1,0 +1,63 @@
+name: Deploy website
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - "website/**"
+      - "scripts/**"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+# 下游 fork 没有本站的 Pages 站点与部署凭据，跑部署只会报错。
+# 所以：构建与自检在任何仓库都跑（下游也能验证自己的改动），
+# 读取 Pages 参数、上传产物、部署三步只在主仓 rv2036/riscv-servers-website 执行。
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 安装 Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "0.147.9"
+          extended: true
+
+      - name: 读取 Pages 参数
+        id: pages
+        if: github.repository == 'rv2036/riscv-servers-website'
+        uses: actions/configure-pages@v5
+
+      - name: 构建站点
+        run: hugo --source website --gc --minify --cleanDestinationDir --baseURL "${{ steps.pages.outputs.base_url }}/"
+
+      - name: 站点自检
+        run: python3 scripts/check_site.py
+
+      - name: 上传产物
+        if: github.repository == 'rv2036/riscv-servers-website'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: website/public
+
+  deploy:
+    needs: build
+    if: github.repository == 'rv2036/riscv-servers-website'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 部署到 GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

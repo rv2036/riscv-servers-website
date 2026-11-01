@@ -102,6 +102,10 @@ news = "ニュース"
 data = "データ"
 blog = "ブログ"
 
+[servers]
+enquire = "購入相談"
+enquire_pending = "購入相談の窓口はまだ開設されていません"
+
 [badge]
 hw_tested = "甲辰プロジェクトが実機で実測"
 

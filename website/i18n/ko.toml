@@ -102,6 +102,10 @@ news = "뉴스"
 data = "데이터"
 blog = "블로그"
 
+[servers]
+enquire = "구매 문의"
+enquire_pending = "구매 문의 창구가 아직 열리지 않았습니다"
+
 [badge]
 hw_tested = "지아천 프로젝트 실기 실측 완료"
 

@@ -328,6 +328,8 @@ section.block { padding: 2.2rem 0 0; }
   border-radius: var(--radius);
   padding: 1rem 1.05rem;
   box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
 }
 
 .card h3 { margin: 0 0 .35rem; font-size: 1.02rem; }
@@ -463,6 +465,24 @@ section.block { padding: 2.2rem 0 0; }
   color: var(--fg-dim);
 }
 .links a:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+
+/* 卡片底部动作区：购买咨询（入口未配置时置灰、不可点） */
+.card-actions { margin-top: auto; padding-top: .9rem; display: flex; }
+.btn-enquire {
+  font-size: .9rem;
+  justify-content: center;
+  width: 100%;
+  padding: .45rem .9rem;
+}
+.btn.is-disabled {
+  background: var(--bg-soft);
+  color: var(--fg-mute);
+  border-color: var(--line);
+  border-style: dashed;
+  cursor: not-allowed;
+  opacity: .85;
+}
+.btn.is-disabled:hover { color: var(--fg-mute); border-color: var(--line); }
 
 /* ---------- 新闻 ---------- */
 

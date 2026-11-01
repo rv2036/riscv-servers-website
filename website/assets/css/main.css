@@ -6,7 +6,7 @@
   --bg-card: #151a22;
   --fg: #e8ecf3;
   --fg-dim: #9aa6b8;
-  --fg-mute: #6f7c8f;
+  --fg-mute: #7d8a9e;
   --line: #232b37;
   --line-soft: #1b222c;
   --accent: #4fd1c5;
@@ -26,7 +26,7 @@ html[data-theme="light"] {
   --bg-card: #ffffff;
   --fg: #171a1f;
   --fg-dim: #55524b;
-  --fg-mute: #7a7469;
+  --fg-mute: #6d675c;
   --line: #e2ddd1;
   --line-soft: #ece8de;
   --accent: #0f766e;

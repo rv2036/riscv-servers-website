@@ -1,2 +1,55 @@
-# 服务器级整机/主板/工作站/云实例
-items: []
+# RISC-V 服务器清单（中文母版）
+# 只有经过人工核对一手资料的产品才建条目；status 用程序值，由 i18n 渲染成各语言文案
+items:
+  - id: lx500
+    name: "蓝芯 LX500 智通融合服务器 CPU（整机：联想问天 WR5219 G5）"
+    vendor: "蓝芯算力（深圳）科技有限公司"
+    vendor_en: "Lanxin Computing (Shenzhen) Technology Co., Ltd."
+    soc: "LX500 单芯片：48 核异构 = 32 个性能核 + 16 个能效核（共享芯片存储空间）；片内集成 AI 矩阵引擎，峰值 75 TOPS INT8，支持 INT4/INT8/FP16/FP32；支持 RVV 1.0 与 RVA23；矩阵乘扩展指令 + 专用矩阵运算硬件单元。"
+    form: "芯片为单 die 封装（封装形式与尺寸未公开）；整机形态为 2U 机架式服务器（联想问天 WR5219 G5）。"
+    memory: "4 通道 DDR5，最高 6400 MT/s；CPU 与片内 AI 引擎统一内存（共享同一内存空间，数据零搬运）；支持 CXL 2.0 内存扩展。"
+    storage_io: "64 条 PCIe Gen5 通道（支持 bifurcation）+ 4 条 PCIe Gen3 通道；CXL 2.0；整机（WR5219 G5）提供多种存储/IO/内存选配、支持热插拔硬盘。"
+    power: ""
+    os_support: "Ubuntu、openEuler（官方点亮演示即在两系统上实机启动）；中国移动 BC-Linux 已完成深度适配。"
+    availability: "芯片与整机均未公布价格；整机走联想问天产品线交付"
+    first_announced: "2026-02"
+    status: production
+    verified: true
+    highlight: true
+    note: "官方定位：全球首款面向服务器的 RISC-V + AI“智通融合”CPU（旗舰产品），把通用计算与片内 AI 推理放在同一颗芯片上，替代“CPU + 独立加速卡”；承载整机为 2U 机架式服务器联想问天 WR5219 G5，另有一体机与智通融合超节点形态。"
+    urls:
+      - label: "官方新闻（lanxincomputing.com）"
+        url: "https://lanxincomputing.com/news-detail.html?id=76"
+      - label: "官方新闻（lanxincomputing.com）"
+        url: "https://lanxincomputing.com/news-detail.html?id=82"
+      - label: "官方新闻（lanxincomputing.com）"
+        url: "https://lanxincomputing.com/news-detail.html?id=86"
+      - label: "官方新闻（lanxincomputing.com）"
+        url: "https://lanxincomputing.com/news-detail.html?id=122"
+      - label: "官方新闻（lanxincomputing.com）"
+        url: "https://lanxincomputing.com/news-detail.html?id=123"
+  - id: v100
+    name: "进迭时空 SpacemiT V100 服务器级 CPU（整机：C2201 / G5201 / S5236）"
+    vendor: "进迭时空（北京）智能科技有限公司"
+    vendor_en: "SpacemiT"
+    soc: "V100 单芯片：46 核异构 = 6× 香山昆明湖 V2R2（最高 2.1 GHz，单核 SPECint2006 ≥15.0/GHz）+ 40× 进迭时空自研 X100（最高 2.4 GHz，≥9.0/GHz）；RVA23；64 MB SLC；双路一致性互联最高 92 核。"
+    form: "芯片 FCBGA 封装，58.5 × 75.4 mm，0.94 mm pitch；整机 C2201 为 2U 机架式，820×447.4×87.8 mm、≤35 kg（G5201 4U 895×447.4×176.8 mm；S5236 4U）。"
+    memory: "单芯片 8 通道 DDR5、1DPC、DDR5 RDIMM，4800 MT/s，峰值带宽 307 GB/s；单条 DIMM 最大 256 GB，单芯片最大 2 TB；整机 C2201 为 16 个 DIMM 插槽、最高 2 TB。"
+    storage_io: "PCIe 5.0 共 52 条通道（x16~x1 灵活配置，可扩 AI 卡与 SAS/SATA/NVMe）；1×GMAC（IEEE 1588）；外围 1×QSPI、1×LPC、1×eSPI、3×SPI Master、4×I3C、12×I2C、12×SMBUS、5×UART。整机 C2201：双路共 88 条 PCIe 5.0 Lane，前置 8×3.5\" U.2 NVMe、内置 1×M.2、后置 2×2.5\" SATA。"
+    power: "芯片 TDP 120W（官方规格书）；整机 C2201 配 1600W CRPS 铂金电源、1+1 冗余。"
+    os_support: "openEuler、openRuyi、openKylin、Debian、Ubuntu（26.10）、Red Hat Enterprise Linux 10.2（开发者预览）、Fedora、Rocky Linux，可直接安装启动；固件 UEFI 2.1.1 + ACPI 6.6、EDK2、openBMC；虚拟化 KVM/QEMU、Docker。"
+    availability: "官方未公布价格与量产时间；配套整机 C2201 / G5201 / S5236"
+    first_announced: "2026-10"
+    status: announced
+    verified: true
+    highlight: true
+    note: "官方定位：首颗完整符合 RISC-V 服务器规范的计算芯片 / 服务器级 CPU，面向数据中心通用计算、Agent 基础设施与国产化智算平台；配套发布计算服务器 C2201（2U 双路）、智算服务器 G5201（4U，8 卡）、存储服务器 S5236（4U，36 盘位）。"
+    urls:
+      - label: "产品页（spacemit.com）"
+        url: "https://www.spacemit.com/products/keystone/v100"
+      - label: "规格书 PDF（cdn-resource.spacemit.com）"
+        url: "https://cdn-resource.spacemit.com/file/chip/V100/v100_brief_zh.pdf"
+      - label: "官方新闻（spacemit.com）"
+        url: "https://www.spacemit.com/news/2c9c8082a1770faf01a1870587fc0001"
+      - label: "规格书 PDF（cdn-resource.spacemit.com）"
+        url: "https://cdn-resource.spacemit.com/file/product/V100/c2201_brief_zh.pdf"

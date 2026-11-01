@@ -27,7 +27,9 @@
       {{ with .note }}<p>{{ . }}</p>{{ end }}
       {{ with .urls }}
       <div class="links">
-        {{ range . }}<a href="{{ .url }}" rel="noopener">{{ .label }}</a>{{ end }}
+        {{ range . }}{{ $u := .url }}
+        <a href="{{ $u }}" rel="noopener">{{ .label }}{{ with (urls.Parse $u).Query.Get "id" }} · id={{ . }}{{ end }}</a>
+        {{ end }}
       </div>
       {{ end }}
     </article>

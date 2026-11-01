@@ -64,7 +64,7 @@ license = "Text released under CC BY-SA 4.0"
 source = "Source"
 
 [badge]
-verified = "Verified by the Project Jiachen lead"
+hw_tested = "Tested on real hardware by Project Jiachen"
 
 [error]
 "404" = "Nothing lives at this address. Start again from one of the links below."

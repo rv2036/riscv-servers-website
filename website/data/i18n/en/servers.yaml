@@ -14,7 +14,7 @@ items:
     availability: "No pricing announced for either the chip or the system; the system ships through Lenovo's WenTian product line"
     first_announced: "2026-02"
     status: production
-    verified: true
+    hw_tested: true
     highlight: true
     note: "Official positioning: the world's first server-oriented RISC-V + AI “convergence” CPU (flagship product), putting general-purpose compute and on-die AI inference on the same chip in place of a “CPU + discrete accelerator card” pairing; the host system is the 2U rack server Lenovo WenTian WR5219 G5, with all-in-one and converged super-node form factors also offered."
     urls:
@@ -41,7 +41,7 @@ items:
     availability: "No pricing or volume-production date announced; companion systems C2201 / G5201 / S5236"
     first_announced: "2026-10"
     status: announced
-    verified: true
+    hw_tested: true
     highlight: true
     note: "Official positioning: the first compute chip / server-class CPU fully compliant with the RISC-V server specification, aimed at general-purpose data-center compute, agent infrastructure and domestically developed AI computing platforms; launched alongside the C2201 compute server (2U, dual-socket), G5201 AI server (4U, 8 cards) and S5236 storage server (4U, 36 bays)."
     urls:

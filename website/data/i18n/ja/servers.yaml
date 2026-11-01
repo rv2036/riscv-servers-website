@@ -14,7 +14,7 @@ items:
     availability: "チップ・システムとも価格は未公表。システムは Lenovo 問天の製品ラインで提供"
     first_announced: "2026-02"
     status: production
-    verified: true
+    hw_tested: true
     highlight: true
     note: "公式の位置づけ：サーバー向けとしては世界初の RISC-V＋AI「智通融合」CPU（フラッグシップ製品）。汎用計算とオンチップ AI 推論を同一チップに載せ、「CPU＋独立アクセラレータカード」を置き換えることを狙う。搭載システムは 2U ラックマウントの Lenovo 問天 WR5219 G5 で、ほかにオールインワン型と智通融合スーパーノード型がある。"
     urls:
@@ -41,7 +41,7 @@ items:
     availability: "価格と量産時期は公式に未公表。対応システムは C2201 / G5201 / S5236"
     first_announced: "2026-10"
     status: announced
-    verified: true
+    hw_tested: true
     highlight: true
     note: "公式の位置づけ：RISC-V サーバー仕様に完全準拠した初の計算チップ／サーバー級 CPU。データセンターの汎用計算、Agent 基盤、国産の智算プラットフォーム向け。あわせて計算サーバー C2201（2U デュアルソケット）、智算サーバー G5201（4U、8 カード）、ストレージサーバー S5236（4U、36 ベイ）を発表。"
     urls:

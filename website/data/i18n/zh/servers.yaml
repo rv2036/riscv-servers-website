@@ -14,7 +14,7 @@ items:
     availability: "芯片与整机均未公布价格；整机走联想问天产品线交付"
     first_announced: "2026-02"
     status: production
-    verified: true
+    hw_tested: true
     highlight: true
     note: "官方定位：全球首款面向服务器的 RISC-V + AI“智通融合”CPU（旗舰产品），把通用计算与片内 AI 推理放在同一颗芯片上，替代“CPU + 独立加速卡”；承载整机为 2U 机架式服务器联想问天 WR5219 G5，另有一体机与智通融合超节点形态。"
     urls:
@@ -41,7 +41,7 @@ items:
     availability: "官方未公布价格与量产时间；配套整机 C2201 / G5201 / S5236"
     first_announced: "2026-10"
     status: announced
-    verified: true
+    hw_tested: true
     highlight: true
     note: "官方定位：首颗完整符合 RISC-V 服务器规范的计算芯片 / 服务器级 CPU，面向数据中心通用计算、Agent 基础设施与国产化智算平台；配套发布计算服务器 C2201（2U 双路）、智算服务器 G5201（4U，8 卡）、存储服务器 S5236（4U，36 盘位）。"
     urls:

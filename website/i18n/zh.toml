@@ -64,7 +64,7 @@ license = "文字以 CC BY-SA 4.0 发布"
 source = "源码"
 
 [badge]
-verified = "甲辰计划主理人验证过"
+hw_tested = "经甲辰计划真机实测"
 
 [error]
 "404" = "这个地址没有内容。可以从下面的入口重新开始。"

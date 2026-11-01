@@ -23,7 +23,7 @@
       <article class="card{{ if .highlight }} feature{{ end }}">
         <div class="card-top">
           <h3>{{ .name }}</h3>
-          {{ if .verified }}<span class="badge verified">{{ i18n "badge.verified" }}</span>{{ end }}
+          {{ if .hw_tested }}<span class="badge verified">{{ i18n "badge.hw_tested" }}</span>{{ end }}
         </div>
         <p>{{ .vendor }}{{ with .vendor_en }} · {{ . }}{{ end }}{{ with .soc }} · {{ . }}{{ end }}</p>
         {{ with .note }}<p>{{ . }}</p>{{ end }}

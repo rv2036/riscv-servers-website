@@ -14,7 +14,7 @@ items:
     availability: "칩과 완제품 모두 가격 미공개; 완제품은 Lenovo Wentian 제품 라인으로 공급됩니다"
     first_announced: "2026-02"
     status: production
-    verified: true
+    hw_tested: true
     highlight: true
     note: "공식 포지셔닝은 서버용 세계 최초 RISC-V + AI 'AI·범용 융합' CPU(플래그십)입니다. 범용 연산과 칩 내 AI 추론을 한 칩에 올려 'CPU + 독립 가속 카드' 구성을 대체하며, 탑재 완제품은 2U 랙마운트 서버 Lenovo Wentian WR5219 G5이고 올인원과 AI·범용 융합 슈퍼노드 형태도 있습니다."
     urls:
@@ -41,7 +41,7 @@ items:
     availability: "공식 가격과 양산 시점은 미공개; 함께 발표된 완제품은 C2201 / G5201 / S5236"
     first_announced: "2026-10"
     status: announced
-    verified: true
+    hw_tested: true
     highlight: true
     note: "공식 포지셔닝은 RISC-V 서버 규격을 완전히 충족하는 첫 컴퓨팅 칩이자 서버급 CPU로, 데이터센터 범용 연산과 에이전트 인프라, 자국산 지능형 컴퓨팅 플랫폼을 겨냥합니다. 함께 발표된 제품은 컴퓨팅 서버 C2201(2U 2소켓), AI 서버 G5201(4U, 8카드), 스토리지 서버 S5236(4U, 36베이)입니다."
     urls:

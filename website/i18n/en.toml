@@ -72,7 +72,7 @@ ip_title = "IP cores (licensable)"
 ip_note = "CPU IP sold to chip companies rather than a finished chip; many of the SoCs above integrate cores from this list."
 
 [badge]
-verified = "Verified by the Project Jiachen lead"
+hw_tested = "Tested on real hardware by Project Jiachen"
 
 [error]
 "404" = "Nothing lives at this address. Start again from one of the links below."

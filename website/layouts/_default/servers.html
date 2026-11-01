@@ -13,7 +13,7 @@
       <div class="card-top">
         <span class="rank">{{ add $i 1 }}</span>
         <h3>{{ $s.name }}</h3>
-        {{ if $s.verified }}<span class="badge verified">{{ i18n "badge.verified" }}</span>{{ end }}
+        {{ if $s.hw_tested }}<span class="badge verified">{{ i18n "badge.hw_tested" }}</span>{{ end }}
         {{ with $s.status }}<span class="badge soft">{{ i18n (printf "status.%s" .) }}</span>{{ end }}
       </div>
       <p>{{ $s.vendor }}{{ with $s.vendor_en }} · {{ . }}{{ end }}</p>

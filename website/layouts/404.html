@@ -4,6 +4,9 @@
     <h1>404</h1>
     <div class="sub">{{ i18n "error.404" }}</div>
   </header>
+</div>
+{{ partial "subscribe.html" . }}
+<div class="wrap">
   <div class="hero-actions">
     <a class="btn btn-primary" href="{{ "" | relLangURL }}">{{ i18n "label.home" }}</a>
     <a class="btn" href="{{ "servers/" | relLangURL }}">{{ i18n "nav.servers" }}</a>

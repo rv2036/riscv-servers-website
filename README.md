@@ -45,6 +45,28 @@ items:
 
 口径：数字必须是本站在真机上测出来的，写明环境、软件版本与原始数据出处；未经真机验证的数字不进这个栏目。
 
+## RSS 与订阅
+
+每个语言四份 feed，都从 `data/i18n/<lang>/*.yaml` 直接生成（不依赖 markdown 文章，所以加条目就自动进 feed）：
+
+| Feed | 内容 |
+| --- | --- |
+| `/index.xml`（en: `/en/index.xml`） | **全部更新**：新闻 + 数据合并，按日期倒序 |
+| `/news/index.xml` | 只要新闻 |
+| `/data/index.xml` | 只要真机实测的性能报告（现在是空的） |
+| `/blog/index.xml` | 博客文章 |
+
+- 条目上限 40，`guid` 是稳定标识且 `isPermaLink="false"`（新闻用 `news:<原文 URL>`、数据用 `data:<id>`），换标题不会让订阅端重复推送
+- `<link>` 指向原文（新闻）或报告全文（数据），`<pubDate>` 取条目自己的 `date`
+- 页面 `<head>` 里有 feed 发现链接：新闻页/数据页指向各自的 feed，其余页面回退到全站 feed
+- 模板是 `layouts/_default/rss.xml`；新闻页、数据页靠 front matter 的 `outputs: ["html", "rss"]` 开出 feed
+
+**邮件订阅**：每页 hero 下方都有一条订阅条（`layouts/partials/subscribe.html`），左边邮件表单、右边 RSS 入口。
+
+- 后端地址写在 `hugo.toml` 的 `[params] newsletter_endpoint`，**现在留空** → 输入框与按钮都是 `disabled`，并显示「后端尚未接入」的说明
+- 填入端点后表单自动变成可提交（`method="post"`，会带上 `email` 与 `lang` 两个字段），不需要改模板
+- 置灰态是自定义样式（`-webkit-appearance: none` + 显式配色），否则深色主题下浏览器默认底色会发白
+
 ## 站点结构
 
 ```

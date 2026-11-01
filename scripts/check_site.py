@@ -121,6 +121,69 @@ def main():
             errors.append(f"news.yaml({lang}) 有重复 URL: {sorted(dups)[:3]}")
     print("新闻数据: 重复 URL 检查完成")
 
+    # 5) RSS：feed 齐全、条目字段合法、guid 唯一且不可当链接
+    FEEDS = ["index.xml", "news/index.xml", "data/index.xml", "blog/index.xml"]
+    rss_missing = 0
+    feed_counts = {}
+    for lang in LANGS:
+        base = "" if lang == "zh" else lang + "/"
+        for feed in FEEDS:
+            path = os.path.join(PUB, base + feed)
+            if not os.path.isfile(path):
+                errors.append(f"缺 RSS: /{base}{feed}")
+                rss_missing += 1
+                continue
+            with open(path, encoding="utf-8", errors="ignore") as fh:
+                xml = fh.read()
+            items = re.findall(r"<item>(.*?)</item>", xml, re.S)
+            feed_counts[(lang, feed)] = len(items)
+            if len(items) > 40:
+                errors.append(f"/{base}{feed} 条目超过 40 条上限（{len(items)}）")
+            guids = re.findall(r"<guid[^>]*>(.*?)</guid>", xml, re.S)
+            if len(set(guids)) != len(guids):
+                errors.append(f"/{base}{feed} guid 有重复")
+            for it in items:
+                missing_tag = [t for t in ("title", "link", "guid", "pubDate", "description") if f"<{t}" not in it]
+                if missing_tag:
+                    errors.append(f"/{base}{feed} 条目缺 {missing_tag}")
+                    break
+                if 'isPermaLink="false"' not in it:
+                    errors.append(f"/{base}{feed} 条目 guid 缺 isPermaLink=false")
+                    break
+                m = re.search(r"<pubDate>(.*?)</pubDate>", it)
+                if m and not re.match(r"^[A-Z][a-z]{2}, \d{2} [A-Z][a-z]{2} \d{4} \d{2}:\d{2}:\d{2} [+-]\d{4}$",
+                                      m.group(1).strip()):
+                    errors.append(f"/{base}{feed} pubDate 格式异常: {m.group(1)[:40]}")
+                    break
+    # 新闻 feed 必须跟着 news.yaml 的条数（上限 40）
+    for lang in LANGS:
+        news_n = feed_counts.get((lang, "news/index.xml"), 0)
+        if news_n == 0:
+            errors.append(f"新闻 RSS 为空: /{' ' if lang == 'zh' else lang + '/'}news/index.xml")
+    zh_news = feed_counts.get(("zh", "news/index.xml"), 0)
+    zh_home = feed_counts.get(("zh", "index.xml"), 0)
+    if zh_home < zh_news:
+        errors.append(f"首页 RSS（{zh_home}）少于新闻 RSS（{zh_news}），合并逻辑有误")
+    print(f"RSS: 检查 {len(LANGS) * len(FEEDS)} 个 feed，缺失 {rss_missing} 个；"
+          f"首页/新闻/数据/博客条目数（zh）= "
+          f"{feed_counts.get(('zh','index.xml'),0)}/{feed_counts.get(('zh','news/index.xml'),0)}/"
+          f"{feed_counts.get(('zh','data/index.xml'),0)}/{feed_counts.get(('zh','blog/index.xml'),0)}")
+
+    # 6) 每个语言的首页、新闻页、数据页都要在 head 里给出 feed 发现链接
+    no_feed_link = 0
+    for lang in LANGS:
+        base = "" if lang == "zh" else lang + "/"
+        for page in ("", "news/", "data/"):
+            path = os.path.join(PUB, base, page, "index.html")
+            if not os.path.isfile(path):
+                continue
+            with open(path, encoding="utf-8", errors="ignore") as fh:
+                html = fh.read()
+            if "application/rss+xml" not in html:
+                errors.append(f"页面缺 feed 发现链接: /{base}{page}")
+                no_feed_link += 1
+    print(f"RSS 发现链接: 检查 {len(LANGS) * 3} 页，缺 {no_feed_link} 页")
+
     if errors:
         print("\n未通过：")
         for e in errors[:40]:

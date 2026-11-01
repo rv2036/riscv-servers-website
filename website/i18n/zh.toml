@@ -85,6 +85,23 @@ rack = "机柜级形态：整柜交付、按 POD 或集群组织，通常装多�
 empty_title = "暂无内容"
 empty_body = "这里将存放**经甲辰计划真机实测**的性能报告。每份报告发布前会写清测试环境、软件版本、测试方法与原始数据出处，不收录未经真机验证的数字。"
 
+[subscribe]
+title = "订阅更新"
+placeholder = "你的邮箱地址"
+button = "订阅"
+pending = "邮件订阅后端尚未接入，输入框暂时不可用。接好服务后这里会直接变成可提交。"
+rss = "RSS 订阅"
+rss_all = "全部更新"
+rss_news = "新闻"
+rss_data = "数据"
+rss_blog = "博客"
+
+[feed]
+all = "全部更新"
+news = "新闻"
+data = "数据"
+blog = "博客"
+
 [badge]
 hw_tested = "经甲辰计划真机实测"
 

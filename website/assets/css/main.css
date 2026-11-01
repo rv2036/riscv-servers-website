@@ -217,6 +217,60 @@ main { display: block; padding: 2.1rem 0 3.5rem; }
 
 .hero-actions { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.25rem; }
 
+/* 订阅条：hero 下方 —— 邮件订阅（后端未接入时置灰）+ RSS 入口 */
+.subscribe {
+  border-bottom: 1px solid var(--line-soft);
+  background: var(--bg-soft);
+  padding: .8rem 0;
+}
+
+.subscribe-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: .7rem 1.5rem;
+}
+
+.sub-form { display: flex; flex-wrap: wrap; align-items: center; gap: .45rem .6rem; }
+.sub-label { color: var(--fg-dim); font-size: .88rem; }
+.sub-row { display: flex; flex-wrap: wrap; gap: .5rem; }
+.sub-input {
+  min-width: 15rem;
+  padding: .45rem .7rem;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--fg);
+  font-size: .9rem;
+  font-family: inherit;
+}
+.sub-input::placeholder { color: var(--fg-mute); }
+/* 置灰态自己画：UA 对 disabled 控件的默认底色在深色主题下会发白，压不住品牌色 */
+.sub-input:disabled,
+.sub-btn:disabled {
+  background: var(--bg-soft);
+  color: var(--fg-mute);
+  border-color: var(--line);
+  -webkit-text-fill-color: var(--fg-mute);
+  opacity: .85;
+  cursor: not-allowed;
+}
+.sub-input,
+.sub-btn { -webkit-appearance: none; appearance: none; }
+.sub-btn { padding: .45rem .9rem; font-size: .9rem; }
+.sub-note { flex-basis: 100%; margin: .1rem 0 0; color: var(--fg-mute); font-size: .8rem; }
+
+.sub-rss { display: flex; align-items: center; flex-wrap: wrap; gap: .5rem; }
+.sub-rss-links { display: flex; flex-wrap: wrap; gap: .5rem .7rem; font-size: .88rem; }
+.sub-rss-links a { color: var(--fg-dim); }
+.sub-rss-links a:hover { color: var(--accent); }
+
+@media (max-width: 620px) {
+  .sub-input { min-width: 0; width: 100%; }
+  .sub-row { width: 100%; }
+}
+
 .btn {
   display: inline-flex;
   align-items: center;

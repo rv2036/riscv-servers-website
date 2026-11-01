@@ -9,6 +9,7 @@
     {{ with .Params.sub }}<div class="sub">{{ . }}</div>{{ end }}
   </div>
 </header>
+{{ partial "subscribe.html" . }}
 <div class="wrap">
   {{ range $key := slice "server" "rack" }}
   {{ $group := cond (eq $key "server") $systems $racks }}

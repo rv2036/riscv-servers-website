@@ -1,0 +1,25 @@
+{{- /* 订阅条：邮件订阅（后端接入前置灰）+ RSS 入口。放在各页 hero 下方。 */ -}}
+{{- $endpoint := site.Params.newsletter_endpoint -}}
+<aside class="subscribe" aria-label="{{ i18n "subscribe.title" }}">
+  <div class="wrap subscribe-inner">
+    <form class="sub-form"{{ with $endpoint }} action="{{ . }}" method="post"{{ else }} aria-disabled="true"{{ end }}>
+      <label class="sub-label" for="sub-email">{{ i18n "subscribe.title" }}</label>
+      <div class="sub-row">
+        <input class="sub-input" id="sub-email" name="email" type="email" inputmode="email"
+               autocomplete="email" placeholder="{{ i18n "subscribe.placeholder" }}"{{ if not $endpoint }} disabled{{ end }}>
+        <input type="hidden" name="lang" value="{{ .Language.Lang }}">
+        <button class="btn btn-primary sub-btn" type="submit"{{ if not $endpoint }} disabled{{ end }}>{{ i18n "subscribe.button" }}</button>
+      </div>
+      {{ if not $endpoint }}<p class="sub-note">{{ i18n "subscribe.pending" }}</p>{{ end }}
+    </form>
+    <div class="sub-rss">
+      <span class="sub-label">{{ i18n "subscribe.rss" }}</span>
+      <div class="sub-rss-links">
+        <a href="{{ "index.xml" | relLangURL }}">{{ i18n "subscribe.rss_all" }}</a>
+        <a href="{{ "news/index.xml" | relLangURL }}">{{ i18n "subscribe.rss_news" }}</a>
+        <a href="{{ "data/index.xml" | relLangURL }}">{{ i18n "subscribe.rss_data" }}</a>
+        <a href="{{ "blog/index.xml" | relLangURL }}">{{ i18n "subscribe.rss_blog" }}</a>
+      </div>
+    </div>
+  </div>
+</aside>

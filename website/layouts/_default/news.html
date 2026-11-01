@@ -6,6 +6,7 @@
     {{ with .Params.sub }}<div class="sub">{{ . }}</div>{{ end }}
   </div>
 </header>
+{{ partial "subscribe.html" . }}
 <div class="wrap">
   {{- $lastYear := "" }}
   {{- range $i, $n := $d.news.items }}

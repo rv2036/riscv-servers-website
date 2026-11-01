@@ -1,0 +1,96 @@
+{{- /* RSS：新闻页出新闻条目、数据页出实测数据条目、首页出两者合并倒序、博客出文章列表。 */ -}}
+{{- $d := partial "site-data.html" . -}}
+{{- $kindOfFeed := "all" -}}
+{{- if eq .Section "blog" -}}
+  {{- $kindOfFeed = "blog" -}}
+{{- else -}}
+  {{- with .File -}}
+    {{- if eq .BaseFileName "news" -}}{{ $kindOfFeed = "news" }}
+    {{- else if eq .BaseFileName "data" -}}{{ $kindOfFeed = "data" }}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $items := slice -}}
+{{- if or (eq $kindOfFeed "news") (eq $kindOfFeed "all") -}}
+  {{- range $d.news.items -}}
+    {{- $n := . -}}
+    {{- $desc := $n.summary | default "" -}}
+    {{- with $n.source -}}{{- $desc = printf "%s（%s）" $desc . -}}{{- end -}}
+    {{- $items = $items | append (dict
+          "kind" "news"
+          "date" ($n.date | default "1970-01-01")
+          "title" $n.title
+          "link" $n.url
+          "desc" $desc
+          "cats" ($n.tags | default slice)
+          "guid" (printf "news:%s" $n.url)) -}}
+  {{- end -}}
+{{- end -}}
+{{- if or (eq $kindOfFeed "data") (eq $kindOfFeed "all") -}}
+  {{- range $d.data.items -}}
+    {{- $x := . -}}
+    {{- $desc := $x.subject | default "" -}}
+    {{- with $x.metrics -}}
+      {{- $m := slice -}}
+      {{- range . -}}{{- $m = $m | append (printf "%s %s" .label .value) -}}{{- end -}}
+      {{- $desc = printf "%s ｜ %s" $desc (delimit $m "；") -}}
+    {{- end -}}
+    {{- with $x.method -}}{{- $desc = printf "%s ｜ %s" $desc . -}}{{- end -}}
+    {{- $link := $.Permalink -}}
+    {{- with $x.urls -}}{{- $link = (index . 0).url -}}{{- end -}}
+    {{- $items = $items | append (dict
+          "kind" "data"
+          "date" ($x.date | default "1970-01-01")
+          "title" $x.title
+          "link" $link
+          "desc" $desc
+          "cats" (slice (i18n "nav.data"))
+          "guid" (printf "data:%s" ($x.id | default $x.title))) -}}
+  {{- end -}}
+{{- end -}}
+{{- if eq $kindOfFeed "blog" -}}
+  {{- range .RegularPages -}}
+    {{- $p := . -}}
+    {{- $items = $items | append (dict
+          "kind" "blog"
+          "date" ($p.Date.Format "2006-01-02")
+          "title" $p.Title
+          "link" $p.Permalink
+          "desc" ($p.Summary | plainify | default "")
+          "cats" ($p.Params.tags | default slice)
+          "guid" $p.Permalink) -}}
+  {{- end -}}
+{{- end -}}
+{{- $items = sort $items "date" "desc" -}}
+{{- $feedName := i18n "feed.all" -}}
+{{- if eq $kindOfFeed "news" -}}{{ $feedName = i18n "feed.news" }}
+{{- else if eq $kindOfFeed "data" -}}{{ $feedName = i18n "feed.data" }}
+{{- else if eq $kindOfFeed "blog" -}}{{ $feedName = i18n "feed.blog" }}
+{{- end -}}
+{{- $channelTitle := printf "%s — %s" site.Title $feedName -}}
+{{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ $channelTitle }}</title>
+    <link>{{ .Permalink }}</link>
+    <description>{{ with .Params.sub }}{{ . }}{{ else }}{{ site.Params.description | default site.Title }}{{ end }}</description>
+    <language>{{ .Language.LanguageCode | default .Language.Lang }}</language>
+    <lastBuildDate>{{ now.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</lastBuildDate>
+    <generator>Hugo</generator>
+    {{- with .OutputFormats.Get "rss" }}
+    <atom:link href="{{ .Permalink }}" rel="self" type="application/rss+xml"/>
+    {{- end }}
+    {{- range first 40 $items }}
+    <item>
+      <title>{{ .title }}</title>
+      <link>{{ .link }}</link>
+      <guid isPermaLink="false">{{ .guid }}</guid>
+      <pubDate>{{ (time.AsTime (default "1970-01-01" .date)).Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
+      <description>{{ .desc }}</description>
+      {{- range .cats }}
+      <category>{{ . }}</category>
+      {{- end }}
+    </item>
+    {{- end }}
+  </channel>
+</rss>

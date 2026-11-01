@@ -85,6 +85,23 @@ rack = "Rack-scale products: delivered as a whole cabinet and organised as a POD
 empty_title = "Nothing published yet"
 empty_body = "This section will hold performance reports measured by Project Jiachen on real hardware. Each report will state the test environment, software versions, method and the source of the raw data; numbers that were not measured on hardware are not accepted here."
 
+[subscribe]
+title = "Subscribe for updates"
+placeholder = "Your email address"
+button = "Subscribe"
+pending = "The mailing-list backend is not connected yet, so this field is disabled. Once it is, this form will submit directly."
+rss = "RSS feeds"
+rss_all = "All updates"
+rss_news = "News"
+rss_data = "Data"
+rss_blog = "Blog"
+
+[feed]
+all = "All updates"
+news = "News"
+data = "Data"
+blog = "Blog"
+
 [badge]
 hw_tested = "Tested on real hardware by Project Jiachen"
 

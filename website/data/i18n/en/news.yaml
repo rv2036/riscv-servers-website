@@ -1,5 +1,45 @@
 # RISC-V server news (English edition, newest first)
 items:
+  - date: "2026-10-21"
+    title: "Lanxin Computing unveils Zhitong fusion supernode, taking LX500 from single systems to clusters"
+    summary: "At the 2026 RISC-V China Summit, Lanxin Computing launched a Zhitong fusion supernode, extending its LX500-based RISC-V AI compute from a single chip and server to cluster-level infrastructure. LX500 integrates 48 RISC-V cores (32 performance, 16 efficiency) with AI vector and matrix engines for 75 TOPS INT8, shares DDR5 through a unified memory architecture and supports CXL, tuned for time-to-first-token, prefill and long-context inference. The lineup now spans the LX500 chip, the Lenovo Wentian WR5219 G5 server, the LX5000 all-in-one and the supernode, and the company says Qwen, DeepSeek and Kimi models are already adapted — RISC-V servers are starting to ship as a full chip-system-cluster stack."
+    source: "Shanghai Observer / Eastmoney"
+    url: "https://wap.eastmoney.com/a/202610213903006416.html"
+    vendors: ["Lanxin Computing"]
+    tags: ["Systems & boards", "HPC"]
+    importance: "high"
+  - date: "2026-10-20"
+    title: "UltraRISC details UR-CP400: an RVA23 server-class core IP shipping in Q1 2027"
+    summary: "At the 2026 RISC-V China Summit, UltraRISC disclosed UR-CP400, a high-performance RISC-V core IP compliant with RVA23 and RVV 1.0, using an 8-wide out-of-order, 14-stage pipeline and exceeding 22 SPECint_base2006 points/GHz in FPGA configuration, with enhancements for multi-tenant cloud virtualization and agentic workloads; delivery is planned for Q1 2027. UltraRISC offers both core IP and multi-core CPUs, and UR-CP400's figures approach first-tier server cores, but commercial silicon is still a year out."
+    source: "ITHome / Phoenix Tech"
+    url: "https://tech.ifeng.com/c/8xNZKmD2pZD"
+    vendors: ["UltraRISC"]
+    tags: ["Chip launch"]
+    importance: "medium"
+  - date: "2026-10-20"
+    title: "Alibaba DAMO Academy's XuanTie passes 6 billion shipped chips, positions C950 for data-center compute"
+    summary: "At the 2026 RISC-V China Summit, DAMO Academy chief scientist Meng Jianyi reported that cumulative XuanTie RISC-V shipments have passed 6 billion units, that the server-class C950 core is based on RVA23 and exceeds 70 SPECint2006 points per core, and outlined a processor roadmap aimed at autonomous driving and embodied AI. DAMO stressed hardware-software co-design to move products from usable to mass-producible. For the server market, C950 is one of the few Chinese RISC-V core IPs explicitly aimed at general-purpose data-center compute, and the shipment scale shows the XuanTie ecosystem can support high-end products."
+    source: "ICSmart / Tencent News"
+    url: "https://news.qq.com/rain/a/20261020A05R3V00"
+    vendors: ["Alibaba DAMO Academy", "XuanTie"]
+    tags: ["Ecosystem partnerships", "HPC"]
+    importance: "medium"
+  - date: "2026-10-19"
+    title: "ZTE Microelectronics' Lirui Micro shows Zhufeng 200, a RISC-V CPU for AI data centers"
+    summary: "At the 2026 RISC-V China Summit, Lirui Micro, a subsidiary of ZTE Microelectronics, showed Zhufeng 200, a high-performance RISC-V CPU for AI data centers. The chip is based on RVA23 with Hypervisor, AIA, CoVE and RVV 1.0 support, uses a 64-bit superscalar out-of-order architecture, integrates vector/matrix plus compression and crypto engines, and supports DDR5 (including MRDIMM), PCIe 6.0 and CXL 3. It targets agent clusters, inference supernode host CPUs and enterprise hybrid inference; the company says it can run 100-billion-parameter MoE models, with detailed specifications due by the end of 2026. It is the first time a carrier-affiliated Chinese chip company has positioned RISC-V explicitly as a data-center host CPU."
+    source: "ICSmart / Tencent News"
+    url: "https://news.qq.com/rain/a/20261019A09YLY00"
+    vendors: ["ZTE Microelectronics", "Lirui Micro"]
+    tags: ["Chip launch"]
+    importance: "high"
+  - date: "2026-10-19"
+    title: "Tenstorrent closes $1.5B Series E at a $6.2B valuation"
+    summary: "Tenstorrent closed a $1.5 billion Series E at a $6.2 billion post-money valuation, led by Trace Capital and Innovation X with participation from ARK Invest, Fidelity, Morgan Stanley, Sandisk and Tether Investments, among others. The company says the capital will fund volume deployment of Galaxy servers, expand inference services for open-weight models, and advance the AI and CPU IP it licenses. Tenstorrent pairs RISC-V CPUs (TT-Ascalon) with in-house Tensix AI cores across a stack that runs from a single card to superclusters, and the round adds manufacturing and delivery capacity to its data-center competition with NVIDIA."
+    source: "Tenstorrent"
+    url: "https://tenstorrent.com/en/newsroom/tenstorrent-announces-series-e"
+    vendors: ["Tenstorrent"]
+    tags: ["M&A and investment"]
+    importance: "high"
   - date: "2026-10-22"
     title: "Qualcomm acquires RISC-V startup Akeana, stepping up its AI and data-center chip push"
     summary: "Qualcomm has completed its acquisition of RISC-V processor design company Akeana; the deal value was not disclosed, and Akeana's IP and engineering team moved into Qualcomm wholesale to strengthen its AI and data-center position. Akeana was founded in 2021 by a team that had worked on server chips at Marvell, raised more than $100 million in August 2024, and focuses on customer-customizable RISC-V cores. It is the second time Qualcomm has taken a data-center-class RISC-V asset in-house, after Ventana."

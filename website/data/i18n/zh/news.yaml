@@ -1,5 +1,45 @@
 # RISC-V 服务器新闻（中文母版，按日期倒序）
 items:
+  - date: "2026-10-21"
+    title: "蓝芯算力发布智通融合超节点，LX500 从单机走向集群"
+    summary: "蓝芯算力在 2026 RISC-V 中国峰会上发布“智通融合超节点”，把基于 LX500 的 RISC-V AI 算力从单芯片、服务器延伸到集群级基础设施。LX500 集成 48 个 RISC-V 核（32 性能核 + 16 能效核）与 AI Vector/Matrix 引擎，INT8 算力 75 TOPS，以统一内存架构共享 DDR5 并支持 CXL，针对首 Token 延迟、Prefill 和长上下文推理优化；产品线已形成 LX500 芯片、联想问天 WR5219 G5 服务器、LX5000 一体机与超节点四层。官方称已适配 Qwen、DeepSeek、Kimi 等模型，RISC-V 服务器由此开始按“芯片—整机—集群”的完整形态交付。"
+    source: "上观新闻 / 东方财富"
+    url: "https://wap.eastmoney.com/a/202610213903006416.html"
+    vendors: ["Lanxin Computing"]
+    tags: ["整机与主板", "HPC"]
+    importance: "high"
+  - date: "2026-10-20"
+    title: "超睿科技公布 UR-CP400：RVA23 服务器级核 IP，2027 年一季度交付"
+    summary: "超睿科技在 2026 RISC-V 中国峰会上公布高性能处理器核 UR-CP400：符合 RVA23、支持 RVV 1.0，采用乱序 8 发射、14 级流水线，FPGA 仿真配置下 SPECint_base2006 超过 22 分/GHz，并针对多层云虚拟化与 Agent 类负载做了增强，IP 计划 2027 年第一季度交付。超睿同时提供核 IP 与多核 CPU，UR-CP400 的指标已接近国际一线服务器核，但商用芯片落地仍要等到 2027 年。"
+    source: "IT之家 / 凤凰网科技"
+    url: "https://tech.ifeng.com/c/8xNZKmD2pZD"
+    vendors: ["UltraRISC"]
+    tags: ["芯片发布"]
+    importance: "medium"
+  - date: "2026-10-20"
+    title: "达摩院玄铁累计出货超 60 亿颗，C950 对标数据中心通用计算"
+    summary: "在 2026 RISC-V 中国峰会上，达摩院首席科学家孟建熠介绍玄铁 RISC-V 处理器进展：玄铁系列累计出货已超过 60 亿颗，服务器级 C950 基于 RVA23、单核 SPECint2006 突破 70 分，并公布面向自动驾驶与具身智能的处理器路线图。达摩院强调以软硬协同把产品从“可用”推到“可量产”。对服务器市场而言，C950 是国内少数明确对标数据中心通用计算的 RISC-V 核 IP，60 亿颗的出货规模也说明玄铁生态具备支撑高端产品的产业基础。"
+    source: "芯智讯 / 腾讯新闻"
+    url: "https://news.qq.com/rain/a/20261020A05R3V00"
+    vendors: ["Alibaba DAMO Academy", "XuanTie"]
+    tags: ["生态合作", "HPC"]
+    importance: "medium"
+  - date: "2026-10-19"
+    title: "中兴微旗下砺睿微首秀“珠峰200”：面向智算中心的 RISC-V CPU"
+    summary: "在 2026 RISC-V 中国峰会上，中兴微电子旗下砺睿微首次对外展示面向智算中心的高性能 RISC-V CPU“珠峰200”。芯片基于 RVA23，支持 Hypervisor、AIA、CoVE 与 RVV 1.0，采用 64 位超标量乱序架构，集成 Vector/Matrix 及压缩、加密加速引擎，支持 DDR5（含 MRDIMM）、PCIe 6.0 与 CXL 3，定位 Agent 集群、推理超节点 Host 与企业级混合推理三类场景。官方称可运行千亿级 MoE 模型，详细规格将于 2026 年底发布，这是国内运营商系芯片公司首次把 RISC-V 明确放在智算中心 Host CPU 的位置。"
+    source: "芯智讯 / 腾讯新闻"
+    url: "https://news.qq.com/rain/a/20261019A09YLY00"
+    vendors: ["ZTE Microelectronics", "Lirui Micro"]
+    tags: ["芯片发布"]
+    importance: "high"
+  - date: "2026-10-19"
+    title: "Tenstorrent 完成 15 亿美元 E 轮融资，估值 62 亿美元"
+    summary: "Tenstorrent 完成 15 亿美元 E 轮融资，投后估值 62 亿美元，由 Trace Capital 与 Innovation X 领投，ARK Invest、Fidelity、Morgan Stanley、Sandisk、Tether Investments 等参与。公司称资金将用于规模化部署 Galaxy 服务器、扩大开放权重模型的推理服务，并继续推进对外授权的 AI 与 CPU IP。Tenstorrent 以 RISC-V CPU（TT-Ascalon）加自研 Tensix AI 核构建从单卡到超节点的整栈产品，此轮融资为其与 NVIDIA 在数据中心竞争补充了产能与交付能力。"
+    source: "Tenstorrent"
+    url: "https://tenstorrent.com/en/newsroom/tenstorrent-announces-series-e"
+    vendors: ["Tenstorrent"]
+    tags: ["并购与投资"]
+    importance: "high"
   - date: "2026-10-22"
     title: "高通收购 RISC-V 初创 Akeana，加码 AI 与数据中心芯片"
     summary: "高通已完成对 RISC-V 处理器设计公司 Akeana 的收购，交易金额未披露，Akeana 的 IP 与工程团队整体并入高通，用于强化 AI 与数据中心布局。Akeana 2021 年由曾在 Marvell 做服务器芯片的团队创立，2024 年 8 月融资逾 1 亿美元，主打可按客户定制的 RISC-V 核。这是高通在收购 Ventana 之后，第二次把数据中心级 RISC-V 资产收入囊中。"

@@ -1,5 +1,29 @@
 # RISC-V 서버 뉴스(한국어판, 중국어 원본 대응, 날짜 내림차순)
 items:
+  - date: "2026-10-29"
+    title: "세미다이내믹스·노키아, RISC-V 추론 랙을 데이터센터 네트워크에 연결하는 MoU 체결"
+    summary: "스페인 세미다이내믹스(Semidynamics)와 노키아가 RISC-V 기반 AI 추론 가속기와 액체냉각 랙을 노키아의 데이터센터 패브릭(Data Center Fabric) 네트워크와 결합하는 방안을 검토하는 양해각서(MoU)를 체결했습니다. 유럽의 소버린 AI 인프라가 대상이며, 양사는 평가와 테스트, 검증을 거쳐 필요하면 통합을 진행하고 세미다이내믹스는 자사 추론 랙에 노키아 네트워크 기술을 적용하는 것도 검토합니다. 메모리 중심의 RISC-V 추론 플랫폼을 개발 중인 회사가 칩과 가속기에서 추론 랙과 데이터센터 패브릭을 아우르는 전체 스택 공급으로 나아가는 행보로, 개방형 아키텍처 AI 인프라를 둘러싼 유럽 업체들의 연합입니다."
+    source: "Semidynamics"
+    url: "https://semidynamics.com/newsroom/press-releases/post/semidynamics-and-nokia-explore-collaboration-to-strengthen-europe-s-sovereign-ai-capabilities"
+    vendors: ["Semidynamics", "Nokia"]
+    tags: ["생태계 협력", "완제품·메인보드"]
+    importance: "medium"
+  - date: "2026-10-23"
+    title: "랑신컴퓨팅, RISC-V 서버 생태계 심수구 진입…마지막 1~5%가 관건"
+    summary: "랑신컴퓨팅(Lanxin Computing) 생태계 마케팅 책임자 쉬칭웨이는 21세기경제보도와의 인터뷰에서 RISC-V가 인정받은 것과 생태계가 성숙한 것은 다르다고 말했습니다. 서버급 칩이 데이터센터에 들어가려면 중국산 대형 모델과 운영체제, 산업용 소프트웨어에 맞춰야 하며, 산업 솔루션의 90~95%는 범용이지만 금융에 어떤 데이터베이스와 미들웨어가, 산업 현장에 어떤 툴체인이 필요한지와 같은 마지막 1~5%는 실제 고객이 있어야 풀린다는 설명입니다. 회사는 48코어, INT8 75 TOPS, 통합 메모리 최대 2TB의 LX500과 레노버 원티엔 WR5219 G5를 양산했고, 서밋에서 랙당 최대 64개 GPU, 최대 128카드 확장, 60Tbps 이상 메모리 대역폭, 100나노초급 P2P 지연, 32카드까지 하위 호환하는 지통 융합 슈퍼노드를 발표했습니다. 2028년 4~5개 업체가 시장을 키우고, 2030년 생태계가 초기 형성되며, 2035년 기본적인 사용성이 확보된다는 세 시점을 제시했고 2세대 칩은 2027년 상반기 테이프아웃 예정입니다."
+    source: "21세기경제보도"
+    url: "https://www.21jingji.com/article/20261023/herald/0559d4f95f72b1c594f563f5dc462a0f.html"
+    vendors: ["Lanxin Computing"]
+    tags: ["생태계 협력", "HPC"]
+    importance: "high"
+  - date: "2026-10-22"
+    title: "SiFive, RISC-V 기회는 CPU·GPU만이 아니라 NIC·리타이머·광모듈·스위치에도"
+    summary: "SiFive는 데이터센터 인프라 블로그에서 AI 클러스터가 1.6T 인터커넥트로 가면서 병목이 비연산 부품으로 옮겨간다고 짚었습니다. NIC와 슈퍼NIC, 리타이머, 광모듈과 CPO, 스케일업·스케일아웃 스위치, BMC와 신뢰 루트에는 맞춤형 RISC-V 코어가 필요하며 Essential은 레이저 바이어스와 리타이머 펌웨어, 폐루프 온도 제어 같은 실시간 제어를, Intelligence는 가속기 제어 장치(ACU)를, Performance는 Linux급 관리 평면을 맡습니다. 800G 광모듈의 전력 예산이 약 8~18W라는 점과 UALink 2.0이 네트워크 내 연산과 gNMI, YANG, SAI, Redfish 관리 모델을 요구한다는 점을 들어 RISC-V의 서버 기회가 호스트 CPU 하나에 그치지 않음을 보여줍니다."
+    source: "SiFive"
+    url: "https://www.sifive.com/blog/beyond-cpu-gpu-sifive-in-datacenter-infrastructure"
+    vendors: ["SiFive"]
+    tags: ["표준·규격", "HPC"]
+    importance: "medium"
   - date: "2026-10-21"
     title: "랑신컴퓨팅, 지통 융합 슈퍼노드 공개…LX500 단일 시스템에서 클러스터로"
     summary: "2026 RISC-V 중국 서밋에서 랑신컴퓨팅(Lanxin Computing)이 '지통 융합' 슈퍼노드를 발표하며 LX500 기반 RISC-V AI 연산을 단일 칩·단일 서버에서 클러스터급 인프라로 확장했습니다. LX500은 RISC-V 코어 48개(성능 코어 32개, 에너지 효율 코어 16개)와 AI Vector/Matrix 엔진을 통합해 INT8 75 TOPS를 제공하며, 통합 메모리 구조로 DDR5를 공유하고 CXL을 지원합니다. 첫 토큰 지연, Prefill, 장문 컨텍스트 추론에 최적화했고 제품군은 LX500 칩, 레노버 원티엔 WR5219 G5 서버, LX5000 일체형, 슈퍼노드로 구성됩니다. 회사는 Qwen, DeepSeek, Kimi 등 모델 적응을 마쳤다고 밝혔으며, RISC-V 서버가 '칩-시스템-클러스터' 완전한 형태로 공급되기 시작했음을 보여줍니다."

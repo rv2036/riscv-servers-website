@@ -1,5 +1,29 @@
 # RISC-V 服务器新闻（中文母版，按日期倒序）
 items:
+  - date: "2026-10-29"
+    title: "Semidynamics 与诺基亚签 MoU，把 RISC-V 推理机柜接入数据中心网络"
+    summary: "西班牙 Semidynamics 与诺基亚签署谅解备忘录，评估把其基于 RISC-V 的 AI 推理加速器与液冷机柜，接入诺基亚 Data Center Fabric 数据中心网络方案，面向欧洲主权 AI 基础设施。双方将开展评估、测试、验证并按需集成，Semidynamics 也会评估诺基亚网络技术用于自家推理机柜；其正在开发以内存为中心的 RISC-V 推理平台。合作把 RISC-V 从芯片与加速器延伸到推理机柜加数据中心网络的整栈交付，是欧洲厂商围绕开放架构 AI 基础设施的一次联合。"
+    source: "Semidynamics"
+    url: "https://semidynamics.com/newsroom/press-releases/post/semidynamics-and-nokia-explore-collaboration-to-strengthen-europe-s-sovereign-ai-capabilities"
+    vendors: ["Semidynamics", "Nokia"]
+    tags: ["生态合作", "整机与主板"]
+    importance: "medium"
+  - date: "2026-10-23"
+    title: "蓝芯算力：RISC-V 服务器进入生态深水区，卡点在最后 1% 到 5%"
+    summary: "蓝芯算力生态营销负责人许庆伟对 21 世纪经济报道表示，RISC-V 架构被认可不等于生态成熟：服务器级大芯片要进机房，必须同时对接国产大模型、操作系统和行业软件，一套行业方案里 90% 到 95% 是通用部分，真正卡住的是最后 1% 到 5%，例如金融要适配哪些数据库与中间件、工业要适配哪些工具链，只能靠真实客户牵引。蓝芯已量产 48 核、75 TOPS INT8、统一内存最高 2TB 的 LX500 与联想问天 WR5219 G5 整机，并在峰会上发布智通融合超节点：单机柜可部署 64 张 GPU、最高 128 卡互联、访存带宽超过 60Tbps、百纳秒级 P2P 时延，向下兼容 32 卡。公司给出 2028 年四五家同类玩家共同做大蛋糕、2030 年生态初步建立、2035 年达到基础好用的三段时间表，第二代芯片计划 2027 年上半年流片。"
+    source: "21世纪经济报道"
+    url: "https://www.21jingji.com/article/20261023/herald/0559d4f95f72b1c594f563f5dc462a0f.html"
+    vendors: ["Lanxin Computing"]
+    tags: ["生态合作", "HPC"]
+    importance: "high"
+  - date: "2026-10-22"
+    title: "SiFive：RISC-V 的增量不只在 CPU 和 GPU，还在网卡、retimer、光模块与交换机"
+    summary: "SiFive 发布数据中心基础设施技术博客，指出 AI 集群向 1.6T 互联演进时，瓶颈正落到网卡与 SuperNIC、retimer、光模块与 CPO、Scale-up 与 Scale-out 交换机、BMC 与信任根等非计算环节，这些位置需要可定制的 RISC-V 核：Essential 系列做实时控制，例如激光偏置、retimer 固件与闭环温控；Intelligence 系列作为加速器控制单元 ACU；Performance 系列承担 Linux 级管理面。文中给出 800G 光模块约 8 到 18W 的功耗预算，并提到 UALink 2.0 引入在网计算、要求 gNMI、YANG、SAI 与 Redfish 管理模型，说明 RISC-V 在服务器里的机会不止一颗主 CPU。"
+    source: "SiFive"
+    url: "https://www.sifive.com/blog/beyond-cpu-gpu-sifive-in-datacenter-infrastructure"
+    vendors: ["SiFive"]
+    tags: ["标准与规范", "HPC"]
+    importance: "medium"
   - date: "2026-10-21"
     title: "蓝芯算力发布智通融合超节点，LX500 从单机走向集群"
     summary: "蓝芯算力在 2026 RISC-V 中国峰会上发布“智通融合超节点”，把基于 LX500 的 RISC-V AI 算力从单芯片、服务器延伸到集群级基础设施。LX500 集成 48 个 RISC-V 核（32 性能核 + 16 能效核）与 AI Vector/Matrix 引擎，INT8 算力 75 TOPS，以统一内存架构共享 DDR5 并支持 CXL，针对首 Token 延迟、Prefill 和长上下文推理优化；产品线已形成 LX500 芯片、联想问天 WR5219 G5 服务器、LX5000 一体机与超节点四层。官方称已适配 Qwen、DeepSeek、Kimi 等模型，RISC-V 服务器由此开始按“芯片—整机—集群”的完整形态交付。"

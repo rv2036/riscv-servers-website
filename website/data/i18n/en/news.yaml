@@ -1,5 +1,29 @@
 # RISC-V server news (English edition, newest first)
 items:
+  - date: "2026-10-29"
+    title: "Semidynamics and Nokia sign MoU to plug RISC-V inference racks into data center networking"
+    summary: "Spain's Semidynamics and Nokia have signed a memorandum of understanding to explore combining Semidynamics' RISC-V-based AI inference accelerators and liquid-cooled racks with Nokia's Data Center Fabric networking, aimed at Europe's sovereign AI infrastructure. The companies will assess, test, validate and, where appropriate, integrate the technologies, and Semidynamics will evaluate Nokia's networking for its own inference racks while it develops a memory-centric RISC-V inference platform. The deal extends RISC-V from chips and accelerators to a full rack-plus-fabric delivery and marks a European alliance around open-architecture AI infrastructure."
+    source: "Semidynamics"
+    url: "https://semidynamics.com/newsroom/press-releases/post/semidynamics-and-nokia-explore-collaboration-to-strengthen-europe-s-sovereign-ai-capabilities"
+    vendors: ["Semidynamics", "Nokia"]
+    tags: ["Ecosystem partnerships", "Systems & boards"]
+    importance: "medium"
+  - date: "2026-10-23"
+    title: "Lanxin Computing: RISC-V servers reach the ecosystem deep water, where the last 1% to 5% decides"
+    summary: "Lanxin Computing ecosystem marketing lead Xu Qingwei told 21st Century Business Herald that RISC-V being accepted does not mean its ecosystem is mature: a server-class chip entering a machine room must be adapted to domestic LLMs, operating systems and industry software, and while 90% to 95% of an industry solution is generic, the last 1% to 5% — which databases and middleware for finance, which toolchains for industrial sites — is only unlocked by real customers. Lanxin already ships the 48-core, 75 TOPS INT8 LX500 with up to 2TB of unified memory and the Lenovo Wentian WR5219 G5 server, and at the summit launched a Zhitong fusion supernode that puts up to 64 GPUs in a rack, scales to 128 cards, offers more than 60Tbps of aggregate memory bandwidth and 100-nanosecond-level P2P latency, and steps down to 32 cards. The company laid out 2028, 2030 and 2035 milestones for a four-to-five-player market, an initial ecosystem and basic usability, with a second-generation chip due to tape out in the first half of 2027."
+    source: "21st Century Business Herald"
+    url: "https://www.21jingji.com/article/20261023/herald/0559d4f95f72b1c594f563f5dc462a0f.html"
+    vendors: ["Lanxin Computing"]
+    tags: ["Ecosystem partnerships", "HPC"]
+    importance: "high"
+  - date: "2026-10-22"
+    title: "SiFive: RISC-V growth is not only in CPUs and GPUs but in NICs, retimers, optics and switches"
+    summary: "In a data center infrastructure blog post, SiFive argues that as AI clusters move to 1.6T interconnect the bottlenecks land on non-compute parts — NICs and SuperNICs, retimers, optical modules and CPO, scale-up and scale-out switches, BMCs and roots of trust — each needing a configurable RISC-V core: Essential for real-time control such as laser bias, retimer firmware and closed-loop thermal tuning, Intelligence as an accelerator control unit, and Performance for Linux-class management planes. It cites an 8-18W power budget for 800G optical modules and notes that UALink 2.0 adds in-network compute with gNMI, YANG, SAI and Redfish management, showing that the RISC-V server opportunity goes well beyond one host CPU."
+    source: "SiFive"
+    url: "https://www.sifive.com/blog/beyond-cpu-gpu-sifive-in-datacenter-infrastructure"
+    vendors: ["SiFive"]
+    tags: ["Standards & specs", "HPC"]
+    importance: "medium"
   - date: "2026-10-21"
     title: "Lanxin Computing unveils Zhitong fusion supernode, taking LX500 from single systems to clusters"
     summary: "At the 2026 RISC-V China Summit, Lanxin Computing launched a Zhitong fusion supernode, extending its LX500-based RISC-V AI compute from a single chip and server to cluster-level infrastructure. LX500 integrates 48 RISC-V cores (32 performance, 16 efficiency) with AI vector and matrix engines for 75 TOPS INT8, shares DDR5 through a unified memory architecture and supports CXL, tuned for time-to-first-token, prefill and long-context inference. The lineup now spans the LX500 chip, the Lenovo Wentian WR5219 G5 server, the LX5000 all-in-one and the supernode, and the company says Qwen, DeepSeek and Kimi models are already adapted — RISC-V servers are starting to ship as a full chip-system-cluster stack."

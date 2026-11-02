@@ -1,5 +1,29 @@
 # RISC-V サーバーニュース（日本語版、日付の新しい順）
 items:
+  - date: "2026-10-29"
+    title: "Semidynamics とノキアが MoU、RISC-V 推論ラックをデータセンター網に接続へ"
+    summary: "スペインの Semidynamics とノキアは、Semidynamics の RISC-V ベース AI 推論アクセラレーターと液冷ラックを、ノキアの Data Center Fabric ネットワークへ接続する可能性を検討する覚書（MoU）を締結した。欧州のソブリン AI 基盤が対象で、両社は評価・試験・検証を行い、必要に応じて統合を進める。Semidynamics は自社の推論ラックにノキアのネットワーク技術を採り入れることも検討し、メモリ中心の RISC-V 推論プラットフォームを開発している。チップやアクセラレーターから「推論ラック＋データセンターファブリック」のフルスタック提供へと踏み出す動きで、オープンアーキテクチャの AI 基盤を巡る欧州勢の連携となる。"
+    source: "Semidynamics"
+    url: "https://semidynamics.com/newsroom/press-releases/post/semidynamics-and-nokia-explore-collaboration-to-strengthen-europe-s-sovereign-ai-capabilities"
+    vendors: ["Semidynamics", "Nokia"]
+    tags: ["エコシステム連携", "システム・マザーボード"]
+    importance: "medium"
+  - date: "2026-10-23"
+    title: "藍芯算力、RISC-V サーバーは「エコシステムの深水区」へ—最後の 1〜5% が壁"
+    summary: "藍芯算力（Lanxin Computing）のエコシステム担当、許慶偉氏は 21 世紀経済報道の取材に対し、RISC-V が認められたからといってエコシステムが成熟したわけではないと述べた。サーバー級チップがデータセンターに入るには、国内の大規模モデル、OS、業界ソフトとの適合が欠かせず、業界ソリューションの 90〜95% は汎用部分で、金融ならどのデータベースやミドルウェア、産業ならどのツールチェーンという最後の 1〜5% は実顧客の引き込みでしか埋まらないという。同社は 48 コア、INT8 75 TOPS、統合メモリ最大 2TB の LX500 と Lenovo 問天 WR5219 G5 を量産し、サミットでは 1 ラック最大 64 GPU・128 カードまで拡張、メモリ帯域 60Tbps 超、100 ナノ秒級 P2P 遅延、32 カードまで下位互換の「智通融合」スーパーノードを発表した。2028 年に 4〜5 社で市場を育て、2030 年にエコシステムが初期成立、2035 年に基礎的な使いやすさに達するという三つの節目を示し、第 2 世代チップは 2027 年前半のテープアウトを予定する。"
+    source: "21世紀経済報道"
+    url: "https://www.21jingji.com/article/20261023/herald/0559d4f95f72b1c594f563f5dc462a0f.html"
+    vendors: ["Lanxin Computing"]
+    tags: ["エコシステム連携", "HPC"]
+    importance: "high"
+  - date: "2026-10-22"
+    title: "SiFive、RISC-V の伸びは CPU と GPU だけでなく NIC、リタイマー、光モジュール、スイッチにも"
+    summary: "SiFive はデータセンター基盤に関するブログで、AI クラスタが 1.6T インターコネクトへ進むとボトルネックは非計算部品に移ると指摘した。NIC と SuperNIC、リタイマー、光モジュールと CPO、Scale-up／Scale-out スイッチ、BMC と信任の根（Root of Trust）はいずれもカスタマイズ可能な RISC-V コアを必要とし、Essential はレーザーバイアスやリタイマーファームウェア、閉ループ温度制御などのリアルタイム制御、Intelligence はアクセラレーター制御ユニット（ACU）、Performance は Linux 級の管理プレーンを担う。800G 光モジュールの消費電力が約 8〜18W であること、UALink 2.0 がネットワーク内計算と gNMI、YANG、SAI、Redfish の管理モデルを求めることも挙げ、RISC-V のサーバー機会がホスト CPU 1 個にとどまらないことを示した。"
+    source: "SiFive"
+    url: "https://www.sifive.com/blog/beyond-cpu-gpu-sifive-in-datacenter-infrastructure"
+    vendors: ["SiFive"]
+    tags: ["標準・仕様", "HPC"]
+    importance: "medium"
   - date: "2026-10-21"
     title: "藍芯算力、智通融合スーパーノードを発表—LX500 を単機からクラスタへ"
     summary: "2026 RISC-V 中国サミットで、藍芯算力（Lanxin Computing）は「智通融合」スーパーノードを発表し、LX500 ベースの RISC-V AI 演算を単一チップ・単一サーバーからクラスタ級の基盤へ広げた。LX500 は RISC-V コア 48 個（高性能 32＋高効率 16）と AI Vector/Matrix エンジンを統合し、INT8 で 75 TOPS、統一メモリアーキテクチャで DDR5 を共有し CXL にも対応、初回トークン遅延や Prefill、長文コンテキスト推論に向けて最適化している。製品は LX500 チップ、Lenovo 問天 WR5219 G5 サーバー、LX5000 一体型機、スーパーノードの四層となり、Qwen、DeepSeek、Kimi などへの適応も済んだとしている。RISC-V サーバーが「チップ—整機—クラスタ」の形で納入される段階に入ったことを示す。"

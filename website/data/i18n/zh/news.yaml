@@ -1,5 +1,13 @@
 # RISC-V 服务器新闻（中文母版，按日期倒序）
 items:
+  - date: "2026-11-02"
+    title: "晶心科技放缓 Cuzco 服务器级 RISC-V 核开发，工程资源转向 AI"
+    summary: "晶心科技（Andes）CTO 苏泓萌向 EE Times 确认，公司已放缓 Cuzco 高端 RISC-V CPU IP 的开发，把工程资源集中到增长更快的 AI 业务：AI 现已占其营收一半，去年增长 30%、今年预计增长 50%，而 Cuzco 自 Hot Chips 2025 发布后询价虽多、转为授权却很慢。Cuzco 面向数据中心级性能，原由子公司 Condor Computing 开发，今年 Condor 已收回母公司；苏泓萌称项目野心不变，可能以另一个名字、更晚的时间点交付，宁可用十年可复用的核也不抢首发。对 RISC-V 服务器而言，这意味着高端服务器级核 IP 又少了一条快车道，数据中心级 RISC-V 硅短期仍集中在少数玩家手里。"
+    source: "EE Times"
+    url: "https://www.eetimes.com/andes-waits-for-market-momentum-for-cuzco-cpu"
+    vendors: ["Andes Technology"]
+    tags: ["芯片发布", "HPC"]
+    importance: "high"
   - date: "2026-10-29"
     title: "Semidynamics 与诺基亚签 MoU，把 RISC-V 推理机柜接入数据中心网络"
     summary: "西班牙 Semidynamics 与诺基亚签署谅解备忘录，评估把其基于 RISC-V 的 AI 推理加速器与液冷机柜，接入诺基亚 Data Center Fabric 数据中心网络方案，面向欧洲主权 AI 基础设施。双方将开展评估、测试、验证并按需集成，Semidynamics 也会评估诺基亚网络技术用于自家推理机柜；其正在开发以内存为中心的 RISC-V 推理平台。合作把 RISC-V 从芯片与加速器延伸到推理机柜加数据中心网络的整栈交付，是欧洲厂商围绕开放架构 AI 基础设施的一次联合。"

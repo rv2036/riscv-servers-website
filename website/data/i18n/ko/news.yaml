@@ -1,5 +1,13 @@
 # RISC-V 서버 뉴스(한국어판, 중국어 원본 대응, 날짜 내림차순)
 items:
+  - date: "2026-11-02"
+    title: "안데스테크놀로지, Cuzco 서버급 RISC-V 코어 개발 늦춰…엔지니어링은 AI로"
+    summary: "안데스테크놀로지(Andes Technology) CTO 수훙멍(Charlie Su)은 EE Times에 회사가 고성능 RISC-V CPU IP 'Cuzco' 개발 속도를 늦추고 엔지니어링 자원을 빠르게 성장하는 AI 사업으로 돌렸다고 밝혔습니다. AI 사업은 이미 매출의 절반을 차지하며 지난해 30%, 올해는 50% 성장이 예상됩니다. Cuzco는 데이터센터급 성능을 겨냥해 자회사 Condor Computing이 개발했으나 올해 안데스가 다시 내부로 통합했고, Hot Chips 2025 발표 이후 문의는 많았지만 라이선스 계약으로 이어지는 속도는 더뎠습니다. 수 CTO는 목표는 유지되며 다른 이름과 더 늦은 시점에 출시될 수 있다고 말했고, 시장 선점보다 10년 이상 재사용 가능한 코어를 우선한다고 설명했습니다. RISC-V 서버 관점에서는 드문 고성능 서버급 코어 IP 노선 하나가 느려진 것이며, 데이터센터급 RISC-V 실리콘 공급은 소수 업체에 계속 집중될 전망입니다."
+    source: "EE Times"
+    url: "https://www.eetimes.com/andes-waits-for-market-momentum-for-cuzco-cpu"
+    vendors: ["Andes Technology"]
+    tags: ["칩 발표", "HPC"]
+    importance: "high"
   - date: "2026-10-29"
     title: "세미다이내믹스·노키아, RISC-V 추론 랙을 데이터센터 네트워크에 연결하는 MoU 체결"
     summary: "스페인 세미다이내믹스(Semidynamics)와 노키아가 RISC-V 기반 AI 추론 가속기와 액체냉각 랙을 노키아의 데이터센터 패브릭(Data Center Fabric) 네트워크와 결합하는 방안을 검토하는 양해각서(MoU)를 체결했습니다. 유럽의 소버린 AI 인프라가 대상이며, 양사는 평가와 테스트, 검증을 거쳐 필요하면 통합을 진행하고 세미다이내믹스는 자사 추론 랙에 노키아 네트워크 기술을 적용하는 것도 검토합니다. 메모리 중심의 RISC-V 추론 플랫폼을 개발 중인 회사가 칩과 가속기에서 추론 랙과 데이터센터 패브릭을 아우르는 전체 스택 공급으로 나아가는 행보로, 개방형 아키텍처 AI 인프라를 둘러싼 유럽 업체들의 연합입니다."

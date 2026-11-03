@@ -1,5 +1,13 @@
 # RISC-V サーバーニュース（日本語版、日付の新しい順）
 items:
+  - date: "2026-11-02"
+    title: "晶心科技（Andes）、Cuzco サーバー級 RISC-V コアの開発を減速し工数を AI へ"
+    summary: "晶心科技（Andes Technology）の CTO、蘇泓萌氏は EE Times に対し、ハイエンド RISC-V CPU IP「Cuzco」の開発を減速し、成長の速い AI 事業へエンジニアリング資源を振り向けたと明らかにした。AI 事業はすでに売上の半分を占め、昨年は 30% 増、今年は 50% 増の見込みだという。Cuzco はデータセンター級の性能を狙い、子会社 Condor Computing が開発していたが、今年 Condor は親会社に統合された。Hot Chips 2025 での発表後、引き合いは多いもののライセンス契約には結びつきにくい状況が続く。蘇氏は構想は維持するとし、別名称・より遅い時期の投入もあり得ると述べ、先行上市より 10 年使える再利用性を優先するとした。RISC-V サーバーにとっては、数少ないハイエンドなサーバー級コア IP の一系統が減速することを意味し、データセンター向け RISC-V シリコンの供給は少数のベンダーに集中し続ける。"
+    source: "EE Times"
+    url: "https://www.eetimes.com/andes-waits-for-market-momentum-for-cuzco-cpu"
+    vendors: ["Andes Technology"]
+    tags: ["チップ発表", "HPC"]
+    importance: "high"
   - date: "2026-10-29"
     title: "Semidynamics とノキアが MoU、RISC-V 推論ラックをデータセンター網に接続へ"
     summary: "スペインの Semidynamics とノキアは、Semidynamics の RISC-V ベース AI 推論アクセラレーターと液冷ラックを、ノキアの Data Center Fabric ネットワークへ接続する可能性を検討する覚書（MoU）を締結した。欧州のソブリン AI 基盤が対象で、両社は評価・試験・検証を行い、必要に応じて統合を進める。Semidynamics は自社の推論ラックにノキアのネットワーク技術を採り入れることも検討し、メモリ中心の RISC-V 推論プラットフォームを開発している。チップやアクセラレーターから「推論ラック＋データセンターファブリック」のフルスタック提供へと踏み出す動きで、オープンアーキテクチャの AI 基盤を巡る欧州勢の連携となる。"

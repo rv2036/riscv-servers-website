@@ -1,5 +1,13 @@
 # RISC-V server news (English edition, newest first)
 items:
+  - date: "2026-11-02"
+    title: "Andes slows Cuzco server-class RISC-V core work, shifts engineering to AI"
+    summary: "Andes Technology CTO Charlie Su confirmed to EE Times that the company has slowed development of its Cuzco high-end RISC-V CPU IP and redirected engineering resources to its faster-growing AI business, which now accounts for half of revenue after 30% growth last year and an expected 50% this year. Cuzco targets data center-class performance and was developed by spinout Condor Computing, which Andes pulled back in-house this year; inquiries after its Hot Chips 2025 launch have been slow to convert into licenses. Su said the ambition stands and Cuzco may emerge under another name on a longer timeline, preferring a core that stays reusable for a decade over being first to market. For RISC-V servers, one of the few high-end server-class core IP programs is now on a slower path, leaving datacenter-grade RISC-V silicon concentrated among a handful of vendors."
+    source: "EE Times"
+    url: "https://www.eetimes.com/andes-waits-for-market-momentum-for-cuzco-cpu"
+    vendors: ["Andes Technology"]
+    tags: ["Chip launch", "HPC"]
+    importance: "high"
   - date: "2026-10-29"
     title: "Semidynamics and Nokia sign MoU to plug RISC-V inference racks into data center networking"
     summary: "Spain's Semidynamics and Nokia have signed a memorandum of understanding to explore combining Semidynamics' RISC-V-based AI inference accelerators and liquid-cooled racks with Nokia's Data Center Fabric networking, aimed at Europe's sovereign AI infrastructure. The companies will assess, test, validate and, where appropriate, integrate the technologies, and Semidynamics will evaluate Nokia's networking for its own inference racks while it develops a memory-centric RISC-V inference platform. The deal extends RISC-V from chips and accelerators to a full rack-plus-fabric delivery and marks a European alliance around open-architecture AI infrastructure."

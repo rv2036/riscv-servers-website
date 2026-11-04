@@ -1,5 +1,13 @@
 # RISC-V 服务器新闻（中文母版，按日期倒序）
 items:
+  - date: "2026-11-03"
+    title: "Fedora 45 的 RISC-V GA 镜像发布，包含 Server、Cloud 与 Container 三类产物"
+    summary: "Fedora RISC-V 社区发布 Fedora 45 的 riscv64 GA 镜像，属非官方、社区维护，产物放在 dl.fedoraproject.org 的 alt/risc-v/releases/45 下，覆盖 Server、Cloud 与 Container，容器镜像同时在 Quay 的 fedora-testing/fedora-riscv 提供。服务器镜像有两种：Omni 内核（7.3.0-65.1.riscv64.omni.fc45）合入了厂商树补丁与仍在 LKML 评审的回移改动，支持更多开发板，推荐装在物理机上；Generic 镜像只用上游驱动，基本只能在 QEMU 里完整工作。从 Fedora 44 升级要注意 JH7110（VisionFive 2 等）板子用 Generic 内核时 NVMe 有数据损坏风险，已知问题还有 SpacemiT K3 上的 GCC 与 Milk-V Titan 上的 glibc。RISC-V 在 Fedora 仍不是主流架构、镜像由社区维护，但 Server 与 Cloud 产物已按 Fedora 主线节奏随 45 同期放出，说明 riscv64 的服务器发行版支持进入常规发版轨道。"
+    source: "Fedora Discussion"
+    url: "https://discussion.fedoraproject.org/t/fedora-45-risc-v-ga-images-are-available/206919"
+    vendors: ["Fedora Project"]
+    tags: ["操作系统", "软件栈"]
+    importance: "medium"
   - date: "2026-11-02"
     title: "晶心科技放缓 Cuzco 服务器级 RISC-V 核开发，工程资源转向 AI"
     summary: "晶心科技（Andes）CTO 苏泓萌向 EE Times 确认，公司已放缓 Cuzco 高端 RISC-V CPU IP 的开发，把工程资源集中到增长更快的 AI 业务：AI 现已占其营收一半，去年增长 30%、今年预计增长 50%，而 Cuzco 自 Hot Chips 2025 发布后询价虽多、转为授权却很慢。Cuzco 面向数据中心级性能，原由子公司 Condor Computing 开发，今年 Condor 已收回母公司；苏泓萌称项目野心不变，可能以另一个名字、更晚的时间点交付，宁可用十年可复用的核也不抢首发。对 RISC-V 服务器而言，这意味着高端服务器级核 IP 又少了一条快车道，数据中心级 RISC-V 硅短期仍集中在少数玩家手里。"

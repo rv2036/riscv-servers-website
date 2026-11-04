@@ -1,5 +1,13 @@
 # RISC-V サーバーニュース（日本語版、日付の新しい順）
 items:
+  - date: "2026-11-03"
+    title: "Fedora 45 の RISC-V GA イメージ公開、Server・Cloud・Container を提供"
+    summary: "Fedora RISC-V コミュニティが Fedora 45 の riscv64 GA イメージ（非公式・コミュニティ保守）を公開した。dl.fedoraproject.org の alt/risc-v/releases/45 配下に Server、Cloud、Container の成果物が置かれ、コンテナイメージは Quay の fedora-testing/fedora-riscv でも提供される。サーバーイメージは 2 種類で、Omni カーネル（7.3.0-65.1.riscv64.omni.fc45）版はベンダーツリーのパッチや LKML で審査中のバックポートを含み対応ボードが広く、実機への導入に推奨される。Generic 版は上流ドライバのみで、基本的に QEMU でのみ完全動作する。Fedora 44 からのアップグレードでは、JH7110（VisionFive 2 など）のボードを Generic カーネルで使うと NVMe のデータ破損リスクがあるほか、SpacemiT K3 の GCC と Milk-V Titan の glibc に既知の問題がある。RISC-V は依然として Fedora の主要アーキテクチャではなくイメージもコミュニティ製だが、Server と Cloud の成果物が Fedora 本体のリリース周期に沿って 45 で公開されたことは、riscv64 のサーバー向けディストリビューション対応が通常のリリース軌道に入ったことを示す。"
+    source: "Fedora Discussion"
+    url: "https://discussion.fedoraproject.org/t/fedora-45-risc-v-ga-images-are-available/206919"
+    vendors: ["Fedora Project"]
+    tags: ["オペレーティングシステム", "ソフトウェアスタック"]
+    importance: "medium"
   - date: "2026-11-02"
     title: "晶心科技（Andes）、Cuzco サーバー級 RISC-V コアの開発を減速し工数を AI へ"
     summary: "晶心科技（Andes Technology）の CTO、蘇泓萌氏は EE Times に対し、ハイエンド RISC-V CPU IP「Cuzco」の開発を減速し、成長の速い AI 事業へエンジニアリング資源を振り向けたと明らかにした。AI 事業はすでに売上の半分を占め、昨年は 30% 増、今年は 50% 増の見込みだという。Cuzco はデータセンター級の性能を狙い、子会社 Condor Computing が開発していたが、今年 Condor は親会社に統合された。Hot Chips 2025 での発表後、引き合いは多いもののライセンス契約には結びつきにくい状況が続く。蘇氏は構想は維持するとし、別名称・より遅い時期の投入もあり得ると述べ、先行上市より 10 年使える再利用性を優先するとした。RISC-V サーバーにとっては、数少ないハイエンドなサーバー級コア IP の一系統が減速することを意味し、データセンター向け RISC-V シリコンの供給は少数のベンダーに集中し続ける。"

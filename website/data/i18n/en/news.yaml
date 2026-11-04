@@ -1,5 +1,13 @@
 # RISC-V server news (English edition, newest first)
 items:
+  - date: "2026-11-03"
+    title: "Fedora 45 RISC-V GA images land with Server, Cloud and Container artifacts"
+    summary: "The Fedora RISC-V community has published its Fedora 45 riscv64 GA images — non-official and community-maintained — under dl.fedoraproject.org/pub/alt/risc-v/releases/45, covering Server, Cloud and Container artifacts, with container images also on the fedora-testing/fedora-riscv repository in Quay. Two server images ship: a Host-Omni image on the 7.3.0-65.1.riscv64.omni.fc45 kernel that pulls in vendor-tree patches and backports still under LKML review to cover more boards, recommended for physical hardware, and a Host-Generic image on the stock 7.3.0-65.1.riscv64.fc45 kernel with upstream drivers only that works fully mainly in QEMU. Users upgrading from Fedora 44 are warned that JH7110 boards such as the VisionFive 2 risk NVMe data corruption with the generic kernel, and open issues remain around GCC on the SpacemiT K3 and glibc on the Milk-V Titan. RISC-V is still not a primary Fedora architecture and these images are community-built, but the Server and Cloud artifacts now track the main Fedora release cadence, a sign that riscv64 server distro support has settled into a regular release rhythm."
+    source: "Fedora Discussion"
+    url: "https://discussion.fedoraproject.org/t/fedora-45-risc-v-ga-images-are-available/206919"
+    vendors: ["Fedora Project"]
+    tags: ["Operating systems", "Software stack"]
+    importance: "medium"
   - date: "2026-11-02"
     title: "Andes slows Cuzco server-class RISC-V core work, shifts engineering to AI"
     summary: "Andes Technology CTO Charlie Su confirmed to EE Times that the company has slowed development of its Cuzco high-end RISC-V CPU IP and redirected engineering resources to its faster-growing AI business, which now accounts for half of revenue after 30% growth last year and an expected 50% this year. Cuzco targets data center-class performance and was developed by spinout Condor Computing, which Andes pulled back in-house this year; inquiries after its Hot Chips 2025 launch have been slow to convert into licenses. Su said the ambition stands and Cuzco may emerge under another name on a longer timeline, preferring a core that stays reusable for a decade over being first to market. For RISC-V servers, one of the few high-end server-class core IP programs is now on a slower path, leaving datacenter-grade RISC-V silicon concentrated among a handful of vendors."

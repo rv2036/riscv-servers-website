@@ -1,5 +1,13 @@
 # RISC-V 서버 뉴스(한국어판, 중국어 원본 대응, 날짜 내림차순)
 items:
+  - date: "2026-11-03"
+    title: "Fedora 45 RISC-V GA 이미지 공개, Server·Cloud·Container 제공"
+    summary: "Fedora RISC-V 커뮤니티가 Fedora 45의 riscv64 GA 이미지(비공식·커뮤니티 유지)를 공개했습니다. dl.fedoraproject.org의 alt/risc-v/releases/45 아래에 Server, Cloud, Container 산출물이 올라왔고 컨테이너 이미지는 Quay의 fedora-testing/fedora-riscv에서도 받을 수 있습니다. 서버 이미지는 두 종류로, Omni 커널(7.3.0-65.1.riscv64.omni.fc45) 이미지는 벤더 트리 패치와 LKML 검토 중인 백포트를 포함해 지원 보드가 넓어 실제 하드웨어 설치에 권장되며, Generic 이미지는 업스트림 드라이버만 담아 사실상 QEMU에서만 온전히 동작합니다. Fedora 44에서 업그레이드할 때 JH7110(VisionFive 2 등) 보드에서 Generic 커널을 쓰면 NVMe 데이터 손상 위험이 있고, SpacemiT K3의 GCC와 Milk-V Titan의 glibc에 알려진 문제가 남아 있습니다. RISC-V는 여전히 Fedora의 주 아키텍처가 아니고 이미지도 커뮤니티가 만들지만, Server와 Cloud 산출물이 Fedora 본체 릴리스 주기에 맞춰 45에서 나온 것은 riscv64 서버 배포판 지원이 정규 릴리스 궤도에 들어섰다는 뜻입니다."
+    source: "Fedora Discussion"
+    url: "https://discussion.fedoraproject.org/t/fedora-45-risc-v-ga-images-are-available/206919"
+    vendors: ["Fedora Project"]
+    tags: ["운영체제", "소프트웨어 스택"]
+    importance: "medium"
   - date: "2026-11-02"
     title: "안데스테크놀로지, Cuzco 서버급 RISC-V 코어 개발 늦춰…엔지니어링은 AI로"
     summary: "안데스테크놀로지(Andes Technology) CTO 수훙멍(Charlie Su)은 EE Times에 회사가 고성능 RISC-V CPU IP 'Cuzco' 개발 속도를 늦추고 엔지니어링 자원을 빠르게 성장하는 AI 사업으로 돌렸다고 밝혔습니다. AI 사업은 이미 매출의 절반을 차지하며 지난해 30%, 올해는 50% 성장이 예상됩니다. Cuzco는 데이터센터급 성능을 겨냥해 자회사 Condor Computing이 개발했으나 올해 안데스가 다시 내부로 통합했고, Hot Chips 2025 발표 이후 문의는 많았지만 라이선스 계약으로 이어지는 속도는 더뎠습니다. 수 CTO는 목표는 유지되며 다른 이름과 더 늦은 시점에 출시될 수 있다고 말했고, 시장 선점보다 10년 이상 재사용 가능한 코어를 우선한다고 설명했습니다. RISC-V 서버 관점에서는 드문 고성능 서버급 코어 IP 노선 하나가 느려진 것이며, 데이터센터급 RISC-V 실리콘 공급은 소수 업체에 계속 집중될 전망입니다."

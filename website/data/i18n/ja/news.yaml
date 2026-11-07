@@ -1,5 +1,13 @@
 # RISC-V サーバーニュース（日本語版、日付の新しい順）
 items:
+  - date: "2026-11-06"
+    title: "AMD Zen 6、セキュリティコアを RISC-V へ——PSP の TEE が Arm から移行"
+    summary: "11 月 6 日に linux-firmware へ入ったコミットが、AMD PMF のトラステッドアプリケーション（TA）ファームウェア v4 について、TA が「RISC-V based TEE」上で動作するようになったと記している。対象プラットフォームは Family 1Ah M80h、すなわち今後の Zen 6 Ryzen クライアント向けプロセッサである。AMD の Platform Security Processor（PSP）は従来 Arm Cortex-A5 と TrustZone ベースだったため、この役割に RISC-V 実装が現れるのは初めてで、Phoronix は EPYC や Ryzen で RISC-V コアを使うという公開情報はこれまで無かったとしている。RISC-V サーバーにとっては、x86 ベンダーがサーバー級 CPU ファミリーのファームウェアとセキュリティ隔離領域に RISC-V を採り入れ始めたことを意味するが、今回のコミットが示すのはクライアント向け型番のみで、EPYC 側が同時に移行するかは明らかにされていない。"
+    source: "Phoronix"
+    url: "https://www.phoronix.com/news/AMD-Zen-6-TEE-RISC-V-Based"
+    vendors: ["AMD"]
+    tags: ["ソフトウェアスタック"]
+    importance: "low"
   - date: "2026-11-03"
     title: "Fedora 45 の RISC-V GA イメージ公開、Server・Cloud・Container を提供"
     summary: "Fedora RISC-V コミュニティが Fedora 45 の riscv64 GA イメージ（非公式・コミュニティ保守）を公開した。dl.fedoraproject.org の alt/risc-v/releases/45 配下に Server、Cloud、Container の成果物が置かれ、コンテナイメージは Quay の fedora-testing/fedora-riscv でも提供される。サーバーイメージは 2 種類で、Omni カーネル（7.3.0-65.1.riscv64.omni.fc45）版はベンダーツリーのパッチや LKML で審査中のバックポートを含み対応ボードが広く、実機への導入に推奨される。Generic 版は上流ドライバのみで、基本的に QEMU でのみ完全動作する。Fedora 44 からのアップグレードでは、JH7110（VisionFive 2 など）のボードを Generic カーネルで使うと NVMe のデータ破損リスクがあるほか、SpacemiT K3 の GCC と Milk-V Titan の glibc に既知の問題がある。RISC-V は依然として Fedora の主要アーキテクチャではなくイメージもコミュニティ製だが、Server と Cloud の成果物が Fedora 本体のリリース周期に沿って 45 で公開されたことは、riscv64 のサーバー向けディストリビューション対応が通常のリリース軌道に入ったことを示す。"

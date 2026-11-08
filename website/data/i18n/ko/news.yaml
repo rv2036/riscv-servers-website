@@ -1,5 +1,13 @@
 # RISC-V 서버 뉴스(한국어판, 중국어 원본 대응, 날짜 내림차순)
 items:
+  - date: "2026-11-06"
+    title: "AMD Zen 6, 보안 코어를 RISC-V로 전환…PSP의 TEE가 Arm에서 이동"
+    summary: "11월 6일 linux-firmware에 반영된 커밋은 AMD PMF 신뢰 실행 환경(TA) 펌웨어 v4에 대해 해당 TA가 이제 'RISC-V based TEE'에서 동작한다고 명시합니다. 대상 플랫폼은 Family 1Ah M80h, 즉 곧 출시될 Zen 6 Ryzen 클라이언트 프로세서입니다. AMD의 플랫폼 보안 프로세서(PSP)는 그동안 Arm Cortex-A5와 TrustZone 기반이었기에 이 역할에 RISC-V 구현이 등장한 것은 처음이며, Phoronix는 EPYC나 Ryzen에서 RISC-V 코어를 쓴다는 공개 자료가 없었다고 전했습니다. RISC-V 서버 관점에서는 x86 업체가 서버급 CPU 계열의 펌웨어와 보안 격리 영역에 RISC-V를 넣기 시작했다는 신호이지만, 이번 커밋은 클라이언트 모델만 지목하고 있어 EPYC의 동반 전환 여부는 공개되지 않았습니다."
+    source: "Phoronix"
+    url: "https://www.phoronix.com/news/AMD-Zen-6-TEE-RISC-V-Based"
+    vendors: ["AMD"]
+    tags: ["소프트웨어 스택"]
+    importance: "low"
   - date: "2026-11-03"
     title: "Fedora 45 RISC-V GA 이미지 공개, Server·Cloud·Container 제공"
     summary: "Fedora RISC-V 커뮤니티가 Fedora 45의 riscv64 GA 이미지(비공식·커뮤니티 유지)를 공개했습니다. dl.fedoraproject.org의 alt/risc-v/releases/45 아래에 Server, Cloud, Container 산출물이 올라왔고 컨테이너 이미지는 Quay의 fedora-testing/fedora-riscv에서도 받을 수 있습니다. 서버 이미지는 두 종류로, Omni 커널(7.3.0-65.1.riscv64.omni.fc45) 이미지는 벤더 트리 패치와 LKML 검토 중인 백포트를 포함해 지원 보드가 넓어 실제 하드웨어 설치에 권장되며, Generic 이미지는 업스트림 드라이버만 담아 사실상 QEMU에서만 온전히 동작합니다. Fedora 44에서 업그레이드할 때 JH7110(VisionFive 2 등) 보드에서 Generic 커널을 쓰면 NVMe 데이터 손상 위험이 있고, SpacemiT K3의 GCC와 Milk-V Titan의 glibc에 알려진 문제가 남아 있습니다. RISC-V는 여전히 Fedora의 주 아키텍처가 아니고 이미지도 커뮤니티가 만들지만, Server와 Cloud 산출물이 Fedora 본체 릴리스 주기에 맞춰 45에서 나온 것은 riscv64 서버 배포판 지원이 정규 릴리스 궤도에 들어섰다는 뜻입니다."

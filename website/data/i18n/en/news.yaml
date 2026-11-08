@@ -1,5 +1,13 @@
 # RISC-V server news (English edition, newest first)
 items:
+  - date: "2026-11-06"
+    title: "AMD Zen 6 moves its security core to RISC-V as the PSP's TEE shifts from Arm"
+    summary: "A linux-firmware commit merged on 6 November adds AMD PMF trusted-application firmware v4 for the 1Ah M80h platform — the upcoming Zen 6 Ryzen client processors — and states that the TA now runs on a RISC-V based TEE. AMD's Platform Security Processor has historically been an Arm Cortex-A5 core with TrustZone, so this is the first sign of a RISC-V implementation in that role; Phoronix notes there was no prior public reference to a RISC-V core in AMD EPYC or Ryzen parts. For RISC-V servers the signal is that an x86 vendor is putting RISC-V into the firmware and security enclave of a server-class CPU family, though the commit names only a client platform and AMD has not said whether EPYC follows."
+    source: "Phoronix"
+    url: "https://www.phoronix.com/news/AMD-Zen-6-TEE-RISC-V-Based"
+    vendors: ["AMD"]
+    tags: ["Software stack"]
+    importance: "low"
   - date: "2026-11-03"
     title: "Fedora 45 RISC-V GA images land with Server, Cloud and Container artifacts"
     summary: "The Fedora RISC-V community has published its Fedora 45 riscv64 GA images — non-official and community-maintained — under dl.fedoraproject.org/pub/alt/risc-v/releases/45, covering Server, Cloud and Container artifacts, with container images also on the fedora-testing/fedora-riscv repository in Quay. Two server images ship: a Host-Omni image on the 7.3.0-65.1.riscv64.omni.fc45 kernel that pulls in vendor-tree patches and backports still under LKML review to cover more boards, recommended for physical hardware, and a Host-Generic image on the stock 7.3.0-65.1.riscv64.fc45 kernel with upstream drivers only that works fully mainly in QEMU. Users upgrading from Fedora 44 are warned that JH7110 boards such as the VisionFive 2 risk NVMe data corruption with the generic kernel, and open issues remain around GCC on the SpacemiT K3 and glibc on the Milk-V Titan. RISC-V is still not a primary Fedora architecture and these images are community-built, but the Server and Cloud artifacts now track the main Fedora release cadence, a sign that riscv64 server distro support has settled into a regular release rhythm."

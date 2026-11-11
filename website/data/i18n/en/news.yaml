@@ -1,5 +1,13 @@
 # RISC-V server news (English edition, newest first)
 items:
+  - date: "2026-11-11"
+    title: "Nanjing University and Lanxin Computing establish joint high-performance AI processor institute"
+    summary: "On 10 November Nanjing University and Lanxin Computing signed an agreement in the Suzhou High-Tech Zone to build the Nanjing University–Lanxin Computing Joint Institute for High-Performance Intelligent Computing Processors and unveiled it, with university vice-president Suo Wenbin and Lanxin founder, chairman and CEO Lu Shan attending. Per the official account, the institute pairs the university's talent and basic-research strengths with Lanxin's development of CPU+AI converged-architecture high-performance server chips, covering key technology research, commercialisation, senior talent cultivation and deployment of intelligent application solutions; Lanxin focuses on RISC-V high-performance server CPUs with products from IP and chips to boards and server clusters, and opened an East China industrial innovation centre in the zone in April. For RISC-V servers this is another step in binding a Chinese RISC-V server chip vendor to university basic research, although specific joint projects, funding and a timeline have not been disclosed."
+    source: "Suzhou High-Tech Zone Administrative Committee"
+    url: "http://www.snd.gov.cn/hqqrmzf/zwxw/202611/b9f9604b85064a238c0bcde624ff0e48.shtml"
+    vendors: ["Lanxin Computing"]
+    tags: ["Ecosystem partnerships", "HPC"]
+    importance: "low"
   - date: "2026-11-06"
     title: "AMD Zen 6 moves its security core to RISC-V as the PSP's TEE shifts from Arm"
     summary: "A linux-firmware commit merged on 6 November adds AMD PMF trusted-application firmware v4 for the 1Ah M80h platform — the upcoming Zen 6 Ryzen client processors — and states that the TA now runs on a RISC-V based TEE. AMD's Platform Security Processor has historically been an Arm Cortex-A5 core with TrustZone, so this is the first sign of a RISC-V implementation in that role; Phoronix notes there was no prior public reference to a RISC-V core in AMD EPYC or Ryzen parts. For RISC-V servers the signal is that an x86 vendor is putting RISC-V into the firmware and security enclave of a server-class CPU family, though the commit names only a client platform and AMD has not said whether EPYC follows."

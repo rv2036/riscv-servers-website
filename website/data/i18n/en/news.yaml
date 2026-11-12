@@ -1,5 +1,13 @@
 # RISC-V server news (English edition, newest first)
 items:
+  - date: "2026-11-12"
+    title: "XuanTie releases XL-300 cache-coherent interconnect IP: 8 cores per cluster, 32MB L3, double the bandwidth of XL-200"
+    summary: "Alibaba DAMO Academy's RISC-V brand XuanTie has released XL-300, a high-throughput cache-coherent interconnect IP that supports up to eight asynchronously connected cores over a 256-bit data path, up to 32MB of configurable L3 cache and more than 90 percent scaling efficiency across eight concurrent cores, with a bandwidth ceiling roughly double that of the previous XL-200. A new Direct Memory Transfer path bypasses the traditional route to relieve throughput bottlenecks caused by large L3 capacity and high bus latency. For RISC-V servers the point is that server-class multi-core SoCs depend on this kind of high-bandwidth coherent fabric as much as on the CPU cores themselves; XL-300 lifts a single cluster to eight cores and 32MB of L3, strengthening the IP toolbox available to Chinese RISC-V server chip designers. XuanTie did not disclose licensees, tape-out plans or third-party measurements, so the figures above are vendor claims."
+    source: "ITHome"
+    url: "https://www.ithome.com/1/025/902.htm"
+    vendors: ["Alibaba DAMO Academy", "XuanTie"]
+    tags: ["Chip launch", "HPC"]
+    importance: "medium"
   - date: "2026-11-11"
     title: "Nanjing University and Lanxin Computing establish joint high-performance AI processor institute"
     summary: "On 10 November Nanjing University and Lanxin Computing signed an agreement in the Suzhou High-Tech Zone to build the Nanjing University–Lanxin Computing Joint Institute for High-Performance Intelligent Computing Processors and unveiled it, with university vice-president Suo Wenbin and Lanxin founder, chairman and CEO Lu Shan attending. Per the official account, the institute pairs the university's talent and basic-research strengths with Lanxin's development of CPU+AI converged-architecture high-performance server chips, covering key technology research, commercialisation, senior talent cultivation and deployment of intelligent application solutions; Lanxin focuses on RISC-V high-performance server CPUs with products from IP and chips to boards and server clusters, and opened an East China industrial innovation centre in the zone in April. For RISC-V servers this is another step in binding a Chinese RISC-V server chip vendor to university basic research, although specific joint projects, funding and a timeline have not been disclosed."

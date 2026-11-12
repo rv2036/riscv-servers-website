@@ -1,5 +1,13 @@
 # RISC-V 服务器新闻（中文母版，按日期倒序）
 items:
+  - date: "2026-11-11"
+    title: "南京大学与蓝芯算力共建高性能智算处理器联合研究院"
+    summary: "11 月 10 日，南京大学与蓝芯算力在苏州高新区签约共建“南京大学—蓝芯算力高性能智算处理器联合研究院”并揭牌，南京大学党委常委、副校长索文斌与蓝芯算力创始人、董事长兼 CEO 卢山等出席。按官方表述，研究院把南京大学的人才与基础研究优势，与蓝芯算力在 CPU+AI 智通融合架构高性能服务器芯片上的研发能力对接，承担关键技术研发、成果转化、高端人才培养与智慧应用方案落地；蓝芯算力专注 RISC-V 高性能服务器 CPU，产品覆盖 IP、芯片、板卡到服务器集群，今年 4 月已在苏州高新区设立华东产业创新中心。对 RISC-V 服务器而言，这是国内 RISC-V 服务器芯片厂商把高校基础研究与自身产品化能力绑定的又一步，但双方尚未公布具体合作项目、投入金额或时间表。"
+    source: "苏州高新区管委会"
+    url: "http://www.snd.gov.cn/hqqrmzf/zwxw/202611/b9f9604b85064a238c0bcde624ff0e48.shtml"
+    vendors: ["Lanxin Computing"]
+    tags: ["生态合作", "HPC"]
+    importance: "low"
   - date: "2026-11-06"
     title: "AMD Zen 6 的安全核改用 RISC-V：PSP 的 TEE 从 Arm 转向 RISC-V"
     summary: "linux-firmware 在 11 月 6 日合入的提交为 AMD PMF 可信应用（TA）固件 v4 注明：该 TA 现在运行在「RISC-V based TEE」上，提交对应的平台是 Family 1Ah M80h，也就是即将发布的 Zen 6 Ryzen 客户端处理器。AMD 的平台安全处理器（PSP）过去基于 Arm Cortex-A5 与 TrustZone，这是该位置首次出现 RISC-V 实现，Phoronix 称此前没有公开资料提到 AMD 在 EPYC 或 Ryzen 上使用 RISC-V 核。对 RISC-V 服务器而言，这意味着 x86 厂商开始把 RISC-V 放进服务器级 CPU 家族的固件与安全隔区，但此次提交只点名客户端型号，EPYC 是否同步尚无公开说明。"

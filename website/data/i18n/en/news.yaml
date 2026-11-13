@@ -1,5 +1,13 @@
 # RISC-V server news (English edition, newest first)
 items:
+  - date: "2026-11-13"
+    title: "Lingrui Zhixin closes Pre-A+ round of several hundred million yuan led by Meituan to accelerate server-class RISC-V CPU tape-out"
+    summary: "Shanghai-based Lingrui Zhixin has closed a Pre-A+ round worth several hundred million yuan, led by Meituan's strategic investment arm, with JD-affiliated funds, Ganbei Fund, Lihe Suanxin (Dongfang Suanxin CVC), Junxi Capital, SenseTime Guoxiang Capital, Shangqi Capital (SAIC CVC) and Amber Capital (Sangfor) joining alongside existing investors; cumulative funding is now close to 1 billion yuan and the proceeds will fund iteration and tape-out validation of its agent CPU core and chip products. Its P100 is a server-class RISC-V CPU core that the company calls the only one in China with dynamic SMT4, switching between one and four threads per core, with a pipeline deeper than 20 stages and an 8-decode, 10-issue architecture. For RISC-V servers it means internet platform and systems-side strategic capital is now betting directly on a server-class RISC-V core, though Lingrui has not published a tape-out date, a chip model or measured performance: the P100-based chip is still in development and cooperation with domestic system vendors has only reached letters of intent."
+    source: "Jiwei"
+    url: "https://ijiwei.com/n/1140068"
+    vendors: ["Lingrui Zhixin 灵睿智芯"]
+    tags: ["M&A and investment"]
+    importance: "medium"
   - date: "2026-11-12"
     title: "XuanTie releases XL-300 cache-coherent interconnect IP: 8 cores per cluster, 32MB L3, double the bandwidth of XL-200"
     summary: "Alibaba DAMO Academy's RISC-V brand XuanTie has released XL-300, a high-throughput cache-coherent interconnect IP that supports up to eight asynchronously connected cores over a 256-bit data path, up to 32MB of configurable L3 cache and more than 90 percent scaling efficiency across eight concurrent cores, with a bandwidth ceiling roughly double that of the previous XL-200. A new Direct Memory Transfer path bypasses the traditional route to relieve throughput bottlenecks caused by large L3 capacity and high bus latency. For RISC-V servers the point is that server-class multi-core SoCs depend on this kind of high-bandwidth coherent fabric as much as on the CPU cores themselves; XL-300 lifts a single cluster to eight cores and 32MB of L3, strengthening the IP toolbox available to Chinese RISC-V server chip designers. XuanTie did not disclose licensees, tape-out plans or third-party measurements, so the figures above are vendor claims."

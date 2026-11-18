@@ -1,6 +1,14 @@
 # RISC-V 服务器新闻（中文母版，按日期倒序）
 items:
   - date: "2026-11-17"
+    title: "RISC-V International 访谈：RVA23 服务器级芯片已多家流片，HPC 从模拟走向真实部署"
+    summary: "RISC-V International 在 SC26 期间刊出对 HPC 特别兴趣组主席 Nick Brown（EPCC 高级研究员、英国 RISC-V 测试床负责人）与副主席 Doug Norton（InspireSemi 首席营销官）的访谈，给出的进度是：2026 年已有多家厂商基于 RVA23 配置流片服务器级芯片，RISC-V Server Platform 规范已获批准；HPC SIG 去年完成的差距分析显示，英国国家超算 ARCHER2（HPE Cray EX）上 55% 的用户代码可以在 RISC-V 上运行，但“能跑”不等于“已调优”，因此社区重心转向向量化一类单节点优化；InspireSemi 的 Thunderbird 加速器单芯片集成 1536 个原生 FP64 RISC-V 核，正通过 Lenovo、Dell Technologies、Penguin Solutions 与 E4 Computer Engineering 以 PCIe 加速卡和 HPC 服务器两种形态推向市场；Openchip 今年把 Lustre 补丁上游化，补上 RISC-V 在 HPC 文件系统上的缺口，AME/IME/VME 矩阵扩展被两人视为接下来的关键里程碑。对 RISC-V 服务器而言，这篇访谈把“服务器级 RISC-V”从路线图落到可核对的具体项（流片、规范批准、代码覆盖率、OEM 渠道），但全部是受访者口径，未给出芯片型号、实测性能与出货量；SC26 期间另有 11 月 19 日中午的 RISC-V BoF 与 11 月 20 日上午的 RISC-V for HPC 研讨会。"
+    source: "RISC-V International"
+    url: "https://riscv.org/blog/v-questions-with-doug-norton-nick-brown/"
+    vendors: ["RISC-V International", "InspireSemi", "EPCC"]
+    tags: ["HPC", "标准与规范"]
+    importance: "medium"
+  - date: "2026-11-17"
     title: "赛昉 RISC-V 服务器 BMC 芯片昉·惊鸿-B100 实现量产交付，已过多家服务器厂商导入审查"
     summary: "赛昉科技 11 月 16 日宣布，基于 RISC-V 的服务器 BMC（基板管理控制器）芯片昉·惊鸿-B100（JH-B100）已实现量产并交付客户，并已通过多家服务器制造厂商与互联网企业的产品导入与审查流程，搭载该芯片的客户服务器产品即将进入量产阶段。JH-B100 采用赛昉自研 RISC-V 内核与一致性片上网络（NoC），兼容 DDR4/5 内存，集成 PFR/PRoT 与国密 SM2/3/4 算法、多路高速接口与 AI 加速引擎，具备双路 PCIe 4.0 EP、全功能 eSPI（Slave）、PECI 与两路 LTPI，支持双节点管理，面向 CPU 服务器主板以及 AI 基础设施中计算托盘、交换托盘、冷却液分配单元与电源架等管理场景。对 RISC-V 服务器而言，BMC 是独立于主 CPU、整机通电期间常驻的管理面芯片，先在这一格拿到量产导入，等于绕开主 CPU 的软件生态直接进入服务器厂商的物料清单；赛昉未公布客户名单、交付规模与价格，量产交付的实际体量仍需第三方数据印证。"
     source: "IT之家"
@@ -8,6 +16,22 @@ items:
     vendors: ["StarFive 赛昉科技"]
     tags: ["服务器出货"]
     importance: "high"
+  - date: "2026-11-16"
+    title: "Tenstorrent 与 ConfidentialMind 合作，为 Galaxy Blackhole RISC-V 服务器补齐私有化 AI 平台层"
+    summary: "Tenstorrent 11 月 16 日宣布与软件公司 ConfidentialMind 合作，把后者的自托管 AI 平台带到基于 RISC-V 的 Galaxy Blackhole 系统上，双方将在欧洲、中东、亚太与美洲联合销售，目标客户是需要把数据留在本地的政府、高校、受监管企业与推理服务商。Galaxy Blackhole 是 6U 机箱、32 颗 Blackhole Tensix 处理器的整机，既可单机运行，也可在客户自有数据中心横向扩展；ConfidentialMind 提供推理服务、向量数据库、访问控制、加速器管理、可观测性与合规日志这一层，以 OpenAI 兼容 API 对外提供开源大模型、RAG 与智能体，省掉客户自己搭平台的前置工作。对 RISC-V 服务器而言，这是 RISC-V AI 整机从“卖硬件”往“卖可交付的栈”走的一步，补的是上层部署与运维软件；不过双方未公布联合销售的定价、交付时间与客户名单，也未给出性能数据。"
+    source: "Tenstorrent"
+    url: "https://tenstorrent.com/en/newsroom/tenstorrent-and-confidentialmind-partner-to-deliver-sovereign-ai-on-open-hardware"
+    vendors: ["Tenstorrent", "ConfidentialMind"]
+    tags: ["生态合作", "整机与主板"]
+    importance: "medium"
+  - date: "2026-11-16"
+    title: "新加坡 SingNova 展出基于 RISC-V 的智能视频存储服务器与多核 RISC-V 企业级 NAS"
+    summary: "南洋理工大学孵化企业 SingNova（Nanyang Singtech）11 月 16 日发布新闻稿，称在新加坡 Safety & Security Asia 2026 展会展出四款平台，其中两款是服务器形态：Intelligent Video Storage Server 基于 RISC-V 架构与芯片级智能视频编码，官方称可把视频存储需求降低三分之二以上（3:1 压缩比），支持板级冗余、集群故障切换与自恢复，兼容 RTSP/ONVIF 与 H.265/H.264，面向智慧金融、智慧城市、轨道交通、高速公路、能源电力与制造；Storage Station 是基于多核 RISC-V 的企业级一体化 NAS，支持 RAID-TP（容忍三块盘同时故障）、多目标备份与内置 Docker。另两款为 12 核 RISC-V、256 TOPS（INT8）的桌面级 AI 计算系统 AI Power Studio 与数字人产品。对 RISC-V 服务器而言，这是安防与视频存储这一垂直场景里少见的 RISC-V 整机产品线，路线是把编码加速做进芯片、用低功耗换存储成本；但所有指标均为厂商口径，未公布所用 SoC 型号、价格、出货量与第三方测试。"
+    source: "GlobeNewswire / SingNova"
+    url: "https://www.globenewswire.com/news-release/2026/11/16/3403151/0/en/singnova-showcases-risc-v-based-ai-computing-and-intelligent-video-storage-portfolio-at-safety-security-asia-2026.html"
+    vendors: ["SingNova", "Nanyang Technological University"]
+    tags: ["服务器出货", "整机与主板"]
+    importance: "low"
   - date: "2026-11-16"
     title: "南方日报专访蓝芯算力：LX500 完成万亿参数 Kimi K2.6 片内推理验证，移动云已有稳定运行"
     summary: "11 月 16 日《南方日报》刊出对蓝芯算力的专访，CTO 贾新霞与生态营销负责人许庆伟给出的进展包括：LX500 已在片内 AI 引擎上完成万亿参数 Kimi K2.6 与 350 亿参数 Qwen3.6-35B 的推理验证，48 核自研 CPU 与 75 TOPS（INT8）推理引擎通过一致性内存设计共享 DDR5，官方称在片内算力覆盖范围内无需独立 GPU；运营商市场已率先商用，中国移动研究院与移动云场景中均有 LX500 稳定运行，高校与科研机构已规模化使用，金融、政务正在联合适配与批量测试；第二代芯片计划明年流片，公司已向海外客户批量交付硬件开发平台。对 RISC-V 服务器而言，这是国产 RISC-V 服务器芯片厂商给出的一个万亿参数片内推理口径，也是运营商云场景落地的具体点名；但验证结果均为厂商自述，未公布吞吐、时延与第三方基准，可复现性有待外部测试。"

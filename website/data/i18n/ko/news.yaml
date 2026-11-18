@@ -1,6 +1,14 @@
 # RISC-V 서버 뉴스(한국어판, 중국어 원본 대응, 날짜 내림차순)
 items:
   - date: "2026-11-17"
+    title: "RISC-V International 인터뷰: RVA23 서버급 칩 여러 종 테이프아웃, HPC는 시뮬레이션에서 실제 배치로"
+    summary: "RISC-V International은 SC26 기간에 HPC 특별관심그룹(SIG) 의장이자 EPCC 선임연구원·영국 RISC-V 테스트베드 책임자인 Nick Brown과 부의장 겸 InspireSemi 최고마케팅책임자 Doug Norton의 인터뷰를 게재했다. 구체적 내용은 2026년 여러 벤더가 RVA23 프로파일 기반 서버급 실리콘 테이프아웃을 마쳤고 RISC-V Server Platform 규격이 승인됐다는 것, HPC SIG가 지난해 수행한 격차 분석에서 영국 국가 슈퍼컴퓨터 ARCHER2(HPE Cray EX) 사용자의 55%가 자신의 코드를 RISC-V에서 실행할 수 있다고 나왔다는 것(다만 '실행된다'가 '최적화됐다'는 뜻은 아니어서 벡터화 같은 단일 노드 최적화로 무게중심이 옮겨갔다), InspireSemi의 Thunderbird 가속기는 칩당 네이티브 FP64 RISC-V 코어 1536개를 갖추고 Lenovo, Dell Technologies, Penguin Solutions, E4 Computer Engineering을 통해 PCIe 애드인 카드와 HPC 서버 두 형태로 시장에 나간다는 것, Openchip이 올해 Lustre 패치를 업스트림에 올려 RISC-V의 HPC 파일시스템 공백을 메웠고 AME/IME/VME 행렬 확장이 다음 핵심 이정표로 꼽힌다는 것이다. RISC-V 서버 관점에서 이 인터뷰의 가치는 서버급 RISC-V를 로드맵에서 검증 가능한 항목(테이프아웃, 규격 승인, 코드 커버리지, OEM 채널)으로 끌어내렸다는 데 있지만 모두 발언자 설명이며 칩 모델명, 실측 성능, 출하량은 제시되지 않았다. SC26에서는 11월 19일 정오 RISC-V BoF와 11월 20일 오전 RISC-V for HPC 워크숍도 열린다."
+    source: "RISC-V International"
+    url: "https://riscv.org/blog/v-questions-with-doug-norton-nick-brown/"
+    vendors: ["RISC-V International", "InspireSemi", "EPCC"]
+    tags: ["HPC", "표준·규격"]
+    importance: "medium"
+  - date: "2026-11-17"
     title: "StarFive, RISC-V 서버 BMC 'JH-B100' 양산·고객 납품 시작"
     summary: "StarFive(赛昉科技)는 11월 16일 RISC-V 기반 서버 BMC(베이스보드 관리 컨트롤러) 'JH-B100'이 양산에 들어가 고객에게 납품됐다고 밝혔다. 여러 서버 제조사와 인터넷 기업의 제품 도입·심사 절차를 통과했고, 이 칩을 탑재한 고객 서버 제품도 곧 양산에 들어간다. JH-B100은 자체 개발 RISC-V 코어와 일관성 NoC를 결합했으며 DDR4/5를 지원하고 PFR/PRoT와 중국 상용암호 SM2/3/4, 다채널 고속 인터페이스와 AI 가속 엔진을 통합했다. 듀얼 레인 PCIe 4.0 EP, 풀기능 eSPI(Slave), PECI, 2채널 LTPI를 갖춰 듀얼 노드 관리를 지원하며, CPU 서버 메인보드와 AI 인프라의 컴퓨트 트레이·스위치 트레이·냉각수 분배 장치·전원 선반 등 관리 영역을 겨냥한다. RISC-V 서버에서 BMC는 메인 CPU와 독립적으로 전원이 켜진 동안 상시 동작하는 관리 평면 칩이므로, 이 분야의 양산 채택은 호스트 CPU 소프트웨어 생태계를 기다리지 않고 서버 제조사의 부품 목록에 진입한다는 의미다. 다만 고객사, 납품 규모, 가격은 공개되지 않아 실제 물량은 제3자 데이터로 확인이 필요하다."
     source: "ITHome"
@@ -8,6 +16,22 @@ items:
     vendors: ["StarFive 赛昉科技"]
     tags: ["서버 출하"]
     importance: "high"
+  - date: "2026-11-16"
+    title: "Tenstorrent, ConfidentialMind와 손잡고 Galaxy Blackhole RISC-V 서버에 자체 운영 AI 플랫폼 결합"
+    summary: "Tenstorrent는 11월 16일 소프트웨어 기업 ConfidentialMind와 협력해 자사의 RISC-V 기반 Galaxy Blackhole 시스템에 후자의 자체 운영 AI 플랫폼을 올린다고 발표했다. 양사는 유럽, 중동, 아시아태평양, 미주에서 공동 판매하며 데이터를 자체 인프라에 두어야 하는 정부, 대학, 규제 산업 기업, 추론 서비스 사업자를 겨냥한다. Galaxy Blackhole은 6U 섀시에 Blackhole Tensix 프로세서 32개를 담은 시스템으로 단일 장비로도, 고객 데이터센터 안에서 슈퍼클러스터로 확장할 수도 있다. ConfidentialMind는 추론 서빙, 벡터 데이터베이스, 접근 제어, 가속기 관리, 관측성, 컴플라이언스 로그 계층을 제공하고 오픈소스 모델과 RAG, 에이전트를 OpenAI 호환 API로 내놓아 고객이 플랫폼을 직접 구축하는 부담을 없앤다. RISC-V 서버 관점에서는 하드웨어 판매에서 '납품 가능한 스택' 판매로 한 걸음 나아가 배치·운영 소프트웨어를 채우는 움직임이지만, 공동 판매 가격과 공급 시점, 고객사는 공개되지 않았고 성능 데이터도 제시되지 않았다."
+    source: "Tenstorrent"
+    url: "https://tenstorrent.com/en/newsroom/tenstorrent-and-confidentialmind-partner-to-deliver-sovereign-ai-on-open-hardware"
+    vendors: ["Tenstorrent", "ConfidentialMind"]
+    tags: ["생태계 협력", "완제품·메인보드"]
+    importance: "medium"
+  - date: "2026-11-16"
+    title: "싱가포르 SingNova, RISC-V 기반 지능형 영상 저장 서버와 멀티코어 RISC-V 기업용 NAS 공개"
+    summary: "난양이공대(NTU)에서 창업한 SingNova(Nanyang Singtech)는 11월 16일 보도자료에서 싱가포르 Safety & Security Asia 2026 전시에 네 가지 플랫폼을 출품했다고 밝혔다. 이 가운데 두 가지가 서버 형태다. Intelligent Video Storage Server는 RISC-V 아키텍처와 칩 수준 지능형 영상 부호화를 기반으로 영상 저장 수요를 3분의 2 이상 줄인다(3:1 압축비)고 밝혔으며, 보드 이중화와 클러스터 페일오버·자동 복구, RTSP/ONVIF와 H.265/H.264를 지원해 스마트 금융, 스마트시티, 철도, 고속도로, 에너지·전력, 제조를 겨냥한다. Storage Station은 멀티코어 RISC-V 기반 기업용 올인원 NAS로 디스크 3개 동시 고장을 견디는 RAID-TP와 다중 대상 백업, 내장 Docker를 지원한다. 나머지 두 가지는 12코어 RISC-V와 256 TOPS(INT8), 최대 128GB LPDDR5 ECC를 결합한 데스크톱형 AI 연산 시스템 AI Power Studio와 디지털 휴먼 제품이다. RISC-V 서버 관점에서는 보안·영상 저장이라는 수직 영역에서 보기 드문 RISC-V 제품 라인으로, 부호화 가속을 칩에 넣어 저전력으로 저장 비용을 낮추는 노선이지만 모든 지표가 제조사 설명이며 SoC 모델, 가격, 출하량, 제3자 시험은 공개되지 않았다."
+    source: "GlobeNewswire / SingNova"
+    url: "https://www.globenewswire.com/news-release/2026/11/16/3403151/0/en/singnova-showcases-risc-v-based-ai-computing-and-intelligent-video-storage-portfolio-at-safety-security-asia-2026.html"
+    vendors: ["SingNova", "Nanyang Technological University"]
+    tags: ["서버 출하", "완제품·메인보드"]
+    importance: "low"
   - date: "2026-11-16"
     title: "란신 인터뷰: LX500, 1조 파라미터 Kimi K2.6 온다이 추론 검증·차이나모바일 클라우드서 가동"
     summary: "11월 16일 《난팡르바오》가 란신컴퓨팅(Lanxin Computing) 인터뷰를 실었다. CTO 자신샤와 생태계 마케팅 책임자 쉬칭웨이에 따르면 LX500은 온다이 AI 엔진에서 1조 파라미터 Kimi K2.6과 350억 파라미터 Qwen3.6-35B의 추론 검증을 마쳤다. 48개 자체 CPU 코어와 75 TOPS(INT8) 추론 엔진이 일관성 메모리 설계로 DDR5를 공유해, 엔진 연산 범위 안에서는 별도 GPU가 필요 없다는 설명이다. 상용화는 통신사가 먼저로, 차이나모바일연구원과 이동운(China Mobile Cloud) 시나리오에서 LX500이 안정적으로 동작하고 있으며 대학·연구기관은 규모 있게 사용 중이고 금융·정부 분야는 공동 적응과 배치 테스트를 진행 중이다. 2세대 칩은 내년 테이프아웃 예정이며 해외 고객에는 하드웨어 개발 플랫폼을 양산 납품했다. RISC-V 서버 관점에서는 1조 파라미터 모델을 단일 RISC-V SoC로 처리할 수 있다는 벤더 측 데이터이자 통신사 클라우드의 구체적 가동처라는 점이 의미가 있지만, 수치는 모두 회사 설명이며 처리량·지연·제3자 벤치마크는 제시되지 않았다."

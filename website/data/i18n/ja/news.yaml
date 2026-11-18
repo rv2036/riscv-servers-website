@@ -1,6 +1,14 @@
 # RISC-V サーバーニュース（日本語版、日付の新しい順）
 items:
   - date: "2026-11-17"
+    title: "RISC-V International インタビュー：RVA23 のサーバー級チップが複数流片、HPC はシミュレーションから実配備へ"
+    summary: "RISC-V International は SC26 の期間中、HPC 特別興味グループ（SIG）議長で EPCC 上級研究員・英国 RISC-V テストベッド責任者の Nick Brown 氏と、副議長で InspireSemi 最高マーケティング責任者の Doug Norton 氏へのインタビューを掲載した。そこでは、2026 年に複数のベンダーが RVA23 プロファイルに基づくサーバー級シリコンのテープアウトを終え、RISC-V Server Platform 仕様が批准されたこと、HPC SIG が昨年実施したギャップ分析で英国の国家スーパーコンピュータ ARCHER2（HPE Cray EX）の利用者の 55% が自分のコードを RISC-V 上で実行できると判明したこと（ただし「動く」は「最適化済み」ではないため、ベクトル化などの単一ノード最適化へ重心が移った）、InspireSemi の Thunderbird アクセラレータは 1 チップにネイティブ FP64 の RISC-V コアを 1536 基搭載し、Lenovo、Dell Technologies、Penguin Solutions、E4 Computer Engineering を通じて PCIe アドインカードと HPC サーバーの両形態で市場投入されること、Openchip が今年 Lustre のパッチを上流に取り込み RISC-V の HPC ファイルシステムの空白を埋めたこと、AME/IME/VME の行列拡張が次の重要なマイルストーンと位置づけられていることが示された。RISC-V サーバーにとっては、サーバー級 RISC-V をロードマップから検証可能な項目（テープアウト、仕様批准、コードカバー率、OEM チャネル）へ落とし込んだ点に価値があるが、いずれも発言者の説明であり、チップ型番、実測性能、出荷台数は示されていない。SC26 では 11 月 19 日正午に RISC-V の BoF、11 月 20 日午前に RISC-V for HPC ワークショップも開かれる。"
+    source: "RISC-V International"
+    url: "https://riscv.org/blog/v-questions-with-doug-norton-nick-brown/"
+    vendors: ["RISC-V International", "InspireSemi", "EPCC"]
+    tags: ["HPC", "標準・仕様"]
+    importance: "medium"
+  - date: "2026-11-17"
     title: "賽昉（StarFive）の RISC-V サーバー向け BMC「昉・驚鴻-B100」が量産・顧客納入を開始"
     summary: "賽昉科技（StarFive）は 11 月 16 日、RISC-V ベースのサーバー向け BMC（ベースボード管理コントローラー）「昉・驚鴻-B100（JH-B100）」が量産に入り顧客へ納入を開始したと発表した。複数のサーバーメーカーとインターネット企業の製品導入・審査プロセスを通過しており、同チップを搭載した顧客のサーバー製品もまもなく量産に入る見込み。JH-B100 は自社開発の RISC-V コアとコヒーレントな NoC を組み合わせ、DDR4/5 に対応、PFR/PRoT と中国国密 SM2/3/4、多系統の高速インターフェースと AI アクセラレーションエンジンを統合し、デュアルレーン PCIe 4.0 EP、フル機能の eSPI（Slave）、PECI、2 系統の LTPI を備えてデュアルノード管理に対応する。CPU サーバーのマザーボードに加え、AI インフラの計算トレイ、スイッチトレイ、冷却液分配装置、電源シェルフといった管理用途も狙う。RISC-V サーバーにとって BMC は主 CPU から独立して通電中は常時稼働する管理系チップであり、ここでの量産採用はホスト CPU のソフトウェア生態系を待たずにサーバーベンダーの部材リストへ入ることを意味する。ただし顧客名、納入規模、価格は非公表で、実規模は第三者データでの確認が必要だ。"
     source: "IT之家"
@@ -8,6 +16,22 @@ items:
     vendors: ["StarFive 赛昉科技"]
     tags: ["サーバー出荷"]
     importance: "high"
+  - date: "2026-11-16"
+    title: "Tenstorrent と ConfidentialMind、Galaxy Blackhole RISC-V サーバーに自社運用型 AI 基盤を組み合わせ"
+    summary: "Tenstorrent は 11 月 16 日、ソフトウェア企業 ConfidentialMind と提携し、同社のセルフホスト型 AI 基盤を RISC-V ベースの Galaxy Blackhole システム上に載せると発表した。両社は欧州、中東、アジア太平洋、米州で共同販売し、データを自社環境に置く必要がある政府、大学、規制対象企業、推論サービス事業者を狙う。Galaxy Blackhole は 6U 筐体に Blackhole Tensix プロセッサを 32 基搭載するシステムで、単機でも顧客データセンター内でのスーパークラスタへの拡張も可能である。ConfidentialMind は推論サービング、ベクトルデータベース、アクセス制御、アクセラレータ管理、可観測性、コンプライアンスログといった上位層を提供し、OpenAI 互換 API としてオープンソースモデル、RAG、エージェントを提供することで、顧客が基盤を自前で構築する負担を取り除く。RISC-V サーバーにとっては、ハードウェア販売から「納入可能なスタック」の販売へ一歩進み、配備・運用ソフトを補う動きだが、共同販売の価格、提供時期、顧客名は公表されておらず、性能データも示されていない。"
+    source: "Tenstorrent"
+    url: "https://tenstorrent.com/en/newsroom/tenstorrent-and-confidentialmind-partner-to-deliver-sovereign-ai-on-open-hardware"
+    vendors: ["Tenstorrent", "ConfidentialMind"]
+    tags: ["エコシステム連携", "システム・マザーボード"]
+    importance: "medium"
+  - date: "2026-11-16"
+    title: "シンガポールの SingNova、RISC-V ベースのインテリジェント映像ストレージサーバーと多コア RISC-V 企業向け NAS を展示"
+    summary: "南洋理工大学（NTU）発の企業 SingNova（Nanyang Singtech）は 11 月 16 日の発表で、シンガポールの Safety & Security Asia 2026 に 4 つのプラットフォームを出展したと述べた。うち 2 つはサーバー形態である。Intelligent Video Storage Server は RISC-V アーキテクチャとチップレベルのインテリジェント映像符号化を用い、映像の保存容量を 3 分の 2 以上削減できる（3:1 の圧縮比）とする。ボード冗長、クラスタのフェイルオーバーと自己復旧に対応し、RTSP/ONVIF と H.265/H.264 をサポート、スマート金融、スマートシティ、鉄道、高速道路、エネルギー、製造業を対象とする。Storage Station は多コア RISC-V による企業向けオールインワン NAS で、3 台同時故障に耐える RAID-TP、マルチターゲットバックアップ、Docker 内蔵に対応する。残る 2 つは 12 コア RISC-V と 256 TOPS（INT8）、最大 128GB の LPDDR5 ECC を組み合わせたデスクトップ型 AI 計算システム AI Power Studio と、デジタルヒューマン製品である。RISC-V サーバーにとっては、防犯・映像ストレージという垂直領域では珍しい RISC-V 製品ラインであり、符号化アクセラレーションをチップに取り込み、低消費電力でストレージコストを下げる路線だが、指標はいずれもベンダー側の説明で、SoC 型番、価格、出荷量、第三者試験は公表されていない。"
+    source: "GlobeNewswire / SingNova"
+    url: "https://www.globenewswire.com/news-release/2026/11/16/3403151/0/en/singnova-showcases-risc-v-based-ai-computing-and-intelligent-video-storage-portfolio-at-safety-security-asia-2026.html"
+    vendors: ["SingNova", "Nanyang Technological University"]
+    tags: ["サーバー出荷", "システム・マザーボード"]
+    importance: "low"
   - date: "2026-11-16"
     title: "藍芯算力インタビュー：LX500 が 1 兆パラメータの Kimi K2.6 をオンダイ推論で検証、中国移動クラウドで稼働"
     summary: "11 月 16 日付の「南方日報」が藍芯算力（Lanxin Computing）へのインタビューを掲載した。CTO の賈新霞氏とエコシステムマーケティング責任者の許慶偉氏によれば、LX500 はオンダイの AI エンジン上で 1 兆パラメータの Kimi K2.6 と 350 億パラメータの Qwen3.6-35B の推論検証を完了した。48 基の自社 CPU コアと 75 TOPS（INT8）の推論エンジンがコヒーレントメモリ設計で DDR5 を共有し、エンジンの演算範囲内では独立 GPU を必要としないとしている。商用面では通信事業者が先行し、中国移動研究院と移動雲（China Mobile Cloud）のシナリオで LX500 が安定稼働、大学・研究機関では規模導入が進み、金融・政府分野は共同適応とバッチテスト中。第 2 世代チップは来年のテープアウトを予定し、海外顧客にはハードウェア開発プラットフォームを量産出荷済みとする。RISC-V サーバーにとっては 1 兆パラメータ級モデルを単一の RISC-V SoC で処理できるというベンダー側のデータと、通信事業者クラウドでの具体的な稼働先を示すものだが、数値はいずれも同社の説明で、スループットや遅延、第三者ベンチマークは示されていない。"

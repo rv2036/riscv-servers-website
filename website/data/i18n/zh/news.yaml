@@ -1,5 +1,13 @@
 # RISC-V 服务器新闻（中文母版，按日期倒序）
 items:
+  - date: "2026-11-19"
+    title: "赛昉科技昉·天枢-70 乱序 RISC-V CPU IP 随 JH-B100 量产进入数据中心，年出货量预期千万级"
+    summary: "赛昉科技 11 月 19 日披露，其自研乱序 RISC-V CPU IP 昉·天枢-70（Dubhe-70）已随服务器 BMC 芯片昉·惊鸿-B100 进入量产，官方称这是国产乱序 RISC-V CPU IP 首次在数据中心服务器场景实现规模化量产商用，年出货量有望达到千万级。天枢-70 采用 9 级及以上流水线、三发射超标量设计，具备深度乱序执行与多核、I/O 缓存一致性，PPA 上性能接近 Arm Cortex-A73，能效比与面积效率优于 Cortex-A55，适配服务器管理、工业控制与边缘计算；JH-B100 同时集成赛昉自研的昉·星路-500 一致性 NoC，赛昉另有天枢-83、天枢-100 两款高性能 CPU IP 与星路-700 NoC 已获客户选用。对 RISC-V 服务器而言，这条消息落在服务器管理面而非主计算：BMC 是独立于主 CPU、整机通电即常驻的带外管理芯片，跑得动 A73 级乱序内核意味着 RISC-V 在管理面已经够用并进入批量出货，但不能读成服务器主 CPU 的性能突破；千万级是厂商对年出货量的预期，客户名单、单价与实际交付量均未公布。赛昉 11 月 17 日已宣布 B100 量产交付，本条补充的是该芯片所用 CPU IP 的型号与规格。"
+    source: "快科技（新浪科技转载）"
+    url: "https://finance.sina.cn/tech/2026-11-19/detail-inizfuni6347980.d.html"
+    vendors: ["StarFive 赛昉科技"]
+    tags: ["芯片发布"]
+    importance: "medium"
   - date: "2026-11-17"
     title: "RISC-V International 访谈：RVA23 服务器级芯片已多家流片，HPC 从模拟走向真实部署"
     summary: "RISC-V International 在 SC26 期间刊出对 HPC 特别兴趣组主席 Nick Brown（EPCC 高级研究员、英国 RISC-V 测试床负责人）与副主席 Doug Norton（InspireSemi 首席营销官）的访谈，给出的进度是：2026 年已有多家厂商基于 RVA23 配置流片服务器级芯片，RISC-V Server Platform 规范已获批准；HPC SIG 去年完成的差距分析显示，英国国家超算 ARCHER2（HPE Cray EX）上 55% 的用户代码可以在 RISC-V 上运行，但“能跑”不等于“已调优”，因此社区重心转向向量化一类单节点优化；InspireSemi 的 Thunderbird 加速器单芯片集成 1536 个原生 FP64 RISC-V 核，正通过 Lenovo、Dell Technologies、Penguin Solutions 与 E4 Computer Engineering 以 PCIe 加速卡和 HPC 服务器两种形态推向市场；Openchip 今年把 Lustre 补丁上游化，补上 RISC-V 在 HPC 文件系统上的缺口，AME/IME/VME 矩阵扩展被两人视为接下来的关键里程碑。对 RISC-V 服务器而言，这篇访谈把“服务器级 RISC-V”从路线图落到可核对的具体项（流片、规范批准、代码覆盖率、OEM 渠道），但全部是受访者口径，未给出芯片型号、实测性能与出货量；SC26 期间另有 11 月 19 日中午的 RISC-V BoF 与 11 月 20 日上午的 RISC-V for HPC 研讨会。"

@@ -1,5 +1,13 @@
 # RISC-V 서버 뉴스(한국어판, 중국어 원본 대응, 날짜 내림차순)
 items:
+  - date: "2026-11-19"
+    title: "StarFive, 아웃오브오더 RISC-V CPU IP 'Dubhe-70' JH-B100에 탑재해 양산"
+    summary: "StarFive(赛昉科技)는 11월 19일 자체 개발 아웃오브오더 RISC-V CPU IP 'Dubhe-70(昉·天枢-70)'이 서버용 BMC 칩 'JH-B100(昉·惊鸿-B100)'에 탑재돼 양산에 들어갔다고 밝혔다. 중국산 아웃오브오더 RISC-V CPU IP가 데이터센터 서버 영역에서 대규모 양산·상용화에 도달한 것은 처음이라며 연간 출하량이 수천만 개에 이를 것으로 내다봤다. Dubhe-70은 9단 이상 파이프라인과 3발행 슈퍼스칼라 설계에 깊은 아웃오브오더 실행을 갖추고 멀티코어와 I/O 캐시 일관성을 지원한다. PPA는 Arm Cortex-A73에 근접하고 Cortex-A55 대비 전력 효율과 면적 효율이 우수하다고 하며 서버 관리, 산업 제어, 엣지 컴퓨팅을 겨냥한다. JH-B100에는 StarFive 자체 일관성 NoC인 'StarNoC-500'도 통합됐고, 회사는 Dubhe-83과 Dubhe-100 CPU IP, StarNoC-700 NoC 역시 고객이 채택해 서버·AI·HPC를 겨냥하고 있다고 밝혔다. RISC-V 서버 관점에서 이 소식은 연산이 아니라 관리 영역에 속한다. BMC는 호스트 CPU와 독립적으로 전원이 들어온 동안 상시 동작하는 대역외 관리 칩이므로 A73급 아웃오브오더 코어가 돈다는 것은 RISC-V가 관리 영역에서 양산 출하에 충분한 수준에 이르렀다는 뜻이지 서버 주 CPU의 성능 돌파로 읽을 일은 아니다. 수천만 개는 연간 출하량에 대한 회사 전망이며 고객명, 단가, 실제 납품량은 공개되지 않았다. StarFive는 11월 17일에 이미 B100 양산 출하를 발표했고, 이 항목은 그 안에 들어간 CPU IP의 모델과 사양을 보강한다."
+    source: "콰이커지 (Sina Tech 전재)"
+    url: "https://finance.sina.cn/tech/2026-11-19/detail-inizfuni6347980.d.html"
+    vendors: ["StarFive"]
+    tags: ["칩 발표"]
+    importance: "medium"
   - date: "2026-11-17"
     title: "RISC-V International 인터뷰: RVA23 서버급 칩 여러 종 테이프아웃, HPC는 시뮬레이션에서 실제 배치로"
     summary: "RISC-V International은 SC26 기간에 HPC 특별관심그룹(SIG) 의장이자 EPCC 선임연구원·영국 RISC-V 테스트베드 책임자인 Nick Brown과 부의장 겸 InspireSemi 최고마케팅책임자 Doug Norton의 인터뷰를 게재했다. 구체적 내용은 2026년 여러 벤더가 RVA23 프로파일 기반 서버급 실리콘 테이프아웃을 마쳤고 RISC-V Server Platform 규격이 승인됐다는 것, HPC SIG가 지난해 수행한 격차 분석에서 영국 국가 슈퍼컴퓨터 ARCHER2(HPE Cray EX) 사용자의 55%가 자신의 코드를 RISC-V에서 실행할 수 있다고 나왔다는 것(다만 '실행된다'가 '최적화됐다'는 뜻은 아니어서 벡터화 같은 단일 노드 최적화로 무게중심이 옮겨갔다), InspireSemi의 Thunderbird 가속기는 칩당 네이티브 FP64 RISC-V 코어 1536개를 갖추고 Lenovo, Dell Technologies, Penguin Solutions, E4 Computer Engineering을 통해 PCIe 애드인 카드와 HPC 서버 두 형태로 시장에 나간다는 것, Openchip이 올해 Lustre 패치를 업스트림에 올려 RISC-V의 HPC 파일시스템 공백을 메웠고 AME/IME/VME 행렬 확장이 다음 핵심 이정표로 꼽힌다는 것이다. RISC-V 서버 관점에서 이 인터뷰의 가치는 서버급 RISC-V를 로드맵에서 검증 가능한 항목(테이프아웃, 규격 승인, 코드 커버리지, OEM 채널)으로 끌어내렸다는 데 있지만 모두 발언자 설명이며 칩 모델명, 실측 성능, 출하량은 제시되지 않았다. SC26에서는 11월 19일 정오 RISC-V BoF와 11월 20일 오전 RISC-V for HPC 워크숍도 열린다."

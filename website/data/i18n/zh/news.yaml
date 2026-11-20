@@ -8,6 +8,14 @@ items:
     vendors: ["StarFive 赛昉科技"]
     tags: ["芯片发布"]
     importance: "medium"
+  - date: "2026-11-18"
+    title: "RISE 称 riscv64 原生 Python wheel 达 1506 个：PyTorch 2.13 与 vLLM 已可安装"
+    summary: "RISE（RISC-V 软件生态项目）11 月 18 日发布进展报告（作者为 Qualcomm 的 Ludovic Henry）：在其跟踪的 PyPI 下载量前 15000 名包中，含原生代码的 2076 个包里有 1506 个已有 riscv64 wheel，其中 117 个由上游发布在 PyPI、1389 个来自 RISE 自建索引，仍有 519 个缺 wheel，前 100 名里还差 5 个。NumPy、SciPy、pandas、cryptography、PyArrow 与 PyTorch、vLLM 都在名单内：torch 2.13.0 提供 CPython 3.12/3.13/3.14 与自由线程 3.14 的 wheel，在 RISC-V 真机构建而非 QEMU 或交叉编译，完整原生跑过 212,038 个测试用例，torch 2.14.0 已于 9 月跟进；vLLM 0.29.0+cpu 于 9 月 21 日合入、0.30.0 于 9 月 24 日跟进，是 manylinux_2_39_riscv64 的 ABI3 wheel。对 RISC-V 服务器而言，AI 推理与数据栈在 riscv64 Linux 上从源码现编变成预编译安装，但 1389 个包不在 PyPI、要额外指向 pypi.riseproject.dev，vLLM 目前只有 CPU 版本、未给推理性能数据，且这些数字全部来自 RISE 自己的看板，尚无第三方复核。"
+    source: "RISE（RISC-V 软件生态项目）"
+    url: "https://riseproject.dev/2026/11/18/python-on-risc-v-1500-packages-and-counting/"
+    vendors: ["RISE"]
+    tags: ["软件栈"]
+    importance: "medium"
   - date: "2026-11-17"
     title: "RISC-V International 访谈：RVA23 服务器级芯片已多家流片，HPC 从模拟走向真实部署"
     summary: "RISC-V International 在 SC26 期间刊出对 HPC 特别兴趣组主席 Nick Brown（EPCC 高级研究员、英国 RISC-V 测试床负责人）与副主席 Doug Norton（InspireSemi 首席营销官）的访谈，给出的进度是：2026 年已有多家厂商基于 RVA23 配置流片服务器级芯片，RISC-V Server Platform 规范已获批准；HPC SIG 去年完成的差距分析显示，英国国家超算 ARCHER2（HPE Cray EX）上 55% 的用户代码可以在 RISC-V 上运行，但“能跑”不等于“已调优”，因此社区重心转向向量化一类单节点优化；InspireSemi 的 Thunderbird 加速器单芯片集成 1536 个原生 FP64 RISC-V 核，正通过 Lenovo、Dell Technologies、Penguin Solutions 与 E4 Computer Engineering 以 PCIe 加速卡和 HPC 服务器两种形态推向市场；Openchip 今年把 Lustre 补丁上游化，补上 RISC-V 在 HPC 文件系统上的缺口，AME/IME/VME 矩阵扩展被两人视为接下来的关键里程碑。对 RISC-V 服务器而言，这篇访谈把“服务器级 RISC-V”从路线图落到可核对的具体项（流片、规范批准、代码覆盖率、OEM 渠道），但全部是受访者口径，未给出芯片型号、实测性能与出货量；SC26 期间另有 11 月 19 日中午的 RISC-V BoF 与 11 月 20 日上午的 RISC-V for HPC 研讨会。"

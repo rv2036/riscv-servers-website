@@ -8,6 +8,14 @@ items:
     vendors: ["StarFive"]
     tags: ["칩 발표"]
     importance: "medium"
+  - date: "2026-11-18"
+    title: "RISE, riscv64 네이티브 Python wheel 1506개 돌파…PyTorch 2.13·vLLM 설치 가능"
+    summary: "RISC-V 소프트웨어 생태계 프로젝트(RISE)가 11월 18일 진행 보고서(Qualcomm의 Ludovic Henry 작성)를 공개하며, PyPI 다운로드 상위 1만5000개 패키지 가운데 네이티브 코드를 포함한 2076개 중 1506개에 riscv64 wheel이 마련됐다고 밝혔습니다. 이 가운데 업스트림 PyPI에 올라온 것은 117개뿐이고 1389개는 RISE 자체 패키지 인덱스에서 제공되며, 519개는 여전히 wheel이 없습니다(상위 100개 중에서도 5개 미지원). NumPy, SciPy, pandas, cryptography, PyArrow와 함께 PyTorch와 vLLM이 이름을 올렸고, torch 2.13.0은 CPython 3.12·3.13·3.14와 프리스레드 3.14용 wheel을 제공하며 QEMU나 크로스 컴파일이 아닌 RISC-V 실기에서 빌드돼 21만2038건의 테스트를 네이티브로 수행했습니다(torch 2.14.0은 9월에 이어짐). vLLM은 0.29.0+cpu가 9월 21일, 0.30.0이 9월 24일 병합돼 manylinux_2_39_riscv64 ABI3 wheel로 배포됩니다. RISC-V 서버 입장에서는 AI 추론과 데이터 스택이 riscv64 Linux에서 소스 빌드에서 사전 빌드 설치로 옮겨가는 의미가 있지만, 1389개는 PyPI에 없어 RISE 인덱스를 추가로 지정해야 하고 vLLM은 CPU 버전뿐이며 추론 성능 수치도 없고, 모든 수치는 RISE 자체 대시보드 기준으로 제3자 검증은 없습니다."
+    source: "RISE(RISC-V Software Ecosystem)"
+    url: "https://riseproject.dev/2026/11/18/python-on-risc-v-1500-packages-and-counting/"
+    vendors: ["RISE"]
+    tags: ["소프트웨어 스택"]
+    importance: "medium"
   - date: "2026-11-17"
     title: "RISC-V International 인터뷰: RVA23 서버급 칩 여러 종 테이프아웃, HPC는 시뮬레이션에서 실제 배치로"
     summary: "RISC-V International은 SC26 기간에 HPC 특별관심그룹(SIG) 의장이자 EPCC 선임연구원·영국 RISC-V 테스트베드 책임자인 Nick Brown과 부의장 겸 InspireSemi 최고마케팅책임자 Doug Norton의 인터뷰를 게재했다. 구체적 내용은 2026년 여러 벤더가 RVA23 프로파일 기반 서버급 실리콘 테이프아웃을 마쳤고 RISC-V Server Platform 규격이 승인됐다는 것, HPC SIG가 지난해 수행한 격차 분석에서 영국 국가 슈퍼컴퓨터 ARCHER2(HPE Cray EX) 사용자의 55%가 자신의 코드를 RISC-V에서 실행할 수 있다고 나왔다는 것(다만 '실행된다'가 '최적화됐다'는 뜻은 아니어서 벡터화 같은 단일 노드 최적화로 무게중심이 옮겨갔다), InspireSemi의 Thunderbird 가속기는 칩당 네이티브 FP64 RISC-V 코어 1536개를 갖추고 Lenovo, Dell Technologies, Penguin Solutions, E4 Computer Engineering을 통해 PCIe 애드인 카드와 HPC 서버 두 형태로 시장에 나간다는 것, Openchip이 올해 Lustre 패치를 업스트림에 올려 RISC-V의 HPC 파일시스템 공백을 메웠고 AME/IME/VME 행렬 확장이 다음 핵심 이정표로 꼽힌다는 것이다. RISC-V 서버 관점에서 이 인터뷰의 가치는 서버급 RISC-V를 로드맵에서 검증 가능한 항목(테이프아웃, 규격 승인, 코드 커버리지, OEM 채널)으로 끌어내렸다는 데 있지만 모두 발언자 설명이며 칩 모델명, 실측 성능, 출하량은 제시되지 않았다. SC26에서는 11월 19일 정오 RISC-V BoF와 11월 20일 오전 RISC-V for HPC 워크숍도 열린다."

@@ -8,6 +8,14 @@ items:
     vendors: ["XiangShan", "BOSC", "SpacemiT"]
     tags: ["칩 발표", "생태계 협력"]
     importance: "medium"
+  - date: "2026-11-20"
+    title: "E4와 Openchip, SC26에서 MoU 체결…RISC-V 가속기 기반 유럽 주권 AI 컴퓨팅 검토"
+    summary: "이탈리아 HPC 시스템 통합업체 E4 Computer Engineering과 바르셀로나의 RISC-V 프로세서 기업 Openchip이 SC26에서 양해각서(MoU)를 체결하고, 대규모 AI 추론과 HPC 워크로드를 위한 유럽산 고효율 컴퓨팅 솔루션 제품군을 공동 검토하기로 했다. 대상은 EU의 AI Factory와 GigaFactory 같은 주권 컴퓨팅 프로그램이며, 현재 협력 범위는 공동 기술 워크숍, 요구사항 분석, 제품 통합 가능성 평가까지다. 이후 학계·산업계·데이터센터를 대상으로 시장 조사를 진행하고 그 결과와 별도 계약에 따라 설계·검증 여부를 결정하므로 제품 모델, 일정, 가격, 고객은 아직 공개되지 않았다. RISC-V 서버 관점에서는 유럽 통합업체가 RISC-V 가속기를 주권 컴퓨팅 공급망에 넣는 또 하나의 움직임이다. E4는 이미 InspireSemi PCIe 가속기 기반 RISC-V 시스템을 판매하고 있고 이번에 Openchip을 후보로 추가했지만, Openchip은 SUSE와의 MoU와 BER10 검증 단계에서 더 나아가지 못했으므로 이번 건도 같은 기준으로 지켜볼 필요가 있다."
+    source: "E4 Computer Engineering(보도자료)"
+    url: "https://www.e4company.com/en/2026/11/openchip-e4-mou/"
+    vendors: ["Openchip", "E4 Computer Engineering"]
+    tags: ["생태계 협력", "HPC"]
+    importance: "medium"
   - date: "2026-11-19"
     title: "StarFive, 아웃오브오더 RISC-V CPU IP 'Dubhe-70' JH-B100에 탑재해 양산"
     summary: "StarFive(赛昉科技)는 11월 19일 자체 개발 아웃오브오더 RISC-V CPU IP 'Dubhe-70(昉·天枢-70)'이 서버용 BMC 칩 'JH-B100(昉·惊鸿-B100)'에 탑재돼 양산에 들어갔다고 밝혔다. 중국산 아웃오브오더 RISC-V CPU IP가 데이터센터 서버 영역에서 대규모 양산·상용화에 도달한 것은 처음이라며 연간 출하량이 수천만 개에 이를 것으로 내다봤다. Dubhe-70은 9단 이상 파이프라인과 3발행 슈퍼스칼라 설계에 깊은 아웃오브오더 실행을 갖추고 멀티코어와 I/O 캐시 일관성을 지원한다. PPA는 Arm Cortex-A73에 근접하고 Cortex-A55 대비 전력 효율과 면적 효율이 우수하다고 하며 서버 관리, 산업 제어, 엣지 컴퓨팅을 겨냥한다. JH-B100에는 StarFive 자체 일관성 NoC인 'StarNoC-500'도 통합됐고, 회사는 Dubhe-83과 Dubhe-100 CPU IP, StarNoC-700 NoC 역시 고객이 채택해 서버·AI·HPC를 겨냥하고 있다고 밝혔다. RISC-V 서버 관점에서 이 소식은 연산이 아니라 관리 영역에 속한다. BMC는 호스트 CPU와 독립적으로 전원이 들어온 동안 상시 동작하는 대역외 관리 칩이므로 A73급 아웃오브오더 코어가 돈다는 것은 RISC-V가 관리 영역에서 양산 출하에 충분한 수준에 이르렀다는 뜻이지 서버 주 CPU의 성능 돌파로 읽을 일은 아니다. 수천만 개는 연간 출하량에 대한 회사 전망이며 고객명, 단가, 실제 납품량은 공개되지 않았다. StarFive는 11월 17일에 이미 B100 양산 출하를 발표했고, 이 항목은 그 안에 들어간 CPU IP의 모델과 사양을 보강한다."

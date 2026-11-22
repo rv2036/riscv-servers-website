@@ -8,6 +8,14 @@ items:
     vendors: ["香山 XiangShan", "北京开源芯片研究院", "SpacemiT 进迭时空"]
     tags: ["芯片发布", "生态合作"]
     importance: "medium"
+  - date: "2026-11-20"
+    title: "E4 与 Openchip 在 SC26 签署 MoU：拟联合开发基于 RISC-V 加速器的欧洲主权 AI 计算平台"
+    summary: "意大利 HPC 系统集成商 E4 Computer Engineering 与巴塞罗那的 RISC-V 处理器公司 Openchip 在 SC26 上签署谅解备忘录，计划联合评估一套面向大规模 AI 推理与 HPC 工作负载的欧洲高能效计算方案，目标指向欧盟 AI Factory、GigaFactory 等主权算力计划。合作范围目前只到联合技术研讨、需求分析与潜在产品集成评估，下一步才做面向学界、产业与数据中心的市场调研，之后是否进入方案设计与验证取决于调研结果与正式协议，因此现阶段没有产品型号、时间表、报价与客户。对 RISC-V 服务器而言，这是欧洲整机集成商把 RISC-V 加速器纳入主权算力供应链的又一步——E4 此前已在卖基于 InspireSemi PCIe 加速卡的 RISC-V 方案，此次把 Openchip 的加速器列进候选；但 Openchip 与 SUSE 的合作同样始于 MoU、BER10 仍处验证阶段，这一单也要按同样的标准看能否落成可交付系统。"
+    source: "E4 Computer Engineering（厂商新闻稿）"
+    url: "https://www.e4company.com/en/2026/11/openchip-e4-mou/"
+    vendors: ["Openchip", "E4 Computer Engineering"]
+    tags: ["生态合作", "HPC"]
+    importance: "medium"
   - date: "2026-11-19"
     title: "赛昉科技昉·天枢-70 乱序 RISC-V CPU IP 随 JH-B100 量产进入数据中心，年出货量预期千万级"
     summary: "赛昉科技 11 月 19 日披露，其自研乱序 RISC-V CPU IP 昉·天枢-70（Dubhe-70）已随服务器 BMC 芯片昉·惊鸿-B100 进入量产，官方称这是国产乱序 RISC-V CPU IP 首次在数据中心服务器场景实现规模化量产商用，年出货量有望达到千万级。天枢-70 采用 9 级及以上流水线、三发射超标量设计，具备深度乱序执行与多核、I/O 缓存一致性，PPA 上性能接近 Arm Cortex-A73，能效比与面积效率优于 Cortex-A55，适配服务器管理、工业控制与边缘计算；JH-B100 同时集成赛昉自研的昉·星路-500 一致性 NoC，赛昉另有天枢-83、天枢-100 两款高性能 CPU IP 与星路-700 NoC 已获客户选用。对 RISC-V 服务器而言，这条消息落在服务器管理面而非主计算：BMC 是独立于主 CPU、整机通电即常驻的带外管理芯片，跑得动 A73 级乱序内核意味着 RISC-V 在管理面已经够用并进入批量出货，但不能读成服务器主 CPU 的性能突破；千万级是厂商对年出货量的预期，客户名单、单价与实际交付量均未公布。赛昉 11 月 17 日已宣布 B100 量产交付，本条补充的是该芯片所用 CPU IP 的型号与规格。"

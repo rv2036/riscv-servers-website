@@ -18,7 +18,7 @@ items:
     importance: "medium"
   - date: "2026-11-19"
     title: "沙特 Epic Semi 与红帽合作：RHEL 10 开发者预览首次跑上 Contrail AIX RISC-V 服务器"
-    summary: "沙特阿拉伯首家无晶圆厂半导体公司 Epic Semi 11 月 19 日宣布与红帽合作，已让红帽企业 Linux 跑在自家 RISC-V 企业级服务器上，并在 RISC-V CPU+AI 服务器平台 Contrail AIX 上完成 RHEL 10 开发者预览的首次实现，该机型被列入红帽基于 RHEL 10.3 的最新 RISC-V 预览兼容清单。按 Epic Semi 的说法，Contrail AIX 面向 AI 原生基础设施的编排、推理与智能体负载；集成之所以相对简单，是因为 RISC-V Server Platform 规范把固件启动（UEFI）与硬件描述（ACPI 表）标准化了，平台专属工作量因此减少。对 RISC-V 服务器而言，这是中东主权算力厂商第一次把自家整机放进企业级 Linux 的官方预览清单；但 Epic Semi 未公布 Contrail AIX 的核数、主频、内存与加速器规格，也没有性能、价格与交付时间，RHEL 的 RISC-V 版本本身仍是开发者预览、不提供生产支持。"
+    summary: "沙特阿拉伯首家无晶圆厂半导体公司 Epic Semi 11 月 19 日宣布与红帽合作，已让红帽企业 Linux 跑在自家 RISC-V 企业级服务器上，并在 RISC-V CPU+AI 服务器平台 Contrail AIX 上完成 RHEL 10 开发者预览的首次实现，该机型被列入红帽基于 RHEL 10.3 的最新 RISC-V 预览兼容清单。按 Epic Semi 的说法，Contrail AIX 面向 AI 原生基础设施的编排、推理与智能体负载；集成之所以相对简单，是因为 RISC-V Server Platform 规范把固件启动（UEFI）与硬件描述（ACPI 表）标准化了，平台专属工作量因此减少。对 RISC-V 服务器而言，这意味着中东主权算力厂商的整机也进入了企业级 Linux 的官方预览清单；但 Epic Semi 未公布 Contrail AIX 的核数、主频、内存与加速器规格，也没有性能、价格与交付时间，RHEL 的 RISC-V 版本本身仍是开发者预览、不提供生产支持。"
     source: "Epic Semi"
     url: "https://www.epicsemi.com/news/epic-semi-announces-collaboration-with-red-hat-to-bring-red-hat-enterprise-linux-to-contrail-aix-ai-server-platform/"
     vendors: ["Epic Semi", "Red Hat"]
@@ -58,7 +58,7 @@ items:
     importance: "high"
   - date: "2026-11-16"
     title: "红帽发布 RHEL 10.3 RISC-V 开发者预览：新增五个服务器平台，基础平台由 P550 转向 BigSky 2U870"
-    summary: "红帽 11 月 16 日刊出 RHEL 10.3 RISC-V 开发者预览的更新说明（镜像发布于 11 月 13 日）：这一版在 RHEL 10.3 代码基线上重新合入上游 RISC-V 代码，并列出可启动的新平台（红帽称这只是部分清单）：SiFive BigSky 2U870、进迭时空 V100、进迭时空 K3 及基于 K3 的 RV2768 集群服务器、UltraRISC URDP1000、Epic Semi Contrail AIX，同时把项目的开发与构建基础平台从 SiFive HiFive Premier P550 迁向 BigSky 2U870（P550 是最后一次被测）。红帽给出的观察是，这些机器几乎都是 32 核、主频 2GHz 以上（V100 为双路 2×46 核），GCC 与 LLVM 编译不再以天计；同一篇说明还提到 Fedora 45 for RISC-V 已发布。对 RISC-V 服务器而言，这是企业级 Linux 发行版第一次把多家厂商的服务器级整机放进同一份预览兼容清单，并且覆盖到 K3 的整柜集群形态；但开发者预览不提供支持、不保证与正式版之间的迁移路径，也不是生产可用版本。"
+    summary: "红帽 11 月 16 日刊出 RHEL 10.3 RISC-V 开发者预览的更新说明（镜像发布于 11 月 13 日）：这一版在 RHEL 10.3 代码基线上重新合入上游 RISC-V 代码，并列出可启动的新平台（红帽称这只是部分清单）：SiFive BigSky 2U870、进迭时空 V100、进迭时空 K3 及基于 K3 的 RV2768 集群服务器、UltraRISC URDP1000、Epic Semi Contrail AIX，同时把项目的开发与构建基础平台从 SiFive HiFive Premier P550 迁向 BigSky 2U870（P550 是最后一次被测）。红帽给出的观察是，这些机器几乎都是 32 核、主频 2GHz 以上（V100 为双路 2×46 核），GCC 与 LLVM 编译不再以天计；同一篇说明还提到 Fedora 45 for RISC-V 已发布。对 RISC-V 服务器而言，这份兼容清单已覆盖五家厂商的服务器级整机与基于 K3 的整柜集群形态，RHEL 在 RISC-V 上正从单板验证走向多厂商整机适配；但开发者预览不提供支持、不保证与正式版之间的迁移路径，也不是生产可用版本。"
     source: "Red Hat Developer（红帽开发者博客）"
     url: "https://developers.redhat.com/articles/2026/11/16/rhel-10-developer-preview-for-risc-v-updates-to-10-3"
     vendors: ["Red Hat"]

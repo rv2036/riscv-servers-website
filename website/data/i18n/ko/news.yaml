@@ -18,7 +18,7 @@ items:
     importance: "medium"
   - date: "2026-11-19"
     title: "사우디 Epic Semi, Red Hat과 협력…Contrail AIX에서 RHEL 10 개발자 프리뷰 구동"
-    summary: "사우디아라비아 최초의 팹리스 반도체 기업 Epic Semi는 11월 19일 Red Hat과 협력해 자사 RISC-V 기반 기업용 서버에서 Red Hat Enterprise Linux를 구동했으며, RISC-V CPU+AI 서버 플랫폼인 Contrail AIX에서 RHEL 10 개발자 프리뷰의 초기 구현을 완료했다고 밝혔다. 이 시스템은 RHEL 10.3 기반 Red Hat의 최신 RISC-V 프리뷰 호환 목록에 포함됐다. Epic Semi에 따르면 Contrail AIX는 AI 네이티브 인프라(오케스트레이션, 추론, 에이전트 워크로드)를 겨냥하며, RISC-V Server Platform 규격이 펌웨어 부팅(UEFI)과 하드웨어 기술(ACPI 테이블)을 표준화해 플랫폼별 작업을 줄일 수 있었다. RISC-V 서버 입장에서는 중동의 소버린 컴퓨팅 기업이 자사 시스템을 기업용 Linux 프리뷰 호환 목록에 올린 첫 사례다. 다만 Epic Semi는 Contrail AIX의 코어 수, 클럭, 메모리, 가속기 사양과 성능·가격·공급 시점을 공개하지 않았고, RHEL의 RISC-V 버전은 지원이 없는 개발자 프리뷰 단계다."
+    summary: "사우디아라비아 최초의 팹리스 반도체 기업 Epic Semi는 11월 19일 Red Hat과 협력해 자사 RISC-V 기반 기업용 서버에서 Red Hat Enterprise Linux를 구동했으며, RISC-V CPU+AI 서버 플랫폼인 Contrail AIX에서 RHEL 10 개발자 프리뷰의 초기 구현을 완료했다고 밝혔다. 이 시스템은 RHEL 10.3 기반 Red Hat의 최신 RISC-V 프리뷰 호환 목록에 포함됐다. Epic Semi에 따르면 Contrail AIX는 AI 네이티브 인프라(오케스트레이션, 추론, 에이전트 워크로드)를 겨냥하며, RISC-V Server Platform 규격이 펌웨어 부팅(UEFI)과 하드웨어 기술(ACPI 테이블)을 표준화해 플랫폼별 작업을 줄일 수 있었다. RISC-V 서버 입장에서는 중동 소버린 컴퓨팅 기업의 자사 시스템이 기업용 Linux 프리뷰 호환 목록에 오른 것이다. 다만 Epic Semi는 Contrail AIX의 코어 수, 클럭, 메모리, 가속기 사양과 성능·가격·공급 시점을 공개하지 않았고, RHEL의 RISC-V 버전은 지원이 없는 개발자 프리뷰 단계다."
     source: "Epic Semi"
     url: "https://www.epicsemi.com/news/epic-semi-announces-collaboration-with-red-hat-to-bring-red-hat-enterprise-linux-to-contrail-aix-ai-server-platform/"
     vendors: ["Epic Semi", "Red Hat"]
@@ -58,7 +58,7 @@ items:
     importance: "high"
   - date: "2026-11-16"
     title: "Red Hat, RHEL 10.3 RISC-V 개발자 프리뷰 공개…서버 플랫폼 5종 추가, 기반은 P550에서 BigSky 2U870으로"
-    summary: "Red Hat은 11월 16일 RHEL 10.3 출시에 맞춘 RISC-V 개발자 프리뷰 업데이트를 공개했다(이미지 배포는 11월 13일). RHEL 10.3 코드베이스로 옮기고 업스트림 RISC-V 코드를 최대한 반영했으며, 부팅·구동되는 플랫폼으로(Red Hat은 전체 목록이 아니라고 밝혔다) SiFive BigSky 2U870, SpacemiT V100, SpacemiT K3와 K3 기반 RV2768 클러스터 서버, UltraRISC URDP1000, Epic Semi Contrail AIX 등 5종을 추가했다. 프로젝트의 개발·빌드 기반도 SiFive HiFive Premier P550에서 BigSky 2U870으로 옮기기 시작했고 P550은 이번이 마지막 검증 대상이다. Red Hat은 이들 장비가 대부분 32코어·2GHz 이상(V100은 듀얼 소켓 2×46코어)이라 GCC나 LLVM 빌드에 며칠씩 걸리던 시기는 끝났다고 밝혔으며, 같은 글에서 Fedora 45 for RISC-V 출시도 언급했다. RISC-V 서버 입장에서는 기업용 Linux 배포판이 여러 벤더의 서버급 시스템을 하나의 프리뷰 호환 목록에 올리고 랙 단위 클러스터 구성까지 포함한 첫 사례다. 다만 개발자 프리뷰여서 지원과 정식 버전으로의 마이그레이션 보장이 없고 운영 환경용이 아니다."
+    summary: "Red Hat은 11월 16일 RHEL 10.3 출시에 맞춘 RISC-V 개발자 프리뷰 업데이트를 공개했다(이미지 배포는 11월 13일). RHEL 10.3 코드베이스로 옮기고 업스트림 RISC-V 코드를 최대한 반영했으며, 부팅·구동되는 플랫폼으로(Red Hat은 전체 목록이 아니라고 밝혔다) SiFive BigSky 2U870, SpacemiT V100, SpacemiT K3와 K3 기반 RV2768 클러스터 서버, UltraRISC URDP1000, Epic Semi Contrail AIX 등 5종을 추가했다. 프로젝트의 개발·빌드 기반도 SiFive HiFive Premier P550에서 BigSky 2U870으로 옮기기 시작했고 P550은 이번이 마지막 검증 대상이다. Red Hat은 이들 장비가 대부분 32코어·2GHz 이상(V100은 듀얼 소켓 2×46코어)이라 GCC나 LLVM 빌드에 며칠씩 걸리던 시기는 끝났다고 밝혔으며, 같은 글에서 Fedora 45 for RISC-V 출시도 언급했다. RISC-V 서버 입장에서는 호환 목록이 5개 벤더의 서버급 시스템과 K3 기반 랙 단위 클러스터 구성까지 아우르게 됐고, RHEL은 RISC-V에서 단일 보드 검증에서 여러 벤더 완제품 대응으로 넘어가는 중이다. 다만 개발자 프리뷰여서 지원과 정식 버전으로의 마이그레이션 보장이 없고 운영 환경용이 아니다."
     source: "Red Hat Developer"
     url: "https://developers.redhat.com/articles/2026/11/16/rhel-10-developer-preview-for-risc-v-updates-to-10-3"
     vendors: ["Red Hat"]

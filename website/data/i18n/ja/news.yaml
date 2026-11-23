@@ -18,7 +18,7 @@ items:
     importance: "medium"
   - date: "2026-11-19"
     title: "サウジのEpic Semi、Red Hatと協力——RHEL 10開発者プレビューをContrail AIXで起動"
-    summary: "サウジアラビア初のファブレス半導体企業Epic Semiは11月19日、Red Hatと協力してRISC-Vベースの企業向けサーバーでRed Hat Enterprise Linuxを動作させ、RISC-V CPU+AIサーバープラットフォーム「Contrail AIX」でRHEL 10開発者プレビューの初期実装を完了したと発表した。同機はRHEL 10.3をベースにしたRed Hatの最新RISC-Vプレビューの互換リストに含まれている。Epic Semiによれば、Contrail AIXはAIネイティブなインフラ（オーケストレーション、推論、エージェント型ワークロード）向けで、RISC-V Server Platform仕様がファームウェア起動（UEFI）とハードウェア記述（ACPIテーブル）を標準化しているため、プラットフォーム固有の作業を減らせたという。RISC-Vサーバーにとっては、中東の主権コンピューティング企業が自社システムを企業向けLinuxのプレビュー互換リストに載せた初めての例となる。ただしContrail AIXのコア数、クロック、メモリ、アクセラレータ仕様は公開されておらず、性能・価格・提供時期も不明で、RHELのRISC-V版はサポート外の開発者プレビューのままだ。"
+    summary: "サウジアラビア初のファブレス半導体企業Epic Semiは11月19日、Red Hatと協力してRISC-Vベースの企業向けサーバーでRed Hat Enterprise Linuxを動作させ、RISC-V CPU+AIサーバープラットフォーム「Contrail AIX」でRHEL 10開発者プレビューの初期実装を完了したと発表した。同機はRHEL 10.3をベースにしたRed Hatの最新RISC-Vプレビューの互換リストに含まれている。Epic Semiによれば、Contrail AIXはAIネイティブなインフラ（オーケストレーション、推論、エージェント型ワークロード）向けで、RISC-V Server Platform仕様がファームウェア起動（UEFI）とハードウェア記述（ACPIテーブル）を標準化しているため、プラットフォーム固有の作業を減らせたという。RISC-Vサーバーにとっては、中東の主権コンピューティング企業の自社システムが企業向けLinuxのプレビュー互換リストに入ったことになる。ただしContrail AIXのコア数、クロック、メモリ、アクセラレータ仕様は公開されておらず、性能・価格・提供時期も不明で、RHELのRISC-V版はサポート外の開発者プレビューのままだ。"
     source: "Epic Semi"
     url: "https://www.epicsemi.com/news/epic-semi-announces-collaboration-with-red-hat-to-bring-red-hat-enterprise-linux-to-contrail-aix-ai-server-platform/"
     vendors: ["Epic Semi", "Red Hat"]
@@ -58,7 +58,7 @@ items:
     importance: "high"
   - date: "2026-11-16"
     title: "Red Hat、RHEL 10.3のRISC-V開発者プレビューを公開——5つのサーバープラットフォームを追加し、基盤をP550からBigSky 2U870へ"
-    summary: "Red Hatは11月16日、RHEL 10.3に合わせたRISC-V開発者プレビューの更新を公開した（イメージのリリースは11月13日）。RHEL 10.3のコードベースに更新したうえで上流のRISC-Vコードを可能な限り取り込み、起動・動作するプラットフォームとして（同社は部分的なリストと断ったうえで）SiFive BigSky 2U870、SpacemiT V100、SpacemiT K3とK3ベースのRV2768クラスタサーバー、UltraRISC URDP1000、Epic Semi Contrail AIXの5つを追加した。プロジェクトの開発・ビルド基盤もSiFive HiFive Premier P550からBigSky 2U870へ移行を開始し、P550は今回が最後の検証対象となる。Red Hatによれば、これらのマシンはほぼ32コア・2GHz超（V100はデュアルソケットで2×46コア）で、GCCやLLVMのビルドに何日も待つ時代は終わったという。同じ記事はFedora 45 for RISC-Vのリリースにも触れている。RISC-Vサーバーにとっては、企業向けLinuxディストリビューションが複数ベンダーのサーバー級システムを同一のプレビュー互換リストに載せ、ラック単位のクラスタ構成まで含めた初めての例となる。ただし開発者プレビューであり、サポートも正式版への移行保証もなく、本番利用は想定されていない。"
+    summary: "Red Hatは11月16日、RHEL 10.3に合わせたRISC-V開発者プレビューの更新を公開した（イメージのリリースは11月13日）。RHEL 10.3のコードベースに更新したうえで上流のRISC-Vコードを可能な限り取り込み、起動・動作するプラットフォームとして（同社は部分的なリストと断ったうえで）SiFive BigSky 2U870、SpacemiT V100、SpacemiT K3とK3ベースのRV2768クラスタサーバー、UltraRISC URDP1000、Epic Semi Contrail AIXの5つを追加した。プロジェクトの開発・ビルド基盤もSiFive HiFive Premier P550からBigSky 2U870へ移行を開始し、P550は今回が最後の検証対象となる。Red Hatによれば、これらのマシンはほぼ32コア・2GHz超（V100はデュアルソケットで2×46コア）で、GCCやLLVMのビルドに何日も待つ時代は終わったという。同じ記事はFedora 45 for RISC-Vのリリースにも触れている。RISC-Vサーバーにとっては、互換リストが5ベンダーのサーバー級システムとK3ベースのラック単位クラスタ構成までカバーしたことになり、RHELはRISC-Vで単板検証から複数ベンダーの整機対応へ進みつつある。ただし開発者プレビューであり、サポートも正式版への移行保証もなく、本番利用は想定されていない。"
     source: "Red Hat Developer"
     url: "https://developers.redhat.com/articles/2026/11/16/rhel-10-developer-preview-for-risc-v-updates-to-10-3"
     vendors: ["Red Hat"]

@@ -17,6 +17,14 @@ items:
     tags: ["生态合作", "HPC"]
     importance: "medium"
   - date: "2026-11-19"
+    title: "沙特 Epic Semi 与红帽合作：RHEL 10 开发者预览首次跑上 Contrail AIX RISC-V 服务器"
+    summary: "沙特阿拉伯首家无晶圆厂半导体公司 Epic Semi 11 月 19 日宣布与红帽合作，已让红帽企业 Linux 跑在自家 RISC-V 企业级服务器上，并在 RISC-V CPU+AI 服务器平台 Contrail AIX 上完成 RHEL 10 开发者预览的首次实现，该机型被列入红帽基于 RHEL 10.3 的最新 RISC-V 预览兼容清单。按 Epic Semi 的说法，Contrail AIX 面向 AI 原生基础设施的编排、推理与智能体负载；集成之所以相对简单，是因为 RISC-V Server Platform 规范把固件启动（UEFI）与硬件描述（ACPI 表）标准化了，平台专属工作量因此减少。对 RISC-V 服务器而言，这是中东主权算力厂商第一次把自家整机放进企业级 Linux 的官方预览清单；但 Epic Semi 未公布 Contrail AIX 的核数、主频、内存与加速器规格，也没有性能、价格与交付时间，RHEL 的 RISC-V 版本本身仍是开发者预览、不提供生产支持。"
+    source: "Epic Semi"
+    url: "https://www.epicsemi.com/news/epic-semi-announces-collaboration-with-red-hat-to-bring-red-hat-enterprise-linux-to-contrail-aix-ai-server-platform/"
+    vendors: ["Epic Semi", "Red Hat"]
+    tags: ["生态合作", "软件栈"]
+    importance: "medium"
+  - date: "2026-11-19"
     title: "赛昉科技昉·天枢-70 乱序 RISC-V CPU IP 随 JH-B100 量产进入数据中心，年出货量预期千万级"
     summary: "赛昉科技 11 月 19 日披露，其自研乱序 RISC-V CPU IP 昉·天枢-70（Dubhe-70）已随服务器 BMC 芯片昉·惊鸿-B100 进入量产，官方称这是国产乱序 RISC-V CPU IP 首次在数据中心服务器场景实现规模化量产商用，年出货量有望达到千万级。天枢-70 采用 9 级及以上流水线、三发射超标量设计，具备深度乱序执行与多核、I/O 缓存一致性，PPA 上性能接近 Arm Cortex-A73，能效比与面积效率优于 Cortex-A55，适配服务器管理、工业控制与边缘计算；JH-B100 同时集成赛昉自研的昉·星路-500 一致性 NoC，赛昉另有天枢-83、天枢-100 两款高性能 CPU IP 与星路-700 NoC 已获客户选用。对 RISC-V 服务器而言，这条消息落在服务器管理面而非主计算：BMC 是独立于主 CPU、整机通电即常驻的带外管理芯片，跑得动 A73 级乱序内核意味着 RISC-V 在管理面已经够用并进入批量出货，但不能读成服务器主 CPU 的性能突破；千万级是厂商对年出货量的预期，客户名单、单价与实际交付量均未公布。赛昉 11 月 17 日已宣布 B100 量产交付，本条补充的是该芯片所用 CPU IP 的型号与规格。"
     source: "快科技（新浪科技转载）"
@@ -48,6 +56,22 @@ items:
     vendors: ["StarFive 赛昉科技"]
     tags: ["服务器出货"]
     importance: "high"
+  - date: "2026-11-16"
+    title: "红帽发布 RHEL 10.3 RISC-V 开发者预览：新增五个服务器平台，基础平台由 P550 转向 BigSky 2U870"
+    summary: "红帽 11 月 16 日刊出 RHEL 10.3 RISC-V 开发者预览的更新说明（镜像发布于 11 月 13 日）：这一版在 RHEL 10.3 代码基线上重新合入上游 RISC-V 代码，并列出可启动的新平台（红帽称这只是部分清单）：SiFive BigSky 2U870、进迭时空 V100、进迭时空 K3 及基于 K3 的 RV2768 集群服务器、UltraRISC URDP1000、Epic Semi Contrail AIX，同时把项目的开发与构建基础平台从 SiFive HiFive Premier P550 迁向 BigSky 2U870（P550 是最后一次被测）。红帽给出的观察是，这些机器几乎都是 32 核、主频 2GHz 以上（V100 为双路 2×46 核），GCC 与 LLVM 编译不再以天计；同一篇说明还提到 Fedora 45 for RISC-V 已发布。对 RISC-V 服务器而言，这是企业级 Linux 发行版第一次把多家厂商的服务器级整机放进同一份预览兼容清单，并且覆盖到 K3 的整柜集群形态；但开发者预览不提供支持、不保证与正式版之间的迁移路径，也不是生产可用版本。"
+    source: "Red Hat Developer（红帽开发者博客）"
+    url: "https://developers.redhat.com/articles/2026/11/16/rhel-10-developer-preview-for-risc-v-updates-to-10-3"
+    vendors: ["Red Hat"]
+    tags: ["操作系统", "软件栈"]
+    importance: "high"
+  - date: "2026-11-16"
+    title: "Tenstorrent 八台 Galaxy 跑 gpt-oss-120b：单用户解码速度达 5,300 tokens/s"
+    summary: "Tenstorrent 11 月 16 日公布 Galaxy Blackhole 整机的推理优化结果：用 8 台 Galaxy（共 256 颗 Blackhole）跑 OpenAI 的 gpt-oss-120b，把每层切分到 4×4 的 16 颗芯片网格上，关键路径上的专家权重以 BF4 块浮点常驻片内 SRAM，其余权重从 DRAM 流式加载，并在计算的同时预载下一层权重以复用流水级，公司称因此在 8 台机器上取得相当于 24 台部署的单用户解码速度。在 GSM8K 全量测试集上平均 3,000 tokens/s/用户、准确率 95.8%，峰值 5,300 tokens/s/用户；这些数字只覆盖解码阶段、使用 GSM8K 的短提示，不含首 token 延迟。对 RISC-V 服务器而言，Galaxy 是以集成 RISC-V CPU 核的 Blackhole 为算力的 6U 整机，这是目前公开的 RISC-V 系 AI 整机中较高的单用户解码指标之一；但全部是厂商自测口径、未见第三方复现，也不代表整机吞吐，单机为 32 颗 Blackhole、6.2GB 片内 SRAM、1TB GDDR6。"
+    source: "Tenstorrent"
+    url: "https://tenstorrent.com/en/newsroom/tenstorrents-galaxy-blackhole-gpt-oss-12"
+    vendors: ["Tenstorrent"]
+    tags: ["整机与主板"]
+    importance: "medium"
   - date: "2026-11-16"
     title: "Tenstorrent 与 ConfidentialMind 合作，为 Galaxy Blackhole RISC-V 服务器补齐私有化 AI 平台层"
     summary: "Tenstorrent 11 月 16 日宣布与软件公司 ConfidentialMind 合作，把后者的自托管 AI 平台带到基于 RISC-V 的 Galaxy Blackhole 系统上，双方将在欧洲、中东、亚太与美洲联合销售，目标客户是需要把数据留在本地的政府、高校、受监管企业与推理服务商。Galaxy Blackhole 是 6U 机箱、32 颗 Blackhole Tensix 处理器的整机，既可单机运行，也可在客户自有数据中心横向扩展；ConfidentialMind 提供推理服务、向量数据库、访问控制、加速器管理、可观测性与合规日志这一层，以 OpenAI 兼容 API 对外提供开源大模型、RAG 与智能体，省掉客户自己搭平台的前置工作。对 RISC-V 服务器而言，这是 RISC-V AI 整机从“卖硬件”往“卖可交付的栈”走的一步，补的是上层部署与运维软件；不过双方未公布联合销售的定价、交付时间与客户名单，也未给出性能数据。"
@@ -152,6 +176,14 @@ items:
     vendors: ["SiFive"]
     tags: ["标准与规范", "HPC"]
     importance: "medium"
+  - date: "2026-10-22"
+    title: "高通收购 RISC-V 初创 Akeana，加码 AI 与数据中心芯片"
+    summary: "高通已完成对 RISC-V 处理器设计公司 Akeana 的收购，交易金额未披露，Akeana 的 IP 与工程团队整体并入高通，用于强化 AI 与数据中心布局。Akeana 2021 年由曾在 Marvell 做服务器芯片的团队创立，2024 年 8 月融资逾 1 亿美元，主打可按客户定制的 RISC-V 核。这是高通在收购 Ventana 之后，第二次把数据中心级 RISC-V 资产收入囊中。"
+    source: "Design & Reuse / Dealroom"
+    url: "https://www.design-reuse.com/news/202531315-qualcomm-buys-risc-v-startup-akeana-to-push-into-ai-and-data-center-chips"
+    vendors: ["Qualcomm", "Akeana"]
+    tags: ["并购与投资", "芯片发布"]
+    importance: "high"
   - date: "2026-10-21"
     title: "蓝芯算力发布智通融合超节点，LX500 从单机走向集群"
     summary: "蓝芯算力在 2026 RISC-V 中国峰会上发布“智通融合超节点”，把基于 LX500 的 RISC-V AI 算力从单芯片、服务器延伸到集群级基础设施。LX500 集成 48 个 RISC-V 核（32 性能核 + 16 能效核）与 AI Vector/Matrix 引擎，INT8 算力 75 TOPS，以统一内存架构共享 DDR5 并支持 CXL，针对首 Token 延迟、Prefill 和长上下文推理优化；产品线已形成 LX500 芯片、联想问天 WR5219 G5 服务器、LX5000 一体机与超节点四层。官方称已适配 Qwen、DeepSeek、Kimi 等模型，RISC-V 服务器由此开始按“芯片—整机—集群”的完整形态交付。"
@@ -176,6 +208,14 @@ items:
     vendors: ["Alibaba DAMO Academy", "XuanTie"]
     tags: ["生态合作", "HPC"]
     importance: "medium"
+  - date: "2026-10-20"
+    title: "进迭时空发布 V100：46 核 RISC-V 服务器 CPU，双路可扩至 92 核"
+    summary: "在深圳举行的 2026 RISC-V 中国峰会上，进迭时空发布首款服务器级芯片 V100：6 颗香山“昆明湖”V2R2 高性能核加 40 颗自研 X100 能效核，共 46 核，双路可扩至 92 核，配 8 通道 DDR5 与 52 条 PCIe 5.0。官方称其为业内首颗完整符合 RISC-V 服务器规范的计算芯片，BRS 测试全项通过，openEuler、openKylin、Ubuntu、Debian、Fedora 等发行版可直接安装启动。这是香山核首次进入商用服务器芯片，也意味着 RISC-V 服务器开始具备通用发行版的交付能力。"
+    source: "腾讯新闻 / 芯智讯"
+    url: "https://view.inews.qq.com/a/20261020A0BL9500"
+    vendors: ["进迭时空 SpacemiT"]
+    tags: ["芯片发布", "服务器出货", "标准与规范"]
+    importance: "high"
   - date: "2026-10-19"
     title: "中兴微旗下砺睿微首秀“珠峰200”：面向智算中心的 RISC-V CPU"
     summary: "在 2026 RISC-V 中国峰会上，中兴微电子旗下砺睿微首次对外展示面向智算中心的高性能 RISC-V CPU“珠峰200”。芯片基于 RVA23，支持 Hypervisor、AIA、CoVE 与 RVV 1.0，采用 64 位超标量乱序架构，集成 Vector/Matrix 及压缩、加密加速引擎，支持 DDR5（含 MRDIMM）、PCIe 6.0 与 CXL 3，定位 Agent 集群、推理超节点 Host 与企业级混合推理三类场景。官方称可运行千亿级 MoE 模型，详细规格将于 2026 年底发布，这是国内运营商系芯片公司首次把 RISC-V 明确放在智算中心 Host CPU 的位置。"
@@ -191,22 +231,6 @@ items:
     url: "https://tenstorrent.com/en/newsroom/tenstorrent-announces-series-e"
     vendors: ["Tenstorrent"]
     tags: ["并购与投资"]
-    importance: "high"
-  - date: "2026-10-22"
-    title: "高通收购 RISC-V 初创 Akeana，加码 AI 与数据中心芯片"
-    summary: "高通已完成对 RISC-V 处理器设计公司 Akeana 的收购，交易金额未披露，Akeana 的 IP 与工程团队整体并入高通，用于强化 AI 与数据中心布局。Akeana 2021 年由曾在 Marvell 做服务器芯片的团队创立，2024 年 8 月融资逾 1 亿美元，主打可按客户定制的 RISC-V 核。这是高通在收购 Ventana 之后，第二次把数据中心级 RISC-V 资产收入囊中。"
-    source: "Design & Reuse / Dealroom"
-    url: "https://www.design-reuse.com/news/202531315-qualcomm-buys-risc-v-startup-akeana-to-push-into-ai-and-data-center-chips"
-    vendors: ["Qualcomm", "Akeana"]
-    tags: ["并购与投资", "芯片发布"]
-    importance: "high"
-  - date: "2026-10-20"
-    title: "进迭时空发布 V100：46 核 RISC-V 服务器 CPU，双路可扩至 92 核"
-    summary: "在深圳举行的 2026 RISC-V 中国峰会上，进迭时空发布首款服务器级芯片 V100：6 颗香山“昆明湖”V2R2 高性能核加 40 颗自研 X100 能效核，共 46 核，双路可扩至 92 核，配 8 通道 DDR5 与 52 条 PCIe 5.0。官方称其为业内首颗完整符合 RISC-V 服务器规范的计算芯片，BRS 测试全项通过，openEuler、openKylin、Ubuntu、Debian、Fedora 等发行版可直接安装启动。这是香山核首次进入商用服务器芯片，也意味着 RISC-V 服务器开始具备通用发行版的交付能力。"
-    source: "腾讯新闻 / 芯智讯"
-    url: "https://view.inews.qq.com/a/20261020A0BL9500"
-    vendors: ["进迭时空 SpacemiT"]
-    tags: ["芯片发布", "服务器出货", "标准与规范"]
     importance: "high"
   - date: "2026-10-15"
     title: "zeroRISC 十年：开源硅的安全商业化路径"

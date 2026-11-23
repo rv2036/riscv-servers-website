@@ -17,6 +17,14 @@ items:
     tags: ["Ecosystem partnerships", "HPC"]
     importance: "medium"
   - date: "2026-11-19"
+    title: "Saudi Arabia's Epic Semi teams with Red Hat to boot the RHEL 10 developer preview on its Contrail AIX RISC-V server"
+    summary: "Epic Semi, Saudi Arabia's first fabless semiconductor company, said on November 19 that it has worked with Red Hat to run Red Hat Enterprise Linux on its RISC-V-based enterprise servers, completing the initial implementation of the RHEL 10 developer preview on Contrail AIX, its RISC-V CPU+AI server platform; the machine is now on Red Hat's latest RISC-V preview compatibility list built on RHEL 10.3. Epic Semi says Contrail AIX targets AI-native infrastructure — orchestration, inference and agentic workloads — and that the integration was relatively simple because the RISC-V Server Platform specification standardises firmware boot (UEFI) and hardware description (ACPI tables), which cuts platform-specific work. For RISC-V servers this is the first time a Middle East sovereign-computing vendor has put its own system on an enterprise Linux preview list; but Epic Semi has not published core counts, clocks, memory or accelerator specs for Contrail AIX, nor performance, pricing or delivery dates, and RHEL for RISC-V itself remains an unsupported developer preview."
+    source: "Epic Semi"
+    url: "https://www.epicsemi.com/news/epic-semi-announces-collaboration-with-red-hat-to-bring-red-hat-enterprise-linux-to-contrail-aix-ai-server-platform/"
+    vendors: ["Epic Semi", "Red Hat"]
+    tags: ["Ecosystem partnerships", "Software stack"]
+    importance: "medium"
+  - date: "2026-11-19"
     title: "StarFive Dubhe-70 out-of-order RISC-V CPU IP enters data-center volume production inside JH-B100 server BMC"
     summary: "StarFive said on November 19 that its in-house out-of-order RISC-V CPU IP Dubhe-70 is now in volume production inside its JH-B100 server baseboard management controller, which the company calls the first Chinese out-of-order RISC-V CPU IP to reach large-scale commercial deployment in data-center servers, with annual shipments expected to reach tens of millions of units. Dubhe-70 uses a pipeline of nine or more stages with a three-issue superscalar design, deep out-of-order execution and both multi-core and I/O cache coherence; StarFive puts its PPA close to Arm's Cortex-A73 and ahead of the Cortex-A55 on energy and area efficiency, aimed at server management, industrial control and edge computing. JH-B100 also integrates StarFive's StarNoC-500 coherent network-on-chip, and the company says its faster Dubhe-83 and Dubhe-100 CPU IP plus StarNoC-700 have already been picked up by customers for servers, AI and HPC. For RISC-V servers the news sits on the management plane rather than the compute plane: a BMC runs independently of the host CPU and stays alive whenever the system has power, so an A73-class out-of-order core means RISC-V is now good enough to ship in volume there, but it is not a breakthrough in main server CPU performance. The tens-of-millions figure is the vendor's expectation for annual shipments; customer names, unit prices and actual delivered volumes were not disclosed. StarFive had already announced JH-B100 volume delivery on November 17, and this item adds the model and specifications of the CPU IP inside it."
     source: "Kuai Technology (via Sina Tech)"
@@ -48,6 +56,22 @@ items:
     vendors: ["StarFive 赛昉科技"]
     tags: ["Server shipments"]
     importance: "high"
+  - date: "2026-11-16"
+    title: "Red Hat's RHEL 10.3 RISC-V developer preview adds five server platforms, moves its base from P550 to BigSky 2U870"
+    summary: "Red Hat published the RHEL 10.3 update to its RISC-V developer preview on November 16 (the image itself was released on November 13): the build rebases on RHEL 10.3 and folds in as much upstream RISC-V code as possible, listing five newly supported platforms that boot and run it (Red Hat calls this a partial list): SiFive BigSky 2U870, SpacemiT V100, SpacemiT K3 and the K3-based RV2768 cluster server, UltraRISC URDP1000 and Epic Semi Contrail AIX — while the project's development and build base moves from the SiFive HiFive Premier P550 to BigSky 2U870 (P550 is tested for the last time in this release). Red Hat notes that almost all of these machines are 32-core at above 2GHz (the V100 is dual-socket, 2x46 cores), so GCC and LLVM builds no longer take days; the same post mentions that Fedora 45 for RISC-V has shipped. For RISC-V servers this is the first time an enterprise Linux distribution has put server-class systems from several vendors on one preview compatibility list, including a rack-level cluster form factor; but a developer preview carries no support, no guaranteed migration path to a supported release and is not production-ready."
+    source: "Red Hat Developer"
+    url: "https://developers.redhat.com/articles/2026/11/16/rhel-10-developer-preview-for-risc-v-updates-to-10-3"
+    vendors: ["Red Hat"]
+    tags: ["Operating systems", "Software stack"]
+    importance: "high"
+  - date: "2026-11-16"
+    title: "Tenstorrent's eight-Galaxy cluster decodes gpt-oss-120b at 5,300 tokens/sec/user"
+    summary: "Tenstorrent published an inference optimisation result for its Galaxy Blackhole systems on November 16: eight Galaxy machines (256 Blackhole chips in total) run OpenAI's gpt-oss-120b with each layer split across a 4x4 mesh of 16 chips, expert weights on the critical path pinned in on-chip SRAM in the BF4 block floating-point format while the rest stream from DRAM, and pipeline stages reused while the next layer loads — which Tenstorrent says delivers the per-user decode speed of a 24-Galaxy deployment on eight. Across the full GSM8K set the deployment averaged 3,000 tokens/sec/user at 95.8% accuracy, peaking at 5,300 tokens/sec/user; the figures cover decode only, use GSM8K's short prompts and exclude time to first token. For RISC-V servers, Galaxy is a 6U system whose compute comes from Blackhole chips with integrated RISC-V CPU cores, and this is one of the higher published per-user decode numbers for a RISC-V-based AI system — but it is a vendor run, not independently reproduced, says nothing about aggregate throughput, and each Galaxy carries 32 Blackhole chips, 6.2GB of on-chip SRAM and 1TB of GDDR6."
+    source: "Tenstorrent"
+    url: "https://tenstorrent.com/en/newsroom/tenstorrents-galaxy-blackhole-gpt-oss-12"
+    vendors: ["Tenstorrent"]
+    tags: ["Systems & boards"]
+    importance: "medium"
   - date: "2026-11-16"
     title: "Tenstorrent and ConfidentialMind pair a self-hosted AI platform with Galaxy Blackhole RISC-V servers"
     summary: "Tenstorrent said on November 16 that it has partnered with software vendor ConfidentialMind to bring the latter's self-hosted AI platform to Tenstorrent's RISC-V-based Galaxy Blackhole systems, with the two companies selling the combined stack across Europe, the Middle East, Asia-Pacific and the Americas to governments, universities, regulated enterprises and inference providers that need to keep data on their own infrastructure. Galaxy Blackhole is a 6U system holding 32 Blackhole Tensix processors that customers can run as a single machine or scale into a supercluster inside their own datacenter, while ConfidentialMind supplies the layer above it - inference serving, vector databases, access control, accelerator management, observability and compliance logging - exposed as OpenAI-compatible API endpoints for open-source models, RAG pipelines and agents, so buyers do not have to build that platform themselves. For RISC-V servers this is a step from selling hardware toward selling a deployable stack, filling in the deployment and operations software; neither company disclosed pricing, delivery dates or customer names for the joint offering, and no performance figures were given."
@@ -152,6 +176,14 @@ items:
     vendors: ["SiFive"]
     tags: ["Standards & specs", "HPC"]
     importance: "medium"
+  - date: "2026-10-22"
+    title: "Qualcomm acquires RISC-V startup Akeana, stepping up its AI and data-center chip push"
+    summary: "Qualcomm has completed its acquisition of RISC-V processor design company Akeana; the deal value was not disclosed, and Akeana's IP and engineering team moved into Qualcomm wholesale to strengthen its AI and data-center position. Akeana was founded in 2021 by a team that had worked on server chips at Marvell, raised more than $100 million in August 2024, and focuses on customer-customizable RISC-V cores. It is the second time Qualcomm has taken a data-center-class RISC-V asset in-house, after Ventana."
+    source: "Design & Reuse / Dealroom"
+    url: "https://www.design-reuse.com/news/202531315-qualcomm-buys-risc-v-startup-akeana-to-push-into-ai-and-data-center-chips"
+    vendors: ["Qualcomm", "Akeana"]
+    tags: ["M&A and investment", "Chip launch"]
+    importance: "high"
   - date: "2026-10-21"
     title: "Lanxin Computing unveils Zhitong fusion supernode, taking LX500 from single systems to clusters"
     summary: "At the 2026 RISC-V China Summit, Lanxin Computing launched a Zhitong fusion supernode, extending its LX500-based RISC-V AI compute from a single chip and server to cluster-level infrastructure. LX500 integrates 48 RISC-V cores (32 performance, 16 efficiency) with AI vector and matrix engines for 75 TOPS INT8, shares DDR5 through a unified memory architecture and supports CXL, tuned for time-to-first-token, prefill and long-context inference. The lineup now spans the LX500 chip, the Lenovo Wentian WR5219 G5 server, the LX5000 all-in-one and the supernode, and the company says Qwen, DeepSeek and Kimi models are already adapted — RISC-V servers are starting to ship as a full chip-system-cluster stack."
@@ -176,6 +208,14 @@ items:
     vendors: ["Alibaba DAMO Academy", "XuanTie"]
     tags: ["Ecosystem partnerships", "HPC"]
     importance: "medium"
+  - date: "2026-10-20"
+    title: "SpacemiT launches V100: a 46-core RISC-V server CPU scalable to 92 cores in dual-socket"
+    summary: "At the 2026 RISC-V China Summit in Shenzhen, SpacemiT launched its first server-class chip, the V100: 6 XiangShan “Kunminghu” V2R2 high-performance cores plus 40 in-house X100 efficiency cores, 46 cores in total, scalable to 92 cores across two sockets, with 8-channel DDR5 and 52 PCIe 5.0 lanes. The company calls it the industry's first compute chip fully compliant with the RISC-V server specification, with all BRS tests passed and distributions such as openEuler, openKylin, Ubuntu, Debian and Fedora installing and booting directly. It is the first time a XiangShan core has gone into a commercial server chip, and it means RISC-V servers are starting to offer general-purpose distribution delivery."
+    source: "Tencent News / 芯智讯 (ICSmart)"
+    url: "https://view.inews.qq.com/a/20261020A0BL9500"
+    vendors: ["进迭时空 SpacemiT"]
+    tags: ["Chip launch", "Server shipments", "Standards & specs"]
+    importance: "high"
   - date: "2026-10-19"
     title: "ZTE Microelectronics' Lirui Micro shows Zhufeng 200, a RISC-V CPU for AI data centers"
     summary: "At the 2026 RISC-V China Summit, Lirui Micro, a subsidiary of ZTE Microelectronics, showed Zhufeng 200, a high-performance RISC-V CPU for AI data centers. The chip is based on RVA23 with Hypervisor, AIA, CoVE and RVV 1.0 support, uses a 64-bit superscalar out-of-order architecture, integrates vector/matrix plus compression and crypto engines, and supports DDR5 (including MRDIMM), PCIe 6.0 and CXL 3. It targets agent clusters, inference supernode host CPUs and enterprise hybrid inference; the company says it can run 100-billion-parameter MoE models, with detailed specifications due by the end of 2026. It is the first time a carrier-affiliated Chinese chip company has positioned RISC-V explicitly as a data-center host CPU."
@@ -191,22 +231,6 @@ items:
     url: "https://tenstorrent.com/en/newsroom/tenstorrent-announces-series-e"
     vendors: ["Tenstorrent"]
     tags: ["M&A and investment"]
-    importance: "high"
-  - date: "2026-10-22"
-    title: "Qualcomm acquires RISC-V startup Akeana, stepping up its AI and data-center chip push"
-    summary: "Qualcomm has completed its acquisition of RISC-V processor design company Akeana; the deal value was not disclosed, and Akeana's IP and engineering team moved into Qualcomm wholesale to strengthen its AI and data-center position. Akeana was founded in 2021 by a team that had worked on server chips at Marvell, raised more than $100 million in August 2024, and focuses on customer-customizable RISC-V cores. It is the second time Qualcomm has taken a data-center-class RISC-V asset in-house, after Ventana."
-    source: "Design & Reuse / Dealroom"
-    url: "https://www.design-reuse.com/news/202531315-qualcomm-buys-risc-v-startup-akeana-to-push-into-ai-and-data-center-chips"
-    vendors: ["Qualcomm", "Akeana"]
-    tags: ["M&A and investment", "Chip launch"]
-    importance: "high"
-  - date: "2026-10-20"
-    title: "SpacemiT launches V100: a 46-core RISC-V server CPU scalable to 92 cores in dual-socket"
-    summary: "At the 2026 RISC-V China Summit in Shenzhen, SpacemiT launched its first server-class chip, the V100: 6 XiangShan “Kunminghu” V2R2 high-performance cores plus 40 in-house X100 efficiency cores, 46 cores in total, scalable to 92 cores across two sockets, with 8-channel DDR5 and 52 PCIe 5.0 lanes. The company calls it the industry's first compute chip fully compliant with the RISC-V server specification, with all BRS tests passed and distributions such as openEuler, openKylin, Ubuntu, Debian and Fedora installing and booting directly. It is the first time a XiangShan core has gone into a commercial server chip, and it means RISC-V servers are starting to offer general-purpose distribution delivery."
-    source: "Tencent News / 芯智讯 (ICSmart)"
-    url: "https://view.inews.qq.com/a/20261020A0BL9500"
-    vendors: ["进迭时空 SpacemiT"]
-    tags: ["Chip launch", "Server shipments", "Standards & specs"]
     importance: "high"
   - date: "2026-10-15"
     title: "Ten years of zeroRISC: the commercial path for open-source silicon security"

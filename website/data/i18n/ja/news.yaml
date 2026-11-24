@@ -17,6 +17,14 @@ items:
     tags: ["エコシステム連携", "HPC"]
     importance: "medium"
   - date: "2026-11-19"
+    title: "サウジのEpic Semi、Red Hatと協力——RHEL 10開発者プレビューをContrail AIXで起動"
+    summary: "サウジアラビア初のファブレス半導体企業Epic Semiは11月19日、Red Hatと協力してRISC-Vベースの企業向けサーバーでRed Hat Enterprise Linuxを動作させ、RISC-V CPU+AIサーバープラットフォーム「Contrail AIX」でRHEL 10開発者プレビューの初期実装を完了したと発表した。同機はRHEL 10.3をベースにしたRed Hatの最新RISC-Vプレビューの互換リストに含まれている。Epic Semiによれば、Contrail AIXはAIネイティブなインフラ（オーケストレーション、推論、エージェント型ワークロード）向けで、RISC-V Server Platform仕様がファームウェア起動（UEFI）とハードウェア記述（ACPIテーブル）を標準化しているため、プラットフォーム固有の作業を減らせたという。RISC-Vサーバーにとっては、中東の主権コンピューティング企業の自社システムが企業向けLinuxのプレビュー互換リストに入ったことになる。ただしContrail AIXのコア数、クロック、メモリ、アクセラレータ仕様は公開されておらず、性能・価格・提供時期も不明で、RHELのRISC-V版はサポート外の開発者プレビューのままだ。"
+    source: "Epic Semi"
+    url: "https://www.epicsemi.com/news/epic-semi-announces-collaboration-with-red-hat-to-bring-red-hat-enterprise-linux-to-contrail-aix-ai-server-platform/"
+    vendors: ["Epic Semi", "Red Hat"]
+    tags: ["エコシステム連携", "ソフトウェアスタック"]
+    importance: "medium"
+  - date: "2026-11-19"
     title: "StarFive、アウトオブオーダーのRISC-V CPU IP「昉・天枢-70（Dubhe-70）」がJH-B100で量産入り"
     summary: "StarFive（賽昉科技）は11月19日、自社開発のアウトオブオーダーRISC-V CPU IP「昉・天枢-70（Dubhe-70）」がサーバー向けBMCチップ「昉・驚鴻-B100（JH-B100）」に搭載されて量産に入ったと明らかにした。中国製のアウトオブオーダーRISC-V CPU IPがデータセンターのサーバー用途で大規模量産・商用化に到達したのは初めてだとし、年間出荷量は数千万個に達する見込みだとしている。天枢-70は9段以上のパイプラインと3発行のスーパースカラー設計を採り、深いアウトオブオーダー実行に加えてマルチコアとI/Oのキャッシュコヒーレンシに対応する。PPAはArm Cortex-A73に近い性能で、Cortex-A55と比べて電力効率と面積効率で優位とされ、サーバー管理、産業制御、エッジ計算を想定する。JH-B100はStarFive自社のコヒーレントNoC「昉・星路-500」も統合しており、同社には天枢-83、天枢-100の高性能CPU IPと星路-700 NoCもあり、すでに顧客に採用されているという。RISC-Vサーバーにとってこの話は演算面ではなく管理面の進展である。BMCはホストCPUから独立して通電中は常時稼働する帯域外管理チップであり、A73級のアウトオブオーダーコアが動くことはRISC-Vが管理面で量産出荷に足る水準に達したことを示すが、サーバー主CPUの性能突破と読むべきではない。数千万個は年間出荷量の見込みであり、顧客名、単価、実際の納入量は公表されていない。StarFiveは11月17日にB100の量産出荷をすでに発表しており、本項はその内部CPU IPの型番と仕様を補うものだ。"
     source: "快科技（Sina Tech 転載）"
@@ -48,6 +56,22 @@ items:
     vendors: ["StarFive 赛昉科技"]
     tags: ["サーバー出荷"]
     importance: "high"
+  - date: "2026-11-16"
+    title: "Red Hat、RHEL 10.3のRISC-V開発者プレビューを公開——5つのサーバープラットフォームを追加し、基盤をP550からBigSky 2U870へ"
+    summary: "Red Hatは11月16日、RHEL 10.3に合わせたRISC-V開発者プレビューの更新を公開した（イメージのリリースは11月13日）。RHEL 10.3のコードベースに更新したうえで上流のRISC-Vコードを可能な限り取り込み、起動・動作するプラットフォームとして（同社は部分的なリストと断ったうえで）SiFive BigSky 2U870、SpacemiT V100、SpacemiT K3とK3ベースのRV2768クラスタサーバー、UltraRISC URDP1000、Epic Semi Contrail AIXの5つを追加した。プロジェクトの開発・ビルド基盤もSiFive HiFive Premier P550からBigSky 2U870へ移行を開始し、P550は今回が最後の検証対象となる。Red Hatによれば、これらのマシンはほぼ32コア・2GHz超（V100はデュアルソケットで2×46コア）で、GCCやLLVMのビルドに何日も待つ時代は終わったという。同じ記事はFedora 45 for RISC-Vのリリースにも触れている。RISC-Vサーバーにとっては、互換リストが5ベンダーのサーバー級システムとK3ベースのラック単位クラスタ構成までカバーしたことになり、RHELはRISC-Vで単板検証から複数ベンダーの整機対応へ進みつつある。ただし開発者プレビューであり、サポートも正式版への移行保証もなく、本番利用は想定されていない。"
+    source: "Red Hat Developer"
+    url: "https://developers.redhat.com/articles/2026/11/16/rhel-10-developer-preview-for-risc-v-updates-to-10-3"
+    vendors: ["Red Hat"]
+    tags: ["オペレーティングシステム", "ソフトウェアスタック"]
+    importance: "high"
+  - date: "2026-11-16"
+    title: "Tenstorrent、Galaxy 8台でgpt-oss-120bを5,300トークン/秒/ユーザーでデコード"
+    summary: "Tenstorrentは11月16日、Galaxy Blackholeシステムの推論最適化の結果を公開した。8台のGalaxy（Blackhole計256チップ）でOpenAIのgpt-oss-120bを動かし、各層を16チップの4×4メッシュに分割、クリティカルパス上のエキスパート重みをBF4ブロック浮動小数点でオンチップSRAMに常駐させ、残りをDRAMからストリームし、次層の重みを読み込む間にパイプライン段を再利用することで、8台で24台分のユーザーあたりデコード速度が得られたとしている。GSM8K全件では平均3,000トークン/秒/ユーザー、精度95.8%、ピーク5,300トークン/秒/ユーザー。数値はデコード段のみでGSM8Kの短いプロンプトを使い、初回トークンの遅延は含まない。RISC-Vサーバーの観点では、GalaxyはRISC-V CPUコアを内蔵するBlackholeを演算に使う6Uシステムであり、RISC-V系AIシステムとして公開されている中でも高いユーザーあたりデコード性能だが、ベンダー自身の測定で第三者による再現はなく、集合スループットを示すものではない。1台あたりBlackhole 32チップ、オンチップSRAM 6.2GB、GDDR6 1TB。"
+    source: "Tenstorrent"
+    url: "https://tenstorrent.com/en/newsroom/tenstorrents-galaxy-blackhole-gpt-oss-12"
+    vendors: ["Tenstorrent"]
+    tags: ["システム・マザーボード"]
+    importance: "medium"
   - date: "2026-11-16"
     title: "Tenstorrent と ConfidentialMind、Galaxy Blackhole RISC-V サーバーに自社運用型 AI 基盤を組み合わせ"
     summary: "Tenstorrent は 11 月 16 日、ソフトウェア企業 ConfidentialMind と提携し、同社のセルフホスト型 AI 基盤を RISC-V ベースの Galaxy Blackhole システム上に載せると発表した。両社は欧州、中東、アジア太平洋、米州で共同販売し、データを自社環境に置く必要がある政府、大学、規制対象企業、推論サービス事業者を狙う。Galaxy Blackhole は 6U 筐体に Blackhole Tensix プロセッサを 32 基搭載するシステムで、単機でも顧客データセンター内でのスーパークラスタへの拡張も可能である。ConfidentialMind は推論サービング、ベクトルデータベース、アクセス制御、アクセラレータ管理、可観測性、コンプライアンスログといった上位層を提供し、OpenAI 互換 API としてオープンソースモデル、RAG、エージェントを提供することで、顧客が基盤を自前で構築する負担を取り除く。RISC-V サーバーにとっては、ハードウェア販売から「納入可能なスタック」の販売へ一歩進み、配備・運用ソフトを補う動きだが、共同販売の価格、提供時期、顧客名は公表されておらず、性能データも示されていない。"
@@ -152,6 +176,14 @@ items:
     vendors: ["SiFive"]
     tags: ["標準・仕様", "HPC"]
     importance: "medium"
+  - date: "2026-10-22"
+    title: "Qualcomm が RISC-V スタートアップ Akeana を買収、AI・データセンター向けチップを強化"
+    summary: "Qualcomm は RISC-V プロセッサ設計会社 Akeana の買収を完了した。取引額は非公開で、Akeana の IP とエンジニアリングチームは一体で Qualcomm に組み込まれ、AI とデータセンターの布陣を強める。Akeana は 2021 年、Marvell でサーバーチップを手がけたチームが創業し、2024 年 8 月に 1 億ドル超を調達、顧客ごとにカスタマイズできる RISC-V コアを主力とする。Qualcomm が Ventana に続いてデータセンター級の RISC-V 資産を手に入れるのは 2 度目。"
+    source: "Design & Reuse / Dealroom"
+    url: "https://www.design-reuse.com/news/202531315-qualcomm-buys-risc-v-startup-akeana-to-push-into-ai-and-data-center-chips"
+    vendors: ["Qualcomm", "Akeana"]
+    tags: ["M&A・投資", "チップ発表"]
+    importance: "high"
   - date: "2026-10-21"
     title: "藍芯算力、智通融合スーパーノードを発表—LX500 を単機からクラスタへ"
     summary: "2026 RISC-V 中国サミットで、藍芯算力（Lanxin Computing）は「智通融合」スーパーノードを発表し、LX500 ベースの RISC-V AI 演算を単一チップ・単一サーバーからクラスタ級の基盤へ広げた。LX500 は RISC-V コア 48 個（高性能 32＋高効率 16）と AI Vector/Matrix エンジンを統合し、INT8 で 75 TOPS、統一メモリアーキテクチャで DDR5 を共有し CXL にも対応、初回トークン遅延や Prefill、長文コンテキスト推論に向けて最適化している。製品は LX500 チップ、Lenovo 問天 WR5219 G5 サーバー、LX5000 一体型機、スーパーノードの四層となり、Qwen、DeepSeek、Kimi などへの適応も済んだとしている。RISC-V サーバーが「チップ—整機—クラスタ」の形で納入される段階に入ったことを示す。"
@@ -176,6 +208,14 @@ items:
     vendors: ["Alibaba DAMO Academy", "XuanTie"]
     tags: ["エコシステム連携", "HPC"]
     importance: "medium"
+  - date: "2026-10-20"
+    title: "进迭时空が V100 を発表：46 コアの RISC-V サーバー CPU、2 ソケットで 92 コアまで拡張"
+    summary: "深センで開催された 2026 RISC-V 中国サミットで、进迭时空は初のサーバー級チップ V100 を発表した。香山「昆明湖」V2R2 高性能コア 6 個と自社開発 X100 高効率コア 40 個の計 46 コア、2 ソケットで 92 コアまで拡張でき、8 チャネル DDR5 と PCIe 5.0 レーン 52 本を備える。公式は、業界で初めて RISC-V サーバー仕様に完全準拠した計算チップとし、BRS テストの全項目に合格、openEuler、openKylin、Ubuntu、Debian、Fedora などのディストリビューションをそのままインストールして起動できるとしている。香山コアが商用サーバーチップに入るのは初めてで、RISC-V サーバーが汎用ディストリビューションを載せて納品できる段階に入ったことも意味する。"
+    source: "腾讯新闻 / 芯智讯"
+    url: "https://view.inews.qq.com/a/20261020A0BL9500"
+    vendors: ["进迭时空 SpacemiT"]
+    tags: ["チップ発表", "サーバー出荷", "標準・仕様"]
+    importance: "high"
   - date: "2026-10-19"
     title: "中興微電子傘下の砺睿微、「珠峰200」を初公開—智算センター向け RISC-V CPU"
     summary: "2026 RISC-V 中国サミットで、中興微電子（ZTE Microelectronics）傘下の砺睿微（Lirui Micro）は智算センター向け高性能 RISC-V CPU「珠峰200」を初めて公開した。RVA23 に準拠し Hypervisor、AIA、CoVE、RVV 1.0 をサポート、64 ビットのスーパースカラー・アウトオブオーダー構成で Vector/Matrix と圧縮・暗号エンジンを統合、DDR5（MRDIMM を含む）、PCIe 6.0、CXL 3 に対応する。用途はエージェントクラスタ、推論スーパーノードの Host CPU、企業向けハイブリッド推論の三つで、1000 億パラメータ級 MoE モデルを動かせるとし、詳細仕様は 2026 年末に公表予定。通信機器系の中国チップ企業が RISC-V を智算センターの Host CPU に明確に位置づけた初めての例となる。"
@@ -191,22 +231,6 @@ items:
     url: "https://tenstorrent.com/en/newsroom/tenstorrent-announces-series-e"
     vendors: ["Tenstorrent"]
     tags: ["M&A・投資"]
-    importance: "high"
-  - date: "2026-10-22"
-    title: "Qualcomm が RISC-V スタートアップ Akeana を買収、AI・データセンター向けチップを強化"
-    summary: "Qualcomm は RISC-V プロセッサ設計会社 Akeana の買収を完了した。取引額は非公開で、Akeana の IP とエンジニアリングチームは一体で Qualcomm に組み込まれ、AI とデータセンターの布陣を強める。Akeana は 2021 年、Marvell でサーバーチップを手がけたチームが創業し、2024 年 8 月に 1 億ドル超を調達、顧客ごとにカスタマイズできる RISC-V コアを主力とする。Qualcomm が Ventana に続いてデータセンター級の RISC-V 資産を手に入れるのは 2 度目。"
-    source: "Design & Reuse / Dealroom"
-    url: "https://www.design-reuse.com/news/202531315-qualcomm-buys-risc-v-startup-akeana-to-push-into-ai-and-data-center-chips"
-    vendors: ["Qualcomm", "Akeana"]
-    tags: ["M&A・投資", "チップ発表"]
-    importance: "high"
-  - date: "2026-10-20"
-    title: "进迭时空が V100 を発表：46 コアの RISC-V サーバー CPU、2 ソケットで 92 コアまで拡張"
-    summary: "深センで開催された 2026 RISC-V 中国サミットで、进迭时空は初のサーバー級チップ V100 を発表した。香山「昆明湖」V2R2 高性能コア 6 個と自社開発 X100 高効率コア 40 個の計 46 コア、2 ソケットで 92 コアまで拡張でき、8 チャネル DDR5 と PCIe 5.0 レーン 52 本を備える。公式は、業界で初めて RISC-V サーバー仕様に完全準拠した計算チップとし、BRS テストの全項目に合格、openEuler、openKylin、Ubuntu、Debian、Fedora などのディストリビューションをそのままインストールして起動できるとしている。香山コアが商用サーバーチップに入るのは初めてで、RISC-V サーバーが汎用ディストリビューションを載せて納品できる段階に入ったことも意味する。"
-    source: "腾讯新闻 / 芯智讯"
-    url: "https://view.inews.qq.com/a/20261020A0BL9500"
-    vendors: ["进迭时空 SpacemiT"]
-    tags: ["チップ発表", "サーバー出荷", "標準・仕様"]
     importance: "high"
   - date: "2026-10-15"
     title: "zeroRISC の 10 年：オープンシリコンの安全な商用化の道筋"

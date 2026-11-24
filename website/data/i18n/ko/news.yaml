@@ -17,6 +17,14 @@ items:
     tags: ["생태계 협력", "HPC"]
     importance: "medium"
   - date: "2026-11-19"
+    title: "사우디 Epic Semi, Red Hat과 협력…Contrail AIX에서 RHEL 10 개발자 프리뷰 구동"
+    summary: "사우디아라비아 최초의 팹리스 반도체 기업 Epic Semi는 11월 19일 Red Hat과 협력해 자사 RISC-V 기반 기업용 서버에서 Red Hat Enterprise Linux를 구동했으며, RISC-V CPU+AI 서버 플랫폼인 Contrail AIX에서 RHEL 10 개발자 프리뷰의 초기 구현을 완료했다고 밝혔다. 이 시스템은 RHEL 10.3 기반 Red Hat의 최신 RISC-V 프리뷰 호환 목록에 포함됐다. Epic Semi에 따르면 Contrail AIX는 AI 네이티브 인프라(오케스트레이션, 추론, 에이전트 워크로드)를 겨냥하며, RISC-V Server Platform 규격이 펌웨어 부팅(UEFI)과 하드웨어 기술(ACPI 테이블)을 표준화해 플랫폼별 작업을 줄일 수 있었다. RISC-V 서버 입장에서는 중동 소버린 컴퓨팅 기업의 자사 시스템이 기업용 Linux 프리뷰 호환 목록에 오른 것이다. 다만 Epic Semi는 Contrail AIX의 코어 수, 클럭, 메모리, 가속기 사양과 성능·가격·공급 시점을 공개하지 않았고, RHEL의 RISC-V 버전은 지원이 없는 개발자 프리뷰 단계다."
+    source: "Epic Semi"
+    url: "https://www.epicsemi.com/news/epic-semi-announces-collaboration-with-red-hat-to-bring-red-hat-enterprise-linux-to-contrail-aix-ai-server-platform/"
+    vendors: ["Epic Semi", "Red Hat"]
+    tags: ["생태계 협력", "소프트웨어 스택"]
+    importance: "medium"
+  - date: "2026-11-19"
     title: "StarFive, 아웃오브오더 RISC-V CPU IP 'Dubhe-70' JH-B100에 탑재해 양산"
     summary: "StarFive(赛昉科技)는 11월 19일 자체 개발 아웃오브오더 RISC-V CPU IP 'Dubhe-70(昉·天枢-70)'이 서버용 BMC 칩 'JH-B100(昉·惊鸿-B100)'에 탑재돼 양산에 들어갔다고 밝혔다. 중국산 아웃오브오더 RISC-V CPU IP가 데이터센터 서버 영역에서 대규모 양산·상용화에 도달한 것은 처음이라며 연간 출하량이 수천만 개에 이를 것으로 내다봤다. Dubhe-70은 9단 이상 파이프라인과 3발행 슈퍼스칼라 설계에 깊은 아웃오브오더 실행을 갖추고 멀티코어와 I/O 캐시 일관성을 지원한다. PPA는 Arm Cortex-A73에 근접하고 Cortex-A55 대비 전력 효율과 면적 효율이 우수하다고 하며 서버 관리, 산업 제어, 엣지 컴퓨팅을 겨냥한다. JH-B100에는 StarFive 자체 일관성 NoC인 'StarNoC-500'도 통합됐고, 회사는 Dubhe-83과 Dubhe-100 CPU IP, StarNoC-700 NoC 역시 고객이 채택해 서버·AI·HPC를 겨냥하고 있다고 밝혔다. RISC-V 서버 관점에서 이 소식은 연산이 아니라 관리 영역에 속한다. BMC는 호스트 CPU와 독립적으로 전원이 들어온 동안 상시 동작하는 대역외 관리 칩이므로 A73급 아웃오브오더 코어가 돈다는 것은 RISC-V가 관리 영역에서 양산 출하에 충분한 수준에 이르렀다는 뜻이지 서버 주 CPU의 성능 돌파로 읽을 일은 아니다. 수천만 개는 연간 출하량에 대한 회사 전망이며 고객명, 단가, 실제 납품량은 공개되지 않았다. StarFive는 11월 17일에 이미 B100 양산 출하를 발표했고, 이 항목은 그 안에 들어간 CPU IP의 모델과 사양을 보강한다."
     source: "콰이커지 (Sina Tech 전재)"
@@ -48,6 +56,22 @@ items:
     vendors: ["StarFive 赛昉科技"]
     tags: ["서버 출하"]
     importance: "high"
+  - date: "2026-11-16"
+    title: "Red Hat, RHEL 10.3 RISC-V 개발자 프리뷰 공개…서버 플랫폼 5종 추가, 기반은 P550에서 BigSky 2U870으로"
+    summary: "Red Hat은 11월 16일 RHEL 10.3 출시에 맞춘 RISC-V 개발자 프리뷰 업데이트를 공개했다(이미지 배포는 11월 13일). RHEL 10.3 코드베이스로 옮기고 업스트림 RISC-V 코드를 최대한 반영했으며, 부팅·구동되는 플랫폼으로(Red Hat은 전체 목록이 아니라고 밝혔다) SiFive BigSky 2U870, SpacemiT V100, SpacemiT K3와 K3 기반 RV2768 클러스터 서버, UltraRISC URDP1000, Epic Semi Contrail AIX 등 5종을 추가했다. 프로젝트의 개발·빌드 기반도 SiFive HiFive Premier P550에서 BigSky 2U870으로 옮기기 시작했고 P550은 이번이 마지막 검증 대상이다. Red Hat은 이들 장비가 대부분 32코어·2GHz 이상(V100은 듀얼 소켓 2×46코어)이라 GCC나 LLVM 빌드에 며칠씩 걸리던 시기는 끝났다고 밝혔으며, 같은 글에서 Fedora 45 for RISC-V 출시도 언급했다. RISC-V 서버 입장에서는 호환 목록이 5개 벤더의 서버급 시스템과 K3 기반 랙 단위 클러스터 구성까지 아우르게 됐고, RHEL은 RISC-V에서 단일 보드 검증에서 여러 벤더 완제품 대응으로 넘어가는 중이다. 다만 개발자 프리뷰여서 지원과 정식 버전으로의 마이그레이션 보장이 없고 운영 환경용이 아니다."
+    source: "Red Hat Developer"
+    url: "https://developers.redhat.com/articles/2026/11/16/rhel-10-developer-preview-for-risc-v-updates-to-10-3"
+    vendors: ["Red Hat"]
+    tags: ["운영체제", "소프트웨어 스택"]
+    importance: "high"
+  - date: "2026-11-16"
+    title: "Tenstorrent, Galaxy 8대로 gpt-oss-120b 디코딩 5,300토큰/초/사용자 달성"
+    summary: "Tenstorrent는 11월 16일 Galaxy Blackhole 시스템의 추론 최적화 결과를 공개했다. Galaxy 8대(Blackhole 총 256칩)로 OpenAI의 gpt-oss-120b를 구동하며, 각 레이어를 16칩 4×4 메시로 나누고 임계 경로의 전문가 가중치를 BF4 블록 부동소수점으로 온칩 SRAM에 상주시키며 나머지는 DRAM에서 스트리밍하고, 다음 레이어 가중치를 불러오는 동안 파이프라인 단을 재사용해 8대에서 24대 규모의 사용자당 디코드 속도를 얻었다고 밝혔다. GSM8K 전체에서 평균 3,000토큰/초/사용자, 정확도 95.8%, 최대 5,300토큰/초/사용자를 기록했다. 수치는 디코드 단계만 대상으로 하고 GSM8K의 짧은 프롬프트를 사용하며 첫 토큰 지연은 포함하지 않는다. RISC-V 서버 관점에서 Galaxy는 RISC-V CPU 코어를 내장한 Blackhole을 연산에 쓰는 6U 시스템이며, RISC-V 계열 AI 시스템 가운데 공개된 사용자당 디코드 성능으로는 높은 수준이지만 벤더 자체 측정이어서 제3자 재현이 없고 전체 처리량을 뜻하지는 않는다. 대당 Blackhole 32칩, 온칩 SRAM 6.2GB, GDDR6 1TB."
+    source: "Tenstorrent"
+    url: "https://tenstorrent.com/en/newsroom/tenstorrents-galaxy-blackhole-gpt-oss-12"
+    vendors: ["Tenstorrent"]
+    tags: ["완제품·메인보드"]
+    importance: "medium"
   - date: "2026-11-16"
     title: "Tenstorrent, ConfidentialMind와 손잡고 Galaxy Blackhole RISC-V 서버에 자체 운영 AI 플랫폼 결합"
     summary: "Tenstorrent는 11월 16일 소프트웨어 기업 ConfidentialMind와 협력해 자사의 RISC-V 기반 Galaxy Blackhole 시스템에 후자의 자체 운영 AI 플랫폼을 올린다고 발표했다. 양사는 유럽, 중동, 아시아태평양, 미주에서 공동 판매하며 데이터를 자체 인프라에 두어야 하는 정부, 대학, 규제 산업 기업, 추론 서비스 사업자를 겨냥한다. Galaxy Blackhole은 6U 섀시에 Blackhole Tensix 프로세서 32개를 담은 시스템으로 단일 장비로도, 고객 데이터센터 안에서 슈퍼클러스터로 확장할 수도 있다. ConfidentialMind는 추론 서빙, 벡터 데이터베이스, 접근 제어, 가속기 관리, 관측성, 컴플라이언스 로그 계층을 제공하고 오픈소스 모델과 RAG, 에이전트를 OpenAI 호환 API로 내놓아 고객이 플랫폼을 직접 구축하는 부담을 없앤다. RISC-V 서버 관점에서는 하드웨어 판매에서 '납품 가능한 스택' 판매로 한 걸음 나아가 배치·운영 소프트웨어를 채우는 움직임이지만, 공동 판매 가격과 공급 시점, 고객사는 공개되지 않았고 성능 데이터도 제시되지 않았다."
@@ -152,6 +176,14 @@ items:
     vendors: ["SiFive"]
     tags: ["표준·규격", "HPC"]
     importance: "medium"
+  - date: "2026-10-22"
+    title: "Qualcomm, RISC-V 스타트업 Akeana 인수… AI·데이터센터 칩 강화"
+    summary: "Qualcomm이 RISC-V 프로세서 설계 기업 Akeana 인수를 완료했습니다. 거래 금액은 공개되지 않았고 Akeana의 IP와 엔지니어링 조직이 Qualcomm에 전부 합류해 AI·데이터센터 사업을 강화합니다. Akeana는 2021년 Marvell에서 서버 칩을 만들던 팀이 창업했고 2024년 8월 1억 달러 이상을 조달했으며, 고객 맞춤형 RISC-V 코어를 주력으로 합니다. Qualcomm이 Ventana에 이어 데이터센터급 RISC-V 자산을 두 번째로 사들인 사례입니다."
+    source: "Design & Reuse / Dealroom"
+    url: "https://www.design-reuse.com/news/202531315-qualcomm-buys-risc-v-startup-akeana-to-push-into-ai-and-data-center-chips"
+    vendors: ["Qualcomm", "Akeana"]
+    tags: ["인수합병·투자", "칩 발표"]
+    importance: "high"
   - date: "2026-10-21"
     title: "랑신컴퓨팅, 지통 융합 슈퍼노드 공개…LX500 단일 시스템에서 클러스터로"
     summary: "2026 RISC-V 중국 서밋에서 랑신컴퓨팅(Lanxin Computing)이 '지통 융합' 슈퍼노드를 발표하며 LX500 기반 RISC-V AI 연산을 단일 칩·단일 서버에서 클러스터급 인프라로 확장했습니다. LX500은 RISC-V 코어 48개(성능 코어 32개, 에너지 효율 코어 16개)와 AI Vector/Matrix 엔진을 통합해 INT8 75 TOPS를 제공하며, 통합 메모리 구조로 DDR5를 공유하고 CXL을 지원합니다. 첫 토큰 지연, Prefill, 장문 컨텍스트 추론에 최적화했고 제품군은 LX500 칩, 레노버 원티엔 WR5219 G5 서버, LX5000 일체형, 슈퍼노드로 구성됩니다. 회사는 Qwen, DeepSeek, Kimi 등 모델 적응을 마쳤다고 밝혔으며, RISC-V 서버가 '칩-시스템-클러스터' 완전한 형태로 공급되기 시작했음을 보여줍니다."
@@ -176,6 +208,14 @@ items:
     vendors: ["Alibaba DAMO Academy", "XuanTie"]
     tags: ["생태계 협력", "HPC"]
     importance: "medium"
+  - date: "2026-10-20"
+    title: "SpacemiT, V100 발표… 46코어 RISC-V 서버 CPU, 2소켓 최대 92코어"
+    summary: "선전에서 열린 2026 RISC-V 중국 서밋에서 SpacemiT가 첫 서버급 칩 V100을 발표했습니다. XiangShan 'Kunminghu' V2R2 고성능 코어 6개와 자체 개발 X100 에너지 효율 코어 40개로 모두 46코어이며 2소켓으로 92코어까지 확장됩니다. 8채널 DDR5와 PCIe 5.0 52레인을 갖췄습니다. 공식 설명은 RISC-V 서버 규격을 완전히 충족하는 업계 첫 컴퓨팅 칩이라며 BRS 테스트 전 항목 통과와 openEuler, openKylin, Ubuntu, Debian, Fedora 등 배포판의 즉시 설치·부팅을 내세웁니다. XiangShan 코어가 상용 서버 칩에 들어간 첫 사례이고, RISC-V 서버가 범용 배포판 납품 능력을 갖추기 시작했다는 뜻입니다."
+    source: "텐센트 뉴스 / ICWise"
+    url: "https://view.inews.qq.com/a/20261020A0BL9500"
+    vendors: ["进迭时空 SpacemiT"]
+    tags: ["칩 발표", "서버 출하", "표준·규격"]
+    importance: "high"
   - date: "2026-10-19"
     title: "ZTE마이크로일렉트로닉스 계열 리루이웨이, '주펑 200' 첫 공개…AI 데이터센터용 RISC-V CPU"
     summary: "2026 RISC-V 중국 서밋에서 ZTE마이크로일렉트로닉스 계열사 리루이웨이(Lirui Micro)가 AI 데이터센터용 고성능 RISC-V CPU '주펑 200(珠峰200)'을 처음 공개했습니다. RVA23을 준수하고 Hypervisor, AIA, CoVE, RVV 1.0을 지원하며 64비트 슈퍼스칼라 비순차 구조에 Vector/Matrix와 압축·암호 엔진을 통합했습니다. DDR5(MRDIMM 포함), PCIe 6.0, CXL 3을 지원하고 에이전트 클러스터, 추론 슈퍼노드 Host CPU, 기업용 하이브리드 추론을 겨냥합니다. 회사는 1000억 파라미터급 MoE 모델을 구동할 수 있다고 밝혔고 상세 사양은 2026년 말 공개 예정입니다. 통신장비 계열 중국 칩 회사가 RISC-V를 AI 데이터센터 Host CPU 위치에 명확히 둔 첫 사례입니다."
@@ -191,22 +231,6 @@ items:
     url: "https://tenstorrent.com/en/newsroom/tenstorrent-announces-series-e"
     vendors: ["Tenstorrent"]
     tags: ["인수합병·투자"]
-    importance: "high"
-  - date: "2026-10-22"
-    title: "Qualcomm, RISC-V 스타트업 Akeana 인수… AI·데이터센터 칩 강화"
-    summary: "Qualcomm이 RISC-V 프로세서 설계 기업 Akeana 인수를 완료했습니다. 거래 금액은 공개되지 않았고 Akeana의 IP와 엔지니어링 조직이 Qualcomm에 전부 합류해 AI·데이터센터 사업을 강화합니다. Akeana는 2021년 Marvell에서 서버 칩을 만들던 팀이 창업했고 2024년 8월 1억 달러 이상을 조달했으며, 고객 맞춤형 RISC-V 코어를 주력으로 합니다. Qualcomm이 Ventana에 이어 데이터센터급 RISC-V 자산을 두 번째로 사들인 사례입니다."
-    source: "Design & Reuse / Dealroom"
-    url: "https://www.design-reuse.com/news/202531315-qualcomm-buys-risc-v-startup-akeana-to-push-into-ai-and-data-center-chips"
-    vendors: ["Qualcomm", "Akeana"]
-    tags: ["인수합병·투자", "칩 발표"]
-    importance: "high"
-  - date: "2026-10-20"
-    title: "SpacemiT, V100 발표… 46코어 RISC-V 서버 CPU, 2소켓 최대 92코어"
-    summary: "선전에서 열린 2026 RISC-V 중국 서밋에서 SpacemiT가 첫 서버급 칩 V100을 발표했습니다. XiangShan 'Kunminghu' V2R2 고성능 코어 6개와 자체 개발 X100 에너지 효율 코어 40개로 모두 46코어이며 2소켓으로 92코어까지 확장됩니다. 8채널 DDR5와 PCIe 5.0 52레인을 갖췄습니다. 공식 설명은 RISC-V 서버 규격을 완전히 충족하는 업계 첫 컴퓨팅 칩이라며 BRS 테스트 전 항목 통과와 openEuler, openKylin, Ubuntu, Debian, Fedora 등 배포판의 즉시 설치·부팅을 내세웁니다. XiangShan 코어가 상용 서버 칩에 들어간 첫 사례이고, RISC-V 서버가 범용 배포판 납품 능력을 갖추기 시작했다는 뜻입니다."
-    source: "텐센트 뉴스 / ICWise"
-    url: "https://view.inews.qq.com/a/20261020A0BL9500"
-    vendors: ["进迭时空 SpacemiT"]
-    tags: ["칩 발표", "서버 출하", "표준·규격"]
     importance: "high"
   - date: "2026-10-15"
     title: "zeroRISC 10년: 오픈소스 실리콘의 보안 사업화 경로"

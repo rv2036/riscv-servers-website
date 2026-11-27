@@ -1,5 +1,13 @@
 # RISC-V 服务器新闻（中文母版，按日期倒序）
 items:
+  - date: "2026-11-27"
+    title: "元石智算发布 6U 双路 RISC-V AI 服务器：打通六层软件栈，称大模型推理吞吐达 x86 的 95.8%"
+    summary: "在 11 月 26 日于武汉光谷举行的「RDI 生态·RISC-V+AI 新兴算力峰会 2026」上，武汉元石智算（MetaStone）CTO 席宏海发布其称为「业内首款真正跑通大模型服务的异构 RISC-V AI 服务器」：6U 机架式，搭载两颗符合 RVA23 规范的 RISC-V CPU，最多可装 8 张双宽 GPU 或 AI 加速卡。产品基于自研 RVOCs（RISC-V Open Computing System）开放异构计算系统，完成 RISC-V 服务器与 AMD Radeon AI PRO R9700 的端到端适配，贯通内核驱动、运行时、编译器与算子库、深度学习框架、推理引擎、应用服务六层软件栈；官方称在特定测试配置下推理吞吐达到 x86 平台的 95.8%，并通过 12 小时连续压力测试。对 RISC-V 服务器而言，这一步补的是「RISC-V 主机 + 主流 GPU + 可交付推理栈」的组合，而不是又一颗更快的 CPU——把 GPU 服务器的 host CPU 换成 RISC-V 这种形态，此前公开记录只有 SiFive 与 AMD 的 ROCm 演示级验证。但 95.8% 与 12 小时压测这两项数字，此前已由同一团队在 10 月 RISC-V 中国峰会期间以 RVOCs 项目口径公布，本次是随整机再次引用；官方未公布所用 RISC-V CPU 型号、对照 x86 平台的配置、测试模型与并发数、价格与供货时间，也没有第三方复现。"
+    source: "中国日报网（来源：东方网）"
+    url: "http://ex.chinadaily.com.cn/exchange/partners/82/rss/channel/cn/columns/sz8srm/stories/WS6b092701e4b0e14252fcde31.html"
+    vendors: ["MetaStone 元石智算", "AMD"]
+    tags: ["整机与主板", "软件栈"]
+    importance: "high"
   - date: "2026-11-25"
     title: "上海交大 GiantVM 展示 RISC-V 多虚一：多台服务器聚合成一个 Linux 虚拟机，8 节点 zlib 约 6.9 倍"
     summary: "中国日报网 11 月 25 日报道，上海交通大学戚正伟教授团队在 2026 深圳 RISC-V 峰会（10 月 18—20 日，RIOS Lab 主办）上展示了面向 RISC-V 的多虚一架构 GiantVM：把多台 RISC-V 机器的处理器与内存聚合进同一个 Linux guest，通过跨节点 vCPU 启动、页级分布式共享内存以及 MMIO 与中断转发提供统一的虚拟机视图；团队称已完成 RDMA 高速网络集成，并与产业伙伴完成 ARM/RISC-V、CXL/灵衢 UB 新型总线适配。报道给出的测试数字为 8 台服务器聚合时 zlib 压缩约 6.9 倍、双节点 Spark 对比原生分布式方案 3.2—3.8 倍、CXL 总线优化的四节点特定场景 12—24.1 倍（原文两处区间的连接符在网页排版中缺失）。对 RISC-V 服务器而言，这条路补的是单机性能不足时的系统软件层——用软件把多台机器的 CPU 与内存池化，而不是另造一颗更大的芯片；但数字均为团队自测、未见第三方复现，聚合节点的互联要求、可支持的最大节点数与可用版本都未公布。"
